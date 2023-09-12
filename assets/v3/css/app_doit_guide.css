@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/** doit-guide **/
+@media screen and (max-width: 768px) {
+
+	.doit-guide .inner {
+		padding: 8.89vw 5.56vw 0;
+	}
+	.doit-guide h3 {
+		margin-bottom: 21.39vw;
+		color: #6267EA;
+		font-size: 5.55vw;
+		font-weight: 800;
+		letter-spacing: -0.5px;
+	}
+	.doit-guide .philosophy {
+		margin-bottom: 29.72vw;
+	}
+	.doit-guide .philosophy h4 {
+		position: relative;
+		margin-bottom: 6.67vw;
+		color: #000;
+		font-size: 5.56vw;
+		font-weight: 800;
+	}
+	.doit-guide .philosophy h4:before {
+		position: absolute;
+		top: -6.67vw;
+		left: 0;
+		width: 9.44vw;
+		height: 0.83vw;
+		background-color: #000;
+		content: '';
+	}
+	.doit-guide .philosophy p {
+		margin-bottom: 6.67vw;
+		color: #4C5264;
+		font-size: 4.17vw;
+		font-weight: 300;
+		line-height: 1.6em;
+	}
+	.doit-guide .philosophy strong {
+		display: inline-block;
+		margin: 6.67vw 0 2.78vw;
+		color: #000;
+		font-size: 4.17vw;
+		font-weight: 600;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/doit_gui_tit_bg.png);
+		background-position: 0 100%;
+		background-size: 100% 2.22vw;
+		background-repeat: no-repeat;
+	}
+	.doit-guide .philosophy span {
+		display: block;
+	}
+	.doit-guide .philosophy em {
+		color: #000;
+		font-weight: 600;
+	}
+
+
+}

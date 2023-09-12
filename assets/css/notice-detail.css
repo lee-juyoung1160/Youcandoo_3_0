@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* 공지사항 상세 css */
+.notice-detail .top {
+    font-size: 1.3rem;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(113, 113, 113, 0.18);
+}
+.notice-detail .top .title {
+    width: 82%;
+    line-height: 1.4;
+    float: left;
+    color: #3c3c3c;
+    font-family: 'AppleSDGothicNeoM','sans-serif';
+}
+.notice-detail .top .date {
+    float: right;
+    color: #717171;
+}
+.notice-detail .contents {
+    margin-top: 20px;
+}
+.notice-detail .contents .thumbnail-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+.notice-detail .contents .thumbnail {
+    padding-top: 77%;
+    position: relative;
+    overflow: hidden;
+}
+.thumbnail .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%,50%);
+    -webkit-transform: translate(50%,50%);
+    -ms-transform: translate(50%,50%);
+    -moz-transform: translate(50%,50%);
+    -o-transform: translate(50%,50%);
+}
+.notice-detail .contents .thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.notice-detail .contents .text-box{
+    margin-top: 3%;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+/* mobile device */
+@media only screen and (max-width:600px) {
+    .notice-detail .top .title {width: 100%;}
+    .notice-detail .top .date {float: left; margin-top: 2%;}
+}

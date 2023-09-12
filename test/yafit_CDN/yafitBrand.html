@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>what's 야핏</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="favicon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+	<link rel="shortcut icon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico" />
+	<link rel="apple-touch-icon-precomposed" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="What’s 야핏"/>
+    <meta property="og:site_name" content="야핏"/>
+    <meta property="og:description" content="Fit Your Riding, 어떤 상황에서도 Fit한 야핏"/>
+    <meta property="og:image" content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg"/>
+    <meta property="og:image:width" content="400"/>
+    <meta property="og:image:height" content="210"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="What’s 야핏">
+    <meta name="twitter:description" content="Fit Your Riding, 어떤 상황에서도 Fit한 야핏">
+    <meta name="twitter:image" content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg">
+    <meta name="nate:image" content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg" />
+    <meta name="naver-site-verification" content="dcf4d5cf8e610163fe7bbc07a29e21f98c503792"/>
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/reset_1.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/common.css?v=1.6" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/promotion.css?v=1.1" />
+	<link rel="stylesheet" href="https://yafit.yanadoocdn.com/yanadoo/library/swiper.min.css">
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/beusable.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/channel.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/env.js" ></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/common.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/comm.js"></script>
+	<script src="https://yafit.yanadoocdn.com/yanadoo/library/swiper-bundle.min.js"></script>
+
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+	body {min-width: 280px; font-family: 'NotoSansCJKkr'; }
+	/* animation */
+	@keyframes scrollMove{100%{transform:translateY(130px);}}
+	@keyframes bgGradient{0% {background-position: 0% 50%;} 50% {background-position: 100% 50%;} 100% {background-position: 0% 50%;}}
+	.yafit-brand .move-action {opacity: 0; transition: opacity .4s, transform .4s ease-in-out;}
+	.yafit-brand .active .move-action {opacity: 1; transform: translate3d(0, 0, 0);}
+	.yafit-brand .fade-right {transform: translate3d(-30px, 0, 0);}
+	.yafit-brand .fade-left {transform: translate3d(30px, 0, 0);}
+	.yafit-brand .fade-top {transform: translate3d(0, 30px, 0);}
+	.yafit-brand .fade-lg-right {transform: translate3d(-200px, 0, 0);}
+	.yafit-brand .fade-lg-left {transform: translate3d(200px, 0, 0);}
+	/* page-common */
+	.display-pc {display: block !important;}
+	.display-m {display: none !important;}
+	.yafit-brand .right-col {margin-left: auto;}
+	.scroll-hidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
+	.yafit-brand h3 {letter-spacing: -1px;}
+	/* key-visual */
+	.yafit-brand {overflow: hidden; width: 100%; font-size: 16px;}
+	.yafit-brand .key-visual {overflow: hidden; position: relative; width: 100%; height: calc(100vh - 8.8rem); background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_key_visual.png); background-attachment: fixed; background-size: cover;}
+	.yafit-brand .key-visual .right-col {position: absolute; right: 17%; width: 442px; height: 100%;}
+	.yafit-brand .key-visual h3 {position: absolute; top: 28vh; left: 0; width: 637px;}
+	.yafit-brand .key-visual .scroll-down {position: absolute; bottom: 0; left: 220px;}
+	.yafit-brand .key-visual .scroll-down .scroll-line {position: relative; display: block; height: 110px; width: 2px; margin-right: 20px; background-color: rgba(255,255,255,0.4);}
+	.yafit-brand .key-visual .scroll-down .scroll-line:after {content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 30px; background-color: #fff; animation: scrollMove 1.5s infinite ease-in-out;}
+	.yafit-brand .key-visual .text-scroll {margin-bottom: 14px; color: rgba(255,255,255,0.9); font-size: 15px; font-weight: 500; line-height: 1.33;}
+	/* wherever-animation-col */
+	.yafit-brand .wherever-animation-col {position: relative;}
+	.yafit-brand .wherever-animation-col img {width: 60%;}
+	.yafit-brand .wherever-animation-col .main-message {position: absolute;}
+	.yafit-brand .wherever-animation-col .main-message p {width: 19.5em; margin-bottom: 30px; padding: 0.5em 1.5em; color: #fff; font-size: 1.66rem; font-weight: 600; background-color: #000;}
+	.yafit-brand .wherever-animation-col .main-message p span {color: #32F832;}
+	.yafit-brand .wherever-animation-col .main-message h4 {width: 100%; font-size: 4.16rem; font-weight: 600;}
+	.yafit-brand .wherever-animation-col .main-message h4 .text-line {position: relative; padding-right: 1.6em; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/text-line.png); background-size: 0% 0.7em; background-repeat: no-repeat; background-position: 0 90%;}
+	.yafit-brand .wherever-animation-col.active  .main-message h4 .text-line {background-size: 100% 0.7em; transition: .4s .8s;}
+	.yafit-brand .wherever-animation-col .main-message h4 .text-line:after {content: ''; position: absolute; top: 45%; width: 40px; height: 5px; margin-left: 10px; background-color: #000;}
+	.yafit-brand .animation-01 {padding: 170px 0 180px;}
+	.yafit-brand .animation-01 .main-message {top:40%; left: 58%; transition-delay: .6s;}
+	.yafit-brand .animation-01 .main-message p {text-align: center;}
+	.yafit-brand .animation-01 .main-message h4 {padding-left: 17%;}
+	.yafit-brand .animation-02 {width: 100%;}
+	.yafit-brand .animation-02 img {width: 100%;}
+	.yafit-brand .animation-02 .main-message {top: -20px; left: 10%; transition-delay: .4s;}
+	.yafit-brand .animation-03 {display: flex; padding-top: 170px;}
+	.yafit-brand .animation-03 img {margin-left: auto;}
+	.yafit-brand .animation-03 .main-message {top:40%; right: 55%; text-align: left; transition-delay: .6s;}
+	/* wherever-animation-col bg line */
+	.yafit-brand article:before, .yafit-brand article:after {content: ''; opacity: .5; position: absolute;}
+	.yafit-brand .animation-01:before, .yafit-brand .animation-01:after, .yafit-brand .animation-02:before, .yafit-brand .animation-03:before, .yafit-brand .animation-04:before, .yafit-brand .animation-04:after { background:linear-gradient(#32F832 , #33F7E8); }
+	.yafit-brand .animation-01:before {left: 46%; top: -55px; width: 1px; height: 300px; transform: rotate(-50deg);}
+	.yafit-brand .animation-01:after {right: 150px; bottom: 0px; width: 1px; height: 450px; transform: rotate(-50deg);}
+	.yafit-brand .animation-02:before {right: 190px; top:-350px; width: 1px; height: 500px; transform: rotate(50deg);}
+	.yafit-brand .animation-03:before {left: 150px; top:-190px; width: 1px; height: 600px; transform: rotate(-55deg);}
+	.yafit-brand .animation-04:before {right: 30%; top: -205px; width: 1px; height: 250px; transform: rotate(45deg); }
+	.yafit-brand .animation-04:after {left: 30%; bottom: -205px; width: 1px; height: 250px; transform: rotate(45deg);}
+	/* copy-animation-col */
+	.yafit-brand .copy-animation-col {position: relative; display: flex; height: 402px; margin: 170px 0; align-items: center; justify-content: center; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_animation_04_bg.svg); background-position: 50% 40%; background-repeat: no-repeat; background-size: 50%;}
+	.yafit-brand .copy-animation-col .main-message {width: 550px; text-align: center; font-style: italic;}
+	.yafit-brand .copy-animation-col .main-message span {display: block; font-size: 10rem; font-weight: 400;}
+	.yafit-brand .copy-animation-col .main-message img {width: 1.1em;}
+	/* possibility-col */
+	.yafit-brand .possibility-animation-col {padding:200px 0 100px; background-color: #111;}
+	.yafit-brand .possibility-animation-col h3 {width: 535px; margin: 0 auto;}
+	.yafit-brand .possibility-animation-col p {margin-top: 22px; color: #fff; font-size: 44px; text-align: center; line-height: 1.3em}
+	.yafit-brand .possibility-animation-col .animation-container {position: relative; transform: translateX(0); left: 0%;}
+	.yafit-brand .possibility-animation-col .animation-container img {min-width: 8168px; padding-right: 400px;}
+	.possibility-animation-mo-col + .pin-spacer {background-color: #000;}
+	/* system-col */
+	.yafit-brand .system-animation-col {height: 100vh; padding: 175px 0 150px; background-color: #000; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_bg_system.png); background-size: cover;}
+	.yafit-brand .system-animation-col h3 {width: 324px; margin: 0 auto;}
+	.yafit-brand .system-animation-col p {margin: 20px 0 100px; color: #fff; font-size: 44px; text-align: center;}
+	.yafit-brand .system-animation-col p strong {color: #7BF544; font-weight: 600;}
+	.yafit-brand .system-animation-col .animation-container {position: relative; transform: translateX(0); left: 0%;}
+	.yafit-brand .system-animation-col .animation-container img {min-width: 2500px; padding: 0 400px;}
+	/* review-animation-col */
+	.yafit-brand .review-animation-col {padding: 120px 0 180px;background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_review_bg.png); background-size: cover;}
+	.yafit-brand .review-animation-col h3 {color: #32F832; font-size: 60px; margin-bottom: 75px; text-align: center; line-height: 1.2em;}
+	.yafit-brand .review-animation-col h3 span {color: #fff; font-size: 32px; font-weight: 400;}
+	.yafit-brand .review-animation-col ul {max-width: 1000px; margin: 0 auto; padding: 0 30px;}
+	.yafit-brand .review-animation-col ul li {display: flex;}
+	.yafit-brand .review-animation-col ul li:nth-child(1) {transition-delay: 0s;}
+	.yafit-brand .review-animation-col ul li:nth-child(2) {transition-delay: .3s;}
+	.yafit-brand .review-animation-col ul li:nth-child(3) {transition-delay: .6s;}
+	.yafit-brand .review-animation-col ul li:nth-child(4) {transition-delay: .9s;}
+	.yafit-brand .review-animation-col ul li:nth-child(5) {transition-delay: 1.2s;}
+	.yafit-brand .review-animation-col ul li .speech-bubble {display: flex; position: relative; width: 835px; height: 114px; margin-bottom: 20px; padding:0 30px; align-items: center; color: #000; font-size: 24px; background-color: #fff; letter-spacing: -1px;}
+	.yafit-brand .review-animation-col ul li:nth-child(odd) .speech-bubble {border-radius: 30px 30px 30px 0;}
+	.yafit-brand .review-animation-col ul li:nth-child(even) .speech-bubble {background-color: #32f832; border-radius: 30px 30px 0 30px;}
+	.yafit-brand .review-animation-col ul li .speech-bubble:after {content: ''; position: absolute; bottom: -15%; z-index: 1; width: 0; height: 0; border-color: transparent; border-width: 1em; border-style: solid;}
+	.yafit-brand .review-animation-col ul li:nth-child(odd) .speech-bubble:after {left: 0%; border-left-color: #fff;}
+	.yafit-brand .review-animation-col ul li:nth-child(even) .speech-bubble:after {right: 0%; border-right-color: #32f832;}
+	.yafit-brand .review-animation-col ul li .speech-bubble span {color: #444; font-size: 16px; margin-left: auto;}
+	/* line-banner-col*/
+	.yafit-brand .line-banner-col {width: 100%;padding: 6.5rem 0;background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_line_banner_bg.png);background-size: cover;background-position: 60% 0%;background-repeat: no-repeat;}
+	.yafit-brand .line-banner-col p {max-width: 1110px;padding: 0 25px;margin: 0 auto;}
+	/* youtube-slide-col */
+	.yafit-brand .youtube-slide-col {padding: 110px 20px 125px; background-color: #EFEFEF;}
+	.yafit-brand .youtube-slide-col .inner {position: relative; max-width: 1325px; margin: 0 auto;}
+	.yafit-brand .youtube-slide-col h3 {padding: 0 0 60px; color: #000; font-size: 5rem; text-align: center;}
+	.yafit-brand .youtube-slide-col .youtube-slide {overflow: hidden; max-width: 1194px; margin: 0 auto;}
+	.yafit-brand .youtube-slide-col .youtube-slide .swiper-slide {display: block;}
+	.yafit-brand .swiper-button-next {right: 0; top:30%; width: 50px; height: 80px; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_btn_next.svg); background-size: cover;}
+	.yafit-brand .swiper-button-prev {left: 0; top:30%; width: 50px; height: 80px; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_btn_prev.svg); background-size: cover;}
+	.yafit-brand .swiper-button-next.swiper-button-disabled, .yafit-brand .swiper-button-prev.swiper-button-disabled {opacity: .2;}
+	.yafit-brand .vod-info strong {display: block; padding: 20px 0 15px; color: #111; font-size: 20px; line-height: 1.3em; font-weight: 400; border-bottom: 1px solid #D3D3D3;}
+	.yafit-brand .vod-info span {display: block; padding-top: 15px; color: #777; font-size: 16px;}
+	.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {opacity: 0;}
+	/* yafit-zon-col */
+	.yafit-brand .yafit-zon-col {padding: 110px 0 150px; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_yafit_zon_bg.png); background-size: cover;}
+	.yafit-brand .yafit-zon-col h3 {color: #FFFFFF; font-size: 5rem; padding-bottom: 1em; text-align: center;}
+	.yafit-brand .yafit-zon-col .info-round-box {max-width: 1194px; margin: 0 auto; padding: 0 70px 70px; background-color: #fff; border-radius: 17px;}
+	.yafit-brand .yafit-zon-col .region-divide-tab {display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #CCCCCC;}
+	.yafit-brand .yafit-zon-col .region-divide-tab .tab-container {position: relative; display: flex; padding: 40px 0; justify-content: space-between;}
+	.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li {position: relative; padding: 20px 35px; color: #C4C4C4; font-size: 30px; font-weight: 600; border-radius: 40px; cursor: pointer; transition: all .3s; }
+	.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li:after {content: ''; position: absolute; top: 50%; right: -5px; width: 5px; height: 5px; background-color: #C4C4C4; border-radius: 50%; }
+	.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li:last-child:after, .yafit-brand .yafit-zon-col .region-divide-tab .tab-container li.active:after {display: none;}
+	.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li.active {color: #fff; background-color: #000;}
+	.yafit-brand .region-zon-list {position: relative; min-height: 460px; padding: 55px 0 50px 385px; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/yafit_zon_map.png); background-repeat: no-repeat; background-position: 44px 55px; background-size: 300px 460px;}
+	.yafit-brand .region-zon-list .list-container ul {display: none;}
+	.yafit-brand .region-zon-list .list-container ul li {display: flex; margin-bottom: 15px; font-size: 17px;}
+	.yafit-brand .region-zon-list .list-container ul li strong {display: flex; flex-shrink: 0; align-items: center; font-size: 17px; font-weight: 600;}
+	.yafit-brand .region-zon-list .list-container ul li span {display: flex; flex-grow: 1; align-items: center; padding-left: 15px; color: #888;}
+	.yafit-brand .region-zon-list .list-container.active ul {display: block;}
+	.yafit-brand .region-zon-list .list-container .spot {display:block; position: absolute; width: 32px; height: 32px; background-color: rgba(102,102,102,.3); border-radius: 50%; text-indent: -9999px;}
+	.yafit-brand .region-zon-list .list-container .spot:after {content: ''; position: absolute; top:50%; left: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; background-color: #666; border-radius: 50%;}
+	.yafit-brand .region-zon-list .list-container.active .spot {background-color: rgba(0,219,25,.3);}
+	.yafit-brand .region-zon-list .list-container.active .spot:after {background-color: #00DB19; }
+	.yafit-brand .region-zon-list .list-container:nth-child(1) .spot {top: 110px; left: 120px;}
+	.yafit-brand .region-zon-list .list-container:nth-child(2) .spot {top: 164px; left: 126px;}
+	.yafit-brand .region-zon-list .list-container:nth-child(3) .spot {top: 100px; left: 200px;}
+	.yafit-brand .region-zon-list .list-container:nth-child(4) .spot {top: 212px; left: 158px;}
+	.yafit-brand .region-zon-list .list-container:nth-child(5) .spot {top: 383px; left: 285px;}
+	.yafit-brand .yafit-zon-col .yafit-zon-notice {padding: 30px 30px 30px 50px; background-color: #F8F8F8; border-radius: 12px;}
+	.yafit-brand .yafit-zon-col .yafit-zon-notice ul li {position: relative; color: #5C5C5C; font-size: 16px;margin-bottom: 10px;}
+	.yafit-brand .yafit-zon-col .yafit-zon-notice ul li:before {content: ''; position: absolute; top: 45%; left: -15px; width: 3px; height: 3px; background-color: #B9B9B9;}
+	.yafit-brand .yafit-zon-col .yafit-zon-notice ul li:last-child {margin-bottom: 0;}
+	.yafit-brand .yafit-zon-col .only-member {display: inline-block; width: fit-content; margin-left: 5px; padding:4px 5px; color: #000000; font-size: 14px; font-weight: 400; background-color: #F4F4F4; border: 1px solid #B9B9B9; border-radius: 5px;}
+	/* product-more */
+	.yafit-brand .product-more {padding: 110px 0 180px;}
+	.yafit-brand .product-more h3 {color: #000; font-size: 5rem; padding-bottom: 1em; text-align: center;}
+	.yafit-brand .product-more .product-container {display: flex; max-width: 1194px; margin: 0 auto; padding: 20px; justify-content: space-between;}
+	.yafit-brand .product-more .product-container a {width: 31%;}
+	/* btn-floating */
+	.yafit-brand .btn-floating {opacity: 0; display: flex; position: fixed;right: 50px;bottom: 50px;width: 280px;height: 70px; color: #000; align-items: center; justify-content: center; font-size: 26px; font-weight: 600; font-style: italic;
+		background-color: #34f938; background-image: linear-gradient(to right, #34f938, #6edafa,#34f938, #6edafa,#34f938, #6edafa); background-size: 800%;
+		border-radius: 35px; box-shadow: #00000029 0 3px 6px; letter-spacing: -.5px; transition: opacity .4s linear, transform .4s ease-in-out; transition-delay: .2s;  z-index: 10; animation: bgGradient 5s linear infinite;}
+	.yafit-brand .btn-floating.active {opacity: 1; transform: translate3d(0, 0, 0);}
+	/* modal */
+	.modal-content {overflow: inherit; display: none;position: fixed;left: 50%;top:50%;background-color: #fff;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%); z-index: 1002;}
+	.modal-bg {display: none;position: fixed;left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100vh;background-color: #000;opacity: .3;z-index: 1001;}
+	.vod-modal {background: none;}
+	.vod-modal iframe {width: 640px; height: 360px;}
+	.vod-modal .vod-modal-close {position: absolute; top:-60px; right: -10px; width: 60px; height: 60px; }
+
+	@media screen and (max-width: 1024px) {
+		/*common.css - html font-size 5px*/
+		.yafit-brand .key-visual {height: calc(100vh - 10.8rem);}
+		.yafit-brand .wherever-animation-col .main-message p {font-size: 3rem;}
+		.yafit-brand .wherever-animation-col .main-message h4  {font-size: 8rem;}
+		.yafit-brand .youtube-slide-col h3, .yafit-brand .yafit-zon-col h3, .yafit-brand .product-more h3 {font-size: 10rem; }
+		.yafit-brand .copy-animation-col .main-message span {font-size: 18rem; }
+		/* region-zon-list */
+		.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li {padding: 0.5em 0.8em; font-size: 6.5rem;}
+		.yafit-brand .region-zon-list .list-container ul li {display: block; margin-bottom: 25px;}
+		.yafit-brand .region-zon-list .list-container ul li span {display: block; padding-left: 0;}
+		/* youtube-slide-col */
+		.swiper-button-next, .swiper-button-prev {display: none;}
+	}
+	@media screen and (max-width: 920px) {
+		.yafit-brand .key-visual .right-col {right: inherit; left: 5%;}
+		.yafit-brand .key-visual .right-col .scroll-down {left: 0;}
+		.yafit-brand .animation-01 .main-message {left: 50%;}
+		.yafit-brand .wherever-animation-col img {width: 55%;}
+		.yafit-brand .animation-02 img {width: 100%;}
+		.yafit-brand .animation-03 .main-message {right: 50%; top:50%;}
+	}
+	@media screen and (max-width: 720px) {
+		.display-pc {display: none !important;}
+		.display-m {display: block !important;}
+		/* key-visual */
+		.yafit-brand .key-visual {width: 100vw; height: 160.83vw; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_key_visual.png); background-attachment:inherit;}
+		.yafit-brand .key-visual .right-col {left: 8.33vw;width: 68vw;}
+		.yafit-brand .key-visual h3 {top:18.06vw; width: 83.33vw;}
+		.yafit-brand .key-visual .text-scroll {font-size: 3.33vw;}
+		/* wherever-animation-col */
+		.yafit-brand .wherever-animation-col .main-message {z-index: 10;}
+		.yafit-brand .wherever-animation-col .main-message p {width: 67.22vw;margin-bottom: 2.50vw;padding: 1.11vw 5.56vw;font-size: 3.06vw;}
+		.yafit-brand .wherever-animation-col .main-message h4 {padding-left: 5.56vw; font-size: 7.5vw}
+		.yafit-brand .wherever-animation-col.active .main-message h4 .text-line {padding-right: 2em;}
+		.yafit-brand .animation-01 {padding: 18.33vw 0 32vw;}
+		.yafit-brand .wherever-animation-col img {width: 80%; z-index: 1}
+		.yafit-brand .animation-01 .main-message {right: 0; top: inherit; bottom: 0; left: initial;}
+		.yafit-brand .animation-01 .main-message p {text-align: left;}
+		.yafit-brand .animation-02 {padding: 31.94vw 0;}
+		.yafit-brand .animation-02 img {width: 100%;}
+		.yafit-brand .animation-02 .main-message {top: initial;left: 0;bottom: 0;}
+		.yafit-brand .animation-03 {padding: 31.94vw 0 29.58vw}
+		.yafit-brand .animation-03 .main-message { top: initial;right: initial; left:8%;bottom: 0;}
+		/* wherever-animation-col bg line */
+		.yafit-brand .animation-01:before { left: 71%; top: -11.11vw; width: 1px; height: 97.22vw; transform: rotate(-40deg);}
+		.yafit-brand .animation-01:after {display: none;}
+		.yafit-brand .animation-02:before {right: inherit; top: 0; left: 9.17vw; width: 1px; height: 41.67vw; transform: rotate(40deg);}
+		.yafit-brand .animation-03:before { left: inherit; right: 22.78vw; top: -32.36vw; width: 1px; height: 83.33vw; transform: rotate(-45deg);}
+		.yafit-brand .animation-03:after {content: ''; right: 48.78vw; top: -21.8vw; width: 1px; height: 144.33vw; background: linear-gradient(#32F832 , #33F7E8); transform: rotate(45deg);}
+		.yafit-brand .animation-03 .main-message:after {content: ''; position: absolute; top: 9.2vw; left: -5vw; width: 1px; height: 18.33vw; background: linear-gradient(#32F832 , #33F7E8); transform: rotate(-45deg);}
+		.yafit-brand .animation-04:before {right: inherit; left: 40.69vw; top: -26.39vw; width: 1px; height: 34.72vw; transform: rotate(-45deg);}
+		.yafit-brand .animation-04:after {display: none;}
+		/* copy-animation-col */
+		.yafit-brand .copy-animation-col {margin: 29.44vw 0 25.69vw; background-size:100%; background-position: 50% 45%;}
+		.yafit-brand .copy-animation-col .main-message span {font-size: 12.72vw;}
+		.yafit-brand .copy-animation-col .main-message img {width: 1.5em;}
+		/* possibility-col */
+		.yafit-brand .possibility-animation-col {padding:27.78vw 0 60.89vw; background-color: #000;}
+		.yafit-brand .possibility-animation-col h3 {width: 74.03vw;}
+		.yafit-brand .possibility-animation-col p {margin-top: 4.86vw; font-size: 6.11vw;}
+		.yafit-brand .possibility-animation-col .animation-container {position: relative; transform: translateX(0); left: 0%;}
+		.yafit-brand .possibility-animation-col .animation-container img {min-width: 548.16vw;
+			margin-top: 19.16vw; padding-right: 200px;}
+		.possibility-animation-mo-col + .pin-spacer {background-color: #000;}
+		/* system-col */
+		.yafit-brand .system-animation-col {padding: 27.22vw 0 80vw; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_bg_system.png);}
+		.yafit-brand .system-animation-col h3 {width: 45.00vw;}
+		.yafit-brand .system-animation-col p {margin: 2.78vw 0 33.33vw; font-size: 6.11vw;}
+		.yafit-brand .system-animation-col .animation-container img {min-width: 351.11vw; padding: 0 30vw 0 10vw;}
+		/* line-banner-col */
+		.yafit-brand .line-banner-col {background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_line_banner_bg.png);}
+		.yafit-brand .line-banner-col p {display: flex; width: 65.28vw;  justify-content: center;}
+		/* review-animation-col */
+		.yafit-brand .review-animation-col {padding: 17.28vw 0 20.44vw;}
+		.yafit-brand .review-animation-col h3 {margin-bottom: 9.03vw; font-size: 7.78vw;}
+		.yafit-brand .review-animation-col h3 span {font-size: 4.17vw;}
+		.yafit-brand .review-animation-col ul {padding: 0 6.94vw}
+		.yafit-brand .review-animation-col ul li .speech-bubble {position: relative; display: block; width: 70.83vw; height: auto; margin-bottom: 4.17vw; padding: 4.17vw 5.56vw; font-size: 3.61vw;}
+		.yafit-brand .review-animation-col ul li:nth-child(odd) .speech-bubble {border-radius: 3.47vw 3.47vw 3.47vw 0;}
+		.yafit-brand .review-animation-col ul li:nth-child(even) .speech-bubble {border-radius: 3.47vw 3.47vw 0 3.47vw;}
+		.yafit-brand .review-animation-col ul li .speech-bubble span {position: absolute; right: 5.56vw; bottom: 4.17vw; font-size: 2.50vw;}
+		/* youtube-slide-col */
+		.yafit-brand .youtube-slide-col {padding: 15.28vw 0 16.67vw;}
+		.yafit-brand .youtube-slide-col h3 {padding: 0 0 8.33vw; font-size: 7.78vw;}
+		.yafit-brand .youtube-slide-col h3 span {font-weight: 400;}
+		.yafit-brand .vod-info strong {padding: 2.08vw 0 3.33vw; font-size: 3.61vw; line-height: 1.2em; letter-spacing: -.2px;}
+		.yafit-brand .vod-info span {padding-top: 2.78vw; font-size: 3.33vw;}
+		.yafit-brand .youtube-slide-col .pagination_container {display: flex;position: relative; align-items: center; margin-top: 11.11vw; padding: 0 5.56vw 0 8.56vw;}
+		.yafit-brand .youtube-slide-col .pagination-num {width: 10%; margin-left: auto; color: #A5A5A5; font-size: 3.06vw; font-weight: 800;}
+		.yafit-brand .youtube-slide-col .pagination-num .current-slide-num {color: #000;}
+		.yafit-brand .youtube-slide-col .swiper-pagination-progressbar {position: absolute;left: 5.56vw;width: 75%; height: 0.83vw; margin-top: 1.5vw; background:#D3D3D3;}
+		.yafit-brand .youtube-slide-col .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {background: #000000;}
+		/* yafit-zon-col */
+		.yafit-brand .yafit-zon-col {padding: 8.33vw 0 0; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_yafit_zon_bg.png); background-position: 0 0; background-size: contain;}
+		.yafit-brand .yafit-zon-col h3 {font-size: 7.78vw; font-weight: 400;}
+		.yafit-brand .yafit-zon-col .info-round-box {max-width: 100%; padding: 0; border-radius: 4.17vw 4.17vw 0 0;}
+		.yafit-brand .yafit-zon-col .region-divide-tab {padding: 0 6.11vw; border-bottom: none;}
+		.yafit-brand .yafit-zon-col .region-divide-tab .tab-container {padding: 5.56vw 0 6vw; border-bottom: 1px solid #E0E0E0;}
+		.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li {position: relative; padding: 2.5vw 4.44vw; font-size: 4.1vw; border-radius: 5vw; letter-spacing: -1px;}
+		.yafit-brand .yafit-zon-col .region-divide-tab .tab-container li.active {border-radius: 5.00vw;}
+		.yafit-brand .region-zon-list {min-height: inherit; padding: 5.56vw 6.11vw 6.94vw 6.11vw; background-image: none;}
+		.yafit-brand .region-zon-list .list-container .spot {display: none;}
+		.yafit-brand .region-zon-list .list-container ul li {margin-bottom: 3.06vw; font-size: 3.61vw;}
+		.yafit-brand .region-zon-list .list-container ul li strong {font-size: 3.89vw;}
+		.yafit-brand .region-zon-list .list-container ul li span {padding-top: 1.3vw; font-size: 3.33vw;}
+		.yafit-brand .yafit-zon-col .yafit-zon-notice {padding: 4.86vw 6.67vw 4.86vw 8.61vw; border-radius: 0;}
+		.yafit-brand .yafit-zon-col .yafit-zon-notice ul li {margin-bottom: 1.5vw; font-size: 3vw; letter-spacing: -1px;}
+		.yafit-brand .yafit-zon-col .yafit-zon-notice ul li .only-member {margin-left: 0;}
+		.yafit-brand .yafit-zon-col .only-member {padding: 0.7vw;font-size: 2.08vw; border-radius: 3px;}
+		/* product-more */
+		.yafit-brand .product-more {padding: 15.28vw 0 22.22vw;}
+		.yafit-brand .product-more h3 {font-size: 7.78vw;}
+		.yafit-brand .product-more .product-container {display: block; max-width: 90%; margin: 0 auto; padding: 0;}
+		.yafit-brand .product-more .product-container a {display:block; width: 100%; margin-bottom: 3.33vw}
+		.yafit-brand .product-more .product-container a:last-child {margin-bottom: 0;}
+		/* btn-floating */
+		.yafit-brand .btn-floating {right: 0;bottom: 0;width: 100%; height: 12.50vw; font-size: 3.89vw; border-radius: 0; box-shadow: #00000029 0 -0.56vw 0.83vw; }
+		/* modal */
+		.modal-content {left: 50%;top:50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%); }
+		.modal-bg {left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100vh;opacity: .3;}
+		.vod-modal iframe {width: 88.89vw; height: 50.00vw;}
+		.vod-modal .vod-modal-close { top:-8.33vw; right: -1.39vw; width: 8.33vw; height: 8.33vw; }
+	}
+</style>
+<body>
+<header></header>
+<section class="yafit-brand">
+	<article class="key-visual">
+		<div class="right-col">
+			<h3>
+				<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_key_visual_text.svg" alt="fit your ride 어떤 상황에서도 fit한 야핏">
+				<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_key_visual_text.svg" alt="fit your ride 어떤 상황에서도 fit한 야핏">
+			</h3>
+			<div class="scroll-down">
+				<p class="text-scroll">Scroll Down</p>
+				<span class="scroll-line"></span>
+			</div>
+		</div>
+	</article>
+	<article class="wherever-animation-col animation-01">
+		<img class="move-action fade-right display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_animation_01_img.png" alt="이미지1">
+		<img class="move-action fade-right display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_animation_01_img.png" alt="이미지1">
+		<div class="main-message move-action fade-top">
+			<p><span>WHEREVER, </span> FIT YOUR RIDING</p>
+			<h4>
+				파리, 스위스, 방콕<br>메타버스 랜드마크<br><strong class="text-line">어디에서나</strong>
+			</h4>
+		</div>
+	</article>
+	<article class="wherever-animation-col animation-02">
+		<img class="move-action fade-top display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_animation_02_img.png" alt="이미지2">
+		<img class="move-action fade-top display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_animation_02_img.png" alt="이미지2">
+		<div class="main-message move-action fade-right">
+			<p><span>WHATEVER, </span> FIT YOUR RIDING</p>
+			<h4>
+				당신이 가진<br>사이클이<br><strong class="text-line">무엇이든</strong>
+			</h4>
+		</div>
+	</article>
+	<article class="wherever-animation-col animation-03">
+		<img class="move-action fade-left display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_animation_03_img.png" alt="이미지3">
+		<img class="move-action fade-left display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_animation_03_img.png" alt="이미지3">
+		<div class="main-message move-action fade-top">
+			<p><span>WHENEVER, </span> FIT YOUR RIDING</p>
+			<h4>
+				시간, 날씨<br>상관없이<br><strong class="text-line">언제든</strong>
+			</h4>
+		</div>
+	</article>
+	<article class="copy-animation-col animation-04">
+		<h4 class="main-message">
+			<span class="move-action fade-lg-right">야, 너두</span>
+			<span class="move-action fade-lg-left"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/copy_text_point.png" alt="핏"> 할수있어</span>
+		</h4>
+	</article>
+	<article class="possibility-animation-col">
+		<h3>
+			<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/possibility_title.png" alt="yafit possibility">
+		</h3>
+		<p>아직 1년도 안된 야핏에서<br>매일 쌓이고 있는 놀라운 가능성들</p>
+		<div class="animation-container" id="container5">
+			<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/possibility_img.svg" alt="possibility_img">
+			<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_possibility_img.svg" alt="possibility_img">
+		</div>
+	</article>
+	<article class="system-animation-col">
+		<h3>
+			<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/system_title.png" alt="4c system">
+		</h3>
+		<p>꾸준히 <strong>FIT</strong>할 수 있는 이유</p>
+		<div class="animation-container" id="container6">
+			<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/system_img.svg" alt="system_img">
+		</div>
+	</article>
+	<article class="review-animation-col animation-07">
+		<h3>
+			<span>가능성을 경험한 고객들의 이야기</span><br>REAL REVIEW
+		</h3>
+		<ul>
+			<li class="move-action fade-right"><div class="speech-bubble">미션 한 번만 더 하고 끝낼까? 자꾸 운동에<br class="display-m"> 욕심이 생겨요!🚴 <span>-하지-</span></div></li>
+			<li class="move-action fade-left"><div class="speech-bubble right-col">꾸준히 운동하면 마일리지로 보상받아서 <br class="display-m">좋아요! 일석이조! <span>-하슬라 먹깨비-</span></div></li>
+			<li class="move-action fade-right"><div class="speech-bubble">야핏 사이클을 시작하고 삼시세끼 먹어가며 <br class="display-m">살 뺄 수 있어요.👍 <span>-꽃돼지 엄마-</span></div></li>
+			<li class="move-action fade-left"><div class="speech-bubble right-col">틈나는 시간마다 내 맘대로 자유롭게 <br class="display-m">운동할 수 있어요!😍 <span>-호랭이 어흥-</span></div></li>
+			<li class="move-action fade-right"><div class="speech-bubble">지루할 틈이 없고, 팀원들과 함께 <br class="display-m">좋은 인연이 되었습니다! <span>-마롱 mom-</span></div></li>
+		</ul>
+	</article>
+	<article class="line-banner-col">
+		<p>
+			<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_line_banner_text.svg" alt="내가 달리는 길 위에 펼쳐진 또 다른 세, 야핏 라이더 comming soon!">
+			<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_line_banner_text.svg" alt="내가 달리는 길 위에 펼쳐진 또 다른 세, 야핏 라이더 comming soon!">
+		</p>
+	</article>
+	<article class="youtube-slide-col">
+		<h3><span>야핏과 함께라면</span> <br class="display-m">핏 할 수 있어</h3>
+		<div class="inner">
+			<div class="swiper youtube-slide">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<a class="thumbnail" href="https://www.youtube.com/embed/U4ANLNuWFcI">
+							<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_thumbnail_1.png" class="thumbnail-img" alt="달리는 호랑이 썸네일"/>
+						</a>
+						<div class="vod-info">
+							<strong>야핏의 새로운 코치를 소개합니다!<br>없던 의지도 생각하게 만드는 운동법 소개</strong>
+							<span>달리는 호랑이🐯</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a class="thumbnail" href="https://www.youtube.com/embed/jaWUl579bhg">
+							<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_thumbnail_2.png" class="thumbnail-img" alt="송중기 with Yafit 썸네일"/>
+						</a>
+						<div class="vod-info">
+							<strong>야핏과 함께 하면 끝까지 하게 되더라구요!<br>송중기 운동 노하우 대공개</strong>
+							<span>송중기 with Yafit🚴‍️</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a class="thumbnail" href="https://www.youtube.com/embed/XZt8IW0608Y">
+							<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_thumbnail_3.png" class="thumbnail-img" alt="송중기 with Yafit 썸네일"/>
+						</a>
+						<div class="vod-info">
+							<strong>야, 너두 핏 할 수 있어!<br>송중기의 야야야쏭이 궁금해?</strong>
+							<span>송중기 with Yafit🚴‍</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a class="thumbnail" href="https://www.youtube.com/embed/2prttOys2Bc">
+							<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/youtube_thumbnail_4.png" class="thumbnail-img" alt="송중기 with Yafit 썸네일"/>
+						</a>
+						<div class="vod-info">
+							<strong>배우 송중기와 함께 야핏 하실래요?<br>수천명이 함께 타는 실내사이클🚴</strong>
+							<span>송중기 with Yafit🚴</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-button-next display-pc"></div>
+			<div class="swiper-button-prev display-pc"></div>
+			<div class="pagination_container display-m">
+				<div class="swiper-progressbar"></div>
+				<div class="pagination-num"><span class="current-slide-num" id="currentSlideNum">1</span> / <span class="slide-length">4</span></div>
+			</div>
+		</div>
+	</article>
+	<article class="yafit-zon-col">
+		<h3>야핏을 직접 <br class="display-m">체험해 보세요</h3>
+		<div class="info-round-box">
+			<div class="region-divide-tab">
+				<ul class="tab-container">
+					<li data-tab="tab1" class="active">서울</li>
+					<li data-tab="tab2">경기</li>
+					<li data-tab="tab3">강원도</li>
+					<li data-tab="tab4">대전</li>
+					<li data-tab="tab5">부산</li>
+				</ul>
+			</div>
+			<div class="region-zon-list">
+				<div class="list-container tab1 active">
+					<span class="spot">서울</span>
+					<ul>
+						<li>
+							<strong>하이마트 잠실 메이커스랩</strong>
+							<span>서울 송파구 올림픽로 240</span>
+						</li>
+						<li>
+							<strong>신세계 강남점</strong>
+							<span>서울 신반포로 176 </span>
+						</li>
+						<li>
+							<strong>아트짐 논현점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 강남구 논현로 626  <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>리발란스K <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 강남구 학동로97길 20 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>아트짐 신정점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 양천구 중앙로 251 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>펜타짐 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 송파구 백제고분로34길 3 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>어썸 휘트니스 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 마포구 서강로 46 2층~4층 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 연희점<em class="only-member display-m">회원전용</em></strong>
+							<span>서울 서대문구 연희로 82브라운스톤 연희 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 신촌점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 서대문구 연세로 36 독수리빌딩 6, 7F <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 서울숲점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 성동구 왕십리로 115 엘에스타워 지하 1층 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 홍제점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 서대문구 통일로 472 효신빌딩 3-5F <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 홍제 2호점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 서대문구 통일로 413 화인빌딩 7층 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+						<li>
+							<strong>스타칼리휘트니스 응암점 <em class="only-member display-m">회원전용</em></strong>
+							<span>서울 은평구 은평로 170 상현빌딩 5층 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+					</ul>
+				</div>
+				<div class="list-container tab2">
+					<span class="spot">경기</span>
+					<ul>
+						<li>
+							<strong>현대 프리미엄 아울렛 김포점</strong>
+							<span>경기도 김포시 고촌읍 아라육로 152번길 100 현대 프리미엄아울렛 타워존 3층</span>
+						</li>
+						<li>
+							<strong>현대백화점 판교점</strong>
+							<span>경기도 성남시 분당구 판교역로 146번길 20 현대백화점 판교점</span>
+						</li>
+						<li>
+							<strong>하남 스타필드</strong>
+							<span>경기도 하남시 미사대로 750 신세계백화점 하남스타필드점 지하층</span>
+						</li>
+						<li>
+							<strong>피렉스 피트니스 철산본점 <em class="only-member display-m">회원전용</em></strong>
+							<span>경기 광명시 철산로 20 야우리빌딩 10층 <em class="only-member display-pc">회원전용</em></span>
+						</li>
+					</ul>
+				</div>
+				<div class="list-container tab3">
+					<span class="spot">강원도</span>
+					<ul>
+						<li>
+							<strong>하이마트 강원 원주 단계점</strong>
+							<span>강원도 원주시 학성동 978-13</span>
+						</li>
+					</ul>
+				</div>
+				<div class="list-container tab4">
+					<span class="spot">대전</span>
+					<ul>
+						<li>
+							<strong>신세계백화점 대전점</strong>
+							<span>대전 유성구 엑스포로 1, 4층</span>
+						</li>
+					</ul>
+				</div>
+				<div class="list-container tab5">
+					<span class="spot">부산</span>
+					<ul>
+						<li>
+							<strong>신세계백화점 센텀시티점</strong>
+							<span>부산광역시 해운대구 센텀남대로 35 3층</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="yafit-zon-notice">
+				<ul>
+					<li><span class="only-member">회원전용</span> 해당 휘트니스 센터 이용 고객에 한하여 무료체험 가능합니다.</li>
+					<li>백화점은 매장 상황에 따라 야핏 체험존 운영 일정이 변경될 수 있습니다.</li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	<article class="product-more" style="display: none;">
+		<h3>야핏 상품 더보기</h3>
+		<div class="product-container">
+			<a href="https://www.yanadoo.co.kr/promotion-landing/yafitPremium.html">
+				<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_product_01.png" alt="프리미엄 패키지">
+				<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_product_01.png" alt="프리미엄 패키지">
+			</a>
+			<a href="https://www.yanadoo.co.kr/promotion-landing/yafitLite.html">
+				<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_product_02.png" alt="라이트 패키지">
+				<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_product_02.png" alt="라이트 패키지">
+			</a>
+			<a href="https://www.yanadoo.co.kr/promotion-landing/yafitFree.html">
+				<img class="display-pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/pc_product_03.png" alt="무료체험 패키지">
+				<img class="display-m" src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/m_product_03.png" alt="무료체험 패키지">
+			</a>
+		</div>
+	</article>
+	<a class="btn-floating fade-top" href="https://yafit.yanadoocdn.com/yanadoo/web/package/yafitPackage.html">우리 함께 핏 할래?</a>
+</section>
+<div class="modal-warp">
+	<!-- vod-modal -->
+	<div class="modal-content vod-modal">
+		<iframe src="" id="vod" frameborder="0" allowfullscreen></iframe>
+		<button type="button" class="vod-modal-close"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/btn_modal_close.png" alt="닫기"></button>
+	</div>
+	<div id="modalBackDrop" class="modal-bg"></div>
+</div>
+<div data-include-path="https://yafit.yanadoocdn.com/yanadoo/web/layout/footer.html"></div>
+</body>
+<script src="https://yafit.yanadoocdn.com/yanadoo/library/gsap.min.js"></script>
+<script src="https://yafit.yanadoocdn.com/yanadoo/library/ScrollTrigger.min.js"></script>
+<script>
+	window.addEventListener('DOMContentLoaded', () => {yndModal(); youtubeSwipe();});
+	// 야나두 팝업 가리기
+	window.addEventListener("load", () => {
+		document.getElementById('adn_closed_wrap_contents').style.display = "none";
+		document.getElementById('adn_panel_').style.display = "none";
+	});
+	window.addEventListener("scroll", () => { onScrollWindow(); });
+	document.querySelector(".vod-modal-close").addEventListener("click", () => { onClickBntVodModalClose(); });
+	document.querySelector("#modalBackDrop").addEventListener("click", () => { onClickBntVodModalClose(); });
+	document.querySelectorAll(".tab-container li").forEach((item) => { item.addEventListener("click", onClickTabHandler); });
+	window.onresize = function() {onScrollWindow();}
+	// scroll event
+	function onScrollWindow() {
+		const innerWidth = window.innerWidth;
+		const animation01 = document.querySelector('.animation-01');
+		const animation01Top = animation01.offsetTop;
+		const animation02 = document.querySelector('.animation-02');
+		const animation02Top = animation02.offsetTop;
+		const animation03 = document.querySelector('.animation-03');
+		const animation03Top = animation03.offsetTop;
+		const animation04 = document.querySelector('.animation-04');
+		const animation04Top = animation04.offsetTop;
+		const animation07 = document.querySelector('.animation-07');
+		const animation07Top = animation07.offsetTop;
+		const btnFloating = document.querySelector('.btn-floating');
+
+		if (innerWidth <= 720 ? pageYOffset >= animation01Top -400 : pageYOffset >= animation01Top -550) {animation01.classList.add('active'); btnFloating.classList.add('active');}
+		else {animation01.classList.remove('active'); btnFloating.classList.remove('active');}
+
+		if (innerWidth <= 720 ? pageYOffset >= animation02Top -400 : pageYOffset >= animation02Top -550) {animation02.classList.add('active');}
+		else {animation02.classList.remove('active');}
+
+		if (innerWidth <= 720 ? pageYOffset >= animation03Top -400 : pageYOffset >= animation03Top -550) {animation03.classList.add('active');}
+		else {animation03.classList.remove('active');}
+
+		if (innerWidth <= 720 ? pageYOffset >= animation04Top -400 : pageYOffset >= animation04Top -550) {animation04.classList.add('active');}
+		else {animation04.classList.remove('active');}
+
+		if (innerWidth <= 720 ? pageYOffset >= animation07Top -400 : pageYOffset >= animation07Top -400) {animation07.classList.add('active');}
+	}
+	// yafit-zone
+	function onClickTabHandler(item) {
+		const tabTarget = item.currentTarget;
+		const target = tabTarget.dataset.tab;
+		document.querySelectorAll(".tab-container li").forEach((title) => { title.classList.remove("active"); });
+		document.querySelectorAll(".list-container").forEach((target) => { target.classList.remove("active"); });
+		document.querySelector("." + target).classList.add("active");
+		tabTarget.classList.add("active");
+	}
+	// youtube-slide On Click
+	const thumbnail = document.querySelectorAll(".youtube-slide .thumbnail");
+	for ( let i = 0; i < thumbnail.length; i++ )
+		thumbnail[i].addEventListener("click", function (event) {
+			event.preventDefault();
+			document.querySelectorAll(".vod-modal").forEach(item => item.style.display = 'block');
+			document.querySelectorAll("#modalBackDrop").forEach(item => item.style.display = 'block');
+			document.getElementById("vod").setAttribute("src", this.getAttribute("href"));
+			document.body.classList.add('scroll-hidden');
+	});
+	function onClickBntVodModalClose() {
+		document.querySelectorAll(".modal-content").forEach(item => item.style.display = 'none');
+		document.querySelectorAll("#modalBackDrop").forEach(item => item.style.display = 'none');
+		document.getElementById("vod").setAttribute("src", '');
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('scroll-hidden');
+	}
+	// youtube-slide
+	function SetPageNumber(currentSlideNumber) {
+		document.getElementById("currentSlideNum").textContent = currentSlideNumber;
+	}
+	function youtubeSwipe() {
+		new Swiper(".youtube-slide", {
+			slidesPerView: 1.2,
+			slidesPerGroup: 1,
+			spaceBetween: 20,
+			loop: false,
+			centeredSlides: true,
+			pagination: {
+				el: ".swiper-progressbar",
+				type: "progressbar",
+			},
+			on: {
+				slideChangeTransitionStart: function () {
+					SetPageNumber(this.activeIndex + 1);
+				},
+			},
+			breakpoints: {
+				720: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+					spaceBetween: 20,
+					centeredSlides: false,
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+					pagination : false,
+				},
+			}
+		});
+	}
+
+
+	// scroll animation
+	gsap.registerPlugin(ScrollTrigger);
+	const animationContainer5 = document.getElementById("container5");
+	const animationContainer6 = document.getElementById("container6");
+
+	gsap.to(animationContainer5, {
+		x: () => -(animationContainer5.scrollWidth - document.documentElement.clientWidth) + "px",
+		ease: "none",
+		scrollTrigger: {
+			trigger: animationContainer5,
+			invalidateOnRefresh: true,
+			pin: true,
+			trigger: ".possibility-animation-col .animation-container",
+			scrub: 1,
+			end: () => "+=" + animationContainer5.offsetWidth
+		}
+	})
+
+	gsap.to(animationContainer6, {
+		x: () => -(animationContainer6.scrollWidth - document.documentElement.clientWidth) + "px",
+		ease: "none",
+		scrollTrigger: {
+			trigger: animationContainer6,
+			invalidateOnRefresh: true,
+			pin: true,
+			trigger: ".system-animation-col",
+			scrub: 1,
+			end: () => "+=" + animationContainer6.offsetWidth
+		}
+	})
+</script>
+</html>

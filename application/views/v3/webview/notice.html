@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="/assets/v3/css/app_notice.css?resource_version=<?=$resource_version?>">
+<section class="notice">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>공지사항</p>
+	</header>
+	<div class="page-wrap">
+		<article id="contentWrap">
+			<div class="inner">
+				<ul class="notice-list">
+					<!--<li>
+						<a href="#"></a>
+						<p class="title">
+							<strong>
+								두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!
+							</strong>
+							<span>2020. 02. 02</span>
+						</p>
+					</li>
+					<li>
+						<a href="#"></a>
+						<p class="title">
+							<strong>
+								두잇 인증이 안되요!두잇 인증이 안되요!
+							</strong>
+							<span>2020. 02. 02</span>
+						</p>
+					</li>-->
+				</ul>
+			</div>
+		</article>
+
+		<!--<article class="search_result">
+			<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/notice_empty_img.png" alt="검색 결과 없음">
+			<p>공지사항이 없어요</p>
+		</article>-->
+
+	</div>
+</section>
+<script>
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	getList();
+
+	function getList()
+	{
+		const url = api.noticeList;
+		const errMsg = `공지사항 목록을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getListCallback, errMsg)
+	}
+
+	function getListCallback(data)
+	{
+		isSuccessResp(data) ? buildList(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildList(data)
+	{
+		let listEl = '';
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			document.getElementById('contentWrap').classList.remove('search_result');
+
+			listEl += '<div class="inner"><ul class="notice-list">';
+			data.data.list.map(obj => {
+				const {idx, title, created} = obj;
+				listEl +=
+					`<li>
+						<a href="/webview/v3.0/notice/detail/${idx}"></a>
+						<p class="title">
+							<strong>
+								${title}
+							</strong>
+							<span>${created}</span>
+						</p>
+					</li>`
+			})
+			listEl += '</ul></div>';
+		}
+		else
+		{
+			document.getElementById('contentWrap').classList.add('search_result');
+			listEl = `<img src="${noticeNoContent}" alt="검색 결과 없음"><p>공지사항이 없어요</p>`;
+		}
+
+		document.getElementById('contentWrap').innerHTML = listEl;
+	}
+</script>

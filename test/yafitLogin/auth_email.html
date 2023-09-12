@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>야핏 이메일 인증</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<section class="auth-page">
+	<div class="top-title-col">
+		<h2>이메일 주소를<br>인증해 주세요</h2>
+	</div>
+	<div id="request" class="request-auth request-auth-email">
+		<!--아메일주소, 인증번호 에러시 해당 .input-item 에 .error -->
+		<div class="input-item error">
+			<label>이메일 주소</label>
+			<div class="input-line-wrap">
+				<input type="email" placeholder="이메일 주소를 입력해주세요."/>
+			</div>
+			<span class="error-message">이메일 주소를 정확하게 입력해주세요.</span>
+			<span id="counter"></span>
+		</div>
+		<button type="button" id="send" class="btn btn-primary-outline-round">인증번호 보내기</button>
+		<!--button type="button" id="resend" class="btn btn-primary-outline-round">인증번호 다시 보내기</button-->
+	</div>
+	<div id="response" class="response-auth">
+
+		<div class="input-item">
+			<label>인증 번호</label>
+			<div class="input-line-wrap">
+				<input type="tel" maxlength="4" id="verify-code" placeholder="인증번호 4자리" />
+			</div>
+		</div>
+	</div>
+	<div class="bottom-btn-wrap fixed">
+		<button type="button" class="btn btn-primary" id="confirm" value="다음">다음</button>
+	</div>
+
+	<div style="display: none;">
+		Authorization Code : <p id="authorization_code"></p>
+	</div>
+	<!-- 토스트 메세지 -->
+	<div id="toastBar">인증번호가 일치하지 않습니다.</div>
+</section>
+</body>
+
+<script>
+	//토스트 메세지
+	function loadToastBar(msg)
+	{
+		const toastBar = document.querySelector("#toastBar");
+		toastBar.textContent = msg;
+		toastBar.className = "show";
+		setTimeout(function() { toastBar.className = toastBar.className.replace("show", ""); }, 1500);
+	}
+</script>
+
+</html>

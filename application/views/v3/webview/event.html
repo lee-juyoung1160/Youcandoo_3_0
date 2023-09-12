@@ -1,0 +1,302 @@
+<link rel="stylesheet" href="/assets/v3/css/app_event.css?resource_version=<?=$resource_version?>">
+<section class="event list">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>이벤트</p>
+	</header>
+	<div class="page-wrap">
+		<article id="contentWrap">
+			<div class="inner">
+				<div class="btn-wrap" id="btnWrap">
+					<div class="inner">
+						<button type="button" class="active">이벤트</button>
+						<button type="button">결과발표</button>
+					</div>
+				</div>
+				<div class="content-wrap" id="listWrap">
+
+					<!--<div class="event-box">
+						<a href="/webview/v3.0/event/detail/2">자세히보기</a>
+						<div class="banner-wrap">
+							<img src="" alt="">
+							<span class="icon-arrow"><i class="on"></i> 진행중</span>
+						</div>
+						<div class="title-wrap">
+							<p class="title">두잇 플레져 2기, 열정 멤버 주인공 절찬 모집안내 이벤트</p>
+							<span class="date">2020.02.02 ~ 2020.03.03</span>
+						</div>
+					</div>
+
+					<div class="event-box">
+						<a href="#">자세히보기</a>
+						<div class="banner-wrap">
+							<img src="" alt="">
+							<span class="icon-arrow"><i></i> 종료</span>
+						</div>
+						<div class="title-wrap">
+							<p class="title">두잇 플레져 2기, 열정 멤버 주인공 절찬 모집안내 이벤트</p>
+							<span class="date">2020.02.02 ~ 2020.03.03</span>
+						</div>
+					</div>
+
+					<div class="event-box">
+						<a href="#">자세히보기</a>
+						<div class="banner-wrap">
+							<img src="" alt="">
+							<span class="icon-arrow"><i></i> 종료</span>
+						</div>
+						<div class="title-wrap">
+							<p class="title">두잇 플레져 2기, 열정 멤버 주인공 절찬 모집안내 이벤트</p>
+							<span class="date">2020.02.02 ~ 2020.03.03</span>
+						</div>
+					</div>
+
+					<div class="event-box">
+						<a href="#">자세히보기</a>
+						<div class="banner-wrap">
+							<img src="" alt="">
+						</div>
+						<div class="title-wrap">
+							<p class="title"><strong>[결과발표] </strong>이벤트 결과발표 두둥</p>
+							<span class="date">2020.02.02 ~ 2020.03.03</span>
+						</div>
+					</div>-->
+
+				</div>
+
+<!--				<button id="btnPastEvent" type="button" class="btn-more" style="display: none;"><span>지난 이벤트 더보기 ></span></button>-->
+
+			</div>
+		</article>
+
+		<!--<article class="search_result" id="emptyResult" style="display: none;">
+			<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/event_img_empty.png" alt="검색 결과 없음">
+			<p>이벤트를 준비 중이에요</p>
+		</article>-->
+
+<!--		<div class="modal-wrap">-->
+<!--&lt;!&ndash;			 종료된 이벤트 알럿 &ndash;&gt;-->
+<!--			<div class="modal-content confirm-alert" id="modalClosedEvent">-->
+<!--				<div class="modal-body">종료된 이벤트입니다.</div>-->
+<!--				<div class="modal-footer"><button type="button" id="btnOk">확인</button></div>-->
+<!--			</div>-->
+<!--			<div class="modal-bg" id="modalBackDrop"></div>-->
+<!--		</div>-->
+
+	</div>
+</section>
+<script>
+	isBackAction() ? setActiveTabFromSessionStorage() : getInProgress();
+
+	document.querySelectorAll('#btnWrap button').forEach(element => element.addEventListener('click', function () { onClickTab(this); }));
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	const contentWrap = document.getElementById('contentWrap');
+	const listWrap = document.getElementById('listWrap');
+
+	function setActiveTabFromSessionStorage()
+	{
+		const tabIdx = isEmpty(sessionStorage.getItem("tab_idx")) ? 0 : Number(sessionStorage.getItem("tab_idx"));
+		document.querySelectorAll('#btnWrap button').forEach((element, index) => {
+			if (Number(tabIdx) === index) onClickTab(element);
+		})
+	}
+
+	function onClickTab(obj)
+	{
+		document.querySelectorAll('#btnWrap button').forEach(element => element.classList.remove('active'));
+		obj.classList.add('active');
+		document.querySelectorAll('#btnWrap button').forEach((element, index) => {
+			if (element.classList.contains('active'))
+				sessionStorage.setItem("tab_idx", index.toString());
+		});
+
+		switch (obj.textContent) {
+			case '이벤트' :
+				getInProgress();
+				break;
+			case '결과발표' :
+				getAnnouncements();
+				break;
+		}
+	}
+
+	function getInProgress()
+	{
+		const url = api.eventList;
+		const errMsg = `이벤트 목록을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getInProgressCallback, errMsg);
+	}
+
+	function getInProgressCallback(data)
+	{
+		if (isSuccessResp(data))
+		{
+			buildInProgress(data);
+			getClosedListCount();
+		}
+		else
+			alert(getErrorMessage(data.status));
+	}
+
+	function buildInProgress(data)
+	{
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			contentWrap.classList.remove('search_result');
+			listWrap.innerHTML = '';
+			data.data.list.map(obj => {
+				const {idx, event_type, status, title, thumbnail_image_url, link_url, start_date, end_date} = obj;
+				const detailUrl = event_type === '링크' ? link_url : `/webview/v3.0/event/detail/${idx}`;
+				const listEl =
+					`<a href="${detailUrl}">자세히보기</a>
+							<div class="banner-wrap">
+								<img src="${thumbnail_image_url}" alt="">
+								<span class="icon-arrow"><i class="on"></i> ${status}</span>
+							</div>
+							<div class="title-wrap">
+								<p class="title">${title}</p>
+								<span class="date">${start_date} ~ ${end_date}</span>
+							</div>`
+
+				const eventBox = document.createElement("div");
+				eventBox.classList.add('event-box');
+				eventBox.innerHTML = listEl;
+				listWrap.appendChild(eventBox);
+			})
+		}
+		else
+		{
+			listWrap.innerHTML = `<img src="${eventNoContent}" alt="검색 결과 없음"><p>이벤트를 준비 중이에요</p>`;
+			contentWrap.classList.add('search_result');
+		}
+
+		onErrorImage();
+	}
+
+	function getClosedList()
+	{
+		const url = api.endEventList;
+		const errMsg = `지난 이벤트 목록을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getClosedListCallback, errMsg);
+	}
+
+	function getClosedListCallback(data)
+	{
+		isSuccessResp(data) ? buildPastList(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildPastList(data)
+	{
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			if (contentWrap.classList.contains('search_result'))
+			{
+				contentWrap.classList.remove('search_result');
+				listWrap.innerHTML = '';
+			}
+
+			if (!isEmpty(listWrap.nextElementSibling)) listWrap.nextElementSibling.remove();
+
+			data.data.list.map(obj => {
+				const {status, title, thumbnail_image_url, start_date, end_date} = obj;
+				const listEl =
+					`<a onclick="onClickClosedEvent();"></a>
+							<div class="banner-wrap end">
+								<img src="${thumbnail_image_url}" alt="">
+								<span class="icon-arrow"><i></i> ${status}</span>
+							</div>
+							<div class="title-wrap">
+								<p class="title">${title}</p>
+								<span class="date">${start_date} ~ ${end_date}</span>
+							</div>`
+				const eventBox = document.createElement("div");
+				eventBox.classList.add('event-box');
+				eventBox.innerHTML = listEl;
+				listWrap.append(eventBox);
+			})
+		}
+	}
+
+	function getAnnouncements()
+	{
+		const url = api.announcementList;
+		const errMsg = `결과발표 목록을 ${message.loadError}`
+
+		XMLHttpRequestWithJson(url, null, getAnnouncementsCallback, errMsg);
+	}
+
+	function getAnnouncementsCallback(data)
+	{
+		isSuccessResp(data) ? buildAnnouncements(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildAnnouncements(data)
+	{
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			contentWrap.classList.remove('search_result');
+			listWrap.innerHTML = '';
+			data.data.list.map(obj => {
+				const {idx, title, thumbnail_image_url, created} = obj;
+				const listEl =
+					`<a href="/webview/v3.0/event/detail/${idx}">자세히보기</a>
+							<div class="banner-wrap">
+								<img src="${thumbnail_image_url}" alt="">
+							</div>
+							<div class="title-wrap">
+								<p class="title"><strong>[결과발표] </strong>${title}</p>
+								<span class="date">${created.substring(0, 10)}</span>
+							</div>`
+				const eventBox = document.createElement("div");
+				eventBox.classList.add('event-box');
+				eventBox.innerHTML = listEl;
+				listWrap.appendChild(eventBox);
+			})
+		}
+		else
+		{
+			listWrap.innerHTML = `<img src="${eventNoContent}" alt="검색 결과 없음"><p>이벤트를 준비 중이에요</p>`;
+			contentWrap.classList.add('search_result');
+		}
+
+		if (!isEmpty(listWrap.nextElementSibling)) listWrap.nextElementSibling.remove();
+
+		onErrorImage();
+	}
+
+	function getClosedListCount()
+	{
+		const url = api.endEventList;
+		const errMsg = `지난 이벤트 목록을 ${message.loadError}`
+
+		XMLHttpRequestWithJson(url, null, getClosedListCountCallback, errMsg);
+	}
+
+	function getClosedListCountCallback(data)
+	{
+
+		isSuccessResp(data) ? setCloseListCount(data) : alert(getErrorMessage(data.status));
+	}
+
+	function setCloseListCount(data)
+	{
+		if (!isEmpty(listWrap.nextElementSibling)) listWrap.nextElementSibling.remove();
+
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			const button = document.createElement("button");
+			button.classList.add('btn-more');
+			button.setAttribute('type', 'button');
+			button.innerHTML = '<span>지난 이벤트 보기 ></span>';
+			button.addEventListener('click', getClosedList);
+			listWrap.parentNode.insertBefore(button, listWrap.nextSibling);
+		}
+	}
+
+	function onClickClosedEvent()
+	{
+		alert('종료된 이벤트 입니다.')
+	}
+</script>

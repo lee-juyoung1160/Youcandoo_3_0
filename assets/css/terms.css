@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* terms common */
+.terms {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #404040;
+}
+.terms article {
+    padding: 2% 0 0 0;
+}
+.terms article .inner {
+    padding-bottom: 2%;
+    text-align: left;
+    border-bottom: 1px solid rgba(113, 113, 113, 0.18);
+}
+.terms article:last-child .inner {
+    border-bottom: 0;
+}
+.terms .main-wrapper {
+    padding: 3% 0 0 0;
+    padding-top: 100px;
+}
+.terms article .main-title {
+    font-size: 1.5rem;
+}
+.terms a {
+    font-family: "AppleSDGothicNeoM", "sans-serif";
+    color: #4664FA;
+    border-bottom: 1px solid #4664FA;
+}
+.terms .main-wrapper .main-title {
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #4664FA;
+}
+.terms .sub-title {
+    font-family: "AppleSDGothicNeoM", "sans-serif";
+    margin-bottom: 2%;
+    font-size: 1.1rem;
+}
+.terms ol li {
+    margin-bottom: 1%;
+}
+.terms ol li .wrap {
+    float: left;
+    width: 96%;
+}
+.terms ol li p.num {
+    float: left;
+    width: 4%;
+}
+.terms ol li .inner-list {
+    margin: 2% 0;
+}
+.terms .contents {
+    margin-top: 2%;
+    padding: 2%;
+    border: 2px solid rgba(113, 113, 113, 0.18);
+}
+.terms .contents .title {
+    padding-bottom: 1%;
+    border-bottom: 1px solid rgba(113, 113, 113, 0.18);
+}
+.terms .main-wrapper .contents-wrap ol {
+    float: left;
+    width: 50%;
+    margin-top: 1%;
+}
+.terms .main-wrapper .contents-wrap ol p.num {
+    width: 12%;
+}
+.terms .main-wrapper .contents-wrap ol .wrap {
+    width: 85%;
+}
+.terms .contents-wrap ol .text {
+    margin: 2% 0;
+}
+.terms article ul .title,
+.terms article ul .list {
+    margin-bottom: 1%;
+}
+.terms article ul .title {
+    font-family: "AppleSDGothicNeoM", "sans-serif";
+}
+.terms strong{
+    position: relative;
+    margin-left: 20px;
+}
+.terms strong::before {
+    content: "-";
+    display: inline-block;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+table {
+    width: 100%;
+    table-layout: fixed;
+}

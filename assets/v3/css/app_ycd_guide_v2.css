@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/** youcandoo-guide v2 **/
+@media screen and (max-width: 213.33vw) {
+
+	@keyframes fadein {
+		from {
+			opacity:0;
+		}
+		to {
+			opacity:1;
+		}
+	}
+	@-moz-keyframes fadein { /* Firefox */
+		from {
+			opacity:0;
+		}
+		to {
+			opacity:1;
+		}
+	}
+	@-webkit-keyframes fadein { /* Safari and Chrome */
+		from {
+			opacity:0;
+		}
+		to {
+			opacity:1;
+		}
+	}
+	@-o-keyframes fadein { /* Opera */
+		from {
+			opacity:0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+
+	.doit-guide {
+		overflow: hidden;
+		width: 100vw;
+	}
+	.doit-guide article {
+		width: 100vw;
+		margin-bottom: 0;
+	}
+	
+	.doit-guide h5 {
+		font-family: "NanumSquareOTFExtraBold","sans-serif";
+		font-size: 5.56vw;
+		text-align: center;
+		line-height: 8vw;
+	}
+	.doit-guide h5 strong {
+		color: #5C62FF;
+	}
+	.doit-guide h5 strong.point-text {
+		padding-bottom: 4px;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gui_point_text.png);
+		background-position: 0 100%;
+		background-size: 100% 11px;
+		background-repeat: no-repeat;
+	}
+	.doit-guide .page-wrap p {
+		padding: 6.94vw 0 9.17vw;
+		color: #5D5D5D;
+		font-size: 4.17vw;
+		line-height: 6.39vw;
+		text-align: center;
+	}
+	.doit-guide .page-wrap p em {
+		display: block;
+		padding-bottom: 3.89vw;
+	}
+	.doit-guide p > .point-text {
+		padding-bottom: 1px;
+		font-family: "NanumSquareOTFBold","sans-serif";
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gui_point_text.png);
+		background-position: 0 100%;
+		background-size: 100% 7px;
+		background-repeat: no-repeat;
+	}
+	.doit-guide p > .bold_text {
+		font-family: "NanumSquareOTFBold","sans-serif";
+	}
+	.doit-guide p > .small-text {
+		display: block;
+		padding: 8px 0 15px;
+		color: #808080;
+		font-size: 13.5px;
+	}
+	.doit-guide .top-img {
+		display: block;
+		width: 65.83vw;
+		height: 53.33vw;
+		margin: 0 auto;
+		padding: 0 0 11.67vw;
+	}
+	.doit-guide button {
+		display: block;
+		width: 91.67vw;
+		height: 12.78vw;
+		margin: 0 auto;
+	}
+
+	/* start, end */
+	.page-start, .page-end {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		height: calc(100vh - 13.89vw);
+	}
+	.page-end {
+		display: none;
+	}
+	.page-end.active {
+		display: flex;
+		animation: fadein 2s;
+		-moz-animation: fadein 2s; /* Firefox */
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-o-animation: fadein 2s; /* Opera */
+	}
+
+	/* 가이드 탭 */
+	.page-guide {
+		display: none;
+		transition: .3s .6s;
+	}
+	.page-guide.active {
+		display: block;
+		animation: fadein 2s;
+		-moz-animation: fadein 2s; /* Firefox */
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-o-animation: fadein 2s; /* Opera */
+	}
+	.page-guide nav {
+		position: fixed;
+		top: 13.89vw;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+	}
+	.page-guide .swiper-container-nav {
+		padding: 0 4.44vw;
+		background-color: #fff;
+		border-top: 0.28vw solid #E2E8ED;
+		border-bottom: 0.28vw solid #E2E8ED;
+		z-index: 1000;
+	}
+	.page-guide .tabs > li {
+		display: inline-block;
+	}
+	.page-guide .tabs > li > a {
+		display: block;
+		padding: 4.44vw 0 3.61vw;
+		color: #989898;
+		font-size: 4.17vw;
+		font-family: "NanumSquareOTFBold","sans-serif";
+		text-align: center;
+	}
+	.page-guide .tabs > li.active > a {
+		font-family: "NanumSquareOTFBold","sans-serif";
+		color: #6267EA;
+		border-bottom: 0.83vw solid #6267EA;
+	}
+
+	/* 가이드 슬라이드 */
+	.swiper-container-page {
+		margin-top: 27.78vw;
+		padding-bottom: 10.00vw;
+	}
+	.page-guide .title-wrap {
+		text-align: center;
+	}
+	.page-guide .title-num {
+		display: inline-block;
+		position: relative;
+		padding: 11.67vw 0 5.83vw;
+		color: #989898;
+		font-family: "NanumSquareOTFBold","sans-serif";
+		font-size: 5.00vw;
+		text-align: center;
+	}
+	.page-guide .title-num:after {
+		position: absolute;
+		left: 0;
+		bottom: 4.17vw;
+		width: 100%;
+		height: 0.83vw;
+		background-color: #D1D1D1;
+		content: '';
+	}
+
+
+	/* 스와이프 : 이미지 슬라이드 */
+	.page-guide .contents-box {
+		overflow: hidden;
+		width: 83.33vw;
+		margin: 0 auto;
+		justify-content: center;
+	}
+	.page-guide .img-wrap {
+		verflow: hidden;
+		position: relative;
+		width: 83.33vw;
+		height: 76.39vw;
+		margin-top: 11.11vw;
+		background-color: #E4E4E4;
+		border-radius: 4.17vw;
+	}
+	.page-guide .img-wrap img {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.page-guide .img-wrap .img-container {
+		width: 60.56vw;
+		height: 81.94vw;
+		margin: 0 auto;
+		transform: translateY(-5.56vw);
+	}
+
+	.contents-box .swiper-slide {
+		position: relative;
+		opacity: 0 !important;
+	}
+	.contents-box .swiper-container-img .swiper-slide.swiper-slide-active {
+		opacity: 1 !important;
+	}
+	.contents-box .img-wrap .swiper-pagination {
+		position: absolute;
+		right: 3.06vw;
+		bottom: 5.00vw;
+		text-align: right;
+	}
+	.contents-box .img-wrap .swiper-pagination-bullet {
+		width: 1.67vw;
+		height: 1.67vw;
+		margin-right: 1.94vw;
+		background-color: #A9A9A9;
+	}
+	.contents-box .img-wrap .swiper-pagination-bullet:last-child {
+		margin-right: 0;
+	}
+
+	.contents-box .img-wrap .swiper-pagination-bullet-active {
+		background-color: #6A7BFC;
+	}
+
+
+}
+

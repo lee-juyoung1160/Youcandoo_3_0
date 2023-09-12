@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* 탑버튼 */
+.top-btn {
+	display: none;
+	cursor: pointer;
+	width: 41px;
+	height: 41px;
+	z-index: 30;
+	position: fixed;
+	right: 3vh;
+	bottom: 3vh;
+	opacity: 0.1;
+}
+.top-btn.active {
+	display: block;
+}
+/* event css */
+.event {
+    background-color: #fdfdfd;
+}
+.event h4 {
+    display: none;
+}
+.event .main-wrapper  {
+    height: 40%;
+    background-color: #30A4F8;
+}
+/* event css */
+.event .main-wrapper .inner {
+    padding: 100px 0 0 0;
+}
+.event .main-wrapper .main-title {
+    color: #ffffff;
+    text-align: center;
+}
+.event .tab-btn {
+    text-align: center;
+    padding-top: 4%;
+}
+.event .tab-btn li {
+    cursor: pointer;
+    width: 32%;
+    height: 60px;
+    font-size: 1.2rem;
+    line-height: 60px;
+    color: #ffffff;
+    border-radius: 3px 3px 0 0;
+    display: inline-block;
+    font-family: 'AppleSDGothicNeoL','sans-serif';
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-property: color, background-color;
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -o-transition-property: color, background-color;
+}
+.event .tab-btn li:hover {
+    font-family: 'AppleSDGothicNeoM','sans-serif';
+    border-bottom: 8px solid rgba(255, 255, 255, 0.36);
+    transition: 0.3s ease-out;
+}
+.event .tab-btn li.active {
+    color: #30A4F8;
+    background-color: #fdfdfd;
+    font-family: 'AppleSDGothicNeoM','sans-serif';
+}
+.event .tab-btn li.active:hover {
+    border-bottom: 0;
+}
+.event .tab-list .title {
+    width: 73%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+.event .tab-list {
+    width: 100%;
+    margin-top: 2%;
+}
+.event .tab-list a {
+    display: block;
+}
+.event .tab-list li {
+    cursor: pointer;
+    float: left;
+    width: 48%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 20px;
+    box-shadow: 0px 3px 20px 4px rgba(0, 0, 0, 0.05);
+}
+.event .tab-list li:nth-child(2n) {
+    margin-right: 0;
+}
+.event .tab-list li:last-child {
+    margin-right: 0;
+	margin-bottom: 0;
+}
+.event .tab-list li img {
+    width: 656px;
+    height: auto;
+}
+.event .tab-list li .text-wrap {
+    padding: 25px;
+    font-size: 1.1rem;
+    font-family: 'AppleSDGothicNeoB','sans-serif';
+}
+.event .tab-list li .text-wrap .date {
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: 'AppleSDGothicNeoL','sans-serif';
+}
+.event .tab-list li .title-wrap {
+    line-height: 23px;
+}
+.event .tab-list li .text-wrap .state {
+    float: left;
+    margin-right: 10px;
+    color: #30A4F8;
+    font-family: "AppleSDGothicNeoB",'sans-serif';
+}
+.event .more-btn {
+	cursor: pointer;
+	color: #989898;
+	padding: 3vh 0 1vh 0;
+	font-family: 'AppleSDGothicNeoM','sans-serif';
+}
+/* mobile device */
+@media only screen and (max-width:600px) {
+    .event .tab-btn li:hover {border-bottom:0;}
+    .event .tab-list li {float: none; width: 100%; margin-right:0;}
+    .event .tab-btn li {height: 40px; line-height: 40px;}
+    .event .tab-list li .text-wrap {font-size: 1.3rem; padding: 20px 12px;}
+    .event .main-wrapper .inner {padding: 50px 0 0 0;}
+    .event .tab-list li .text-wrap .date {margin-top: 9px; font-size: 1.2rem;}
+}

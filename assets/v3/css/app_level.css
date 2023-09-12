@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/** level guide **/
+@media screen and (max-width: 768px) {
+
+	.level header {
+		border-bottom: none;
+	}
+	.level .user-level {
+		display: none;
+		width: 100%;
+		padding: 10.00vw 0 12.22vw;
+		text-align: center;
+		background-color: #F8F9FF;
+	}
+	.level .user-level.active {
+		display: block;
+	}
+	.level .user-level img {
+		display: block;
+		width: 69.44vw;
+		height: 48.33vw;
+		margin: 0 auto;
+	}
+	.level .user-level h3 {
+		padding: 3vw 0 5vw;
+		color: #000;
+		font-size: 6.67vw;
+		font-weight: 600;
+		text-align: center;
+		line-height: 1em;
+	}
+	.level .user-level h3 span {
+		display: block;
+		color: #4C5264;
+		font-size: 4.17vw;
+		font-weight: 300;
+	}
+	.level .user-level p {
+		color: #8D8D8D;
+		font-size: 3.89vw;
+		line-height: 1.7em;
+	}
+	.level .user-level p strong {
+		color: #6267EA;
+		font-weight: 300;
+	}
+	.level .level-list {
+		padding: 2.78vw 0 16.67vw;
+	}
+	.level .level-list li {
+		display: flex;
+		align-items: center;
+		padding: 7.22vw 0 8.06vw;
+		border-bottom: 1px solid #F5F5F5;
+	}
+	.level .level-list li:last-child {
+		border-bottom: none;
+	}
+	.level .level-list li img {
+		width: 21.11vw;
+		height: 20.83vw;
+		margin-right: 5.56vw
+	}
+	.level .level-list li .info dl {
+		display: flex;
+		width: 64.22vw;
+		font-size: 3.61vw;
+	}
+	.level .level-list li .info dl:nth-child(2) {
+		margin: 2.22vw 0;
+	}
+	.level .level-list li .info dl dt {
+		width: 55%;
+		color: #8D8D8D;
+		margin-right: auto;
+	}
+	.level .level-list li .info dl dd {
+		width: 45%;
+		margin-left: auto;
+		color: #000000;
+		font-weight: 600;
+		text-align: right;
+	}
+	.level .level-list li .info dl dd.bonus {
+		color: #6267EA;
+		font-weight: 300;
+	}
+
+	bottom-manual .inner {
+		padding: 8.33vw 4.44vw 14vw;
+	}
+	.level .bottom-manual h5 {
+		font-size: 3.61vw;
+	}
+	.level .bottom-manual ul li {
+		display: flex;
+		margin-bottom: 4.17vw;
+		font-size: 3.33vw;
+		line-height: 1.7em;
+	}
+
+
+}

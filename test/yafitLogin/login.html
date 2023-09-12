@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>야핏 로그인</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/login.css" />
+	<!--  JSON Viewer  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.7.4/jsoneditor.min.js" integrity="sha512-KQaWlVsZF0iPXCR8p176hVrg/rlw+smy8dpJ+vwiuvoHyGr8PTVvaAV4ZmsAYdCvMRP8e3sB9pl1mRuaunaXrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.7.4/jsoneditor.min.css" integrity="sha512-LDaPaKECzpambd6J0xPGx2s/z8EA1rAm3JzmoMgKO0VTRbXHTeE54oDLRw26eFiyBZ3Cf888tBEHzeUTYA3ddw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<section class="login-page">
+	<h1 class="top-title-col">
+		<img src="img/yafit_logo.png" alt="">
+	</h1>
+	<div class="sns-login-wrap">
+		<button type="button" id="btn-google-login" class="google-login"><img src="img/icon_google.png" alt="구글"> 구글 로그인</button>
+		<button type="button" id="btn-apple-login" class="apple-login"><img src="img/icon_apple.png" alt="구글"> 애플 로그인</button>
+		<button type="button" id="btn-kakao-login" class="kakao-login"><img src="img/icon_kakao.svg" alt="카카오"> 카카오 로그인</button>
+	</div>
+	<div style="display: none;">
+		<p>service_code : <span>aa</span></p>
+		<p>redirect_uri : <span>111</span></p>
+	</div>
+</section>
+</body>
+<script type="text/javascript">
+	/*<![CDATA[*/
+	window.onload = function(e){
+		sessionStorage.setItem("service_code", "aa");
+		sessionStorage.setItem("redirect_uri", "111");
+	}
+
+	// const editor1 = new JSONEditor(document.getElementById("jsoneditor1"), {});
+	// let jsonString = "";
+
+	// if(jsonString !== ""){
+	//     jsonString = JSON.parse("".replace(/&quot;/g, '"'));
+	//     editor1.set(jsonString);
+	// }
+
+	document.querySelector("#btn-apple-login").addEventListener("click", (e)=> {
+		location.href = "/login/apple";
+	});
+
+	document.querySelector("#btn-kakao-login").addEventListener("click", (e)=> {
+		location.href = "/login/kakao";
+	});
+
+	document.querySelector("#btn-google-login").addEventListener("click", (e)=> {
+		location.href = "/login/google";
+	});
+
+	/*]]>*/
+</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html> 
+<head>
+
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		// 마켓 주소 세팅을 미리 해두었습니다. a=안드로이드, i=iOS
+		var market_a = "market://details?id=~~~~~~~~~~~";
+		var market_i = "itms-apps://apps.apple.com/KR/app/id1496745851?ls=1&mt=8";
+		 
+		var currentOS;
+		var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+		 
+		if (mobile) {
+			// 유저에이전트를 불러와서 OS를 구분합니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (userAgent.search("android") > -1)
+				currentOS = "android";
+			else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1)
+						|| (userAgent.search("ipad") > -1))
+				currentOS = "ios";
+			else
+				currentOS = "else";
+		} else {
+			// 모바일이 아닐 때
+			currentOS = "nomobile";
+		}
+			 
+		 
+		 
+		// 바로재생, 다운로드 버튼 클릭
+		function checkAppInstall() {
+			// 앱에 설정해놓은 커스텀 스킴. 여기선 "customScheme"
+			var url = "youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123";
+			 
+			if(currentOS == "android") {
+				// 안드로이드는 미리 만들어둔 iframe에 
+				var invisible_div = document.getElementById("invisible_div");
+				invisible_div.innerHTML = "<iframe src=" + url + " onload=\"goMarket()\"></iframe>";
+			} else if(currentOS == "ios") {
+				setTimeout( function() {
+					goMarket();
+				}, 1000);
+		 
+				location.href = url;
+			} else {
+				alert("안드로이드와 아이폰에서만 사용 가능");
+			}
+		 
+			return false;
+		}
+		 
+		// 마켓 이동
+		function goMarket() {
+			if(currentOS == "android") {
+				location.href=market_a;
+			} else if(currentOS == "ios") {
+				location.href=market_i;
+			} else {
+				/* 기타 OS일 때 */
+			}
+		}
+	</script>
+	<style>
+		.big { font-size : 5em; }
+	</style>
+</head>
+
+<body>
+	<button class="big" onclick="return checkAppInstall()">확인</button><br>
+ 
+	<!-- display 속성을 두어 숨어있는 div를 미리 만들어 놓습니다. 이 div에 iframe이 생성됩니다. -->
+	<div id="invisible_div" style="display:none;"></div>
+</body>  
+</html>

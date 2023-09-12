@@ -1,0 +1,234 @@
+
+<section class="board-list inquiry-create only-m">
+	<div class="container">
+		<div class="page-wrap no-title">
+			<ol id="olTab" class="inquiry-tab clearfix">
+				<li class="on" data-target="#inquiry" id="tabInquiry">문의하기</li>
+				<li data-target="#inquiries" id="tabList">문의내역</li>
+			</ol>
+
+			<!------------s: 1:1문의 ------------>
+			<article id="inquiry" class="contents" style="display: block;">
+				<div class="top-qna">
+					<div class="inner">
+						<p>자주 찾는 질문을 확인해보세요.</p>
+						<div class="go-faq clearfix">
+							<span>
+								이용안내,회원정보,<br>두잇인증/개설,UCD등
+							</span>
+							<button id="btnFaq" type="button" class="btn-go-faq">FAQ 바로 가기</button>
+						</div>
+					</div>
+				</div>
+				<div class="item member-item">
+					<strong class="title">닉네임<i>*</i></strong>
+					<div class="input-wrap">
+						<input type="text" id="nickname" placeholder="닉네임을 입력해주세요." readonly>
+					</div>
+				</div>
+				<div class="item guest-item">
+					<strong class="title">이름<i>*</i></strong>
+					<div class="input-wrap">
+						<input type="text" id="username" placeholder="이름을 입력해주세요.">
+					</div>
+				</div>
+				<div class="item guest-item">
+					<strong class="title">이메일<i>*</i></strong>
+					<div class="input-wrap">
+						<input type="email" id="email" placeholder="이메일을 입력해주세요.">
+					</div>
+				</div>
+				<div class="item guest-item">
+					<strong class="title">비밀번호<i>*</i></strong>
+					<div class="input-wrap password">
+						<input type="password" id="passwd" placeholder="비밀번호 입력">
+						<div class="eyes" id="btnViewPass">
+							<i class="fa-eye-slash"></i>
+						</div>
+					</div>
+					<span class="message">* 8자리 이상 영문, 숫자, 특수 문자로 입력해주세요.</span>
+				</div>
+				<div class="item">
+					<strong class="title">문의유형<i>*</i></strong>
+					<div class="select-box">
+						<select id="selInquiryType">
+							<option value="" disabled selected hidden>문의유형을 선택해주세요.</option>
+							<option value="회원정보">회원정보</option>
+							<option value="이용안내">이용안내</option>
+							<option value="두잇참여/개설">두잇참여/개설</option>
+							<option value="UCD">UCD</option>
+							<option value="오류/불편사항">오류/불편사항</option>
+							<option value="프로모션/이벤트">프로모션/이벤트</option>
+							<option value="제휴">제휴</option>
+							<option value="기타">기타</option>
+						</select>
+					</div>
+				</div>
+				<div class="item">
+					<strong class="title">제목<i>*</i></strong>
+					<div class="input-wrap">
+						<input type="text" id="title" placeholder="제목을 입력해주세요." maxlength="50">
+						<span class="input-length">0/50</span>
+					</div>
+				</div>
+				<div class="item">
+					<strong class="title">문의 내용<i>*</i></strong>
+					<div class="input-wrap">
+						<textarea id="content" class="text-content" cols="30" rows="10" placeholder="내용을 입력해주세요." maxlength="500"></textarea>
+						<span class="input-length">0/500</span>
+					</div>
+				</div>
+				<div class="item">
+					<strong class="title">이미지 첨부</strong>
+					<div class="clearfix">
+						<div class="file-wrap">
+							<label for="input-file1" class="btn-input-file"></label>
+							<input type="file" id="input-file1" name="attachment" accept="image/png, image/jpeg">
+							<i class="icon-delete-attach"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon_delete_file.png?resource_version=<?=$resource_version?>" alt="첨부파일 삭제"></i>
+						</div>
+						<div class="file-wrap">
+							<label for="input-file2" class="btn-input-file"></label>
+							<input type="file" id="input-file2" name="attachment" accept="image/png, image/jpeg">
+							<i class="icon-delete-attach"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon_delete_file.png?resource_version=<?=$resource_version?>" alt="첨부파일 삭제"></i>
+						</div>
+						<div class="file-wrap">
+							<label for="input-file3" class="btn-input-file"></label>
+							<input type="file" id="input-file3" name="attachment" accept="image/png, image/jpeg">
+							<i class="icon-delete-attach"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon_delete_file.png?resource_version=<?=$resource_version?>" alt="첨부파일 삭제"></i>
+						</div>
+					</div>
+					<span class="message">* 이미지 파일(jpg, png)을 기준으로 이미지 당 10MB이하, 최대 3개까지 등록이 가능해요.</span>
+				</div>
+				<div class="item member-item">
+					<div class="input-wrap email">
+						<input id="chkReplyMail" name="ch1" type="checkbox">
+						<label for="chkReplyMail"><span></span><em>이메일 답변 받기</em></label>
+						<input type="email" id="replyMail" placeholder="답변 받을 이메일 주소를 입력해주세요." disabled>
+					</div>
+				</div>
+				<div class="item guest-item">
+					<div class="input-wrap">
+						<input id="chkAgreeTerms" name="ch1" type="checkbox">
+						<label for="chkAgreeTerms"><span></span></label>
+						<button id="btnTerms" type="button" class="open-pop">개인정보 수집 및 이용동의</button>
+					</div>
+				</div>
+				<div class="done-btn-wrap">
+					<button id="btnSubmit">문의하기</button>
+				</div>
+			</article>
+			<!------------e: 1:1문의 ------------>
+
+			<!------------s: 문의내역 ------------>
+			<article id="inquiries" class="inquiries" style="display:none;">
+				<div id="listContent">
+					<!--s: 회원일경우-->
+					<!--<div class="board-list contents">
+						<ul class="inquiry-board">
+							<li>
+								<a href="#">more</a>
+								<div>
+									<p>
+										<span class="board-tit">
+											기프티콘은 언제 발송하나용???대체 휴우우
+											<img class="icon_clip" src="/assets/images/icon_clip.png" alt="첨부파일">
+										</span>
+										<span class="date">2020-11-26</span>
+									</p>
+									<button type="button" disabled>답변대기</button>
+								</div>
+							</li>
+							<li>
+								<a href="#">more</a>
+								<div class="clear_fix">
+									<p>
+										<span class="board-tit">
+											기프티콘은 언제 발송하나용???대체 기프티콘은 언제 발송하나용???대체
+											<img class="icon_clip" src="/assets/images/icon_clip.png" alt="첨부파일">
+										</span>
+										<span class="date">2020-11-26</span>
+									</p>
+									<button type="button">답변완료</button>
+								</div>
+							</li>
+						</ul>
+					</div>-->
+					<!--e: 회원일경우-->
+
+					<!--s: 비회원일경우-->
+					<!--<div class="contents">
+						<p class="top-text-wrap">
+							비회원인 경우 1:1문의 작성 시,<br>입력하신 이메일과 비밀번호로 조회가 가능해요.
+						</p>
+						<div class="item">
+							<div class="input-wrap">
+								<input type="email" placeholder="이메일을 입력해주세요">
+							</div>
+						</div>
+						<div class="item">
+							<div class="input-wrap">
+								<input type="password" placeholder="비밀번호를 입력해주세요">
+							</div>
+						</div>
+						<div class="done-btn-wrap">
+							<button type="button">조회 </button>
+						</div>
+					</div>-->
+					<!--e: 비회원일경우-->
+
+					<!--s: 문의내역 없을 경우-->
+					<!--<div class="no_inquiry">
+						<img src="/assets/images/icon_no_inquiry.png" alt="">
+						<p>문의내역이 없어요</p>
+					</div>-->
+					<!--e: 문의내역 없을 경우-->
+				</div>
+			</article>
+			<!------------e: 문의내역 ------------>
+		</div>
+	</div>
+
+	<div id="modalTerms" class="overlay-modal" style="display: none;">
+		<div class="modal-container">
+			<strong class="modal-tit">개인정보 수집 및 이용 동의 안내</strong>
+			<p>
+				유캔두는 이용자님께서 문의한 내용을 통해 서비스 이용 및 소비자 불만, 제휴상담을 처리하고자 최소한의 범위 내 에서 아래와 같이 개인정보를 수집, 이용합니다.
+			</p>
+			<div class="gary-box">
+				<dl class="clearfix">
+					<dt>수집이용 목적</dt>
+					<dd>문의하기</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>수집 항목</dt>
+					<dd>이름, 이메일, 비밀번호</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>수집이용 목적</dt>
+					<dd>전자상거래 등에서의 소비자<br> 보호에 관한 법률에 따라 3년</dd>
+				</dl>
+			</div>
+
+		</div>
+		<div class="modal-btn-wrap clearfix">
+			<button id="btnTermsOk">확인</button>
+		</div>
+	</div>
+	<div id="modalBackDrop"></div>
+
+	<div id="modalSuccess" class="overlay-modal" style="display: none;">
+		<div class="modal-container">
+			<div class="txt">
+				1:1문의가 정상적으로 등록되었어요.<br>빠른 시일 내에 답변 드릴게요.
+			</div>
+		</div>
+		<div class="modal-btn-wrap clearfix">
+			<button id="btnSuccessOk">확인</button>
+		</div>
+	</div>
+
+</section>
+<script defer src="https://service.yanadoocdn.com/youcandoo/assets/js/core-min.js"></script>
+<script defer src="https://service.yanadoocdn.com/youcandoo/assets/js/x64-core-min.js"></script>
+<script defer src="https://service.yanadoocdn.com/youcandoo/assets/js/sha512-min.js"></script>
+<script defer src="/assets/js/webview/inquiry.js?resource_version=<?=$resource_version?>"></script>

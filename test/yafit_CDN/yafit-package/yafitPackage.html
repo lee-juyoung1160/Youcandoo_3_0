@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>야핏</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="favicon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+	<link rel="shortcut icon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico" />
+	<link rel="apple-touch-icon-precomposed" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="야핏사이클 패키지"/>
+    <meta property="og:site_name" content="야핏"/>
+    <meta property="og:description" content="취향대로, 원하는 기간대로 FIT하게 고르는 패키지"/>
+    <meta property="og:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg">
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="야핏사이클 패키지">
+    <meta name="twitter:description" content="취향대로, 원하는 기간대로 FIT하게 고르는 패키지">
+    <meta name="twitter:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg">
+    <meta name="nate:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg">
+    <meta name="naver-site-verification" content="dcf4d5cf8e610163fe7bbc07a29e21f98c503792"/>
+    <link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/reset_1.css" />
+    <link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/yafitModal.css" />
+    <link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/common.css?v=1.6" />
+    <link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/promotion.css?v=1.1" />
+    <link rel="stylesheet" href="https://yafit.yanadoocdn.com/yanadoo/library/swiper.min.css">
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/beusable.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/channel.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/env.js" ></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/common.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/comm.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/headscript.js"></script>
+    <script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/swiper-bundle.min.js"></script>
+</head>
+<style>
+    /*common style*/
+    .pc {display: block !important;}
+    .mobile {display: none !important;}
+    .packagelist__contents.pc {display: flex !important;}
+    .packagelist__contents.mobile {display: none !important;}
+    .packagelist {min-height: 0 !important; letter-spacing: -0.38px !important;}
+    article {width: 100%;}
+    .inner {width: 53%; max-width: 1060px; height: auto; margin: 0 auto; position: relative;}
+    .article-title { font-family: "NotoSansKR", "sans-serif";  font-weight: 600;}
+    .article-subtext {font-family: "NotoSansKR", "sans-serif";  font-weight: 300;}
+    .inter_font { font-family: "Inter", "sans-serif";  font-weight: 600;}
+    .swiper-pagination-bullet-active {background-color: #FFFFFF !important; opacity: 1 !important;}
+    .swiper-pagination-bullet {opacity: 0.19; background-color: #FFFFFF;}
+
+    /*메인 배너 영역 style*/
+    .packagelist__mainbanner {padding: 5.4% 0 4% 0; background-color: #5757E2; background-image: url("https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/main_banner_back.png"); background-position: center; background-repeat: no-repeat; background-size: cover;}
+    .packagelist__contents {display: flex; justify-content: space-between; align-items: center; }
+    .packagelist__contents__text p {display: inline-block; padding: 1.2% 0; color: #95FAEE; font-family: "NotoSansKR", "sans-serif";  font-weight: 600; font-size: 1.8rem; border-top: 1px solid #95FAEE;  border-bottom: 1px solid #95FAEE; }
+    .packagelist__contents__text .article-title {margin-top: 3.5%; font-size: 5rem; line-height: 1.3; color: #FFFFFF;}
+    .packagelist__contents__text .more-btn {margin-top: 12%; width: 40%; max-width: 178px;}
+    .packagelist__contents__img {width: 45%; max-width: 528px;}
+
+    /*메인 배너 영역(new) style*/
+    .main-banner {width: 100%;background-color: #999;}
+    .main-banner ul li {position: relative; }
+    .main-banner ul li a {position: absolute; left: 0; top:0; width: 100%; height: 100%; text-indent: -9999px;}
+
+    /*패키지 한 눈에 보기 영역 style*/
+    .packagelist__tab {padding: 6% 0 6.8% 0;}
+    .packagelist__tab .article-title {text-align: center; font-size: 4rem; margin-bottom: 0.6%;}
+    .packagelist__tab .article-subtext {text-align: center; font-size: 2.3rem;color: #888888;}
+    .packagelist__tab__btn {display: flex; justify-content: center; margin-top: 5.5%; margin-bottom: 3.4%}
+    .packagelist__tab__btn li {cursor: pointer; margin-right: 1.3%; font-size: 1.9rem; padding:1% 2%; border-radius: 100px; background-color: #FFFFFF; border: 1px solid #888888; color: #888888;font-family: "NotoSansKR", "sans-serif";}
+    .packagelist__tab__btn li:last-child {margin-right: 0;}
+    .packagelist__tab__btn li.active { color: #FFFFFF; background-color: #02CC66; font-weight: 400; border: 1px solid #02CC66;}
+    .packagelist__tab__contents.active {display: block;}
+    .packagelist__tab__contents {display: none;}
+    .packagelist__tab__contents > ul {display: flex; flex-wrap: wrap; margin-top: 3.4%;}
+    .packagelist__tab__contents > ul > li { width: 22.4%; max-width: 330px; margin-right: 3.4%;}
+    .packagelist__tab__contents > ul > li:nth-child(4n) {margin-right: 0;}
+    .packagelist__tab__contents .img-wrap {position: relative;}
+    .packagelist__tab__contents .caption .caption__best {background-color: #6070B1;}
+    .packagelist__tab__contents .caption .caption__popularity {background-color: rgba(235, 88, 88, .9);}
+    .packagelist__tab__contents .caption .caption__specialprice {background-color: rgba(157, 85, 255, .9);}
+    .packagelist__tab__contents .caption {position: absolute; top: 5%; left: 6%; z-index: 2; display: flex; align-items: flex-start;  flex-wrap: wrap; align-content: flex-start; width: 88%; height: 90%;}
+    .packagelist__tab__contents .caption li {margin-right: 2%; margin-bottom: 2%; padding: 2.1% 6% 1.3% 6%; border-radius: 30px; color: #FFFFFF; font-size: 1.6rem; font-family: "NotoSansKR", "sans-serif"; font-weight: 700; background-color: #02CC66;}
+    .packagelist__tab__contents .caption li:last-child {margin-right: 0;}
+    .packagelist__tab .text-wrap {margin-top: 6.8%;}
+    .packagelist__tab .text-wrap h4 {margin-bottom: 2.8%; font-family: "NotoSansKR", "sans-serif"; font-weight: 600; font-size: 2.1rem; }
+    .packagelist__tab .text-wrap p {color: #9E9E9E;font-family: "NotoSansKR", "sans-serif"; font-weight: 300; font-size: 1.6rem; line-height: 1.4;}
+	.packagelist__tab .text-wrap p strong {display: block; color: #02CC66;}
+
+    .packagelist__promotion {position: relative; width: 100%; height: 420px;}
+    .packagelist__promotion .title-wrap {width: 100%; height: 80%; margin: 0 auto; padding-top: 80px; background-color: #02CC66;}
+    .packagelist__promotion .title-wrap img {display: block; width: 384px; margin: 0 auto;}
+    .packagelist__promotion .title-wrap .dday-timer {display: flex; color: #F3FF63; padding-top: 8px; justify-content: center; align-items: center; font-size: 1.8rem; letter-spacing: 0;}
+    .packagelist__promotion .title-wrap .dday-timer strong {margin-right: 16px; font-weight: 600;}
+    .promotion-banner {position: absolute; bottom: -85px; left: 50%; width: 100%; transform: translateX(-50%); -web-transform: translateX(-50%);}
+
+    /*홈트VOD 무료 영역 style*/
+    .packagelist__vodslider {padding: 7.2% 0% 7.8% 0; background-color: #1B212A; color: #FFFFFF;}
+    .packagelist__vodslider .article-title {text-align: center; font-size: 4.8rem; line-height: 1.3; margin-bottom: 4.4%;}
+    .packagelist__vodslider .article-title strong {color:  #02CC66;}
+    .packagelist__vodslider__swiper {padding-bottom: 6%; position: relative;}
+    .packagelist__vodslider__gif {width: 14vw; position: absolute;z-index: 5;top: 32%;left: 50%;transform: translate(-50%, -50%);}
+    .packagelist__vodslider__swiper .swiper-slide {display: flex; flex-direction: column; opacity: 0.8; transform: scale(0.9);}
+    .packagelist__vodslider__swiper .swiper-slide.swiper-slide-active {opacity: 1; transform: scale(1);}
+    .packagelist__vodslider__swiper p {width: inherit; color: #FFFFFF; font-family: "NotoSansKR", "sans-serif"; font-weight: 600; font-size: 2rem; margin-top: 3.6%; text-align: left;}
+
+    /*야핏 소개 영역*/
+    .packagelist__about {background-color: #2A5CDD;}
+    .packagelist__about a {display: block; width: 100%; height: 100%;}
+    .packagelist__about img {display: block; margin: 0 auto;}
+
+    /*야핏 가이드 영역*/
+    .packagelist__guide {padding: 9% 0 11% 0;}
+    .packagelist__guide__btn {display: flex;  justify-content: center; align-items: center; }
+    .packagelist__guide__btn li {cursor: pointer; position: relative; width: 43%; max-width: 500px; height: 90px; line-height: 90px; border: 1px solid #707070; text-align: center; font-family: "NotoSansKR", "sans-serif"; font-weight: 400; font-size: 2rem; background-color: #FFFFFF;}
+    .packagelist__guide__btn li img {position: absolute; top: 50%; right: 8%; transform: translateY(-50%); z-index: 1; width: 8%; max-width: 18px;}
+    .packagelist__guide__btn li:first-child{margin-right: 10px;}
+
+    /*pc : pc 디자인*/
+    @media only screen and (max-width:1680px){
+        .inner {width: 75%;}
+    }
+    @media only screen and (max-width:1200px){
+        .inner {width: 85%;}
+    }
+    @media only screen and (max-width:1024px){
+        .packagelist__contents__text p {font-size: 1.5vw;}
+        .packagelist__contents__text .article-title {font-size: 4vw;}
+        .packagelist__tab .article-title {font-size: 3vw;}
+        .packagelist__tab .article-subtext {font-size: 1.7vw;}
+        .packagelist__tab__btn {margin-top: 3.5%; margin-bottom: 5.4%;}
+        .packagelist__tab__btn li {font-size: 1.5vw;}
+        .packagelist__tab .text-wrap h4 {font-size: 1.7vw;}
+        .packagelist__tab .text-wrap p {font-size: 1.4vw;}
+        .packagelist__tab__contents .caption li {font-size: 1.3vw;}
+        .packagelist__vodslider .article-title {font-size:  3.5vw;}
+        .packagelist__vodslider__swiper p {font-size: 1.4vw;}
+        .packagelist__guide__btn li {font-size: 1.7vw;}
+        .packagelist__promotion .title-wrap {height: 70%;}
+        .packagelist__promotion .title-wrap .dday-timer {font-size: 3.8rem;}
+    }
+    /*pad : pc 디자인*/
+    @media only screen and (max-width:768px){
+        .packagelist__contents__text .article-title {font-size: 4.3vw;}
+        .packagelist__tab .article-title {font-size: 3.5vw;}
+        .packagelist__tab .article-subtext {font-size: 2.1vw;}
+        .packagelist__tab__btn li {font-size: 2vw;}
+        .packagelist__tab .text-wrap h4 {font-size: 2.2vw;}
+        .packagelist__tab .text-wrap p {font-size: 1.8vw;}
+        .packagelist__tab .text-wrap p {font-size: 1.7vw;}
+        .packagelist__tab__contents .caption li {font-size: 1.4vw;}
+        .packagelist__vodslider .article-title {font-size: 4vw;}
+        .packagelist__vodslider__gif {width: 25vw; top: 37%;}
+        .packagelist__guide__btn li {font-size: 2vw;}
+        .packagelist__guide__btn li {height: 65px; line-height: 65px;}
+        .packagelist__guide__btn li img {width: 5%;}
+        .packagelist__vodslider__swiper p {font-size: 1.5vw;}
+
+    }
+    /*mobile : mobile 디자인*/
+    @media only screen and (max-width:600px){
+        .inner {width: 90%;}
+        .pc {display: none !important;}
+        .mobile {display: block !important;}
+        .swiper-pagination-bullet {width: 7px; height: 7px;}
+        .packagelist__mainbanner {padding: 12% 0 61% 0; background-image: url("https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/m_main_banner_back.png");}
+        .packagelist__contents.pc {display: none !important;}
+        .packagelist__contents.mobile {display: block !important;}
+        .packagelist__contents.mobile .packagelist__contents__text .more-btn {width: 21vw;}
+        .packagelist__contents__text .article-title {font-size: 8.3vw;}
+        .packagelist__contents__text p {font-size: 3.8vw;}
+        .packagelist__tab .article-title {font-size: 6.5vw;}
+        .packagelist__tab .article-subtext {font-size: 3.8vw;}
+        .packagelist__tab {padding: 17.8% 0 24% 0;}
+        .packagelist__tab__btn {margin-top: 7%; margin-bottom: 9.4%;}
+        .packagelist__tab__btn li {font-size: 3.2vw;  padding: 2% 3.7%;}
+      /*  .packagelist__tab__contents .img-wrap {padding: 14% 7.5% 7% 7.5%;}*/
+        .packagelist__tab__btn {margin-top: 8%; margin-bottom: 10.4%;}
+        .packagelist__tab .text-wrap h4 {font-size: 3.7vw;}
+        .packagelist__tab .text-wrap p {font-size: 2.9vw;}
+        .packagelist__tab .text-wrap {margin-top: 9.8%;}
+        .packagelist__tab__contents > ul > li:nth-child(n+4) {margin-top: 0%;}
+        .packagelist__tab__contents > ul > li:nth-child(n+3) {margin-top: 10.6%;}
+        .packagelist__tab__contents > ul > li {width: 47.6%; margin-right: 0;}
+        .packagelist__tab__contents > ul > li:nth-child(2n+1) {margin-right: 4.7%;}
+        .packagelist__vodslider {padding: 20% 0% 22% 0;}
+        .packagelist__vodslider .article-title {margin-bottom: 9.4%; font-size: 9vw;}
+        .packagelist__vodslider__swiper p {font-size: 3.8vw; margin-top: 5.6%;}
+        .packagelist__vodslider__swiper {padding-bottom: 17%;}
+        .packagelist__vodslider__gif {width: 45vw;top: 34%;}
+        .packagelist__guide__btn li {width: 48%; font-size: 3.5vw; height: 50px; line-height: 50px;}
+        .packagelist__guide__btn li img {width: 7%; right: 11%;}
+        .packagelist__guide {padding: 20% 0 24% 0;}
+        .packagelist__tab__contents .caption li {font-size: 2.7vw;}
+
+        .packagelist__promotion {height: 78.66vw;}
+        .packagelist__promotion .title-wrap {width: 100%; height: 39.06vw; padding-top: 5.73vw;}
+        .packagelist__promotion .title-wrap img {width: 62.50vw;}
+        .packagelist__promotion .title-wrap .dday-timer {font-size: 4.43vw;}
+        .promotion-banner {bottom: -30.96vw;}
+
+
+    }
+    @media only screen and (max-width:300px) {
+        .inner {width: 95%;}
+    }
+</style>
+<body>
+<header></header>
+<main class="packagelist">
+    <!--  modal start   -->
+    <aside data-value="guideModal"  id="guideModal" class="modal">
+        <div class="modal__contents">
+            <div class="modal__header">
+                <div class="modal__inner">
+                    <h1>야핏 사이클 이용 방법</h1>
+                    <img class="close-btn" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modal_close.png" alt="버튼">
+                </div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <div class="modal__selectbox">
+                        <div class="wrap">
+                            <p class="modal__selectbox__label">로비 메뉴 가이드</p>
+                            <img class="modal__selectbox__icon" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modal_arrow.png" alt="버튼">
+                        </div>
+                        <ul class="modal__selectbox__optionList">
+                            <li data-tab="tab-1" class="optionItem">로비 메뉴 가이드</li>
+                            <li data-tab="tab-2" class="optionItem">주간 미션 가이드</li>
+                            <li data-tab="tab-3" class="optionItem">클럽 가이드</li>
+                            <li data-tab="tab-4" class="optionItem">마일리지 캘린더</li>
+                            <li data-tab="tab-5" class="optionItem">마일리지 상점 가이드</li>
+                            <li data-tab="tab-6" class="optionItem">아이템 상점 가이드</li>
+                            <li data-tab="tab-7" class="optionItem">APP 운동 모드 소개</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="modal__selectbox__optionContent">
+                    <li data-tab="tab-1" class="optionContentsItem active"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-1.png" alt="이미지1"></li>
+                    <li data-tab="tab-2" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-2.png" alt="이미지2"></li>
+                    <li data-tab="tab-3" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-3.png" alt="이미지3"></li>
+                    <li data-tab="tab-4" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-4.png" alt="이미지4"></li>
+                    <li data-tab="tab-5" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-5.png" alt="이미지5"></li>
+                    <li data-tab="tab-6" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-6.png" alt="이미지6"></li>
+                    <li data-tab="tab-7" class="optionContentsItem"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/tab-7.png" alt="이미지6"></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <aside data-value="appAddModal"  id="appAddModal"  class="modal">
+        <div class="modal__contents">
+            <div class="modal__header">
+                <div class="modal__inner">
+                    <h1>야핏 사이이클 앱 등록 방법</h1>
+                    <img class="close-btn" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modal_close.png" alt="버튼">
+                </div>
+            </div>
+            <div class="modal__body">
+                <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/appAddModal.png" alt="이미지">
+                <a class="appAddModal__btn" target="_self" href="https://voucher.yafit.co.kr/">애플(iOS) 이용권 등록하기<img class="appAddModalBtn__icon" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/appAddModal_link_icon.png" alt="아이콘"></a>
+            </div>
+        </div>
+    </aside>
+    <aside data-value="mileageModal" id="mileageModal" class="modal">
+        <div class="modal__contents">
+            <div class="modal__header">
+                <div class="modal__inner">
+                    <h1>마일리지 받자!</h1>
+                    <img class="close-btn" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modal_close.png" alt="버튼">
+                </div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/MileageModal.png" alt="이미지">
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside data-value="modeGuideModal"  id="modeGuideModal" class="modal">
+        <div class="modal__contents">
+            <div class="modal__header">
+                <div class="modal__inner">
+                    <h1>야핏 모드 가이드</h1>
+                    <img class="close-btn" src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modal_close.png" alt="버튼">
+                </div>
+            </div>
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <ul class="modal__tab__lists">
+                        <li class="modal__tab__list active" data-tab="tab-1">트레이닝M</li>
+                        <li class="modal__tab__list" data-tab="tab-2">라이딩M</li>
+                        <li class="modal__tab__list" data-tab="tab-3">셀럽M</li>
+                        <li class="modal__tab__list" data-tab="tab-4">레이싱M</li>
+                    </ul>
+                </div>
+                <ul class="modal__tab__contents">
+                    <li data-tab="tab-1" class="modal__tab__content active"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modeGuideModal_1-min.png" alt="이미지1"></li>
+                    <li data-tab="tab-2" class="modal__tab__content"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modeGuideModal_2-min.png" alt="이미지2"></li>
+                    <li data-tab="tab-3" class="modal__tab__content"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modeGuideModal_3-min.png" alt="이미지3"></li>
+                    <li data-tab="tab-4" class="modal__tab__content"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/modal/modeGuideModal_4-min.png" alt="이미지4"></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!--  modal end   -->
+
+
+    <article class="main-banner">
+        <ul>
+            <!--<li>
+                <a href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/cyclePKG.html">more</a>
+                <img src="https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/list/pc_main_banner_1.png" alt="main banner_01" class="pc">
+                <img src="https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/list/mo_main_banner_1.png" alt="main banner_01" class="mobile">
+            </li>-->
+            <li>
+                <a href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/chuseok2209.html">more</a>
+                <img src="https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/list/pc_main_banner_2.png" alt="main banner_02" class="pc">
+                <img src="https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/list/mo_main_banner_2.png" alt="main banner_02" class="mobile">
+            </li>
+        </ul>
+    </article>
+
+    <article class="packagelist__tab">
+        <h1 style="display: none">패키지 한 눈에 보기 영역</h1>
+
+        <h2 class="article-title">패키지 한 눈에 보기</h2>
+        <p class="article-subtext">취향대로, 원하는 기간대로 핏하게!</p>
+        <ul class="packagelist__tab__btn">
+            <li data-tab="tab-1" class="active">전체</li>
+            <li data-tab="tab-2">야핏 사이클로 탈래요</li>
+            <li data-tab="tab-3">이미 사이클이 있어요</li>
+        </ul>
+
+        <div data-tab="tab-1" class="packagelist__tab__contents active">
+
+            <div class="packagelist__promotion">
+                <div class="title-wrap">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/promotion_title.svg" alt="기간 한정 특가">
+                    <div class="dday-timer">
+                        <strong>마감임박</strong>
+                        <span id="dDayTimer"></span>
+                    </div>
+                </div>
+                <div class="inner">
+                    <a href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/chuseok2209.html" class="promotion-banner">
+                        <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/pc_promotion_img.png" alt="pc" class="pc">
+                        <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/m_promotion_img.png" alt="m" class="mobile">
+                    </a>
+                </div>
+
+            </div>
+            <ul class="inner">
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/promotion/yafitAllInOne.html">
+                        <div class="img-wrap">
+                            <ul class="caption">
+                                <li class="caption__popularity">인기</li>
+                            </ul>
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/all_package_thumb_1.png" alt="올인원 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>올인원 패키지</h4>
+                            <p><strong>#야핏사이클 #아이패드 #앱이용권</strong>#마일리지 #홈트VOD #야나두영어<br>#카카오스마트램프</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/cyclePKG.html">
+                        <div class="img-wrap">
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/cycle_package_thum_1.png" alt="사이클 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>사이클 패키지</h4>
+                            <p><strong>#야핏사이클 #앱이용권</strong>#마일리지 #홈트VOD #야나두영어<br>#카카오스마트램프</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/sensorPKG.html">
+                        <div class="img-wrap">
+                            <ul class="caption">
+                                <li class="caption__specialprice">특가</li>
+                            </ul>
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/sensor_package_thumb_1.png" alt="센서 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>센서 패키지</h4>
+                            <p><strong>#가민센서 #앱이용권</strong>#마일리지 #홈트VOD<br>#실내사이클보유자용</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/AppTicket.html">
+                        <div class="img-wrap">
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/app_package_thumb_1.png" alt="앱 이용권 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>앱 이용권</h4>
+                            <p><strong>#기존유저전용</strong> #마일리지 #홈트VOD</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-tab="tab-2" class="packagelist__tab__contents">
+			<div class="packagelist__promotion">
+				<div class="title-wrap">
+					<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/promotion_title.svg" alt="기간 한정 특가">
+					<div class="dday-timer">
+						<strong>마감임박</strong>
+						<span id="dDayTimer1"></span>
+					</div>
+				</div>
+				<div class="inner">
+					<a href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/chuseok2209.html" class="promotion-banner">
+						<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/pc_promotion_img.png" alt="pc" class="pc">
+						<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/m_promotion_img.png" alt="m" class="mobile">
+					</a>
+				</div>
+
+			</div>
+            <ul class="inner">
+                <li>
+                    <!--<a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/allPKG.html">-->
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/promotion/yafitAllInOne.html">
+                        <div class="img-wrap">
+                            <ul class="caption">
+                                <li class="caption__popularity">인기</li>
+                            </ul>
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/all_package_thumb_1.png" alt="올인원 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>올인원 패키지</h4>
+                            <p><strong>#야핏사이클 #아이패드 #앱이용권</strong>#마일리지 #홈트VOD #야나두영어<br>#카카오스마트램프</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/cyclePKG.html">
+                        <div class="img-wrap">
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/cycle_package_thum_1.png" alt="사이클 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>사이클 패키지</h4>
+                            <p><strong>#야핏사이클 #앱이용권</strong>#마일리지 #홈트VOD #야나두영어<br>#카카오스마트램프</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-tab="tab-3" class="packagelist__tab__contents">
+            <ul class="inner">
+                <li>
+                    <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/package/sensorPKG.html">
+                        <div class="img-wrap">
+                            <ul class="caption">
+                                <li class="caption__specialprice">특가</li>
+                            </ul>
+                            <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/sensor_package_thumb_1.png" alt="센서 패키지 썸네일">
+                        </div>
+                        <div class="text-wrap">
+                            <h4>센서 패키지</h4>
+                            <p><strong>#가민센서 #앱이용권</strong>#마일리지 #홈트VOD<br>#실내사이클보유자용</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </article>
+    <article class="packagelist__vodslider">
+        <div class="inner">
+            <h1 style="display: none">홈트VOD 무료 영역</h1>
+            <h2 class="article-title">야핏 사이클 이용하면<br><strong>홈트<span class="inter_font">VOD</span> <span class="inter_font">423</span>강 무료!</strong></h2>
+        </div>
+        <div class="swiper packagelist__vodslider__swiper">
+            <img class="packagelist__vodslider__gif" src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/vodslider_animations.gif" alt="애니메이션">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_01.png" alt="이미지">
+                    <p>직장인 필수 스트레칭</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_02.png" alt="이미지">
+                    <p>형바디 몸매 만들기</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_03.png" alt="이미지">
+                    <p>정의성의 코어 운동</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_04.png" alt="이미지">
+                    <p>필라테스로 몸매 만들기</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_05.png" alt="이미지">
+                    <p>기초 필라테스</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_06.png" alt="이미지">
+                    <p>배드타임 요가 루틴</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_07.png" alt="이미지">
+                    <p>셀프뷰티 in 요가</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_08.png" alt="이미지">
+                    <p>재활 요가</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/slider_09.png" alt="이미지">
+                    <p>나혼자 교정한다</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </article>
+    <article class="packagelist__about">
+        <h1 style="display: none">야핏 소개 영역</h1>
+        <div class="inner">
+            <a target="_self" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/yafitCycle.html"><img class="pc" src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/about.png" alt="이미지"><img class="mobile" src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/m_about.png" alt="이미지"></a>
+        </div>
+    </article>
+    <article class="packagelist__guide">
+        <h1 style="display: none">야핏 가이드 영역</h1>
+        <div class="inner">
+            <ul class="packagelist__guide__btn">
+                <li data-value="appAddModal" class="modalBtns">
+                    <span>앱 등록 방법</span>
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/more_icon.png" alt="아이콘">
+                </li>
+                <li data-value="guideModal" class="modalBtns" id="guideModalButton">
+                    <span>사이클 이용방법</span>
+                    <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/package/list/more_icon.png" alt="아이콘">
+                </li>
+            </ul>
+        </div>
+    </article>
+</main>
+<div data-include-path="https://yafit.yanadoocdn.com/yanadoo/web/layout/footer.html"></div>
+</body>
+<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/yafitModal.js"></script>
+<script>
+    window.addEventListener("load", () => {document.getElementById('adn_closed_wrap_contents').style.display = "none"; });
+    yndModal();
+    // body fixed 때문에 추가 로직
+    window.addEventListener("scroll", function (){
+        if(document.querySelector('body').classList.contains('fixed')) {
+            document.querySelector('.packagelist').style.paddingTop = "8.8rem";
+        }else {
+            document.querySelector('.packagelist').style.paddingTop = "0";
+        }
+    });
+    // 리스트탭 열림/닫힘 핸들링
+    packageListTabHandleOpen();
+    function packageListTabHandleOpen() {
+        const packageListTabBtns = document.querySelectorAll('.packagelist__tab__btn li');
+        const packageListTabContents = document.querySelectorAll('.packagelist__tab__contents');
+
+        for(let i=0; i<packageListTabBtns.length; i++) {
+            packageListTabBtns[i].addEventListener("click", function(e) {
+                let clickEl = e.currentTarget;
+                packageListTabHandleClose(packageListTabBtns, packageListTabContents);
+                clickEl.classList.add('active');
+                let clickElValue = clickEl.getAttribute('data-tab');
+                if(clickElValue === packageListTabContents[i].getAttribute('data-tab') ) {
+                    packageListTabContents[i].classList.add('active');
+                }
+            });
+        }
+    }
+    function packageListTabHandleClose(packageListTabBtns, packageListTabContents) {
+        for(let i=0; i<packageListTabBtns.length; i++) {
+            packageListTabBtns[i].classList.remove("active")
+            packageListTabContents[i].classList.remove("active")
+        }
+    }
+    // 스와이퍼 슬라이드 스크립트
+    const swiper = new Swiper(".packagelist__vodslider__swiper", {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3.6,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2.6,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    countDownTime();
+    // hh:mm:ss:ms timer count down
+    function countDownTime() {
+        const countDownTimer = function (id, date) {
+            const _vDate = new Date(date); // 전달 받은 일자
+            const _second = 1000;
+            const _minute = _second * 60;
+            const _hour = _minute * 60;
+            const _day = _hour * 24;
+            let timer;
+
+            function showRemaining() {
+                const now = new Date();
+                const distDt = _vDate - now;
+
+                const days = Math.floor(distDt / _day);
+                const hours = Math.floor((distDt % _day) / _hour);
+                const minutes = Math.floor((distDt % _hour) / _minute);
+                const seconds = Math.floor((distDt % _minute) / _second);
+                //const milliSecond = Math.floor((distDt % _second) / _milliSecond * 10);
+                if (distDt < 0) {
+                    clearInterval(timer);
+                    document.getElementById(id).textContent = '00:00:00:00';
+                    return;
+                }
+                document.getElementById(id).textContent = leadingZeros(days,1) + '일  ';
+                document.getElementById(id).textContent += leadingZeros(hours,2) + ':';
+                document.getElementById(id).textContent += leadingZeros(minutes,2) + ':';
+                document.getElementById(id).textContent += leadingZeros(seconds,2);
+                //document.getElementById(id).textContent += leadingZeros(milliSecond,2);
+                // 빈자리 0으로 채우기
+                function leadingZeros(n, digits) {
+                    let zero = '';
+                    n = n.toString();
+                    if (n.length < digits) {
+                        for (let i = 0; i < digits - n.length; i++)
+                            zero += '0';
+                    }
+                    return zero + n;
+                }
+            }
+            timer = setInterval(showRemaining, 1000); }
+
+        const dateObj = new Date();
+        dateObj.setDate(dateObj.getDate() + 1);
+
+        countDownTimer('dDayTimer', '09/14/2022 12:00 pm'); // 2022년 9월 14일까지
+		countDownTimer('dDayTimer1', '09/14/2022 12:00 pm'); // 2022년 9월 14일까지
+    }
+</script>
+</html>
+
+
+

@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/assets/v3/css/app_notice.css?resource_version=<?=$resource_version?>">
+<section class="notice detail">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>공지사항</p>
+	</header>
+	<div class="page-wrap">
+		<article>
+			<div class="title-wrap">
+				<div class="inner">
+					<p class="title" id="title"></p>
+					<div class="info">
+						<span class="date" id="created"></span>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="img" id="contentImage">
+					<img src="" alt="">
+				</div>
+				<div class="text-wrap">
+					<div class="inner" id="content">
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</section>
+<input type="hidden" id="idx" value="<?php echo $idx;?>">
+<script>
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	getDetail();
+
+	function getDetail()
+	{
+		const url = api.detailNotice+document.getElementById('idx').value;
+		const errMsg = `상세 내용을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getDetailCallback, errMsg)
+	}
+
+	function getDetailCallback(data)
+	{
+		isSuccessResp(data) ? buildDetail(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildDetail(data)
+	{
+		const {title, contents, created, notice_image_url} = data.data;
+
+		document.getElementById('title').textContent = title;
+		document.getElementById('created').textContent = created;
+		isEmpty(notice_image_url)
+			? document.getElementById('contentImage').remove()
+			: document.querySelector('#contentImage img').setAttribute('src', notice_image_url);
+		document.getElementById('content').textContent = contents;
+
+		onErrorImage();
+	}
+</script>

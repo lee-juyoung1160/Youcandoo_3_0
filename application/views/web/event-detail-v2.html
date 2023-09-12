@@ -1,0 +1,29 @@
+
+<section class="board-detail only-m">
+	<div class="container">
+		<div class="page-wrap no-title">
+			<div class="view-wrap">
+				<div class="title-wrap">
+					<h3 class="board-tit" id="title"></h3>
+					<span class="date" id="eventDate"></span>
+				</div>
+
+				<div class="contents-wrap" id="contents">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-footer">
+		<div class="container">
+			<h4>유의사항</h4>
+			<ul id="eventNotice" style="list-style: none;">
+				<!--<li>프로모션 두잇은 동시에 최대 3개까지만 참여 가능합니다.</li>
+				<li>프로모션 기간이 종료되면 두잇을 개설하실 수 없습니다.</li>
+				<li>프로모션 두잇은 제한 없이 개설 가능합니다.</li>
+				<li>프로모션 예산이 모두 소진된 경우 두잇을 개설하실 수 없습니다.</li>-->
+			</ul>
+		</div>
+	</div>
+</section>
+<input type="hidden" id="idx" value="<?php echo $idx; ?>">
+<script defer src="/assets/js/webview/event-detail.js?resource_version=<?=$resource_version?>"></script>

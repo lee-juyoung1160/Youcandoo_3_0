@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!--	<base href="https://www.yanadoo.co.kr/promotion-landing/" />-->
+	<title>하루 10분 야나두 영어를 평생수강</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/reset.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/common.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/promotion.css" />
+	<link rel="stylesheet" href="https://yafit.yanadoocdn.com/yanadoo/library/swiper.min.css">
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/beusable.js"></script>
+	<script type="text/javascript" src="https://tenping.kr/scripts/cpa/tenping.cpa.V2_Domain.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/channel.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/env.js" ></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/common.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/comm.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/headscript.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/swiper.min.js"></script>
+</head>
+<body>
+<header></header>
+<style>
+
+	.key-point-col.on .key-title{animation:flipInX 1s forwards;}
+	.key-point-col h3{font-size:6rem;}
+	.key-point-col h3 em{display:block; width:17rem; height:5rem; margin:0 auto 3rem; line-height:5rem; font-size:2.2rem; color:#fff; text-align:center; background-color:#3f6358; border-radius:10rem;}
+	.key-point-col h3 + p{margin-top:2rem; font-size:2.6rem;}
+	.key-point-col ul{padding:0 13rem; margin-top:7rem;}
+	.key-point-col ul li{margin:2rem 0; padding:4.3rem 8rem 3.7rem; font-size:2.85rem; text-align:left; letter-spacing:-0.1rem; background-color:#fff; border-radius:1rem;}
+	.key-point-col ul li strong{font-size:3.4rem;}
+	.key-point-col ul li .num{display:inline-block; width:4.8rem; height:4.8rem; margin-right:2.5rem; padding:1.3rem 0; font-weight:700; font-size:2.5rem; color:#fff; background-color:#3f6358; text-align:center; border-radius:50%; box-sizing:border-box;}
+	.key-point-col ul li .import{display:inline;}
+	.key-point-col canvas{position:absolute; top:0; left:0; width:100%; height:100%;}
+	@keyframes flipInX{
+		0%{transform:perspective(400px) rotateX(90deg); opacity:0;}
+		50%{transform:perspective(400px) rotateX(0);}
+		70%{transform:perspective(400px) rotateX(10deg);}
+		100%{transform:perspective(400px) rotateX(0deg); opacity:1;}
+	}
+
+
+</style>
+<!-- BEGIN CONTENT -->
+<section class="landing" >
+
+
+
+	<button type="button" class="button">좋아용<span class="clickedCountText"></span></button>
+
+
+</section>
+
+<script src="https://www.yanadoo.co.kr/promotion-landing/common/js/confetti.browser.min.js"></script>
+<script>
+
+
+
+	class LikeCounter {
+		constructor() {
+			// 버튼 클릭 횟수
+			this.clickedCount = 0;
+
+			const button = document.querySelector('.button');
+			const clickedCountText = document.querySelector('.clickedCountText');
+
+			// 화살표 함수로 이벤트 리스너 정의
+			button.addEventListener('click', () => {
+				this.clickedCount += 1;
+				clickedCountText.textContent = this.clickedCount;
+			});
+		}
+	}
+
+	new LikeCounter();
+</script>
+
+</body>
+</html>

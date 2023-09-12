@@ -1,0 +1,1555 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'NotoSansCJKkr';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Light.woff2)
+      format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Light.woff)
+      format('woff'),
+    url(https://english.yanadoocdn.com/upload/yanadoo/fonts/NotoSansCJKkr-Light.otf)
+      format('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: 'NotoSansCJKkr';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Regular.woff2)
+      format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Regular.woff)
+      format('woff'),
+    url(https://english.yanadoocdn.com/upload/yanadoo/fonts/NotoSansCJKkr-Regular.otf)
+      format('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: 'NotoSansCJKkr';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Medium.woff2)
+      format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Medium.woff)
+      format('woff'),
+    url(https://english.yanadoocdn.com/upload/yanadoo/fonts/NotoSansCJKkr-Medium.otf)
+      format('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: 'NotoSansCJKkr';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Bold.woff2)
+      format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Bold.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/yanadoo/fonts/NotoSansCJKkr-Bold.otf)
+      format('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: 'NotoSansCJKkr';
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Black.woff2)
+      format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/notoSans/NotoSansCJKkr-Black.woff)
+      format('woff'),
+    url(https://english.yanadoocdn.com/upload/yanadoo/fonts/NotoSansCJKkr-Black.otf) format
+      ('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Light.woff2) format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Light.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Light.otf) format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Regular.woff2) format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Regular.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Regular.otf) format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Medium.woff2) format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Medium.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Medium.otf) format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Bold.woff2) format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Bold.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-Bold.otf) format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-ExtraBold.woff2) format('woff2'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-ExtraBold.woff) format('woff'),
+    url(https://english.yanadoocdn.com/upload/fonts/inter/Inter-ExtraBold.otf) format('opentype');
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+/* common css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: normal normal 10px/1.2 'Inter', 'NotoSansCJKkr', sans-serif;
+}
+
+button,
+input,
+select,
+table,
+pre,
+textarea {
+  font-family: 'Inter', 'NotoSansCJKkr', sans-serif;
+}
+
+body.fixed #root {
+  padding-top: 8.8rem;
+}
+
+header + div > h2 {
+  display: none;
+}
+
+main {
+  position: relative;
+  min-height: 80vh;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::placeholder {
+  color: #000;
+}
+
+input:-ms-input-placeholder {
+  color: #000;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ellipsis.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+}
+
+.fixed header {
+  position: fixed;
+  top: 0;
+  z-index: 15;
+}
+
+.inner-col {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  background-color: #fff;
+}
+
+/* ico */
+span[class^='ico'],
+i[class^='ico'] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  box-sizing: border-box;
+}
+
+.nav-global span[class^='ico'] {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.ico-user {
+  background-image: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_user_100x100.png);
+}
+
+.ico-cart {
+  position: relative;
+  background-image: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_cart_100x100.png);
+}
+
+.ico-cart em {
+  display: inline-block;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.3rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.5rem;
+  font-size: 8.4px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ff5647;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  line-height: 15.8px;
+  text-align: center;
+}
+
+.ico-search {
+  display: inline-block;
+  width: 4.2rem;
+  height: 4.2rem;
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_search_100x100.png)
+    no-repeat 50% 50%/100%;
+}
+
+.ico-mark {
+  display: inline-block;
+  position: relative;
+  margin-left: 2.5rem;
+  padding: 0 0.8rem 0 0.3rem;
+  height: 2.6rem;
+  color: #fff;
+  background: #3b3b4d;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  line-height: 2.6rem;
+  vertical-align: middle;
+}
+.ico-mark:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.35rem;
+  width: 0;
+  height: 0;
+  border-bottom: 1.39rem solid #3b3b4d;
+  border-left: 1.39rem solid transparent;
+}
+.ico-mark:after {
+  content: '';
+  position: absolute;
+  top: 1.25rem;
+  left: -1.35rem;
+  width: 0;
+  height: 0;
+  border-top: 1.39rem solid #3b3b4d;
+  border-left: 1.39rem solid transparent;
+}
+
+.ico-member {
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 2.2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.ico-member:before {
+  content: 'M';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-right: 0.7rem;
+  padding: 0 0.4rem;
+  color: #fded52;
+  background-color: #000;
+  font-weight: 400;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+/* button */
+.btn-flex-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.btn-flex-form button,
+.btn-flex-form a {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+  width: auto;
+}
+.btn-flex-form button span,
+.btn-flex-form a span {
+  font-weight: 400;
+}
+.btn-flex-form button + button,
+.btn-flex-form button + a,
+.btn-flex-form a + button,
+.btn-flex-form a + a {
+  margin-left: 1.5rem;
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+  padding: 2.2rem 1rem 1.9rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #000;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  border-style: solid;
+  border-color: #cfcfda;
+  text-align: center;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.btn.positive {
+  color: #fff;
+  border-color: #3b3b4d;
+  background-color: #3b3b4d;
+}
+
+.btn.disabled {
+  color: #fff;
+  border-color: #cfcfda;
+  background-color: #cfcfda;
+}
+
+.btn.active {
+  border-color: #fded52;
+  background-color: #fded52;
+}
+
+.btn span {
+  position: relative;
+}
+
+.btn .call {
+  display: inline-block;
+  width: 2rem;
+  margin: 0 1rem 0 0;
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_call_141x142.png)
+    no-repeat 0 0 / contain;
+  line-height: 1;
+  text-indent: -99999px;
+}
+
+/* no content */
+.no-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.no-content .ico {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin-bottom: 1rem;
+}
+.no-content .title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #000;
+}
+.no-content .desc {
+  margin: 1rem 0 0;
+  font-size: 1.6rem;
+  color: #a0a0b6;
+}
+
+/* header */
+header {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 8.8rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e7e7f0;
+  transition: all 0.3s;
+}
+header.remove {
+  top: -8.9rem;
+}
+header .logo {
+  display: block;
+  width: 7.7rem;
+  height: 2.1rem;
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/img_logo_154x42.png)
+    no-repeat 0 0/100%;
+}
+header .inner-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 8.8rem;
+  margin: 0 auto;
+}
+header .nav-group {
+  flex: 1 1 auto;
+}
+header .nav-group h1 {
+  flex: 0 0 8rem;
+  margin-right: 1rem;
+}
+header .nav-group button {
+  display: none;
+}
+header .nav-item {
+  display: flex;
+  align-items: center;
+}
+header .nav-global {
+  flex: 0 1 14rem;
+  text-align: right;
+}
+header .nav-global a,
+header .nav-global button {
+  display: inline-block;
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+header .nav-group:hover:after {
+  content: '';
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 38.5rem;
+  background: #fff;
+  border-top: 0.1rem solid #ececf6;
+  border-bottom: 0.1rem solid #ececf6;
+  visibility: visible;
+  opacity: 1;
+  z-index: 9;
+}
+header .nav-group:hover nav ul ul {
+  display: block;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  padding: 0 0 0 3rem;
+  box-sizing: border-box;
+}
+nav ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+nav ul:hover {
+  display: block;
+}
+nav li li {
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: left;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+nav li li:first-child {
+  padding-top: 3rem;
+}
+nav li li a {
+  line-height: 1;
+}
+nav li li a.active {
+  font-weight: 700;
+}
+nav li li.new a::after {
+  content: 'N';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0 0 0.3rem;
+  padding: 3px 1.5px 0 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #ff5647;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+nav li > ul {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+}
+nav li.active > a {
+  font-weight: 700;
+}
+nav li.active > a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #000;
+  transform: translateX(0%);
+}
+nav a {
+  display: block;
+}
+nav a:hover {
+  font-weight: 700;
+}
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+  padding-right: 6rem;
+  box-sizing: border-box;
+}
+nav > ul > li > a {
+  display: block;
+  position: relative;
+  height: auto;
+  padding: 3.45rem 0;
+  text-align: left;
+}
+nav > ul > li.yafit > a::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 3.2rem;
+  height: 1.8rem;
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_yafit_96x54.png)
+    no-repeat left top/3.2rem auto;
+}
+
+.header-prev {
+  display: none;
+}
+
+/* footer */
+footer {
+  border-top: 1px solid #cfcfda;
+}
+footer .inner-col {
+  padding: 6.9rem 3rem 7.8rem;
+}
+footer .footer-logo {
+  position: absolute;
+  top: 6.9rem;
+  left: 3rem;
+}
+footer .footer-logo a {
+  display: inline-block;
+  width: 10.2rem;
+  height: 2.7rem;
+}
+footer .footer-logo a img {
+  width: 100%;
+}
+footer .footer-nav-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+footer .footer-nav-menu dl dd {
+  margin-top: 3.1rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+footer .footer-nav-menu dl + dl {
+  margin-left: 15rem;
+}
+footer .footer-nav-menu dl dt {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+footer .footer-nav-menu dd + dd {
+  margin-top: 3.3rem;
+}
+footer .footer-info strong {
+  display: none;
+}
+footer .footer-info .tel {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+footer .footer-info span {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #a0a0b6;
+}
+footer .footer-info,
+footer .footer-info span + span {
+  margin-top: 0.8rem;
+}
+footer .footer-utility {
+  margin-top: 6.8rem;
+}
+footer .footer-utility a {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #333;
+}
+footer .footer-utility a span {
+	color: #ff5647;
+}
+footer .footer-utility a + a {
+  margin-left: 0.5rem;
+}
+footer .footer-utility a + a:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #333;
+  border-radius: 50%;
+}
+footer address {
+  margin-top: 1.6rem;
+}
+footer address p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  color: #a0a0b6;
+  line-height: 1.5;
+}
+footer #footerSelect {
+  position: absolute;
+  right: 3rem;
+  top: 33.5rem;
+  width: 21.9rem;
+  padding: 1.1rem 1.5rem 0.9rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+  border: 1px solid #e7e7f0;
+  border-radius: 0;
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_check_36x21.png) 91%
+    50%/1.2rem auto no-repeat;
+}
+footer .footer-link-area {
+  position: absolute;
+  top: 42.4rem;
+  right: 3rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: start;
+}
+footer .footer-link-area a {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+footer .footer-link-area a img {
+  width: 100%;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -ms-optimize-contrast;
+}
+footer .footer-link-area a + a {
+  margin-left: 1.1rem;
+}
+footer .footer-link-area .link-lists + .link-lists {
+  margin-left: 3rem;
+}
+footer .confirm-list-box h2 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+footer .confirm-list-box ul li {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+footer .confirm-list-box ul li::before {
+  content: '-';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+
+.material-counter button {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #a0a0b6;
+  border: 1px solid #a0a0b6;
+  border-radius: 50%;
+}
+.material-counter span {
+  display: inline-block;
+  width: 3.6rem;
+  color: #3b3b4d;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 5px;
+  }
+
+  body {
+    min-width: 360px;
+  }
+
+  .fixed body {
+    overflow: hidden;
+  }
+
+  .inner-col {
+    padding: 0;
+  }
+
+  body.fixed #root {
+    padding-top: 10.8rem;
+  }
+
+  /* no content */
+  .no-content .ico {
+    width: 14rem;
+    height: 14rem;
+    margin-bottom: 1.3rem;
+  }
+  .no-content .title {
+    font-size: 3.5rem;
+  }
+
+  /* ico */
+  .nav-global span[class^='ico'] {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .ico-cart em {
+    right: -0.2rem;
+    bottom: 0;
+    min-width: 2.3rem;
+    height: 2.3rem;
+    padding: 0 0.7rem;
+    font-size: 1.4rem;
+    line-height: 12.5px;
+    border-radius: 1.2rem;
+  }
+
+  .ico-hamburger {
+    width: inherit;
+    height: inherit;
+    background-image: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_hamburger_100x100.png);
+  }
+
+  /* header */
+  header {
+    height: 10.8rem;
+  }
+  header:hover:after {
+    content: '';
+    display: none;
+  }
+  header.remove {
+    top: -10.8rem;
+  }
+  header.line-none {
+    border-bottom: 1px solid #fff;
+  }
+  header .inner-col {
+    width: 100%;
+    height: inherit;
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+  header .logo {
+    width: 11.2rem;
+    height: 3rem;
+  }
+  header .nav-group {
+    flex: 0 0 50%;
+  }
+  header .nav-group button {
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin: auto 4.5rem auto 3.2rem;
+  }
+  header .nav-group:hover::after {
+    display: none;
+  }
+  header .nav-global {
+    flex: 0 0 50%;
+  }
+  header .nav-global a,
+  header .nav-global button {
+    width: 5rem;
+    height: 5rem;
+    align-self: flex-end;
+  }
+  header .nav-global a:last-child {
+    margin-right: 2rem;
+  }
+  header nav {
+    display: none;
+  }
+  header nav li {
+    margin: 0;
+  }
+  header nav li:last-child {
+    border: 0;
+  }
+  header nav li a {
+    height: inherit;
+  }
+  header nav li ul > li {
+    display: none;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  header nav li ul > li:first-child {
+    padding-top: 2rem;
+  }
+  header nav li.active ul {
+    display: block;
+    position: static;
+    left: unset;
+    transform: unset;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 7rem;
+    border: 0;
+    box-sizing: border-box;
+    background: #f7f7fc;
+  }
+  header nav li.active li {
+    display: block;
+  }
+  header nav li.active li.new a::after {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0 0 0 1rem;
+    font-size: 1.8rem;
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  header nav li.active > a {
+    font-weight: 700;
+  }
+  header nav li.active > a:after {
+    transform: rotate(180deg) translateY(50%);
+    border: unset;
+    left: unset;
+  }
+  header nav > ul > li {
+    padding-right: 0;
+  }
+  header nav > ul > li:last-child {
+    border: 0;
+  }
+  header nav > ul > li > a {
+    padding: 3.5rem 6rem;
+    font-size: 3.2rem;
+  }
+  header nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 4rem;
+    width: 5rem;
+    height: 5rem;
+    background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_arrow_50x50g.png)
+      no-repeat 0 0/100%;
+    transform: rotate(0deg) translateY(-50%);
+  }
+  header.active-mobile nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    padding: 16rem 0 8rem;
+    font-size: 3rem;
+    background-color: #fff;
+    border-right: 1px solid #e7e7f0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    z-index: 4;
+  }
+  header.active-mobile nav .logo {
+    position: absolute;
+    top: 7rem;
+    left: 4rem;
+    width: 14rem;
+    height: 4rem;
+  }
+  header.active-mobile nav > ul > li {
+    display: block;
+    width: 100%;
+  }
+  header.active-mobile nav > ul > li a {
+    text-align: left;
+  }
+  header.active-mobile nav > ul > li.yafit > a::before {
+    top: 0.5rem;
+    left: 5rem;
+    width: 5rem;
+    height: 2.8rem;
+    background-size: 5rem auto;
+  }
+  header.active-mobile nav .btn-join-group {
+    margin: 5rem 0 0;
+    padding: 0 4.2rem;
+  }
+  header.active-mobile nav .btn-join-group button {
+    display: block;
+    width: 100%;
+    height: 9.6rem;
+    margin: 0 0 1.7rem;
+  }
+  header.active-mobile nav .btn-app-download {
+    margin: 16.5rem 0 0;
+    padding: 0 4.2rem 0;
+  }
+  header.active-mobile nav .btn-app-download .title {
+    display: block;
+    margin: 0 0 2.5rem;
+  }
+  header.active-mobile nav .btn-app-download button {
+    width: 10rem;
+    height: 10rem;
+  }
+  header.active-mobile .nav-close {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    z-index: 3;
+  }
+  header.active-mobile .nav-close span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 7rem;
+    height: 7rem;
+    background: #000
+      url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_close_201x201.png) no-repeat
+      right center/100%;
+  }
+
+  .nav-close {
+    display: none;
+  }
+
+  .header-prev {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    top: -10.8rem;
+    left: 0;
+    width: calc(100% - 20rem);
+    height: 10.6rem;
+    background-color: #fff;
+    z-index: 21;
+  }
+  .header-prev button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 11rem;
+    height: 100%;
+    margin: auto;
+    text-indent: -9999rem;
+  }
+  .header-prev button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 4rem;
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_btn_back_100x100b.png)
+      no-repeat 50% 50%/100% auto;
+  }
+  .header-prev button + strong {
+    margin-left: 12rem;
+  }
+  .header-prev strong {
+    display: inline-block;
+    flex: 1;
+    padding-top: 0.2rem;
+    margin-left: 4rem;
+    font-weight: 400;
+    font-size: 3.1rem;
+    line-height: 1;
+    color: #000;
+  }
+
+  .fixed .header-prev {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  /* button */
+  .btn-flex-form .btn + .btn {
+    margin-left: 1.8rem;
+  }
+
+  .btn {
+    padding: 3.3rem 1rem 3.1rem;
+    font-size: 2.7rem;
+  }
+
+  /* footer */
+  footer .inner-col {
+    padding: 8rem 4.2rem;
+  }
+  footer .footer-logo {
+    top: 8rem;
+    right: 4.2rem;
+    left: auto;
+  }
+  footer .footer-nav-menu {
+    display: block;
+  }
+  footer .footer-nav-menu dl + dl {
+    margin-top: 8rem;
+    margin-left: 0;
+  }
+  footer .footer-nav-menu dl dt {
+    font-size: 2.6rem;
+  }
+  footer .footer-nav-menu dl dd {
+    margin-top: 4rem;
+    font-size: 2.2rem;
+  }
+  footer .footer-nav-menu dl dd + dd {
+    margin-top: 4rem;
+  }
+  footer .footer-info {
+    margin-top: 8rem;
+  }
+  footer .footer-info strong {
+    display: block;
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+  footer .footer-info .tel {
+    margin-top: 2rem;
+    font-size: 4rem;
+    color: #1f1f1f;
+  }
+  footer .footer-info span {
+    margin-top: 1.8rem;
+    font-weight: 400;
+    font-size: 2.2rem;
+  }
+  footer .footer-info span + span {
+    margin-top: 1rem;
+  }
+  footer .footer-link-area {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: start;
+    margin-top: 8rem;
+  }
+  footer .footer-link-area a {
+    width: 7rem;
+    height: 7rem;
+  }
+  footer .footer-link-area a + a {
+    margin-left: 1.5rem;
+  }
+  footer .footer-link-area .link-lists + .link-lists {
+    margin-left: 5rem;
+  }
+  footer #footerSelect {
+    position: static;
+    display: block;
+    width: 100%;
+    padding: 3rem 3rem 2.6rem;
+    margin-top: 8rem;
+    font-size: 2rem;
+    background-size: 2rem auto;
+    background-position: 97% 50%;
+  }
+  footer .footer-utility {
+    margin-top: 5rem;
+  }
+  footer .footer-utility a {
+    font-size: 2rem;
+  }
+  footer .footer-utility a + a {
+    margin-left: 2.8rem;
+  }
+  footer .footer-utility a + a:before {
+    margin-right: 2.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  footer address {
+    margin-top: 3.6rem;
+  }
+  footer address p {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .ico-tag {
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+  }
+
+  .footer-logo a {
+    width: 10.2rem;
+    height: 2.7rem;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -ms-optimize-contrast;
+  }
+
+  .material-counter {
+    font-size: 2.2rem;
+  }
+  .material-counter button {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .material-counter span {
+    width: 6.4rem;
+  }
+}
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+input[type='checkbox'] + .chk,
+input[type='radio'] + .chk {
+  display: inline-block;
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background: #cfcfda;
+  vertical-align: middle;
+  cursor: pointer;
+}
+input[type='checkbox'] + .chk:before,
+input[type='radio'] + .chk:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.3rem;
+  height: 1.1rem;
+}
+input[type='checkbox'] + .chk + span,
+input[type='radio'] + .chk + span {
+  font-size: 1.4rem;
+}
+input[type='checkbox']:checked + .chk,
+input[type='radio']:checked + .chk {
+  background-color: #fded52;
+}
+
+input[type='checkbox'] + .chk:before {
+  background: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_check_38x30w.png) 50%
+    50%/100% auto no-repeat;
+}
+input[type='checkbox']:checked + .chk:before {
+  background-image: url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_check_38x30b.png);
+}
+
+input[type='radio'] + .chk {
+  background-color: #fff;
+  border: 2px solid #cfcfda;
+}
+input[type='radio'] + .chk:before {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+input[type='radio']:checked + .chk {
+  border: 2px solid #fded52;
+}
+input[type='radio']:checked + .chk:before {
+  background-color: #000;
+}
+
+select.sct {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  padding-left: 1rem;
+  background: #fff
+    url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_arrow_63x63_b.png) no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+  background-size: 1.2rem;
+  border: 1px solid #dfdfea;
+  border-radius: 0.5rem;
+}
+
+i.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.frm dl {
+  display: block;
+  width: 100%;
+  margin-top: 7.3rem;
+  font-size: 2.5rem;
+}
+.frm dl .mark {
+  position: relative;
+}
+.frm dl .mark:before {
+  content: '*';
+  display: inline-block;
+  position: absolute;
+  left: -1.5rem;
+  color: #ff5647;
+  font-weight: 400;
+}
+.frm dt label {
+  font-size: 2.5rem;
+}
+.frm dd input {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 2.1rem 2.5rem;
+  font-size: 2.9rem;
+  border-bottom: 1px solid #e7e7f0;
+  box-sizing: border-box;
+}
+.frm dd input::placeholder {
+  color: #b7b7c8;
+}
+
+.btn-block {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  color: #000;
+  background-color: #fded52;
+  font-weight: 400;
+  font-size: 2.7rem;
+  border: 1px solid #fded52;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+}
+.btn-block span {
+  position: relative;
+}
+.btn-block-block {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  color: #000;
+  background-color: #fded52;
+  font-size: 2.7rem;
+  border-radius: 0.5rem;
+  line-height: 2.5rem;
+}
+.btn-block-xl {
+  display: inline-block;
+  width: 49.5rem;
+  height: 6.8rem;
+  color: #000;
+  background-color: #fded52;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  line-height: 6.5rem;
+}
+.btn-block.white,
+.btn-block.default {
+  background-color: #fff;
+}
+.btn-block.white:hover,
+.btn-block.white.active,
+.btn-block.default:hover,
+.btn-block.default.active {
+  background-color: #f7f7fc;
+  border-color: #cfcfda;
+}
+.btn-block.disabled {
+  color: #fff;
+  background-color: #cfcfda;
+  cursor: default;
+}
+.btn-block.disabled.active {
+  color: #000;
+  background-color: #fded52;
+  cursor: pointer;
+}
+.btn-block.warning {
+  background-color: #fded52;
+}
+.btn-block.warning:hover,
+.btn-block.warning.active {
+  background-color: #fae100;
+}
+.btn-block.danger:hover,
+.btn-block.danger.active {
+  background-color: #fae100;
+}
+.btn-block.dark {
+  background-color: #3b3b4d;
+}
+.btn-block.dark:hover,
+.btn-block.dark.active {
+  background-color: #000;
+}
+.btn-block.stroke {
+  background-color: #fff;
+  border-color: #cfcfda;
+}
+.btn-block.stroke:hover,
+.btn-block.stroke.active {
+  background-color: #f7f7fc;
+  border-color: #cfcfda;
+}
+.btn-block.alpha {
+  opacity: 1;
+}
+.btn-block.alpha:hover,
+.btn-block.alpha.active {
+  opacity: 0.4;
+}
+
+.btn-group {
+  width: 100%;
+  margin: 0 auto;
+}
+.btn-group button {
+  position: relative;
+  width: 49.5%;
+  height: 7.2rem;
+  color: #000;
+  background-color: #fded52;
+  font-weight: 400;
+  font-size: 2.2rem;
+  border: 1px solid #fded52;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.btn-group button span {
+  position: relative;
+}
+.btn-group button-block {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  color: #000;
+  background-color: #fded52;
+  font-size: 2.7rem;
+  border-radius: 0.5rem;
+  line-height: 2.5rem;
+}
+.btn-group button-xl {
+  display: inline-block;
+  width: 49.5rem;
+  height: 6.8rem;
+  color: #000;
+  background-color: #fded52;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  line-height: 6.5rem;
+}
+.btn-group button.white,
+.btn-group button.default {
+  background-color: #fff;
+}
+.btn-group button.white:hover,
+.btn-group button.white.active,
+.btn-group button.default:hover,
+.btn-group button.default.active {
+  background-color: #f7f7fc;
+  border-color: #cfcfda;
+}
+.btn-group button.disabled {
+  color: #fff;
+  background-color: #cfcfda;
+  cursor: default;
+}
+.btn-group button.disabled.active {
+  color: #000;
+  background-color: #fded52;
+  cursor: pointer;
+}
+.btn-group button.warning {
+  background-color: #fded52;
+}
+.btn-group button.warning:hover,
+.btn-group button.warning.active {
+  background-color: #fae100;
+}
+.btn-group button.danger:hover,
+.btn-group button.danger.active {
+  background-color: #fae100;
+}
+.btn-group button.dark {
+  background-color: #3b3b4d;
+}
+.btn-group button.dark:hover,
+.btn-group button.dark.active {
+  background-color: #000;
+}
+.btn-group button.stroke {
+  background-color: #fff;
+  border-color: #cfcfda;
+}
+.btn-group button.stroke:hover,
+.btn-group button.stroke.active {
+  background-color: #f7f7fc;
+  border-color: #cfcfda;
+}
+.btn-group button.alpha {
+  opacity: 1;
+}
+.btn-group button.alpha:hover,
+.btn-group button.alpha.active {
+  opacity: 0.4;
+}
+.btn-group button + button {
+  margin-left: 1%;
+}
+
+.embed-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.embed-youtube iframe,
+.embed-youtube object,
+.embed-youtube embed {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

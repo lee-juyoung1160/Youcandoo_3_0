@@ -1,0 +1,25 @@
+.event-detail .app-btn {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background-color: rgb(71, 105, 247);
+    font-family: 'AppleSDGothicNeoB','sans-serif';
+}
+.event-detail .thumbnail-wrapper {
+    position: relative;
+    padding-top: 50%;
+}
+.event-detail .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/assets/images/test.png");
+}

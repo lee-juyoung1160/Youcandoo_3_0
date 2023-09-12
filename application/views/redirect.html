@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>유캔두</title>
+</head>
+<script type="text/javascript">
+    var fallback_url = "https://apps.apple.com/kr/app/%EC%9C%A0%EC%BA%94%EB%91%90-%EC%95%BC%EB%82%98%EB%91%90%EA%B0%80-%EB%A7%8C%EB%93%A0-%EB%AA%A9%ED%91%9C%EB%8B%AC%EC%84%B1%EC%95%B1/id1496745851?mt=8";
+    var store_link = "itms-apps://apps.apple.com/KR/app/id1496745851?ls=1&mt=8";
+    var web_store_link = "https://apps.apple.com/KR/app/id1496745851?mt=8";
+    var appIcon = "https://cdnappicons.appsflyer.com/id1008236892.ver-8.5.png";
+    var A="youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123";
+    var loc = window.location;
+    function redirect_to_web_store(loc) {
+        loc.href = web_store_link;
+    }
+    function redirect(loc) {
+        loc.href = A;
+        console.log(fallback_url);
+        if(fallback_url.startsWith("http")) {
+        //     setTimeout(function() {
+        //         loc.href = fallback_url;
+        //     }, 3500)
+        }
+    }
+</script>
+<body>
+<div id="DisplayDevice"></div>
+//    var appSchem = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+//    isMyApp();
+//
+//    function isMyApp(){
+//        var iframe = document.createElement('iframe');
+//        iframe.style.visibility = 'hidden';
+//        iframe.src = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+//        document.body.appendChild(iframe);
+//        document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+//
+//
+//        function clearTimers(){
+//            clearInterval(heartbeat);
+//            clearTimeout(timer);
+//        }
+//
+//        function intervalHeartbeat(){
+//            if(document.webkitHidden || document.hidden){
+//                clearTimers();
+//                console.log('앱이 설치 되어 있습니다.');
+//            }
+//        }
+//
+//        heartbeat = setInterval(intervalHeartbeat, 200);
+//        var deLay = 1000;
+//        timer = setTimeout(function() {
+//                var iframe = document.createElement('iframe');
+//                iframe.style.visibility = 'hidden';
+//                iframe.src = 'https://apps.apple.com/app/id1496745851';
+//                document.body.appendChild(iframe);
+//                document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+//            console.log('앱이 없습니다.');
+//        }, deLay);
+//    }
+
+    // var timerId = null;
+    //
+    // function StartClock() {
+    //     URLLink();
+    //     timerId = setInterval(URLLink, 1000);
+    // }
+    //
+    //
+    // function StopClock() {
+    //     if(timerId != null) {
+    //         clearInterval(timerId);
+    //     }
+    // }
+    //
+    // function AppStoreURL(){
+    //     var iframe = document.createElement('iframe');
+    //     iframe.style.visibility = 'hidden';
+    //     iframe.src = 'https://apps.apple.com/app/id1496745851';
+    //     document.body.appendChild(iframe);
+    //     document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+    // }
+    //
+    // function URLLink(){
+    //     var iframe = document.createElement('iframe');
+    //     iframe.style.visibility = 'hidden';
+    //     iframe.src = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+    //     document.body.appendChild(iframe);
+    //     document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+    //     setTimeout(AppStoreURL,1000);
+    //     return;
+    //
+    //     var Device = getMobileOperatingSystem();
+    //
+    //     document.getElementById("DisplayDevice").innerHTML = Device;
+    //
+    //     var userAgent = navigator.userAgent;
+    //     if (userAgent.match(/android/)) {
+    //         if (userAgent.match(/Chrome/)) {
+    //             // 안드로이드의 크롬에서는 intent만 동작하기 때문에 intent로 호출해야함
+    //             setTimeout(function () {
+    //                 location.href = "intent://커스텀스킴주소#Intent; scheme=스킴; action=..;category=..; package=com.android.xxx; end;";
+    //             }, 1000);
+    //         } else {
+    //             // 크롬 이외의 브라우저들
+    //             setTimeout(
+    //                 function () {
+    //                     if ((new Date()).getTime() - visitedAt < 2000) {
+    //                         location.href = "https://apps.apple.com/app/id1496745851";
+    //                     }
+    //                 }, 500);
+    //             var iframe = document.createElement('iframe');
+    //             iframe.style.visibility = 'hidden';
+    //             iframe.src = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+    //             document.body.appendChild(iframe);
+    //             document.body.removeChild(iframe); // back 호출시 캐싱될 수 있으므로 제거
+    //         }
+    //     }
+    //
+    //     // if(Device=="iOS"){
+    //     //     // window.location.href = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+    //     //     location.href = 'youcandoo1496745851://urllink?pageType=doit_detail&pageValue=DOIT-123123123123123';
+    //     //     if(document.webkitHidden || document.hidden){
+    //     //         location.href="https://apps.apple.com/app/id1496745851";
+    //     //     }
+    //     // }
+    //
+    //     StopClock();
+    // }
+    // function getMobileOperatingSystem() {
+    //     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    //
+    //     // Windows Phone must come first because its UA also contains "Android"
+    //     if (/windows phone/i.test(userAgent)) {
+    //         return "Windows Phone";
+    //     }
+    //
+    //     if (/android/i.test(userAgent)) {
+    //         return "Android";
+    //     }
+    //
+    //     // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    //     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    //         return "iOS";
+    //     }
+    //
+    //     return "unknown";
+    // }
+    //
+    // StartClock();
+
+</script>
+</body>
+</html>

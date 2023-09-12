@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/assets/v3/css/app_event.css?resource_version=<?=$resource_version?>">
+<section class="event detail">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>이벤트</p>
+	</header>
+	<div class="page-wrap">
+		<article>
+			<div class="title-wrap">
+				<div class="inner">
+					<strong id="type" style="display: none;">[결과발표]</strong>
+					<p class="title" id="title"></p>
+					<div class="info">
+						<span class="date" id="date"></span>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="img" id="contentImage">
+					<img src="" alt="">
+				</div>
+				<div class="text-wrap">
+					<div class="inner" id="content">
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<div class="bottom-manual">
+			<div class="inner">
+				<h5><i><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/event_icon_tip.png" alt=""></i>꼭 확인해주세요.</h5>
+				<p id="notice">
+					<!--‘두잇플레져 관련 문의 및 지원 신청서 작성에 궁금한<br>
+					모든 사항은 <strong>나>설정>(우측 상단 톱니바퀴)>1:1문의</strong>로<br>
+					연락부탁드립니다.<br><br>
+					두잇 이벤트는 하단 [이벤트 목록]버튼 또는,<br>
+					<strong>MY(나 프로필)>이벤트</strong>에서 확인하실 수 있습니다.-->
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<input type="hidden" id="idx" value="<?php echo $idx;?>">
+<script>
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	getDetail();
+
+	function getDetail()
+	{
+		const url = api.detailEvent+document.getElementById('idx').value;
+		const errMsg = `상세 내용을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getDetailCallback, errMsg)
+	}
+
+	function getDetailCallback(data)
+	{
+		isSuccessResp(data) ? buildDetail(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildDetail(data)
+	{
+		const {event_type, title, contents, image_url, start_date, end_date, notice, created} = data.data;
+		let eventDate = `${start_date} ~ ${end_date}`;
+		if (event_type === '결과발표')
+		{
+			document.getElementById('type').style.display = 'block';
+			eventDate = created.substring(0, 10);
+		}
+
+		document.getElementById('title').textContent = title;
+		document.getElementById('date').textContent = eventDate;
+		document.getElementById('content').textContent = contents;
+		document.getElementById('notice').textContent = notice;
+		document.querySelector('#contentImage img').setAttribute('src', image_url);
+
+		onErrorImage();
+	}
+</script>

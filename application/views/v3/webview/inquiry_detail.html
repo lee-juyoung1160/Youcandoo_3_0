@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="/assets/v3/css/app_inquiry.css?resource_version=<?=$resource_version?>">
+<section class="inquiry detail">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>1:1 문의</p>
+	</header>
+	<div class="page-wrap">
+		<article>
+			<div class="inner">
+				<div class="title-wrap">
+					<p class="title">
+						<span id="created"></span>
+						<strong id="title"></strong>
+					</p>
+					<span class="icon-arrow" id="status"></span>
+					</p>
+				</div>
+				<div class="contents-wrap">
+					<div class="text-wrap" id="content">
+					</div>
+					<div class="file-view-wrap" id="fileWrap">
+						<!--<button type="button">첨부파일</button>
+						<button type="button" class="active">첨부파일</button>
+						<button type="button">첨부파일</button>
+						<div class="img-wrap">
+							<img src="https://youcandoo.yanadoocdn.com/v3/admin/subcategory/2021/04/29/73d4b4b35eabcd2577cc3ef8e1545a8f.png" alt="">
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</article>
+		<div class="answer-wrap" id="answerWrap" style="display: none;">
+			<div class="inner">
+				<div class="title-wrap">
+					<p class="title">
+						<span id="answered"></span>
+						<strong>답변</strong>
+					</p>
+				</div>
+				<div class="text-wrap" id="answer">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<input type="hidden" id="idx" value="<?php echo $idx;?>">
+<script>
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	getDetail();
+
+	function getDetail()
+	{
+		const url = api.detailInquiry+document.getElementById('idx').value;
+		const errMsg = `상세 내용을 ${message.loadError}`;
+
+		XMLHttpRequestWithJson(url, null, getDetailCallback, errMsg)
+	}
+
+	function getDetailCallback(data)
+	{
+		if (isSuccessResp(data))
+			buildDetail(data);
+		else
+		{
+			alert(getErrorMessage(data.status));
+			if (data.status === 20254) location.href = '/webview/v3.0/qna';
+		}
+	}
+
+	function buildDetail(data)
+	{
+		const {title, contents, status, created, attach, answered, answer} = data.data;
+
+		document.getElementById('created').textContent = created;
+		document.getElementById('title').textContent = title;
+		if (status === '답변완료')
+			document.getElementById('status').classList.add('complete');
+		document.getElementById('status').textContent = status;
+		document.getElementById('content').textContent = contents;
+		if (!isEmpty(attach) && attach.length > 0)
+		{
+			let firstAttachUrl;
+			let attachElement = '';
+			attach.map((obj, index) => {
+				const {contents_url} = obj;
+				let active = '';
+				if (index === 0)
+				{
+					active = 'active';
+					firstAttachUrl = contents_url;
+				}
+				attachElement += `<button type="button" class="${active}" data-url="${contents_url}" onclick="viewImage(this);">첨부파일</button>`;
+			});
+			attachElement += `<div class="img-wrap"><img src="${firstAttachUrl}" alt="" onload="resizeImageWrap(this);"></div>`;
+
+			document.getElementById('fileWrap').innerHTML = attachElement;
+		}
+
+		if (!isEmpty(answer))
+		{
+			document.getElementById('answerWrap').style.display = 'block';
+			document.getElementById('answered').textContent = answered;
+			document.getElementById('answer').textContent = answer;
+		}
+
+		onErrorImage();
+	}
+
+	function viewImage(obj)
+	{
+		document.querySelectorAll('#fileWrap button').forEach(element => {
+			element.classList.remove('active');
+		})
+		obj.classList.add('active');
+		const url = isEmpty(obj.dataset.url) ? '' : obj.dataset.url;
+		document.querySelector('.img-wrap img').setAttribute('src', url);
+		onErrorImage();
+	}
+
+	function resizeImageWrap(obj)
+	{
+		document.querySelector('#fileWrap .img-wrap').style.height = `${obj.offsetHeight}px`;
+	}
+</script>
+

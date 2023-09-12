@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>야핏 체험권 무료발급</title>
+    <!--base href="https://www.yanadoo.co.kr/promotion-landing/" /-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://english.yanadoocdn.com/upload/yanadoo/pc/common/ico/favicon_64x64_v2.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://english.yanadoocdn.com/upload/yanadoo/pc/common/ico/favicon_152x152_v2.png"
+    />
+
+    <meta name="description" content="야핏 체험권 무료발급" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="야핏 체험권 무료발급" />
+    <meta property="og:site_name" content="야핏 체험권 무료발급" />
+    <meta property="og:description" content="신개념 메타버스 홈트레이닝 - 야핏 체험권 무료발급" />
+    <meta
+      property="og:image"
+      content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg"
+    />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="210" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="신개념 메타버스 홈트레이닝" />
+    <meta name="twitter:description" content="신개념 메타버스 홈트레이닝 - 야핏 체험권 무료발급" />
+    <meta
+      name="twitter:image"
+      content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg"
+    />
+    <meta
+      name="nate:image"
+      content="https://english.yanadoocdn.com/upload/yanadoo/pc/common/yafit_kakaolink.jpg"
+    />
+    <link rel="stylesheet" type="text/css" href="https://www.yanadoo.co.kr/promotion-landing/common/css/common.css?v=1.4" />
+    <script type="text/javascript" src="https://www.yanadoo.co.kr/promotion-landing/common/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://www.yanadoo.co.kr/promotion-landing/common/env.js"></script>
+    <style>
+      /* reset */
+      html,
+      body,
+      h1,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-style: normal;
+      }
+      button {
+        font-size: 100%;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+      }
+      input[type='text'],
+      input[type='tel'] {
+        border: 0;
+        outline: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+      }
+      ul,
+      ol,
+      li,
+      dl,
+      dt,
+      dd {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      input[type='checkbox'],
+      input[type='radio'] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        outline: 0;
+        opacity: 0;
+      }
+
+      /* yafit-experience */
+      .hide-txt {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip-path: polygon(0 0, 0 0, 0 0);
+        overflow: hidden;
+      }
+      .yafit-experience {
+        display: none;
+        position: relative;
+        font-size: 3.2vw;
+      }
+      .yafit-experience > div {
+        width: 100%;
+        max-width: 720px;
+        margin: auto;
+      }
+      .yafit-experience .btn-yafit {
+        height: 3.2em;
+        margin: auto;
+        font-weight: 700;
+        font-size: 160%;
+        color: #fff;
+        background-color: #e7e7f0;
+        border-radius: 5em;
+      }
+      .yafit-experience .btn-yafit.active {
+        color: #000;
+        background-color: #32fa32;
+      }
+      .section-intro {
+        background-color: #000;
+      }
+      .section-intro .intro-col {
+        position: relative;
+        width: 100%;
+        height: 53.5em;
+        background: url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/bg_intro.jpg)
+          no-repeat 50% 0 / 100% auto;
+      }
+      .section-intro .intro-col .btn-yafit {
+        position: absolute;
+        right: 0;
+        bottom: 2em;
+        left: 0;
+        width: 80%;
+      }
+      .section-submit .talk-list {
+        position: relative;
+        width: 100%;
+        padding: 2em 1.95em;
+        background: #242424
+          url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/ico_talkbox_smile.png)
+          no-repeat calc(100% - 0.5em) calc(100% - 1em) / 8.5em auto;
+        box-sizing: border-box;
+      }
+      .section-submit .talk-list li {
+        position: relative;
+        height: 4.5em;
+        text-align: left;
+      }
+      .section-submit .talk-list li strong {
+        display: inline-block;
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        margin-top: 0.2em;
+        padding: 0.8em 1.5em;
+        font-weight: 400;
+        font-size: 130%;
+        color: #fff;
+        background-color: #3a3a3a;
+        border-radius: 3em;
+        opacity: 0;
+      }
+      .section-submit .talk-list li:nth-child(2n) strong {
+        font-weight: 700;
+        color: #000;
+        background-color: #fff;
+      }
+      .section-submit .talk-list li:first-child strong {
+        animation: slide-up 1s forwards;
+      }
+      .section-submit .talk-list li:nth-child(2) strong {
+        animation: slide-up 1s 1s forwards;
+      }
+      .section-submit .talk-list li:nth-child(3) strong {
+        animation: slide-up 1s 2s forwards;
+      }
+      .section-submit .submit-box {
+        width: 100%;
+        padding: 2em;
+        box-sizing: border-box;
+      }
+      .section-submit .submit-box strong {
+        display: block;
+        margin-top: 0.8em;
+        font-weight: 700;
+        font-size: 200%;
+        color: #000;
+      }
+      .section-submit .submit-box input {
+        width: 100%;
+        margin-top: 0.5em;
+        padding: 0.8em 1em;
+        font-weight: 400;
+        font-size: 150%;
+        color: #000;
+        background-color: #f7f7fc;
+        box-sizing: border-box;
+      }
+      .section-submit .submit-box input::placeholder {
+        color: #b7b7c8;
+      }
+      .section-submit .submit-box p {
+        padding: 1em 0;
+        font-weight: 400;
+        font-size: 150%;
+        line-height: 1.4;
+        letter-spacing: -1px;
+        color: #000;
+        text-align: left;
+        word-break: keep-all;
+      }
+      .section-submit .agree-box {
+        position: relative;
+        padding: 3em 0 2em;
+      }
+      .section-submit .agree-box label {
+        display: inline-block;
+        position: relative;
+      }
+      .section-submit .agree-box label span {
+        display: inline-block;
+        position: relative;
+        padding: 0.5em 0 0.5em 2.5em;
+        font-weight: 400;
+        font-size: 110%;
+        color: #3b3b4d;
+        letter-spacing: -1px;
+      }
+      .section-submit .agree-box label input[type='checkbox'] + span:before {
+        content: '';
+        position: absolute;
+        top: 0em;
+        left: 0;
+        width: 2em;
+        height: 2em;
+        background: url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/ico_yafit_check.png)
+          no-repeat 50% 0 / 2em auto;
+      }
+      .section-submit .agree-box label input[type='checkbox']:checked + span:before {
+        background-position: 50% -2em;
+      }
+      .section-submit .agree-box button {
+        position: absolute;
+        top: 1.95em;
+        right: 0;
+        bottom: 0;
+        height: 3em;
+        padding: 0.5em 0 0.5em 0.5em;
+        font-weight: 400;
+        font-size: 120%;
+        color: #000;
+      }
+      .section-submit .agree-box button span {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 90%;
+        line-height: 1.1;
+        color: #3b3b4d;
+        border-bottom: 1px solid #3b3b4d;
+      }
+      .section-submit .submit-box .btn-yafit {
+        width: 100%;
+      }
+      .ynd-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100%;
+        visibility: visible;
+      }
+      .ynd-modal .ynd-dimmed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .ynd-modal .ynd-modal-content .btn-close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 3em;
+        height: 3em;
+        padding: 0;
+        font-size: 100%;
+        background-color: transparent;
+        text-indent: -999em;
+      }
+      .ynd-modal .ynd-modal-content .btn-close:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0.1em;
+        height: 2em;
+        margin: auto;
+        background-color: #000;
+        transform: rotate(45deg);
+      }
+      .ynd-modal .ynd-modal-content .btn-close:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0.1em;
+        height: 2em;
+        margin: auto;
+        background-color: #000;
+        transform: rotate(-45deg);
+      }
+      .ynd-modal .ynd-modal-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 28em !important;
+        height: 39.5em;
+        margin: auto;
+        padding: 2em;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+      .ynd-modal .ynd-modal-content strong {
+        display: block;
+        margin-bottom: 1em;
+        font-weight: 700;
+        font-size: 190%;
+        line-height: 1.3;
+        color: #000;
+        text-align: left;
+      }
+      .ynd-modal .ynd-modal-content p {
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 1.4;
+        word-break: keep-all;
+      }
+      .ynd-modal .ynd-modal-content ol {
+        padding-top: 1em;
+      }
+      .ynd-modal .ynd-modal-content li {
+        position: relative;
+        padding-bottom: 1.3em;
+      }
+      .ynd-modal .ynd-modal-content li p:before {
+        content: '';
+        position: absolute;
+        top: 0.4em;
+        left: 0.3em;
+        width: 2px;
+        height: 2px;
+        background-color: #000;
+        border-radius: 100%;
+      }
+      .ynd-modal .ynd-modal-content li strong {
+        display: block;
+        margin-bottom: 0.2em;
+        padding: 0.2em 0;
+        font-weight: 400;
+        font-size: 100%;
+        text-align: left;
+      }
+      .ynd-modal .ynd-modal-content li p {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 0.8em;
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 1.5;
+        letter-spacing: -1px;
+        box-sizing: border-box;
+        word-break: keep-all;
+      }
+      .section-result .voucher-box {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        padding: 1em 0 0.8em;
+        font-weight: 700;
+        font-size: 160%;
+        color: #000;
+        background: url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/bg_voucher_input.png)
+          no-repeat 50% 50% / 100% auto;
+        box-sizing: border-box;
+      }
+      .section-result .voucher-box input[type='text'] {
+        width: 11.2em;
+        padding: 0 0 0 1.4em;
+        font-weight: 700;
+        font-size: 110%;
+        color: #000;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+      }
+      .section-result .voucher-box input[type='text']:disabled {
+        color: #000 !important;
+        background-color: transparent;
+        -webkit-text-fill-color: #000 !important;
+        opacity: 1 !important;
+      }
+      .section-result .voucher-box button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        text-indent: -999em;
+        z-index: 2;
+      }
+      .section-result .result-col {
+        padding: 2em;
+        background: #000
+          url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/bg_yafit_slogan.png)
+          no-repeat 50% calc(100% - 1em) / 100% auto;
+        box-sizing: border-box;
+      }
+      .section-result .result-col dt {
+        padding: 1em 0;
+      }
+      .section-result .result-col dt em {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 160%;
+        color: #fff;
+      }
+      .section-result .result-col dt p {
+        margin: 0.5em auto;
+        font-weight: 700;
+        font-size: 280%;
+        color: #fff;
+        text-align: left;
+      }
+      .section-result .result-col dt p strong {
+        font-weight: 700;
+        font-size: 100%;
+        color: #32fa32;
+      }
+      .section-result .result-col dd p {
+        padding: 1em 0;
+        font-weight: 400;
+        font-size: 160%;
+        line-height: 1.3;
+        color: #808080;
+      }
+      .section-result .btn-group {
+        padding: 13em 0 1em 0;
+        text-align: center;
+      }
+      .section-result .btn-group button {
+        display: inline-block;
+        width: auto;
+        height: 4em;
+        margin: 0;
+        padding: 0.5em 1.5em;
+        font-size: 125%;
+        border: 0;
+        outline: 0;
+      }
+      .section-result .btn-group button + button {
+        margin-left: 0.5em;
+      }
+      .section-result .btn-group .btn-gray {
+        background-color: #5f5f5f;
+      }
+      .section-result .notice-col {
+        position: relative;
+        width: 100%;
+        padding: 2em 2em 6em 2em;
+        background-color: #f7f7fc;
+        box-sizing: border-box;
+      }
+      .section-result .notice-col strong {
+        display: block;
+        padding: 1em 0 0.5em;
+        font-weight: 700;
+        font-size: 190%;
+        color: #000;
+        text-align: left;
+      }
+      .section-result .notice-col li {
+        position: relative;
+        padding: 0.5em 0 0.5em 1em;
+        font-weight: 400;
+        font-size: 110%;
+        word-break: keep-all;
+      }
+      .section-result .notice-col li:before {
+        content: '';
+        position: absolute;
+        top: 0.9em;
+        left: 0.3em;
+        width: 0.2em;
+        height: 0.2em;
+        background-color: #000;
+        border-radius: 100%;
+      }
+      .section-result .notice-col p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 1.5em 0;
+        font-weight: 700;
+        font-size: 110%;
+        color: #000;
+        background-color: #f0eff4;
+        text-align: center;
+      }
+      .section-error {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        justify-content: center;
+        align-items: center;
+      }
+      .section-error .error-box {
+        width: 100%;
+        height: 10em;
+        padding-top: 9.5em;
+        background: #000
+          url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/yafit/experience/ico_error.png)
+          no-repeat 50% 0 / 10em auto;
+      }
+      .section-error .error-box strong {
+        display: block;
+        font-weight: 700;
+        font-size: 260%;
+        color: #fff;
+        text-align: center;
+      }
+      .section-error .error-box p {
+        padding-top: 0.5em;
+        font-weight: 400;
+        font-size: 160%;
+        color: #808080;
+        text-align: center;
+      }
+      @keyframes slide-up {
+        0% {
+          top: 0.5em;
+          opacity: 0;
+        }
+        30% {
+          top: -0.3em;
+          opacity: 1;
+        }
+        100% {
+          top: 0;
+          opacity: 1;
+        }
+      }
+
+      @media screen and (min-width: 720px) {
+        .yafit-experience {
+          font-size: 23px;
+        }
+      }
+    </style>
+    <script>
+      const gymCode = window.location.href.split('#')[1];
+
+      // validation 체크
+      function validation() {
+        let userName = document.getElementById('userName');
+        let cellPhoneNumber = document.getElementById('cellPhoneNumber');
+        let checkAgree = document.getElementById('checkAgree');
+        const regPhone = /^((01[1|6|7|8|9])[1-9]+[0-9]{6,7})|(010[1-9][0-9]{7})$/;
+
+        if (
+          userName.value.replaceAll(' ', '').length !== 0 &&
+          regPhone.test(cellPhoneNumber.value) &&
+          checkAgree.checked
+        ) {
+          document.querySelector('.btn-submit').classList.add('active');
+        } else {
+          document.querySelector('.btn-submit').classList.remove('active');
+        }
+      }
+
+      // 체험권 받기
+      function experienceSubmit() {
+        let userName = document.getElementById('userName');
+        let cellPhoneNumber = document.getElementById('cellPhoneNumber');
+        let checkAgree = document.getElementById('checkAgree');
+        const regPhone = /^((01[1|6|7|8|9])[1-9]+[0-9]{6,7})|(010[1-9][0-9]{7})$/;
+
+        if (userName.value.replaceAll(' ', '').length === 0) {
+          alert('이름을 입력해 주세요.');
+          userName.focus();
+          return false;
+        }
+        if (!regPhone.test(cellPhoneNumber.value)) {
+          alert('휴대전화번호 형식에 맞게 입력해 주세요.');
+          cellPhoneNumber.focus();
+          return false;
+        }
+        if (!checkAgree.checked) {
+          alert('마케팅 활용 동의를 체크해 주세요.');
+          return false;
+        }
+
+        let dataBody = {
+          cellPhone: cellPhoneNumber.value,
+          gymCode: gymCode,
+          userName: userName.value,
+        };
+
+        $.ajax({
+          type: 'POST',
+          url: API_HOST + '/v2/yafit/partner-gym/get-voucher',
+          data: JSON.stringify(dataBody),
+          contentType: 'application/json',
+          success: function (response) {
+            if (response.meta.code === 200) {
+              document.querySelector('.section-submit').style.display = 'none';
+              document.querySelector('.section-result').style.display = 'block';
+              document.getElementById('resultUserName').innerHTML = userName.value + '고객님';
+              document.getElementById('voucherInput').value = response.data.voucherNumber;
+              document.getElementById('voucherInput').disabled = true;
+              window.scroll(0, 0);
+            } else if (response.meta.code === -1) {
+              alert(response.meta.message);
+            } else {
+              alert('오류가 발생했습니다.');
+            }
+          },
+          error: function (data) {
+            alert('통신장애가 발생되었습니다.');
+          },
+        });
+      }
+
+      // 체험권 번호 복사
+      function voucherNumberCopy() {
+        let url = document.getElementById('voucherInput');
+        url.disabled = false;
+        url.select();
+        document.execCommand('copy');
+        url.disabled = true;
+        url.blur();
+        alert('이용권 번호가 번호가 복사되었습니다.');
+      }
+
+      // userAgent 구분 앱 다운로드 링크
+      function appDownloadLink(iosUrl, andUrl) {
+        const isIOS = navigator.userAgent.match(/ipad|ipod|iphone/i);
+        if (isIOS) {
+          window.open(iosUrl);
+        } else {
+          window.open(andUrl);
+        }
+      }
+
+      window.addEventListener('load', function () {
+        document.querySelector('.section-intro').style.minHeight = window.innerHeight + 'px';
+        $.ajax({
+          type: 'GET',
+          url: API_HOST + '/v2/yafit/partner-gym/' + gymCode,
+          async: false,
+          success: function (result) {
+            if (result.data !== undefined) {
+              document.querySelector('.section-intro').style.display = 'block';
+              document.querySelector('.gym-name').innerHTML = result.data.gymName;
+              window.scroll(0, 0);
+            } else {
+              document.querySelector('.section-error').style.display = 'flex';
+              document.querySelector('.section-error').style.height = window.innerHeight + 'px';
+            }
+          },
+          error: function (result) {
+            alert('다시 시도해주세요.');
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <section class="yafit-experience section-intro">
+        <h1 class="hide-txt">신개념 메타버스 홈트레이닝 야핏 체험권 무료 발급!</h1>
+        <div class="intro-col">
+          <button
+            type="button"
+            class="btn-yafit active"
+            onclick="document.querySelector('.section-intro').style.display='none';document.querySelector('.section-submit').style.display='block';window.scroll(0,0);"
+          >
+            야핏 체험권 발급 받기
+          </button>
+        </div>
+      </section>
+      <section class="yafit-experience section-submit">
+        <h1 class="hide-txt">체험권 무료 발급</h1>
+        <div class="store-col">
+          <div class="talk-list">
+            <ul>
+              <li><strong>안녕하세요!</strong></li>
+              <li><strong class="gym-name"></strong></li>
+              <li><strong>야핏 라이더님 반갑습니다 :)</strong></li>
+            </ul>
+          </div>
+          <div class="submit-box">
+            <strong>고객님의</strong>
+            <input
+              type="text"
+              placeholder="이름"
+              id="userName"
+              name="userName"
+              maxlength="5"
+              onkeyup="validation();"
+            />
+            <input
+              type="tel"
+              placeholder="휴대전화번호"
+              id="cellPhoneNumber"
+              name="cellPhoneNumber"
+              maxlength="11"
+              onkeyup="validation();"
+            />
+            <p>정보를 남겨 주시면 즉시 이용 가능한<br />야핏 체험권을 발급해 드립니다.</p>
+            <div class="agree-box">
+              <label
+                ><input
+                  type="checkbox"
+                  name="checkAgree"
+                  id="checkAgree"
+                  onchange="validation();"
+                /><span>[필수] 개인정보 수집 및 마케팅 활용 동의</span></label
+              >
+              <button
+                type="button"
+                onclick="document.getElementById('modalYafitAgree').style.display='block';"
+              >
+                <span>내용보기</span>
+              </button>
+            </div>
+            <button type="button" class="btn-yafit btn-submit" onclick="experienceSubmit();">
+              체험권 바로 받기
+            </button>
+          </div>
+        </div>
+        <div class="ynd-modal modal-yafit-agree" id="modalYafitAgree">
+          <div
+            class="ynd-dimmed"
+            onclick="document.getElementById('modalYafitAgree').style.display='none';"
+          ></div>
+          <div class="ynd-modal-content">
+            <button
+              type="button"
+              class="btn-close"
+              onclick="document.getElementById('modalYafitAgree').style.display='none';"
+            >
+              닫기
+            </button>
+            <strong>개인정보 수집<br />및 마케팅 활용 약관</strong>
+            <p>
+              야나두는 귀하의 이벤트 및 문의에 대한 처리 및 회신을 위하여 귀하의 개인정보를 수집 및
+              처리하고자 합니다. 내용을 자세히 읽으신 후 동의여부를 결정하여 주시기 바랍니다.
+            </p>
+            <ol>
+              <li>
+                <strong>1. 개인정보 수집 이용목적</strong>
+                <p>상품 안내, 이벤트 안내, 고객문의(상담신청)처리 및 회신</p>
+                <p>야핏 서비스 체험권 발급</p>
+              </li>
+              <li>
+                <strong>2. 개인정보 수집 항목</strong>
+                <p>이름, 휴대전화번호</p>
+              </li>
+              <li>
+                <strong>3. 개인정보 이용기간 및 보유기간</strong>
+                <p>1년 보관 후 파기</p>
+              </li>
+              <li>
+                <strong>4. 동의를 거부할 권리 및 동의 거부에 따른 불이익</strong>
+                <p>
+                  귀하는 개인정보 수집 및 마케팅 활용에 대한 동의를 거부할 권리가 있으며, 동의를
+                  거부하는 경우 체험권 발급이 불가능 합니다.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="yafit-experience section-result">
+        <h1 class="hide-txt">체험권 발급 완료</h1>
+        <div class="result-col">
+          <dl>
+            <dt>
+              <em id="resultUserName"></em>
+              <p><strong>30일 체험권</strong>이<br />발급 되었습니다.</p>
+            </dt>
+            <dd>
+              <div class="voucher-box">
+                <input type="text" id="voucherInput" value="" />
+                <button type="button" onclick="voucherNumberCopy();">복사</button>
+              </div>
+              <p>야핏과 함께 즐거운 라이딩 되세요!<br />유의사항을 꼭 확인 하세요!</p>
+            </dd>
+          </dl>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn-yafit btn-gray"
+              onclick="window.open('https://drive.google.com/file/d/1enNughNGK3bC9SYeLYNCaVii91m8KDj9/view');"
+            >
+              체험권 등록 안내
+            </button>
+            <button
+              type="button"
+              class="btn-yafit active"
+              onclick="appDownloadLink('https://apps.apple.com/kr/app/%EC%95%BC%ED%95%8F-%EC%82%AC%EC%9D%B4%ED%81%B4/id1545299028', 'https://play.google.com/store/search?q=%EC%95%BC%ED%95%8F&c=apps')"
+            >
+              야핏 앱 다운로드
+            </button>
+          </div>
+        </div>
+        <div class="notice-col">
+          <strong>유의사항</strong>
+          <ul>
+            <li>야핏 체험 이용권은 야핏앱 설치 후 등록 가능합니다.</li>
+            <li>체험 이용권을 등록한 시점 부터 이용기간이 소진 됩니다.</li>
+            <li>
+              야핏 기존 회원은 기존 이용권 사용 기간이 만료된 뒤 체험 이용권 등록이 가능합니다.
+            </li>
+            <li>
+              발급된 체험 이용권은 야핏의 모든 메뉴 이용이 가능하나 마일리지는 사용할 수 없습니다.
+            </li>
+            <li>
+              체험 기간 중 적립 된 운동기록 및 마일리지는 유료 이용권을 구매 하시면 사용하실 수
+              있습니다.
+            </li>
+            <li>
+              체험 이용권 등록 후 등록 번호는 재 사용할 수 없으며, 등록 후에는 양도가 불가능 합니다.
+            </li>
+            <li>
+              체험 이용권을 다수 발급 받아 비정상으로 등록 이용 시 적립된 마일리지는 사전 고지 없이
+              강제 회수 될 수도 있습니다.
+            </li>
+            <li>
+              야핏앱 이용 도중 등록한 계정(카카오 또는 애플) 탈퇴 시 운동 기록 및 마일리지는 소멸
+              되며 계정 탈퇴에 따른 복구는 불가능 합니다.
+            </li>
+          </ul>
+          <p>야핏 사이클과 함께 즐거운 라이딩 되시길 바랍니다.</p>
+        </div>
+      </section>
+      <section class="yafit-experience section-error">
+        <div class="error-box">
+          <strong>잘못된 접근 입니다.</strong>
+          <p>센터 관리자에게 문의하세요.</p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

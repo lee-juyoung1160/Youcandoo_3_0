@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <script src="https://service.yanadoocdn.com/youcandoo/assets/js/browser-deeplink.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var uri="https://apps.apple.com/app/id1496745851";
+    deeplink.setup({
+        iOS: {
+            appId: "1496745851",
+            appName: "youcandoo",
+        },
+        android: {
+            appId: "com.yanadoo.youcandoo"
+        }
+    });
+
+    function clickHandler(uri) {
+        deeplink.open(uri);
+        return false;
+    }
+
+    </script>
+    <style>
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+    a {
+        font-family: monospace;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 25px;
+        background: #060;
+        color:#fff;
+        text-align: center;
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+<!--    <a href="#" data-uri="fb://profile" onclick="clickHandler(this.dataset.uri)">open fb://profile</a>-->
+
+<script>
+    clickHandler(uri);
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^(/index\.php|/health_check.html|/favicon.ico|/assets/|/iOS/|/theme/|/custom_event/|/test/|/akamai/|/fcm/|/robots\.txt)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+

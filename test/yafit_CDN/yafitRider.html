@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>야핏 라이더 소개</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="favicon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/favicon_yafitRider.ico">
+    <link rel="shortcut icon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/favicon_yafitRider.ico" />
+    <link rel="apple-touch-icon-precomposed" href="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/favicon_yafitRider.ico">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="야핏 라이더 소개"/>
+    <meta property="og:site_name" content="야핏"/>
+    <meta property="og:description" content="이젠 야외에서도 더 핏하게! 야, 너두 핏할 수 있어"/>
+    <meta property="og:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/og_yafitRider.png"/>
+    <meta property="og:image:width" content="400"/>
+    <meta property="og:image:height" content="210"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="야핏 라이더 소개">
+    <meta name="twitter:description" content="이젠 야외에서도 더 핏하게! 야, 너두 핏할 수 있어">
+    <meta name="twitter:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/og_yafitRider.png">
+    <meta name="nate:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/og_yafitRider.png" />
+    <meta name="naver-site-verification" content="dcf4d5cf8e610163fe7bbc07a29e21f98c503792"/>
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/reset_1.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/common.css?v=1.6" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/promotion.css?v=1.1" />
+	<link rel="stylesheet" href="https://yafit.yanadoocdn.com/yanadoo/library/swiper.min.css">
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/beusable.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/env.js" ></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/common.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/comm.js"></script>
+	<script src="https://yafit.yanadoocdn.com/yanadoo/library/swiper-bundle.min.js"></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+	body {min-width: 280px; font-family: 'Inter', 'NotoSansCJKkr', sans-serif;}
+	.display-pc {display: block !important;}
+	.display-m {display: none !important;}
+
+	.yafit-raider h4 {font-size: 5.5rem; font-weight: 300; letter-spacing: -2px;}
+	.yafit-raider h5 {font-size: 5rem; font-weight: 300; letter-spacing: -2px; text-align: center;}
+	.yafit-raider .sub-title {display: block; padding-bottom: 10px; font-size: 22px; font-weight: 300; text-align: center;}
+	.yafit-raider .point-text {color: #141CD6;}
+	.yafit-raider .text-medium {font-weight: 400;}
+	.yafit-raider .text-bold {font-weight: 600;}
+
+	.yafit-raider .key-visual {overflow: hidden; display:flex; width: 100%; height: calc(100vh - 8.8rem); justify-content: center; align-items: center;}
+	.yafit-raider .key-visual video {Object-fit: fill;}
+	.yafit-raider .change-brand-col {padding: 190px 0 185px;}
+	.yafit-raider .change-brand-col h5 {display: flex; justify-content: center; font-weight: 400;}
+	.yafit-raider .change-brand-col h5 em {display: block;}
+	.yafit-raider .change-brand-col h5 em:first-child {margin-right: 20px;}
+	.animation_delay_1, .animation_delay_2, .animation_delay_3 {opacity: 0; transform: translateY(30px); -webkit-transform: translateY(30px); -o-transform: translateY(30px); }
+	.animation_delay_1 {transition: .5s .2s;}
+	.animation_delay_2 {transition: .5s .5s;}
+	.animation_delay_3 {transition: .5s .8s;}
+	.animation_delay_1.active,.animation_delay_2.active , .animation_delay_3.active {opacity: 1; transform: translateY(0); -webkit-transform: translateY(0); -o-transform: translateY(0);}
+
+	.yafit-raider .new-yafitRider-col {padding-top: 150px; background-color: #F2F8F4;}
+	.yafit-raider .new-yafitRider-col .sub-title {display: flex; align-items: center; justify-content: center;}
+	.yafit-raider .new-yafitRider-col .sub-title img {width: 147px; padding-left: 5px;}
+	.yafit-raider .new-yafitRider-col video {display: block; width: 884px; margin: 0 auto;}
+	.yafit-raider .new-yafitRider-col .desc {display: block;margin-top: 8px; color: #B4B4B4; font-size: 15px; text-align: center;}
+
+	.raider-slide-col {padding: 200px 0;}
+	.raider-slide-col .inner {position: relative; max-width: 980px; margin: 0 auto;}
+	.raider-slide-col h4 {text-align: left;}
+	.raider-slide-col .slide-text {position: absolute; top: 150px; left: 600px; opacity: 0; transition: all .3s;}
+	.raider-slide-col .slide-text:last-child {font-size: 58px;}
+	.raider-slide-col .slide-text.active {opacity: 1;}
+	.raider-slide-col .raider-slide img {max-width: 514px;}
+	.raider-slide .swiper-slide {opacity: 0 !important; justify-content: left;}
+	.raider-slide .swiper-slide-active {opacity: 1 !important;}
+	.raider-slide-col .raider-slide-tab {display: flex; position: absolute; bottom: 250px; left: 600px; align-items: center;}
+	.raider-slide-col .raider-slide-tab li {padding: 10px 27px 8px; color: #979797; font-size: 16px; border: 1px solid #979797; border-radius: 100px; cursor: pointer;}
+	.raider-slide-col .raider-slide-tab li:nth-child(2) {margin: 0 10px;}
+	.raider-slide-col .raider-slide-tab li.active {color: #141CD6; font-weight: 600; background-color: #F4F4FF; border-color: #141CD6;}
+
+	.trigger-slide-col {/* position: relative; */width: 100%;}
+	.trigger-slide-col .trigger-slide {position: relative; /*position: absolute; top: 0; width: 100%;*/ height: 1109px;}
+	.trigger-slide img {position: absolute; bottom: 0; left: 50%; width: 481px; transform: translateX(-50%); -webkit-transform: translateX(-50%); -o-transform: translateX(-50%);}
+	.challenge-col {background-color: #FEFAEF;}
+	.challenge-col h5 {padding-top: 180px;}
+	.app-user-col {padding: 150px 0 0; background-color: #EBF4FB;}
+	.app-user-col .speech-bubble {display: flex; position: relative; width: 209px; height: 50px; align-items: center; justify-content: center;
+		margin: 0 auto; color: #fff; font-size: 22px; background-color: #A2C9E8; border-radius: 100px;}
+	.app-user-col .speech-bubble:after {content: ' '; position: absolute; left: 50%; bottom: -10px; width: 0; height: 0; border-top: 10px solid #A2C9E8; border-left: 10px solid transparent; border-right: 10px solid transparent; transform: translateX(-50%); -webkit-transform: translateX(-50%); -o-transform: translateX(-50%); }
+	.app-user-col h5 {padding-top: 20px;}
+	.app-user-col .sub-title {margin-top: 15px;}
+
+	.running-col {padding-top: 250px; background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/bg_running.png); background-repeat: no-repeat; background-size: 100%;}
+	.running-col .video-container {overflow: hidden; display: flex; width: 100%; justify-content: center; align-items: center; margin: 16px 0 27px;}
+
+	.floating-banner-col {position: fixed; left: 0; bottom: 0; width: 100%; padding: 10px 0; background-color: #000; z-index: 1;
+		opacity: 0; transition: opacity .4s linear, transform .4s ease-in-out; transition-delay: .2s; transform: translate3d(0, 30px, 0);}
+	.floating-banner-col .inner {display: flex; width: 600px; margin: 0 auto;}
+	.floating-banner-col a {margin-left: auto; width: 280px; height: 45px; color: #1C1C1C; font-size: 20px;font-weight: 400; text-align: center; line-height: 48px; background-color: #00CC66;}
+
+	ul.animation_text {position: relative; margin-right: auto;}
+	ul.animation_text li {position: absolute;width: 170px; color: #fff; font-size: 24px;line-height: 45px; text-align: center;}
+	.animation_text_01, .animation_text_02  {display: none;}
+	.animation_text_01.active, .animation_text_02.active  {display: block;}
+	.floating-banner-col.active {opacity: 1; transform: translate3d(0, 0, 0);}
+
+	@media screen and (max-width: 1024px) {
+		.yafit-raider h4 {font-size: 10.5rem;}
+		.yafit-raider h5 {font-size: 10rem;}
+	}
+
+	@media screen and (max-width: 980px) {
+		.raider-slide-col .inner {width: 90%;}
+		.raider-slide-col .slide-text {top:20%; left: 55%; font-size: 57px;}
+		.raider-slide-col .slide-text:last-child {font-size: 45px;}
+		.raider-slide-col .raider-slide img {width: 50%;}
+		.raider-slide-col .raider-slide-tab {bottom: 25%; left: 55%;}
+		.raider-slide-col .raider-slide-tab li {padding: 10px 18px 8px; font-size: 13px;}
+		.running-col .video-container { transform: scale(0.7); -webkit-transform: scale(0.7); -o-transform: scale(0.7);}
+	}
+
+	@media screen and (max-width: 720px) {
+		.display-pc {display: none !important;}
+		.display-m {display: block !important;}
+
+		.yafit-raider h4 {font-size: 8.33vw;}
+		.yafit-raider h5 {font-size: 8.33vw;}
+		.yafit-raider .sub-title {padding-bottom: 1.94vw; font-size: 4.44vw;}
+
+		.yafit-raider .key-visual {height: auto;}
+		.yafit-raider .key-visual video {width: 100%; height: auto;}
+
+		.yafit-raider .change-brand-col {padding: 22.22vw 0 21.25vw;}
+		.yafit-raider .change-brand-col h5 {display: block;}
+		.yafit-raider .change-brand-col h5 em:first-child {margin-right: 0;}
+
+		.yafit-raider .new-yafitRider-col {padding-top: 23.89vw;}
+		.yafit-raider .new-yafitRider-col .sub-title img {width: 29.17vw; padding-left: 0.97vw;}
+		.yafit-raider .new-yafitRider-col video {width: 100%;}
+
+		.raider-slide-col {padding: 22.22vw 0 23.61vw}
+		.raider-slide-col h4 {position: relative; width: 100%; height: 23.61vw;}
+		.raider-slide-col .slide-text {width: 100%; top:0; left: 0; font-size: 8.33vw; text-align: center;}
+		.raider-slide-col .slide-text:last-child {font-size: 8.33vw;}
+		.raider-slide-col .raider-slide .swiper-slide {display: flex; justify-content: center}
+		.raider-slide-col .raider-slide img {width: 71.39vw;}
+		.raider-slide-col .raider-slide-tab {position: inherit; bottom: inherit; left: inherit; justify-content: center;}
+		.raider-slide-col .raider-slide-tab li {padding: 1.94vw 5.56vw 1.81vw; font-size: 3.89vw;}
+
+		.trigger-slide-col .trigger-slide {height: 152.50vw}
+		.challenge-col h5 {padding-top: 22.22vw;}
+		.app-user-col {padding: 13.89vw 0 0;}
+		.app-user-col .speech-bubble {width: 40vw; height: 9vw; font-size: 4.03vw;}
+		.app-user-col .speech-bubble:after {left: 50%; bottom: -1.5vw; border-top: 2vw solid #A2C9E8; border-left: 2vw solid transparent; border-right: 2vw solid transparent;}
+		.trigger-slide img {width: 66.81vw;}
+
+		.running-col {padding-top: 30.00vw;}
+		.running-col .video-container {transform: scale(1); -webkit-transform: scale(1); -o-transform: scale(1);}
+		.running-col video {width: 100%;}
+
+		.btn-app-download {display: block; width: 69.44vw; height: 12.50vw; margin: 6.94vw auto 32.50vw;}
+		.floating-btn-col {position: fixed; left: 0; bottom: 0; width: 100%; height: 13.89vw; line-height: 13.89vw; background-color: #00CC66; z-index: 1;
+			opacity: 0; transition: opacity .4s linear, transform .4s ease-in-out; transition-delay: .2s; transform: translate3d(0, 30px, 0);}
+		div.animation_text {display: block; position: relative;text-align: center;}
+		.floating-btn-col a {display: block; position: absolute;left: 0;top: 0;width: 100%;height: 100%; text-indent: -9999px}
+		div.animation_text p {position: absolute; left: 0; top: 0; width: 100%; color: #000; font-size: 3.61vw;font-weight: 600;}
+		.floating-btn-col.active {opacity: 1; transform: translate3d(0, 0, 0);}
+	}
+
+</style>
+<body>
+<header></header>
+<section class="yafit-raider">
+	<article class="key-visual">
+		<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_key_visual_img.png" muted autoplay loop playsinline class="display-pc">
+			<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_key_visual.mp4" type="video/mp4">
+		</video>
+		<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_key_visual_img.png" muted autoplay loop playsinline class="display-m">
+			<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_key_visual.mp4" type="video/mp4">
+		</video>
+	</article>
+	<article class="change-brand-col animation-00">
+		<span class="sub-title animation_delay_1">대한민국 1위 라이딩 앱</span>
+		<h5><em class="animation_delay_2">오픈라이더가</em> <em class="animation_delay_3"><span class="point-text">야핏라이더</span>로!</em></h5>
+	</article>
+	<article class="new-yafitRider-col animation-01">
+		<span class="sub-title">새로워진 <img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/yafitRider_logo.png" alt="야핏 라이더"></span>
+		<h5>예비 라이더부터 굇수까지 <br><span class="text-medium">맞춤형 라이딩 정보 제공</span></h5>
+		<span class="desc display-pc">* 굇수 : 뛰어난 능력자 또는 고수</span>
+		<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_new_yafitRider_img.png" muted playsinline class="new-yafitRider-video-pc">
+			<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_new_yafitRider.mp4" type="video/mp4">
+		</video>
+		<!--img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_new_yafitRider_img.png" alt="" class="display-m"-->
+		<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_new_yafitRider_img.png" width="100%" height="auto" muted playsinline class="new-yafitRider-video-m">
+			<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_new_yafitRider_3.mp4" type="video/mp4">
+		</video>
+	</article>
+	<article class="raider-slide-col">
+		<div class="inner">
+			<h4>
+				<em class="slide-text active">내게 맞는<br><span class="text-medium">라이딩 코스<br class="display-pc">추천 받기</span></em>
+				<em class="slide-text">달리고 싶은 <br class="display-pc">경로를 <br><span class="text-medium">바로 찾기</span></em>
+				<em class="slide-text"><span class="text-medium">속도계로 <br class="display-pc">주행 기록까지</span> <br>야핏 라이더에서 <br class="display-pc">한번에!</em>
+			</h4>
+			<div class="raider-slide">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/raider_slide_1.png" alt="추천 코스">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/raider_slide_2.png" alt="길찾기">
+					</div>
+					<div class="swiper-slide">
+						<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/raider_slide_3.png" alt="라이딩 시작">
+					</div>
+				</div>
+			</div>
+			<ul class="raider-slide-tab">
+				<li class="active">추천 코스</li>
+				<li>길찾기</li>
+				<li>라이딩 시작</li>
+			</ul>
+		</div>
+	</article>
+
+	<article class="trigger-slide-col">
+		<div class="challenge-col trigger-slide">
+			<h5>나를, 그리고 우리를<br>더 뜨겁게 하는 <br><strong class="text-bold">야핏 Challenge</strong></h5>
+			<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/challenge_img.png" alt="챌린지 이미지">
+		</div>
+		<div class="app-user-col trigger-slide animation-02">
+			<em class="speech-bubble">실시간 앱 가입자 수</em>
+			<h5><strong class="text-bold point-text"><span id="userCountMotion">1,718,687</span>명</strong>의<br>라이더들과 함께!</h5>
+			<span class="sub-title">함께 달리는 것이 진정한 라이딩이다.</span>
+			<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/app_user_img.png" alt="앱 가입자 수 이미지">
+		</div>
+	</article>
+	<article class="running-col animation-03">
+		<span class="sub-title">한계없는 야핏라이더의 길</span>
+		<h5>지금 <strong class="text-bold point-text"><span id="kmCountMotion">0</span>km</strong><br class="display-m">달리는 중</h5>
+		<div class="video-container">
+			<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_running_img.png" muted autoplay loop playsinline  class="display-pc">
+				<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_running.mp4" type="video/mp4">
+			</video>
+			<video poster="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_running_img.png" muted autoplay loop playsinline class="display-m">
+				<source src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/m_running.mp4" type="video/mp4">
+			</video>
+		</div>
+	</article>
+	<article class="qr-banner-col display-pc">
+		<img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/pc_qr_banner.png" alt="야핏 라이더 지금 바로 경험하기">
+	</article>
+	<a href="https://yafitrider.onelink.me/xjWv/rj6o5six" class="btn-app-download display-m"><img src="https://yafit.yanadoocdn.com/yanadoo/images/web/aboutRider/btn_app_download.svg" alt="앱 무료로 이용하기"></a>
+
+	<div class="floating-banner-col display-pc">
+		<div class="inner">
+			<ul class="animation_text">
+				<li class="animation_text_01">Fit your Riding</li>
+				<li class="animation_text_02 active">Yafit Rider</li>
+			</ul>
+			<a href="https://yafitrider.onelink.me/xjWv/rj6o5six">지금 바로 경험하기</a>
+		</div>
+	</div>
+
+	<div class="floating-btn-col display-m">
+		<div class="animation_text">
+			<p class="animation_text_01 mo_01 active">지금 바로 경험하기</p>
+			<p class="animation_text_02 mo_02">Fit your Riding</p>
+		</div>
+		<a href="https://yafitrider.onelink.me/xjWv/rj6o5six">지금 바로 경험하기</a>
+	</div>
+
+
+</section>
+
+<div data-include-path="https://yafit.yanadoocdn.com/yanadoo/web/layout/footer.html"></div>
+</body>
+<script src="https://yafit.yanadoocdn.com/yanadoo/library/gsap.min.js"></script>
+<script src="https://yafit.yanadoocdn.com/yanadoo/library/ScrollTrigger.min.js"></script>
+<script>
+	window.addEventListener('DOMContentLoaded', () => {yndModal(); setInterval(animationsText, 2500);});
+	// 야나두 팝업 가리기
+	window.addEventListener("load", () => {
+		document.getElementById('adn_closed_wrap_contents').style.display = "none";
+		document.getElementById('adn_panel_').style.display = "none";
+	});
+	window.addEventListener("scroll", () => { onScrollWindow(); });
+	window.onresize = function() {onScrollWindow();}
+
+	let flag = true;
+	// scroll event
+	function onScrollWindow() {
+		const innerWidth = window.innerWidth;
+		const animation00 = document.querySelector('.animation-00');
+		const animation00Top = animation00.offsetTop;
+		const bannerFloating = document.querySelector('.floating-banner-col');
+		const btnFloating = document.querySelector('.floating-btn-col');
+
+		const animation01 = document.querySelector('.animation-01');
+		const animation01Top = animation01.offsetTop;
+
+		/*const animation02 = document.querySelector('.animation-02');
+		const animation02Top = animation02.offsetTop;*/
+
+		const animation03 = document.querySelector('.animation-03');
+		const animation03Top = animation03.offsetTop;
+
+
+		if ( pageYOffset >= animation00Top - 500) {
+			bannerFloating.classList.add('active'); btnFloating.classList.add('active');
+		}else {
+			bannerFloating.classList.remove('active'); btnFloating.classList.remove('active');
+		}
+		if ( pageYOffset >= animation00Top - 300) {
+			document.querySelector('.animation_delay_1').classList.add('active');
+			document.querySelector('.animation_delay_2').classList.add('active');
+			document.querySelector('.animation_delay_3').classList.add('active');
+		}
+
+
+		const newYafitRiderVideoPc = document.querySelector('.new-yafitRider-video-pc');
+		const newYafitRiderVideoM = document.querySelector('.new-yafitRider-video-m');
+
+		if(pageYOffset >= animation01Top - 200 && innerWidth > 720)
+		{
+			newYafitRiderVideoPc.style.display = "block";
+			newYafitRiderVideoM.style.display = "none";
+			if(newYafitRiderVideoPc.paused) {newYafitRiderVideoPc.play();}
+		}
+		else {newYafitRiderVideoPc.pause();}
+
+		if(innerWidth < 720 && pageYOffset >= animation01Top - 200) {
+			newYafitRiderVideoPc.style.display = "none";
+			newYafitRiderVideoM.style.display = "block";
+
+			if(newYafitRiderVideoM.paused) {newYafitRiderVideoM.play();}
+		}else {newYafitRiderVideoM.pause();}
+
+		/*if ( pageYOffset >= animation02Top - 300) {
+			if (!flag)
+			{
+				animateCountUp(document.querySelector("#userCountMotion"), 1718687);
+				flag = true;
+			}
+		} else {
+			flag = false;
+		}*/
+
+		if ( pageYOffset >= animation03Top - 300) {
+			if (!flag)
+			{
+				animateCountUp(document.querySelector("#kmCountMotion"), 288814244);
+				flag = true;
+			}
+		} else {
+			flag = false;
+		}
+	}
+
+	new Swiper('.raider-slide', {
+		slidesPerView: 1,
+		effect : 'fade',
+		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
+		on: {
+			transitionEnd : function() {
+				document.querySelectorAll(".raider-slide-col h4 > .slide-text").forEach((element, index) => {
+					index === this.realIndex
+						? element.classList.add('active')
+						: element.classList.remove('active');
+				})
+				document.querySelectorAll(".raider-slide-tab > li").forEach((element, index) => {
+					index === this.realIndex
+						? element.classList.add('active')
+						: element.classList.remove('active');
+				})
+			}
+		}
+	});
+
+	/*// scroll animation
+	const triggerSlide = document.querySelectorAll(".trigger-slide");
+	const triggerSection = document.querySelectorAll(".trigger-slide-col");
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: triggerSection,
+			scrub: true,
+			pin: true,
+			end: "+=3000"
+		}
+	});
+	tl.to(triggerSlide, {xPercent: -100, duration:2, ease: "none"})
+		.to({},{duration:1});
+*/
+
+	// 카운트 업
+	function numberWithCommas(num)
+	{
+		return isEmpty(num) ? 0 : num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+	// An ease-out function that slows the count as it progresses
+	const easeOutQuad = t => t * ( 2 - t );
+
+	// The animation function, which takes an Element
+	function animateCountUp(targetEl, targetNumber)
+	{
+		// How long you want the animation to take, in ms
+		const animationDuration = 1500;
+		// Calculate how long each ‘frame’ should last if we want to update the animation 60 times per second
+		const frameDuration = 1000 / 60;
+		// Use that to calculate how many frames we need to complete the animation
+		const totalFrames = Math.round( animationDuration / frameDuration );
+
+		let frame = 0;
+		const countTo = parseInt( targetNumber, 10 );
+		// Start the animation running 60 times per second
+		const counter = setInterval( () => {
+			frame++;
+			// Calculate our progress as a value between 0 and 1
+			// Pass that value to our easing function to get our
+			// progress on a curve
+			const progress = easeOutQuad( frame / totalFrames );
+			// Use the progress value to calculate the current count
+			const currentCount = Math.round( countTo * progress );
+			targetEl.textContent = `${numberWithCommas(currentCount)}`;
+
+			// If we’ve reached our last frame, stop the animation
+			if ( frame === totalFrames ) {
+				clearInterval( counter );
+			}
+		}, frameDuration );
+	}
+	function animationsText() {
+		const text01 = document.querySelector('.animation_text_01');
+		const text02 = document.querySelector('.animation_text_02');
+		const mtext01 = document.querySelector('.animation_text_01.mo_01');
+		const mtext02 = document.querySelector('.animation_text_02.mo_02');
+		if(!text01.classList.contains('active') || !mtext01.classList.contains('active') ) {
+			text01.classList.add('active');
+			text02.classList.remove('active');
+			mtext01.classList.add('active');
+			mtext02.classList.remove('active');
+		} else {
+			text01.classList.remove('active');
+			text02.classList.add('active')
+			mtext01.classList.remove('active');
+			mtext02.classList.add('active')
+		}
+	}
+
+
+</script>
+</html>

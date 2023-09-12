@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+/** story **/
+@media screen and (max-width: 768px) {
+
+	.story .page-wrap {
+		margin-top: 0;
+	}
+	.story .top {
+		position: relative;
+		width: 100%;
+		color: #fff;
+		background-color: #000;
+	}
+	.story .top:after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		opacity: .4;
+		content: '';
+	}
+	.story.philosophy .top:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story1_top.png);
+	}
+	.story.member .top:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story2_top.png);
+	}
+	.story.leader .top:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story3_top.png);
+	}
+	.story.emoticon .top:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/brandstory_4_top_img.png);
+	}
+	.story .top .inner {
+		padding: 39.72vw 10.00vw 14.44vw;
+	}
+	.story .top h3 {
+		color: #fff;
+		font-size: 6.67vw;
+		font-weight: 300;
+		position: relative;
+		letter-spacing: -0.14vw;
+		z-index: 1;
+		opacity: .8;
+	}
+	.story .top h3 span {
+		display: block;
+		margin-bottom: 6.11vw;
+		font-size: 3.33vw;
+		font-weight: 600;
+	}
+
+	.story .content .inner {
+		padding: 13.89vw 8.89vw 0;
+	}
+	.story .content .paragraph {
+		position: relative;
+		margin-bottom: 24.44vw;
+		color: #5D5D5D;
+		font-size: 4.17vw;
+		line-height: 1.7em;
+	}
+	.story .content .paragraph:last-of-type {
+		margin-bottom: 8.33vw;
+	}
+	.story .content .paragraph:before {
+		position: absolute;
+		top: -6.67vw;
+		left: -2.78vw;
+		width: 9.44vw;
+		height: 0.83vw;
+		background-color: #000;
+		content: '';
+	}
+	.story .content .paragraph:first-child:before{
+		display: none;
+	}
+	.story .content .paragraph strong {
+		font-weight: 600;
+	}
+
+	.story .content .paragraph h4 {
+		margin-bottom: 4.44vw;
+		color: #000;
+		font-size: 5.56vw;
+		font-weight: 600;
+		letter-spacing: 0;
+	}
+	.story .content .paragraph img {
+		padding: 8.33vw 0 9.72vw;
+	}
+
+	.story .instagram-btn_wrap {
+		margin-bottom: 10.56vw;
+		padding: 0 8.89vw;
+		color: #9D9D9D;
+		font-size: 3.33vw;
+	}
+	.story .instagram-btn_wrap button {
+		margin-top: 1.39vw;
+		color: #93C1FF;
+		font-size: 3.33vw;
+		letter-spacing: 0;
+	}
+
+	.story .copy {
+		display: block;
+		padding-bottom: 8.33vw;
+		color: #9D9D9D;
+		font-size: 3.33vw;
+		border-bottom: 0.28vw solid #f3f3f3;
+	}
+
+	.story .content.align-img-right {
+		padding-top: 13.89vw;
+	}
+	.story .content.align-img-right .inner {
+		padding: 0 8.89vw;
+	}
+
+	.story .content.align-img-right .paragraph:before{
+		left: 4.44vw;
+	}
+	.story .content.align-img-right .paragraph h4 {
+		margin-bottom: 0;
+		line-height: 1.5em;
+	}
+	.story .content.align-img-right .img {
+		text-align: right;
+	}
+	.story .content.align-img-right .img img {
+		width: 91.11vw;
+		padding: 5.56vw 0;
+	}
+	.story .copy-wrap {
+		padding: 0 8.89vw;
+	}
+	.story .bottom-wrap {
+		padding-bottom: 29.17vw;
+	}
+	.story .bottom-wrap .inner {
+		padding: 0 8.89vw;
+	}
+	.story .bottom-wrap h3 {
+		padding: 8.33vw 0 2.78vw;
+		font-size: 5.56vw;
+		font-weight: 600;
+	}
+	.story .bottom-wrap .btn {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 23.33vw;
+		color: #fff;
+		background-color: #000;
+		border-radius: 1.94vw;
+	}
+	.story .bottom-wrap .btn:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		opacity: .5;
+		background-position: 0 25%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	.story .bottom-wrap .btn.philosophy:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story1_top.png);
+	}
+	.story .bottom-wrap .btn.member:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story2_top.png);
+	}
+	.story .bottom-wrap .btn.leader:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/story3_top.png);
+	}
+	.story .bottom-wrap .btn.emoticon:after {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/brandstory_banner4_img.png);
+	}
+
+	.story .bottom-wrap .btn:first-of-type {
+		margin-bottom: 3.89vw;
+	}
+	.story .bottom-wrap .btn a {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-indent: -2777.50vw;
+		z-index: 100;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/brandstory_banner_arrow.png);
+		background-repeat: no-repeat;
+		background-position: 97% 85%;
+		background-size: 8.33vw 1.94vw
+	}
+	.story .bottom-wrap .btn .text-wrap {
+		padding: 3.33vw;
+		z-index: 90;
+		position: relative;
+		opacity: .8;
+	}
+	.story .bottom-wrap .btn .text-wrap span {
+		font-size: 3.06vw;
+	}
+	.story .bottom-wrap .btn .text-wrap p {
+		padding-top: 1.67vw;
+		font-size: 4.17vw;
+	}
+
+}

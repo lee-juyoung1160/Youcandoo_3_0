@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* guide-page css */
+.guide-page {
+    background-color: #ffffff;
+}
+.guide-page .link-page {
+    border-bottom: 1px solid  #304f9e;
+    color: #304f9e;
+    font-family: "AppleSDGothicNeoM", 'sans-serif';
+}
+.guide-page h2.main-title {
+    margin-bottom: 25px;
+}
+.guide-page article {
+    padding: 6vh 0;
+}
+.guide-page .main-wrapper {
+    text-align: center;
+    color: #ffffff;
+    background-color: #30a5f7;
+}
+.guide-page .main-text {
+    margin-bottom: 0.5vh;
+}
+.guide-page .main-text:last-child {
+    margin-bottom: 0;
+}
+.guide-page .guide-slide {
+    text-align: left;
+}
+.guide-page .guide-slide .inner {
+    position: relative;
+}
+.guide-page .guide-slide .col-1 {
+    float: left;
+    width: 60%;
+}
+.guide-page .guide-slide .col-1 img {
+    width: 360px;
+    margin: 1vh 0;
+    box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.05);
+}
+.guide-page .guide-slide .col-1 img.m-img {
+    display: none;
+}
+.guide-page .guide-slide .col-2 {
+    position: relative;
+    padding-top: 4vh;
+    float: right;
+    width: 40%;
+}
+.guide-page .swiper-slide .wrap {
+    width: 100%;
+}
+.guide-page .swiper-button-next, .swiper-button-prev {
+    width: 10px;
+    height: 32px;
+    top: 0;
+    left: 0;
+    margin-top: 0 !important;
+}
+.guide-page .swiper-button-next {
+    left: 40px;
+}
+.guide-page .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 20px !important;
+    color: #929292 !important;
+}
+.guide-page .guide-slide h2.main-title {
+    color: #464646;
+    margin-bottom: 16px;
+}
+.guide-page .guide-slide h6 {
+    color :  #525252;
+    font-size: 1.3rem;
+    margin-bottom: 2vh;
+    font-family: "AppleSDGothicNeoM", 'sans-serif';
+}
+.guide-page .guide-slide .text-wrap {
+    margin-top: 2vh;
+    line-height: 1.5;
+}
+.guide-page .guide-slide .text-wrap p {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-family: "AppleSDGothicNeoL", 'sans-serif';
+    margin-bottom: 2vh;
+}
+.guide-page .guide-slide .text-wrap p:last-child {
+    margin-bottom: 0;
+}
+.guide-page .tab-btn {
+    text-align: right;
+    margin-bottom: 6vh;
+}
+.guide-page .tab-btn li {
+    cursor: pointer;
+    display: inline-block;
+    width: 49%;
+    font-size: 1.2rem;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'AppleSDGothicNeoM','sans-serif';
+    background-color: rgb(245, 245, 245);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-property: color, background-color;
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -o-transition-property: color, background-color;
+}
+.guide-page .tab-btn li.active {
+    color: #ffffff;
+    background-color: #30A4F8;
+}
+.guide-page .tab-contents.active {
+    display: block;
+}
+.guide-page .tab-contents {
+    display: none;
+}
+.guide-page .m-main-text {
+    display: none;
+}
+.guide-page .cap {
+    font-size: 0.9rem;
+    margin-bottom: 1vh;
+    padding: 1vh 2vh;
+    border: 1px solid #fff;
+    display: inline-block;
+    border-radius: 30px;
+}
+    /* 스와이퍼 기본 css */
+.guide-page .swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.guide-page .gallery-top {
+    height: 80%;
+    width: 100%;
+}
+.guide-page .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 33px 0;
+}
+.guide-page .gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+.guide-page .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+}
+.guide-page .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 5px !important;
+    border-radius: 3px !important;
+    margin-left: 2px !important;
+}
+/* pad device */
+@media only screen and (max-width: 950px) {
+    .guide-page .guid .col-1 img {width: 294px;}
+}
+/* mobile device */
+@media only screen and (max-width:600px) {
+    .guide-page h2.main-title {margin-bottom: 16px;}
+    .guide-page .guide-slide .col-1, .guide-page .guid .col-2 {float: none; width: 100%;}
+    .guide-page .guide-slide .col-2 {padding-top: 0; float: none; width: 100%}
+    .guide-page .guide-slide .col-1 img.m-img {display: block;}
+    .guide-page .guide-slide .col-1 img.w-img {display: none;}
+    .guide-page .swiper-button-next, .swiper-button-prev {display: none;}
+    .guide-page .tab-btn li {font-size: 1.1rem; height: 50px; line-height: 50px;}
+    .guide-page .tab-btn {margin-bottom: 3vh;}
+    .guide-page .m-main-text {display: block;}
+    .guide-page .w-main-text {display: none;}
+    .guide-doit-create .guide-slide h2.main-title {text-align: center;}
+    .guide-page .swiper-pagination {position: inherit;}
+    .guide-page .gallery-thumbs {padding: 20px 0;}
+}

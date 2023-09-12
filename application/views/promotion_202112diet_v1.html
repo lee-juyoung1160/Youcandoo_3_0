@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="공부습관,야나두,자기계발,자기개발,습관형성,자기관리앱,목표관리,생활습관,목표,목표달성,동기부여,습관">
+	<meta property="og:type" content="교육">
+	<meta property="og:title" content="목표달성 커뮤니티 앱 유캔두">
+	<meta property="og:url" content="https://www.youcandoo.co.kr">
+	<meta property="og:description" content="쉬운 방법으로 빠른 달성을 돕는 매일 1%의 성장습관. 오늘부터 하루 10분 관리 해보세요.">
+	<meta property="og:image" content="https://youcandoo.yanadoocdn.com/v3/web/assets/images/thumbnail.jpg?resource_version=<?=$resource_version?>">
+	<link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico?resource_version=<?=$resource_version?>">
+	<link rel="stylesheet" href="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/css/swiper.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161922496-1"></script>
+	<script src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+	<title>유캔두</title>
+	<script>
+		// 애널리틱스 관련 스크립트
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-161922496-1');
+
+		// Facebook Pixel Code
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '407679561137687');
+		fbq('track', 'PageView');
+
+		// 뷰저블 트래킹 스크립트
+		(function(w, d, a){
+			w.__beusablerumclient__ = {
+				load : function(src){
+					var b = d.createElement("script");
+					b.src = src; b.async=true; b.type = "text/javascript";
+					d.getElementsByTagName("head")[0].appendChild(b);
+				}
+			};w.__beusablerumclient__.load(a);
+		})(window, document, "//rum.beusable.net/script/b211221e140653u472/85ceacddc9");
+
+		// 카카오모먼트 광고 SDK/픽셀
+		kakaoPixel('6010738363450373989').pageView();
+	</script>
+</head>
+<style>
+	/* reset css */
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button{margin:0;padding:0;font-style:normal;vertical-align:baseline;font-size:100%;border:0;}*::-webkit-scrollbar-track,.modal_container::-webkit-scrollbar-track{background-color:rgba(0,0,0,.1);border-radius:10px;margin-top:5px;margin-bottom:0}*::-webkit-scrollbar,.modal_container::-webkit-scrollbar{width:5px;background-color:#fff;margin-top:20px;margin-bottom:20px}*::-webkit-scrollbar-thumb,.modal_container::-webkit-scrollbar-thumb{background-color:#717171;border-radius:10px;margin-top:20px;margin-bottom:20px}*:focus{outline:none}body{width:100%;min-width:280px;height:auto;line-height:1;font-size:15px;color:#1B1B1C;background-color:#fff;font-family:'SpoqaHanSansNeo', 'sans-serif';}img{max-width:100%;vertical-align:top;height:auto!important}ol,ul,li{list-style:none}table{border-collapse:collapse;border-spacing:0}hr{display:block;margin:16px 0;padding:0;height:1px;border:0;border-top:1px solid #ccc}button{outline:none;cursor:pointer}i{cursor:pointer}input::-ms-clear,input::-ms-reveal{display:none;width:0;height:0}input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none}input,select,textarea{vertical-align:middle;-webkit-appearance:none;-webkit-border-radius:0}select{cursor:pointer}select:focus{outline:none}input:focus{outline:none}a{text-decoration:none;color:inherit;cursor:pointer;display:inline-block}*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}.clearfix::after{content:"";clear:both;display:block}.readable-hidden,.a11y,legend{position:absolute;width:1px;height:1px;overflow:hidden;margin:-1px;clip:rect(0,0,0,0)}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{transition:background-color 5000s ease-in-out 0s;-webkit-transition:background-color 9999s ease-out;-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#545454!important}h1,h2,h3,h4,h5,h6{font-weight:normal;}
+	/*font*/
+	@font-face {font-family: "SpoqaHanSansNeo";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoRegular.woff2?resource_version=<?=$resource_version?>") format("woff2"); font-weight: 300;}
+	@font-face {font-family: "SpoqaHanSansNeo";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoMedium.woff2?resource_version=<?=$resource_version?>") format("woff2"); font-weight: 500;}
+	@font-face {font-family: "SpoqaHanSansNeo";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoBold.woff2?resource_version=<?=$resource_version?>") format("woff2"); font-weight: 600;}
+	/* common css */
+	section{overflow: hidden; width:100%; max-width:720px;height:100%;margin:0 auto;position:relative;}
+	article {width: 100%;}
+	.inner {padding: 0 39px;}
+	header,.promotion-title__head, footer {display: none;}
+	/* 토스트 메세지 */
+	#snackbar {visibility: hidden;position: fixed;left: 50%;bottom: 100px;min-width: 250px;padding: 16px;color: #fff;font-size: 17px;text-align: center;background-color: #333;border-radius: 50px;transform: translateX(-50%);box-shadow: 2px 1px 5px rgba(0,0,0,.5);z-index: 1101;}
+	#snackbar.show {visibility: visible;-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;animation: fadein 0.5s, fadeout 0.5s 2.5s;}
+	@-webkit-keyframes fadein {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	@keyframes fadein {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	@-webkit-keyframes fadeout {
+		from {opacity: 1;}
+		to {opacity: 0;}
+	}
+
+	@keyframes fadeout {
+		from {opacity: 1;}
+		to {opacity: 0;}
+	}
+
+	/* 해당 페이지 css */
+	.scroll-hidden {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
+	.promotion-motion__title .motion-title__img img:nth-child(1){display: none;}
+	.promotion-motion__title .motion-title__img img:nth-child(1).active {display: block;}
+	.promotion-motion__title .motion-title__img img:nth-child(2){display: none;}
+	.promotion-motion__title .motion-title__img img:nth-child(2).active {display: block;}
+	.promotion-motion__title {position: relative; height: 1153px; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_title_bg.jpg); background-size: 102% auto; background-repeat: no-repeat;}
+	.promotion-motion__title .title {width: 592px;height: 414px; margin: 0 auto; padding-top: 83px;}
+	.promotion-motion__title .support {position: relative;top: 40px; width: 720px; height: 35px; margin: 74px 0 0;}
+	.promotion-motion__title .motion-title__img {position: relative; width: 606px; height: 516px; margin: 100px auto 0;}
+	.promotion-motion__title .motion-title__img img {position: absolute; top: 0; bottom: 0;}
+	/* 적립된 쌀 영역 */
+	.promotion-rice__wrap {padding-bottom: 90px; background-color: #252A31;}
+	.promotion-rice__wrap h2 {padding: 98px 0 52px; color: #222; font-size: 40px; font-weight: 600; text-align: center; background-color: #fff; line-height: 1.5em; letter-spacing: -0.9px;}
+	.promotion-rice__wrap h2 strong {color: #FD4E6A; font-size:72px; letter-spacing: -1.77px;}
+	.promotion-motion__rice {border-radius: 10px; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_rise_bg.png); background-size: 100%; background-repeat: no-repeat;}
+	.promotion-motion__rice h3 {padding: 100px 0 347px; color: #fff;font-size: 31px; font-weight: 300; text-align: center; line-height: 1.7em;}
+	.promotion-motion__rice h3 span {font-size: 37px; font-weight: 600;}
+	.promotion-motion__rice h3 span strong {color:#58E5CE; font-size: 50px;}
+	/* 세로 슬라이드 영역 */
+	.promotion-slide__submit {position: relative; width: 592px;height: 292px; margin: 60px auto 0;}
+	.promotion-slide__submit:after {position: absolute;bottom: 0;left: 0;width: 100%;height: 100%;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_slide_shadow.svg);background-size: 100% auto;z-index: 100;content: '';}
+	.promotion-slide__submit li {display: flex; align-items: center; padding: 20px 0 22px 30px; color: #fff; border-bottom: 1px solid rgba(112, 112, 112, .2);}
+	.promotion-slide__submit li img {width: 71px; height: 36px; }
+	.promotion-slide__submit li strong {margin-left: 24px; font-size: 27px; font-weight: 300; text-align: center;}
+	/* 결심선언 폼 */
+	.promotion-form__wrap {height: 1146px; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_con3_bg.svg); background-size: 100% auto; background-repeat: no-repeat;}
+	.promotion-form__wrap .title {padding: 100px 0 80px; text-align: center}
+	.promotion-form__wrap .title img {display: inline-block;}
+	.promotion-form__wrap .title img:nth-child(1) {width: 411px;}
+	.promotion-form__wrap .title img:nth-child(2) {width: 478px; margin: 60px 0 40px;}
+	.promotion-form__wrap .title img:nth-child(3) {width: 388px;}
+	.promotion-form__wrap .inner {padding: 0 40px;}
+	.promotion-form {padding: 59px 0;background-color: #fff; border-radius: 10px;}
+	.promotion-form h4 {margin-bottom: 57px; color: #333; text-align: center; font-size: 39px; font-weight: 600; letter-spacing: -1.55px;}
+	.promotion-form h4 span {display: block; margin-top:10px; font-size: 31px; font-weight: 300;}
+	.promotion-form input[type="text"], .promotion-form input[type="tel"] {height: 63px; padding: 14px 16px;font-size: 27px;font-weight: 500;background-color: #F3F3F7;border: none;}
+	.promotion-form input::placeholder {color: #898989;}
+	.promotion-form label {display: inline-block;width: 125px;font-size: 27px;font-weight: 500;}
+	.promotion-form .input-wrap__name {margin-bottom: 32px;}
+	.promotion-form .input-wrap__name input[type="text"] {width: 418px;}
+	.promotion-form .select-box {height: 63px; padding: 14px 63px 16px 16px;font-size: 27px;font-weight: 500;background-color: #F3F3F7;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_dropdown_btn.png);background-position: 100% 100%; background-size: 63px 63px; background-repeat: no-repeat; border: none;}
+	.promotion-form  select {color: #111;}
+	.promotion-form .input-wrap__phone {padding: 32px 0;}
+	.promotion-form .input-wrap__kg, .promotion-form .input-wrap__name,.promotion-form .input-wrap__phone{display: flex; padding-left:40px; align-items: center;}
+	.promotion-form .input-wrap__kg input[type="tel"] {width: 197px;}
+	.promotion-form .input-wrap__kg span {font-size: 30px;font-weight: 500;padding-right: 17px;}
+	.promotion-form .input-wrap__kg span:last-of-type {padding-left: 16px;}
+	.promotion-form .input-wrap__phone input[type="tel"] {width: 142px}
+	.promotion-form .input-wrap__phone .input-num__center {margin:0 4px;}
+	.promotion-form .checkbox-wrap {display: flex; align-items: center; padding: 39px 0 0 40px;}
+	.promotion-form .checkbox-wrap input[type="checkbox"] {display: none;}
+	.promotion-form .checkbox-wrap input[type="checkbox"] + label {display: flex;width: 444px; align-items: center; font-size: 23px; color: #666; font-weight: 300;}
+	.promotion-form .checkbox-wrap input[type="checkbox"] + label span {display: inline-flex;width: 40px;height: 40px;margin-right: 12px;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_check_btn.png);background-size: cover;background-repeat: no-repeat;background-position: center;}
+	.promotion-form .checkbox-wrap input[type="checkbox"]:checked + label span {background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_check_btn_1.svg);background-size: cover;background-repeat: no-repeat;background-position: center;}
+	.promotion-form .checkbox-wrap a {color: #0067FF;font-size: 23px; text-decoration: underline;}
+	.promotion-form__wrap p {margin: 45px 0 18px; font-size: 19px; font-weight: 300; text-align: center;}
+	.promotion-form__wrap  button {display: block; width: 592px; height: 118px; margin: 56px auto 0; background: none;}
+	/* 성공 기부 현황 */
+	.promotion-success {background-color: #252431; text-align: center;}
+	.promotion-success .inner {padding:30px 50px 80px;}
+	.promotion-success .title {padding:65px 0 40px;color: #fff; font-size: 44px; font-weight: 600; line-height: 1.3em; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_success_title_bg.svg); background-size: 100%;}
+	.promotion-success .count-box {color: #fff; font-size: 39px; font-weight: 300; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_success_count_box.svg); background-size: 100%; background-repeat: no-repeat; background-position: 0 100%;}
+	.promotion-success .count-kg strong {color: #58E5CE; font-size: 59px; line-height: 1.5em;}
+	.promotion-success .count-momey {padding: 70px 0 30px; color: #FED75B; font-size: 64px; font-weight: 600;}
+	.promotion-success .bottom {margin-top: 60px; color: #fff;}
+	.promotion-success .bottom strong {display: block; margin-bottom:12px; color: #F0F0F0; font-size: 44px;}
+	.promotion-success .bottom span {color: #B7B7B7; font-size: 21px; font-weight: 300;}
+	/* 리뷰 슬라이드 */
+	.promotion-review__warp {height: 712px;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_con5_bg.png);background-size: 100% auto;background-repeat: no-repeat;}
+	.promotion-slide__review {padding: 259px 0 0 39px;}
+	.promotion-slide__review li {position: relative;width: 296px;height: 355px;padding: 71px 27px 40px;background-color: #fff;border-radius: 10px;}
+	.promotion-slide__review li p {color: #444444;font-size: 28px;font-weight: 300;line-height: 1.4;letter-spacing: -1.4px;display: -webkit-box;overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;-webkit-line-clamp: 5;}
+	.promotion-slide__review li .nic-name {position: absolute;bottom: 41px;right: 27px;color: #a7a7a7;font-size: 26px;font-weight: 300;text-align: right;}
+	.promotion-slide__review li:after {position: absolute;top: 27px;left: 24px;width: 30px; height: 30px; background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_review_img.svg); background-size: 100% auto; content: '';}
+	/* 친구에게 공유 */
+	.promotion-share__warp {padding:51px 0;background-color: #333333;}
+	.promotion-share__warp .inner {display: flex}
+	.promotion-share__warp .share-text, .promotion-share__warp .share-btn__warp {width: 50%;}
+	.promotion-share__warp .share-text img {width: 275px;}
+	.promotion-share__warp .share-btn__warp {width: 48%; margin-left: auto;}
+	.promotion-share__warp .share-btn__warp span {display: block; margin: 10px 0 25px; color: #fff; font-size: 23px; font-weight: 500;}
+	.promotion-share__warp .share-btn__warp button {width: 286px; height: 71px; color: #333333; font-size: 27px; font-weight: 500; background-color:#F9E133; border-radius: 10px; }
+
+	.promotion-bottom__warp {background-color: #fff;}
+	/* 플로팅배너 */
+	.floating-banner__wrap {display: none;}
+	/* 모달 */
+	.modal-content {display: none;position: fixed;left: 50%;top:50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);z-index: 1100;}
+	.modal-bg {display: none;position: fixed;left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100vh;background-color: #000;opacity: .3;z-index: 1001;}
+
+	.complete-modal {width: 360px;height: 675px;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_complete_modal_bg_pc.png);background-size: 100% auto;background-repeat: no-repeat;}
+	.complete-modal p {font-weight: 300;text-align: center;}
+	.complete-modal p.top strong {padding: 0 5px 3px; color: #1FAD96; font-weight: 600; border-bottom: 1px solid #000;}
+	.complete-modal p.top {padding: 108px 0 100px;font-size: 23px; line-height: 1.5em;}
+	.complete-modal p.bottom {margin-bottom: 20px; font-size: 18px; line-height: 1.4em;}
+	.complete-modal p.bottom strong {color: #1FAD96; font-weight: 600;}
+	.complete-modal .modal-close__btn {display: flex;width: 20px;height: 20px;background: none;margin: 16px 16px 0 auto; text-indent: -9999px;}
+	.complete-modal .modal-app__btn {display: block;width: 280px;height: 48px;margin: 0 auto; background: none;}
+	.complete-modal .tag-copy {display: flex; align-items: center; width: 320px; height: 34px; margin: 110px auto 0; background-color: #fff; border-radius: 4px;}
+	.complete-modal input {width: 253px; padding-left: 8px; color: #666666; font-size: 12px; border: none; letter-spacing: -.8px}
+	.complete-modal .tag-copy button {width: 60px; height: 22px;}
+
+	.terms-modal {width: 360px; padding: 40px; border-radius: 10px; background-color: #fff;}
+	.terms-modal h4 {font-size: 18px; font-weight: 600;}
+	.terms-modal p {margin: 20px 0 30px; font-size: 14px; font-weight: 300; line-height: 24px;}
+	.terms-modal .modal-close__btn {width: 280px; height: 48px; background: none;}
+	.alert-modal {width: 580px; padding:34px; background-color: #fff; border-radius: 20px;}
+	.alert-modal p {margin: 52px 0 67px; color: #51515D; font-size: 27px; font-weight: 300; text-align: center; line-height: 39px;}
+	.alert-modal button {width: 100%; height: 96px; color: #fff; font-size: 33px; background-color: #6267EA; border-radius: 5px;}
+
+	/* 뷰포트 */
+	@media all and (max-width:719px) {
+		/* 토스트 메세지 */
+		#snackbar {visibility: hidden;left: 50%;bottom: 13vw;min-width: 34.77vw;padding: 2.23vw;font-size: 3.33vw;border-radius: 6.95vw;transform: translateX(-50%);box-shadow: 0.28vw 0.14vw 0.70vw rgba(0,0,0,.5);}
+		#snackbar.show {visibility: visible;-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;animation: fadein 0.5s, fadeout 0.5s 2.5s;}
+
+		.inner {padding: 0 5.42vw;}
+		section {padding-bottom: 35.88vw;}
+		.promotion-motion__title {height: 160.14vw;}
+		.promotion-motion__title .title {width: 82.22vw;height: 57.50vw;padding-top: 11.53vw;}
+		.promotion-motion__title .support {top: 5.56vw; width: 100.00vw; height: 4.86vw; margin: 10.28vw 0 0;}
+		.promotion-motion__title .motion-title__img {width: 84.17vw; height: 71.67vw; margin: 14.5vw auto 0;}
+		.promotion-rice__wrap {padding-bottom: 12.50vw;}
+		.promotion-rice__wrap h2 {padding: 13.61vw 0 7.22vw;font-size: 5.56vw;letter-spacing: -0.13vw;}
+		.promotion-rice__wrap h2 strong {font-size:10vw; letter-spacing: -0.25vw;}
+		.promotion-motion__rice {border-radius: 1.39vw;}
+		.promotion-motion__rice h3 {padding: 13.89vw 0 48.19vw;font-size: 4.31vw;}
+		.promotion-motion__rice h3 span {font-size: 5.14vw;}
+		.promotion-motion__rice h3 span strong {font-size: 6.94vw;}
+		/* 세로 슬라이드 영역 */
+		.promotion-slide__submit {width: 82.22vw;height: 40.56vw; margin: 8.33vw auto 0;}
+		.promotion-slide__submit li {padding: 2.78vw 0 3.06vw 4.17vw;}
+		.promotion-slide__submit li img {width: 9.86vw; height: 5.00vw; }
+		.promotion-slide__submit li strong {margin-left: 3.33vw; font-size: 3.75vw;}
+		/* 결심선언 폼 */
+		.promotion-form__wrap {height: 159.39vw;}
+		.promotion-form__wrap .title {padding: 13.89vw 0 11.11vw;}
+		.promotion-form__wrap .title img:nth-child(1) {width: 57.08vw;}
+		.promotion-form__wrap .title img:nth-child(2) {width: 66.39vw; margin: 8.33vw 0 5.56vw;}
+		.promotion-form__wrap .title img:nth-child(3) {width: 53.89vw;}
+		.promotion-form__wrap .inner {padding: 0 5.56vw;}
+		.promotion-form {padding: 8.33vw 0 8.33vw;}
+		.promotion-form h4 {margin-bottom: 7.92vw;   font-size: 5.42vw;  letter-spacing: -0.22vw;}
+		.promotion-form h4 span { margin-top:1.39vw; font-size: 4.31vw; }
+		.promotion-form input[type="text"], .promotion-form input[type="tel"] {height: 8.75vw; padding: 1.94vw 2.22vw;font-size: 3.75vw;}
+		.promotion-form label {width: 17.36vw;font-size: 3.75vw;}
+		.promotion-form .input-wrap__name {margin-bottom: 4.45vw;}
+		.promotion-form .input-wrap__name input[type="text"] {width: 58.06vw;}
+		.promotion-form .select-box {height: 8.75vw; padding: 1.94vw 8.75vw 2.22vw 2.22vw;font-size: 3.75vw; background-size: 8.75vw 8.75vw;}
+		.promotion-form  select {color: #111;}
+
+		.promotion-form .input-wrap__kg, .promotion-form .input-wrap__name {padding-left: 5.56vw;}
+		.promotion-form .input-wrap__phone {padding: 4.44vw 0 4.44vw 5.56vw;}
+		.promotion-form .input-wrap__kg input[type="tel"] {width: 27.36vw;}
+		.promotion-form .input-wrap__kg span {font-size: 4.17vw;padding-right: 2.36vw;}
+		.promotion-form .input-wrap__kg span:last-of-type {padding-left: 2.22vw;}
+		.promotion-form .input-wrap__phone input[type="tel"] {width: 19.72vw}
+		.promotion-form .input-wrap__phone .input-num__center {margin:0 0.56vw;}
+		.promotion-form .checkbox-wrap {padding: 5.42vw 0 0 5.56vw;}
+		.promotion-form .checkbox-wrap input[type="checkbox"] + label {width: 61.67vw; height: 0; font-size: 3.19vw;}
+		.promotion-form .checkbox-wrap input[type="checkbox"] + label span {width: 5vw;height: 5vw;margin-right: 1.67vw;}
+		.promotion-form .checkbox-wrap a {font-size: 3.19vw;}
+		.promotion-form__wrap p {margin: 7.25vw 0 2.5vw; font-size: 2.64vw;}
+		.promotion-form__wrap  button {display: block; width: 82.22vw;height: 16.39vw; margin: 7.79vw auto 0;}
+		/* 성공 기부 현황 */
+		.promotion-success .inner {padding:4.17vw 6.94vw 11.11vw;}
+		.promotion-success .title {padding:9.03vw 0 5.56vw; font-size: 6.11vw;}
+		.promotion-success .count-box { font-size: 5.42vw; }
+		.promotion-success .count-kg strong { font-size: 8.19vw; line-height: 1.5em;}
+		.promotion-success .count-momey {padding: 9.72vw 0 4.17vw;  font-size: 8.89vw; }
+		.promotion-success .bottom {margin-top: 8.33vw; }
+		.promotion-success .bottom strong { margin-bottom:1.67vw;  font-size: 6.11vw;}
+		.promotion-success .bottom span { font-size: 2.92vw; }
+		/* 리뷰 슬라이드 */
+		.promotion-review__warp {height: 97vw;}
+		.promotion-slide__review {padding: 35.97vw 0 0 5.42vw;}
+		.promotion-slide__review li {position: relative;width: 41.11vw;height: 49.31vw;padding: 9.86vw 3.75vw 5.56vw;background-color: #fff;border-radius: 1.39vw;}
+		.promotion-slide__review li p {font-size: 3.89vw;line-height: 1.4;letter-spacing: -0.19vw;}
+		.promotion-slide__review li .nic-name {bottom: 5.69vw;right: 3.75vw;font-size: 3.61vw;font-weight: 300;}
+		.promotion-slide__review li:after {top: 3.75vw;left: 3.33vw;width: 4.17vw; height: 4.17vw;}
+		/* 친구에게 공유 */
+		.promotion-share__warp {padding:7.08vw 0;}
+		.promotion-share__warp .share-text img {width: 38.19vw;}
+		.promotion-share__warp .share-btn__warp span {margin: 1.39vw 0 3.47vw; font-size: 3.19vw;}
+		.promotion-share__warp .share-btn__warp button {width: 39.72vw; height: 9.86vw;font-size: 3.75vw;  border-radius: 1.39vw; }
+		/* 플로팅배너 */
+		.floating-banner__wrap {
+			display: block;
+			position: fixed;width: 100.00vw;left: 50%;bottom: 0;margin-left: -50.00vw; padding: 2.78vw 0 8vw; background-color: #000; z-index: 1000;
+			opacity: 0; transform: translateY(31.11vw); -webkit-transform: translateY(31.11vw); -ms-transform: translateY(31.11vw); -o-transform: translateY(31.11vw); -moz-transform: translateY(31.11vw);
+		}
+		.floating-banner__wrap.active {opacity: 1; transition: .4s .2s; transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); -moz-transform: translateY(0);}
+		.floating-banner__wrap strong {display: block; color: #fff; font-size: 3.75vw; font-weight: 500; text-align: center; line-height: 1.4em;}
+		.floating-banner__wrap button {display: block; width: 82.08vw; height: 13.06vw; margin: 2.50vw auto 2.92vw; background: none;}
+		.floating-banner__wrap span {display: block; color: #91F5E5; font-size: 2.92vw; font-weight: 300; text-align: center;}
+		/* 모달 */
+		.complete-modal {width: 50.07vw;height: 93.88vw;background-size: 100% auto;}
+		.complete-modal p.top strong {padding: 0 0.70vw 0.42vw;border-bottom: 0.14vw solid #000;}
+		.complete-modal p.top {padding: 15.02vw 0 13.91vw;font-size: 3.20vw; line-height: 1.5em;}
+		.complete-modal p.bottom {margin-bottom: 2.78vw; font-size: 2.50vw; line-height: 1.4em;}
+		.complete-modal .modal-close__btn {width: 2.78vw;height: 2.78vw;background: none;margin: 2.23vw 2.23vw 0 auto; text-indent: -1390.68vw;}
+		.complete-modal .modal-app__btn {width: 38.94vw;height: 6.68vw;margin: 0 auto; background: none;}
+		.complete-modal .tag-copy { align-items: center; width: 44.51vw; height: 4.73vw; margin: 15.30vw auto 0;  border-radius: 0.56vw;}
+		.complete-modal input {width: 35.19vw; padding-left: 1.11vw; font-size: 1.67vw; border: none; letter-spacing: -0.11vw}
+		.complete-modal .tag-copy button {width: 8.34vw; height: 3.06vw;}
+
+		.terms-modal {width: 50.00vw; padding: 5.56vw; border-radius: 1.39vw;}
+		.terms-modal h4 {font-size: 2.50vw;}
+		.terms-modal .modal-close__btn {width: 38.89vw; height: 6.67vw; background: none;}
+		.alert-modal {width: 80.56vw; padding:4.72vw; background-color: #fff; border-radius: 2.78vw;}
+		.alert-modal p {margin: 7.22vw 0 9.31vw; color: #51515D; font-size: 3.75vw; font-weight: 300; text-align: center; line-height: 5.42vw;}
+		.alert-modal button {width: 100%; height: 13.33vw; color: #fff; font-size: 4.58vw; background-color: #6267EA; border-radius: 0.69vw;}
+	}
+
+	@media all and (max-width:530px) {
+		.promotion-form__wrap p {margin: 7.25vw 0 3.5vw;}
+		/*모달*/
+		.complete-modal {width: 86.23vw;height: 161.89vw;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_complete_modal_bg_m.png);}
+		.complete-modal p.top strong {padding: 0 0.70vw 0.42vw;}
+		.complete-modal p.top {padding: 21.5vw 0 24.06vw;font-size: 5.15vw;}
+		.complete-modal p.bottom {margin-bottom: 5.15vw; font-size: 4.17vw;}
+		.complete-modal .modal-close__btn {width: 13vw;height: 13vw;margin: 0 0 0 auto;}
+		.complete-modal .modal-app__btn {width: 76.77vw;height: 11.96vw;}
+		.complete-modal .tag-copy { align-items: center; width: 76.77vw; height: 11.96vw; margin: 30.46vw auto 0; border-radius: 0.56vw;}
+		.complete-modal input {width: 60vw; padding-left: 1.95vw; font-size: 2.78vw;}
+		.complete-modal .tag-copy button {width: 14.46vw; height: 5.29vw; }
+
+		.terms-modal {width: 86.11vw; padding: 12.50vw 4.16vw 11.11vw; border-radius: 1.39vw;}
+		.terms-modal h4 {font-size: 4.17vw; font-weight: 600;}
+		.terms-modal p {width: 70vw; margin: 4.17vw auto 6.94vw; font-size: 3.06vw;line-height: 4.17vw;}
+		.terms-modal .modal-close__btn {width: 77.78vw; height: 13.33vw;}
+	}
+	@media all and (max-width:280px) {
+		.promotion-form .checkbox-wrap input[type="checkbox"] + label {width: 67vw; font-size: 2vw;}
+		.promotion-form .checkbox-wrap a {font-size: 2vw;}
+		.promotion-form .checkbox-wrap {padding: 5.42vw 0 0 4vw;}
+		.promotion-form {padding: 8.33vw 0 7vw;}
+	}
+</style>
+<body>
+<header><h1 class="promotion-title__head">질량보존의 법칙 다이어트</h1></header>
+<section>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=407679561137687&ev=PageView&noscript=1"/>
+	<!--  s: 최상단 비쥬얼 -->
+	<article class="promotion-motion__title">
+		<p class="title"><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_title.svg" alt="질량보존의법칙"></p>
+		<p class="support"><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_support.png" alt="후원사"></p>
+		<div class="motion-title__img">
+			<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_title_motion_1.svg" alt="title motion image">
+			<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_title_motion_2.svg" alt="title motion image">
+		</div>
+	</article>
+	<!-- s: 적립된 쌀 -->
+	<article class="promotion-rice__wrap">
+		<h2>지금까지, <strong id="applyCount"></strong> 명이<br>다이어트 결심을 선언했어요.</h2>
+		<div class="inner">
+			<div class="promotion-motion__rice">
+				<h3>다이어트 결심으로 적립된 쌀<br><span>총 <strong class="count-text" id="targetWeight"></strong> kg</span></h3>
+			</div>
+			<div class="promotion-slide__submit swiper-container">
+				<ul class="swiper-wrapper" id="applyList">
+					<!--<li class="swiper-slide">
+						<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_new_icon.png" alt="new"><span>20분 전</span><strong>김*영님이 -3kg을 감량했어요!</strong>
+					</li>
+					<li class="swiper-slide">
+						<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_new_icon.png" alt="new"><span>8분 전</span><strong>김**영님이 -3kg을 감량했어요!</strong>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+	</article>
+	<!--  s:결심 선언하기 폼 -->
+	<article class="promotion-form__wrap">
+		<div class="title">
+			<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_form_title_3.svg" alt="">
+			<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_form_title_1.png" alt="">
+			<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_form_title_2.png" alt="">
+		</div>
+		<div class="inner">
+			<div class="promotion-form">
+				<h4>올해 감량 목표를 선언하세요!<!--span>빼고 싶은 무게 만큼 쌀이 기부됩니다.</span--></h4>
+				<div class="input-wrap__name">
+					<label>이름</label>
+					<input type="text" placeholder="홍길동" maxlength="5" id="name"/>
+				</div>
+
+				<div class="input-wrap__kg">
+					<label>감량목표</label>
+					<!--span>-</span-->
+					<input type="tel" maxlength="2" id="target" placeholder="1~10"/>
+					<span>Kg</span>
+				</div>
+				<button type="submit" id="btnSubmit"><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_form_btn.png" alt="결심선언하기"></button>
+			</div>
+		</div>
+	</article>
+	<!-- s: 캠페인 상세 설명 -->
+	<article class="promotion-explanation">
+		<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_con4_bg.png" alt="Explanation01">
+		<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_con4_motion.gif" alt=motion">
+	</article>
+	<!-- 기부 성공 현황 -->
+	<div class="promotion-success">
+		<div class="inner">
+			<h4 class="title">그리고 우린,<br>해내고 있습니다!</h4>
+			<div class="count-box">
+				<p class="count-kg">
+					현재까지<br>
+					 <strong>5,933</strong>kg의<br>
+					무게가 모여
+				</p>
+				<p class="count-momey"><strong>13,053,920</strong>원</p>
+			</div>
+			<div class="bottom">
+				<strong>기부에 성공했어요</strong>
+				<span>※ 질법다 챌린지 참여자 7,992명 (2/21 기준)</span>
+			</div>
+		</div>
+	</div>
+	<div><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_explanation03.png" alt="Explanation03"></div>
+	<!-- s: 리뷰 슬라이드 -->
+   <article class="promotion-review__warp">
+	  <div class="promotion-slide__review swiper-container">
+		  <ul class="swiper-wrapper">
+			  <li class="swiper-slide">
+				  <p>작심 3일을 못 넘기던 나였는데, 하다보니 움직여지고 움직이다 보니 운동하게 되는 내 자신이 신기해요!</p>
+				  <span class="nic-name">벌**소리</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>덕분에 좋은 습관 백일 넘게 매일 유지하고 있어요!</p>
+				  <span class="nic-name">승*</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>하루 10분 정도면 해낼 수 있는 미션들덕에 부담없이 하고, 요즘 이걸로 커피값 버는게 쏠쏠해요 ~ ㅎㅎ</p>
+				  <span class="nic-name">구**갸</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>나태해지려고 할 때 멤버들이 같이하자고 독려해주니 안할 수가 없어요~~ 진짜 너무 좋아요!!</p>
+				  <span class="nic-name">베**모카</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>3일, 7일 연속으로 해낼때마다 받는 뱃지가 귀엽고 쏠쏠해요 ㅋㅋ 자꾸 하게 만드는 마성의 습관 만들어주는 앱 ㅎㅎ</p>
+				  <span class="nic-name">대**미</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>리더인 저보다 열심히 하는 멤버들 때문에 계속 들어와서 인증하게 되네요. 재밌어요 ㅋㅋ</p>
+				  <span class="nic-name">두**양이</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>제일 도움 많이 됐던 건 1일 1야채먹기! 진짜 별거 아닌데 일단 채소 한끼 먹는게 내몸에 엄청난 변화였음!!😀</p>
+				  <span class="nic-name">럽*</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>사소한 매일이 내일의 더 나은 나를 만들고, 내가 좋아하는 일들에 대해서도 잘 알게되는 계기가 되었다.</p>
+				  <span class="nic-name">뚜**뚜잇</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>내 살과 낭비되는 시간이 줄고, 근육량과 지갑이 두둑해졌다💪</p>
+				  <span class="nic-name">리**드범</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>매일 책읽고, 스트레칭하고, 산책하고, 물마시고 등등등.. 코로나로 지친 나에게 활력소가 되어준 유캔두!</p>
+				  <span class="nic-name">별*</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>나태해진 나를 일깨워준 유캔두💕 습관형성에 차~암 조으다👍</p>
+				  <span class="nic-name">화**❤</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>하루를 시작할때부터 잠이 들기 전까지 유캔두는 나의 일상이 되어 갔네요..</p>
+				  <span class="nic-name">정**!</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>하루하루 열심히 도전하고있는 유캔두 100일! 나도 성공✌ 계속해서 365일 뱃지도 받즈아~~!!</p>
+				  <span class="nic-name">승**87</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>탄산수나 커피를 즐겨마셔서 하루 물 한잔도 안마시던 내가 물 마시게 되는 습관이 생기게 된게 너무 좋다~</p>
+				  <span class="nic-name">요**니</span>
+			  </li>
+			  <li class="swiper-slide">
+				  <p>이것 때문에 3대 500까진 아니어도 3대 300 곧 도달예정! 확실히 사람들과 함께하니까 꾸준히 하게 돼요!</p>
+				  <span class="nic-name">아**스</span>
+			  </li>
+		  </ul>
+	  </div>
+   </article>
+	<!-- s: 친구에게 공유 -->
+	<article class="promotion-share__warp">
+		<div class="inner">
+			 <div class="share-text">
+				 <img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_share_text_1.svg" alt="야 너두 살 기부할 수 있어!">
+			 </div>
+			<div class="share-btn__warp">
+				<span>함께하면 기부금이 늘어나요!</span>
+				<button type="button" id="btnShare">친구에게 공유하기</button>
+			</div>
+		</div>
+	</article>
+	<article class="promotion-bottom__warp">
+		<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_notice.png" alt="notice">
+	</article>
+	<!-- s: 플로팅 배너 (모바일에서만 보임) -->
+	<div class="floating-banner__wrap">
+		<strong>결심을 시작하기까지 딱 1분!</strong>
+		<button type="button" id="btnMoveToWebviewOnFloating"><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_floating_btn.svg" alt="지금바로참여하기"></button>
+		<span>※ 챌린지는 ‘유캔두’앱에서 참여할 수 있어요.</span>
+	</div>
+
+	<!-- s: 모달 -->
+	<div class="modal-wrap">
+		<!-- 신청완료 모달 -->
+		<div class="modal-content complete-modal" id="modalSuccess">
+			<button type="button" class="modal-close__btn btnModalClose">닫기</button>
+			<p class="top">
+				나 <strong id="applyName"></strong>가 선언한<br>
+				<strong id="applyTarget"></strong>으로 <strong id="applySave"></strong>의<br>
+				쌀을 기부하겠습니다.
+			</p>
+			<p class="bottom">
+				질량 보존의 법칙 다이어트<br>챌린지에 참여하면<br>
+				쌀 <strong id="applyExtra"></strong> 더 기부할 수 있어요!
+			</p>
+			<button type="button" class="modal-app__btn" id="btnMoveToWebviewOnPopup">
+				<img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211223/pro_diet_complete_modal_btn.svg" alt="지금 바로 챌린지 참여하기">
+			</button>
+			<div class="tag-copy">
+				<input type="text" id="hashTag" value="#질량보존의법칙다이어트#질법다챌린지#유캔두" readonly/>
+				<button type="button" id="btnCopy"><img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_modal_btn_copy.png" alt="복사하기"></button>
+			</div>
+		</div>
+
+		<!-- 알럿 -->
+		<div class="modal-content alert-modal" id="modalAlert">
+			<p id="alertMessage"></p>
+			<button type="button" class="modal-close__btn" id="btnModalAlertClose">확인</button>
+		</div>
+
+		<div class="modal-bg" id="modalBackDrop"></div>
+	</div>
+
+	<div id="snackbar"></div>
+</section>
+<footer></footer>
+</body>
+<script src="/assets/v3/js/onelink-smart-script.js"></script>
+<script src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/js/swiper.min.js"></script>
+<script>
+	const hostname = window.location.host;
+	let baseApiUrl = 'https://api.youcandoo.co.kr/v3.1/webview/';
+	switch (hostname.toString()) {
+		case 'www.youcandoo.co.kr' :
+			baseApiUrl = 'https://api.youcandoo.co.kr/v3.1/webview/';
+			break;
+		case 'stagingwww.youcandoo.co.kr' :
+			baseApiUrl = 'https://stagingapi.youcandoo.co.kr/v3.1/webview/';
+			break;
+		case 'testingwww.youcandoo.co.kr' :
+			baseApiUrl = 'https://testingapi.youcandoo.co.kr/v3.1/webview/';
+			break;
+		default :
+			baseApiUrl = 'https://developmentapi.youcandoo.co.kr/v3.1/webview/';
+	}
+	let counterFlag = false;
+	
+	window.addEventListener('DOMContentLoaded', function() {
+		['keyup', 'input', 'change'].forEach(e => document.querySelector('#target').addEventListener(e, function (event) { initInputNumber(event); }));
+		document.querySelectorAll('.btnModalClose').forEach(element => element.addEventListener('click', onClickBtnModalClose));
+		document.querySelector('#btnModalAlertClose').addEventListener('click', onClickBtnModalAlertClose);
+		document.querySelector('#btnShare').addEventListener('click', function () {
+			btnShareTrack();
+			onClickBtnShare();
+		});
+		document.querySelector('#btnCopy').addEventListener('click', copyTag);
+		document.querySelector('#btnMoveToWebviewOnPopup').addEventListener('click', function () { moveToWebview('popup'); });
+		document.querySelector('#btnMoveToWebviewOnFloating').addEventListener('click', function () { moveToWebview('floating'); });
+		document.querySelector('#btnSubmit').addEventListener('click', function (event) {
+			event.preventDefault();
+			btnSubmitTrack();
+			onSubmitApply();
+			btnSubmitKakaoTrack();
+		});
+		document.querySelector('.promotion-motion__title .motion-title__img img:nth-child(1)').classList.add('active');
+		getCampaignInfo();
+		initReviewSwipe();
+		// 메인 애니메이션
+		setInterval(animationsHuman, 1200);
+	});
+
+	function getCampaignInfo()
+	{
+		const xhr = new XMLHttpRequest();
+		xhr.open("POST", baseApiUrl+'campaign/view', true);
+		xhr.responseType = 'json';
+		xhr.send();
+		xhr.onloadend = function () {
+			xhr.status === 200 ? buildInfo(xhr.response.data) : alert('목록을 불러오지 못했습니다.');
+		}
+	}
+
+	let g_total_target = 0;
+	function buildInfo(data)
+	{
+		const {total_count, total_target, list} = data;
+
+		g_total_target = Math.round(total_target * 0.1);
+		document.querySelector("#applyCount").textContent = `${numberWithCommas(total_count)}`;
+		document.querySelector("#targetWeight").textContent = `${numberWithCommas(g_total_target)}`;
+		animateCountUp(document.querySelector("#applyCount"), total_count);
+		window.addEventListener("scroll", function () { onScrollWindow(); });
+
+		if (list instanceof Array)
+		{
+			let listEl = '';
+			list.map(obj => {
+				const {name, target} = obj;
+				const imgUrl = 'https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20220125/pro_diet_new_icon.png';
+
+				listEl += `<li class="swiper-slide"><img src="${imgUrl}" alt="new"><strong>${name}님이 -${target}kg 감량을 결심했어요!</strong></li>`;
+			})
+
+			document.querySelector("#applyList").innerHTML = (listEl)
+
+			if (applySwiper) applySwiper.destroy();
+			initApplySwipe();
+		}
+	}
+
+	function onScrollWindow()
+	{
+		const pageYOffset = window.pageYOffset;
+		const riceMotionContent = document.querySelector('.promotion-motion__rice');
+		const riceTop = document.querySelector('.promotion-rice__wrap').offsetTop;
+
+		const floatingMotionContent = document.querySelector('.floating-banner__wrap');
+		const explanationTop = document.querySelector('.promotion-explanation').offsetTop;
+
+		if (pageYOffset >= riceTop - 450)
+		{
+			riceMotionContent.classList.add('active');
+
+			if (!counterFlag) {
+				animateCountUp(document.querySelector("#targetWeight"), Math.round(g_total_target));
+				counterFlag = true;
+			}
+		}
+
+		pageYOffset >= explanationTop ? floatingMotionContent.classList.add('active') : floatingMotionContent.classList.remove('active');
+	}
+
+	function onSubmitApply()
+	{
+		if (validation())
+		{
+			const param = {
+				"name" : document.querySelector('#name').value.trim(),
+				"target" :  document.querySelector('#target').value.trim(),
+			}
+			const xhr = new XMLHttpRequest();
+			xhr.open("POST", baseApiUrl+'campaign/apply', true);
+			xhr.responseType = 'json';
+			xhr.send(JSON.stringify(param));
+			xhr.onloadend = async function () {
+				if (xhr.status === 200)
+				{
+					const result = await xhr.response;
+					getStatusMessage(result.status);
+					if (result.status === 0)
+					{
+						setTimeout(getCampaignInfo, 2000);
+						initInputForm();
+					}
+				}
+				else
+					loadAlertModal('등록 처리 중 오류가 발생했습니다.');
+			}
+		}
+	}
+
+	let targetFocus;
+	function validation()
+	{
+		const name = document.querySelector("#name");
+		const target = document.querySelector("#target");
+
+		if (isEmpty(name.value))
+		{
+			loadAlertModal('이름을 입력해주세요.');
+			targetFocus = name;
+			return false;
+		}
+
+		if (name.value.trim().length < 2)
+		{
+			loadAlertModal('이름은 최소 두 글자 이상 입력해주세요.');
+			targetFocus = name;
+			return false;
+		}
+
+		if (isEmpty(target.value))
+		{
+			loadAlertModal('감량 목표를 입력해주세요.');
+			targetFocus = target;
+			return false;
+		}
+
+		if (Number(target.value) > 10)
+		{
+			loadAlertModal('과유불급! 최대 감량 목표는 10kg 이하로 적어주세요!');
+			targetFocus = target;
+			return false;
+		}
+
+		targetFocus = false;
+		return true;
+	}
+
+	function onClickBtnModalAlertClose()
+	{
+		document.querySelectorAll(".modal-content").forEach(element => element.style.display = 'none');
+		document.querySelector("#modalBackDrop").style.display = 'none';
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('scroll-hidden');
+		if (targetFocus) targetFocus.focus();
+	}
+
+	function getStatusMessage(status)
+	{
+		switch (status) {
+			case 0 :
+				loadSuccessModal();
+				break;
+			case 20304 :
+				loadAlertModal('이미 참여한 사용자입니다.');
+				break;
+			case 20333 :
+				loadAlertModal('이름을 입력해주세요.');
+				break;
+			case 20334 :
+				loadAlertModal('전화번호를 입력해주세요.');
+				break;
+			case 20332 :
+				loadAlertModal('감량목료를 입력해주세요.');
+				break;
+			default :
+				loadAlertModal('처리 중 오류가 발생했습니다.');
+		}
+	}
+
+	function loadAlertModal(msg)
+	{
+		document.querySelector("#alertMessage").textContent = msg;
+		document.querySelector("#modalAlert").style.display = 'block';
+		document.querySelector("#modalBackDrop").style.display = 'block';
+		document.body.style.overflow = 'hidden';
+		document.body.classList.add('scroll-hidden');
+	}
+
+	function loadSuccessModal()
+	{
+		const target = document.querySelector("#target").value;
+		const save = parseInt(target) * 0.1;
+		const extra = parseInt(target) * 0.9;
+		document.querySelector("#applyName").textContent = document.querySelector("#name").value.trim();
+		document.querySelector("#applyTarget").textContent = `${target}kg`;
+		document.querySelector("#applySave").textContent = `${save < 1 ? save.toFixed(1) : save}kg`;
+		document.querySelector("#applyExtra").textContent = `${extra.toString().length > 1 ? extra.toFixed(1) : extra}kg`;
+		document.querySelector("#modalSuccess").style.display = 'block';
+		document.querySelector("#modalBackDrop").style.display = 'block';
+		document.body.style.overflow = 'hidden';
+		document.body.classList.add('scroll-hidden');
+	}
+
+	function onClickBtnModalClose()
+	{
+		document.querySelectorAll(".modal-content").forEach(element => element.style.display = 'none');
+		document.querySelector("#modalBackDrop").style.display = 'none';
+		document.body.style.overflow = 'auto';
+		document.body.classList.remove('scroll-hidden');
+	}
+
+	function onClickBtnShare()
+	{
+		let tmpTextarea = document.createElement('textarea');
+		tmpTextarea.value = `${window.location.href}?utm_source=202112diet&utm_campaign=bridge_share`;
+
+		document.body.appendChild(tmpTextarea);
+		tmpTextarea.select();
+		tmpTextarea.setSelectionRange(0, 9999);
+
+		const isCopied = document.execCommand('copy');
+		document.body.removeChild(tmpTextarea);
+		const msg = isCopied ? "공유 URL이 복사 되었습니다." : "URL 복사에 실패했습니다.";
+		loadSnackbar(msg);
+	}
+
+	function copyTag()
+	{
+		const hashTag = document.querySelector("#hashTag");
+		hashTag.select();
+		const isCopied = document.execCommand('copy');
+		const msg = isCopied ? '해시태그가 복사 되었습니다.' : '해시태그 복사에 실패했습니다.';
+		loadSnackbar(msg);
+	}
+
+	function loadSnackbar(msg)
+	{
+		const snackbar = document.querySelector("#snackbar");
+		snackbar.textContent = msg;
+		snackbar.className = "show";
+		setTimeout(function() { snackbar.className = snackbar.className.replace("show", ""); }, 1500);
+	}
+
+	function moveToWebview(type)
+	{
+		const link = 'https://youcandoo.onelink.me/74SB';
+
+		const oneLinkGenerator =  new window.AF.OneLinkUrlGenerator(
+			{oneLinkURL: link,
+				pidKeysList: ['incoming_media_source', 'utm_source'],
+				pidStaticValue: '202112diet',
+				campaignKeysList: ['incoming_campaign', 'utm_campaign'],
+				campaignStaticValue: 'bridge_direct',
+				skipList: []
+			});
+
+		const channelType = type === 'floating' ? 'bridge_floating' : 'bridge_popup';
+		const pageType = 'webview';
+		const pageValue = `{"url":"https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/202112_diet.html"}`;
+		const deeplink = `youcandoolink://applink/applink?pageType=${pageType}&pageValue=${pageValue}`
+		oneLinkGenerator.setChannel("original_url_channel", encodeURIComponent(channelType));
+		oneLinkGenerator.setCustomParameter("afDp", "af_dp", encodeURIComponent("youcandoolink://applink"));
+		oneLinkGenerator.setDeepLinkValue("original_url_deeplinkvalue", encodeURIComponent(deeplink));
+		oneLinkGenerator.setCustomParameter("pageType", "pageType", "webview");
+		oneLinkGenerator.setCustomParameter("pageValue", "pageValue", encodeURIComponent(pageValue));
+		oneLinkGenerator.setCustomParameter("afForce", "af_force_deeplink", true);
+
+		const url = oneLinkGenerator.generateUrl();
+		window.open(url, '_blank');
+	}
+
+	function initInputForm()
+	{
+		document.querySelector("#name").value = '';
+		document.querySelector("#target").value = '';
+	}
+
+	let applySwiper;
+	function initApplySwipe()
+	{
+		applySwiper =
+			new Swiper(".promotion-slide__submit", {
+				direction: "vertical",
+				slidesPerView: 4,
+				slidesPerGroup: 1,
+				allowTouchMove: false,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				loop: true,
+			});
+	}
+
+	function initReviewSwipe()
+	{
+		new Swiper(".promotion-slide__review", {
+			slidesPerView: 2.5,
+			slidesPerGroup: 1,
+			spaceBetween: 20,
+			autoplay: {
+				delay: 1500,
+				disableOnInteraction: false,
+			},
+			loop: true,
+		});
+	}
+
+	function isEmpty(value)
+	{
+		return (
+			/** null or undefined **/
+			(value == null) ||
+
+			/** has length and it's zero **/
+			(value.hasOwnProperty('length') && value.length === 0) ||
+
+			/** is an Object and has no keys **/
+			(value.constructor === Object && Object.keys(value).length === 0) ||
+
+			(value.constructor === String && value.trim() === '')
+		)
+	}
+
+	function numberWithCommas(num)
+	{
+		return isEmpty(num) ? 0 : num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	// An ease-out function that slows the count as it progresses
+	const easeOutQuad = t => t * ( 2 - t );
+
+	// The animation function, which takes an Element
+	function animateCountUp(targetEl, targetNumber)
+	{
+		// How long you want the animation to take, in ms
+		const animationDuration = 1500;
+		// Calculate how long each ‘frame’ should last if we want to update the animation 60 times per second
+		const frameDuration = 1000 / 60;
+		// Use that to calculate how many frames we need to complete the animation
+		const totalFrames = Math.round( animationDuration / frameDuration );
+
+		let frame = 0;
+		const countTo = parseInt( targetNumber, 10 );
+		// Start the animation running 60 times per second
+		const counter = setInterval( () => {
+			frame++;
+			// Calculate our progress as a value between 0 and 1
+			// Pass that value to our easing function to get our
+			// progress on a curve
+			const progress = easeOutQuad( frame / totalFrames );
+			// Use the progress value to calculate the current count
+			const currentCount = Math.round( countTo * progress );
+			targetEl.textContent = `${numberWithCommas(currentCount)}`;
+
+			// If we’ve reached our last frame, stop the animation
+			if ( frame === totalFrames ) {
+				clearInterval( counter );
+			}
+		}, frameDuration );
+	}
+
+	function initInputNumber(event)
+	{
+		const inputValue = event.target.value;
+		const inputValueArr = inputValue.split("");
+		const inputLength = inputValueArr.length;
+		let respStr = '';
+		for (let i=0; i<inputLength; i++)
+		{
+			if (inputValueArr[0] == 0 || !isNumber(inputValueArr[0]))
+				inputValueArr[0] = '';
+			if (isNumber(inputValueArr[i]))
+				respStr += inputValueArr[i];
+		}
+
+		event.target.value = respStr;
+	}
+
+	function isNumber(param)
+	{
+		const regex = /^[0-9]*$/g;
+		return regex.test(param);
+	}
+
+	function animationsHuman() {
+		const human01 = document.querySelector('.promotion-motion__title .motion-title__img img:nth-child(1)');
+		const human02 = document.querySelector('.promotion-motion__title .motion-title__img img:nth-child(2)');
+		if(!human01.classList.contains('active')) {
+			human01.classList.add('active');
+			human02.classList.remove('active');
+		} else {
+			human01.classList.remove('active');
+			human02.classList.add('active')
+		}
+	}
+
+	// ga track
+	function btnSubmitTrack() {gtag('event','button',{'event_category':'promotion_202112diet','event_label':'button_action_202112diet'});}
+	function btnShareTrack() {gtag('event','button',{'event_category':'promotion_202112diet','event_label':'button_copy_202112diet'});}
+
+	// kakaoPixel track
+	function btnSubmitKakaoTrack() {kakaoPixel('6010738363450373989').pageView();kakaoPixel('6010738363450373989').participation();}
+</script>
+</html>

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.event-promotion .main-wrapper .inner {
+    padding: 0;
+}
+.home-btn {
+    display: none;
+    width: 20px;
+    position: fixed;
+    top: 4.7vh;
+    left: 18px;
+    z-index: 999;
+}
+.event-promotion img {
+    width: 100%;
+    height: auto;
+}
+.event-promotion .web-img {
+    width: 100%;
+    height: 80px;
+    margin-top: -16vh;
+    line-height: 80px;
+    text-align: center;
+    font-size: 21px;
+    font-family: "AppleSDGothicNeoB","sans-serif";
+    color: #ffffff;
+    background-color: #30A4F8;
+}
+.event-promotion .deep-linking {
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 40;
+    text-align: center;
+    font-size: 18px;
+    font-family: "AppleSDGothicNeoB","sans-serif";
+    color: #ffffff;
+    background-color: #30A4F8;
+    opacity: 0;
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+}
+/* mobile device */
+@media only screen and (max-width:600px) {
+    header, footer,.event-promotion .web-img {display: none;}
+    .home-btn {display: block;}
+    .event-promotion .main-wrapper .inner, .main-wrapper{padding: 0;}
+    .event-promotion .inner {width: 100%;}
+    .event-promotion .deep-linking.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+        -webkit-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+        -moz-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+        -o-transition: transform 0.7s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s, opacity 0.5s cubic-bezier(0.0, 0.5, 0.2, 0.8) 0.00025s;
+    }
+}

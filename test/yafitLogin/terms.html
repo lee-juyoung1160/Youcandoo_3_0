@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>야핏 이용약관</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<section class="terms-page">
+	<div class="top-title-col">
+		<h2>서비스 이용약관에<br>동의해 주세요.</h2>
+		<p>야핏 통합회원은 하나의 ID로 야핏의 모든 서비스를 이용하실 수 있습니다.</p>
+	</div>
+	<ul class="terms-check-list">
+		<li>
+			<div class="terms-check-item check-all">
+				<label><input type="checkbox" name="terms-all" value="all">네, 모두 동의합니다.</label>
+			</div>
+		</li>
+		<li>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-required" value="">(필수) 카카오 개인정보 제 3자 제공 동의</label>
+				<button type="button">보기</button>
+			</div>
+		</li>
+		<li>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-required" value="age">(필수) 만 14세 이상입니다.</label>
+				<button type="button">보기</button>
+			</div>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-required" value="terms">(필수) 야핏 통합 서비스 이용 약관 동의</label>
+				<button type="button">보기</button>
+			</div>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-required" value="privacy">(필수) 개인정보 수집 및 이용 동의</label>
+				<button type="button">보기</button>
+			</div>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-required" value="location">(필수) 위치 정보 이용 동의</label>
+				<button type="button">보기</button>
+			</div>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-optional" value="marketing">(선택) e-mail 광고 및 마케팅 이용 동의</label>
+				<button type="button">보기</button>
+			</div>
+			<div class="terms-check-item">
+				<label><input type="checkbox" name="terms-optional" value="all">(선택) SMS 마케팅 이용 동의</label>
+				<button type="button">보기</button>
+			</div>
+		</li>
+	</ul>
+	<div class="bottom-btn-wrap fixed">
+		<button type="button" class="btn btn-primary" id="confirm" value="다음">다음</button>
+	</div>
+	<div style="display: none;">
+		Authorization Code : <p id="authorization_code"></p>
+	</div>
+</section>
+</body>
+<script type="text/javascript">
+	/*<![CDATA[*/
+	window.onload = function (e) {
+		sessionStorage.setItem("authorization_code", "1c13790b-a787-48af-b377-f852abb0f65c");
+		document.getElementById("authorization_code").textContent = sessionStorage.getItem("authorization_code");
+		// document.getElementById("response").disabled = false;
+
+		// 체크박스 event
+		const optionalCheckBoxes = document.querySelectorAll("input[name='terms-optional']");
+		optionalCheckBoxes.forEach(checkbox => {
+			checkbox.addEventListener('click', () => {
+				check();
+			});
+		});
+
+		const requiredCheckBoxes = document.querySelectorAll("input[name='terms-required']");
+		requiredCheckBoxes.forEach(checkbox => {
+			checkbox.addEventListener('click', () => {
+				check();
+			});
+		});
+
+		// 전체선택 체크박스 event
+		document.querySelector("input[name='terms-all']").addEventListener("click", function(e){
+			checkAll();
+		});
+
+		// 다음 버튼 event
+		document.querySelector("#confirm").addEventListener("click", function (){
+			confirm();
+		});
+	}
+
+	function confirm(){
+
+		let isOk = true;
+		const requiredCheckBoxList = document.querySelectorAll('input[name="terms-required"]');
+		requiredCheckBoxList.forEach((checkbox) => {
+			if(checkbox.checked === false) {
+				isOk = false;
+			}
+		});
+
+		if(!isOk) {
+			alert("필수 항목에 체크해주시기 바랍니다");
+			return;
+		}
+
+		let obj = {};
+		obj["authorization_code"] = sessionStorage.getItem("authorization_code")
+		const checkboxList = document.querySelectorAll('input[name="terms-option"]');
+		checkboxList.forEach((checkbox) => {
+			obj[checkbox.value] = checkbox.checked;
+		})
+
+		common.fetch({
+			url: '/terms/agree',
+			method: 'POST',
+			data: obj
+		})
+			.then((response) => {
+				console.log("success", response);
+				location.href = "/sms"
+			})
+			.catch((e) => {
+				console.log("catch", e);
+				alert(e);
+			});
+		// location.href success
+	}
+
+	function check()  {
+		// 항목 체크박스
+		const requiredCheckBoxList = document.querySelectorAll('input[name="terms-required"]');
+		const optionalCheckBoxList = document.querySelectorAll('input[name="terms-optional"]');
+		// 항목 중 선택된 체크박스
+		const requiredCheckBoxListChecked = document.querySelectorAll('input[name="terms-required"]:checked');
+		const optionalCheckBoxListChecked = document.querySelectorAll('input[name="terms-optional"]:checked');
+		// 전체 선택 체크박스
+		const allCheckBox = document.querySelector('input[name="terms-all"]');
+
+		allCheckBox.checked = ((requiredCheckBoxList.length + optionalCheckBoxList.length) === (requiredCheckBoxListChecked.length + optionalCheckBoxListChecked.length));
+	}
+
+	function checkAll()  {
+		// 전체 선택 체크박스
+		const allCheckBox = document.querySelector('input[name="terms-all"]');
+		// 항목 체크박스
+		const requiredCheckBoxList = document.querySelectorAll('input[name="terms-required"]');
+		const optionalCheckBoxList = document.querySelectorAll('input[name="terms-optional"]');
+
+		requiredCheckBoxList.forEach((checkbox) => {
+			checkbox.checked = allCheckBox.checked
+		});
+
+		optionalCheckBoxList.forEach((checkbox) => {
+			checkbox.checked = allCheckBox.checked
+		});
+	}
+	/*]]>*/
+</script>
+</html>

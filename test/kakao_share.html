@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="공부습관,야나두,자기계발,자기개발,습관형성,자기관리앱,목표관리,생활습관,목표,목표달성,동기부여,습관">
+	<meta property="og:type" content="교육">
+	<meta property="og:title" content="질량보존의 법칙">
+	<meta property="og:url" content="https://www.youcandoo.co.kr/test/kakao_share.html">
+	<meta property="og:description" content="질량보존의 법칙 디스크립션 테스트">
+	<meta property="og:image" content="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/invite_kakao_share.png?resource_version=<?=$resource_version?>">
+	<link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico?resource_version=<?=$resource_version?>">
+	<title>카카오 공유</title>
+</head>
+<body>
+	<button id="btnShareKakao" style="width: 100%; height: 100px;">카카오톡 공유</button>
+</body>
+<!--카카오톡 공유 라이브러리-->
+<script src="../assets/v3/js/kakao.min.js"></script>
+<script>
+	// 웹 페이지(e.g. 브릿지 페이지) 카카오톡 공유 예제
+	document.querySelector("#btnShareKakao").addEventListener('click', onClickBtnShareKakao);
+
+	// 초기화
+	Kakao.init('4b0f50476105759197fa9cefc338e99b');
+
+	function onClickBtnShareKakao()
+	{
+		/**
+		 * title + description 최대 4라인 까지 표시 됨. 1라인당 24자가 적당..
+		 * 이미지 사이즈 200x200 이상(유캔두 권장 800x800), 파일크기 최대 2MB
+		 * **/
+		const shareUrl = 'https://youcandoo.onelink.me/pWyT/5ff804c';
+		const title = '타이틀은 콘텐츠 상세설명과 합쳐서 최대 4줄까지 표시된다고함. 한 줄에 몇 글자까지 표시되는지 테스트를 해보자.하하하하.';
+		const description = '타이틀은 콘텐츠 상세설명과 합쳐서 최대 4줄까지 표시된다고함. 한 줄에 몇 글자까지 표시되는지 테스트를 해보자.하하하하.';
+		const imageUrl = 'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg';
+		Kakao.Link.sendDefault({
+			objectType: 'feed',
+			content: {
+				title: title,
+				description: description,
+				imageUrl: imageUrl,
+				link: {
+					mobileWebUrl: shareUrl,
+				},
+			},
+			installTalk : true
+		});
+	}
+</script>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>야핏 사이클 패키지</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="favicon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+	<link rel="shortcut icon" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico" />
+	<link rel="apple-touch-icon-precomposed" href="https://yafit.yanadoocdn.com/yanadoo/images/web/common/favicon_yafit.ico">
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="야핏 사이클 패키지"/>
+	<meta property="og:site_name" content="야핏"/>
+	<meta property="og:description" content="내가 가진 기기로 즐기는 실속 패키지"/>
+	<meta property="og:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg"/>
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="야핏 사이클 패키지">
+	<meta name="twitter:description" content="내가 가진 기기로 즐기는 실속 패키지ㅌ">
+	<meta name="twitter:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg">
+	<meta name="nate:image" content="https://yafit.yanadoocdn.com/yanadoo/images/web/common/og_yafit_1.jpg" />
+	<meta name="naver-site-verification" content="dcf4d5cf8e610163fe7bbc07a29e21f98c503792"/>
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/reset_1.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/common.css" />
+	<link rel="stylesheet" type="text/css" href="https://yafit.yanadoocdn.com/yanadoo/web/assets/style/edu/promotion.css" />
+	<link rel="stylesheet" href="https://yafit.yanadoocdn.com/yanadoo/library/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="https://yafitcdn.yanadoo.co.kr/yanadoo/web/assets/style/package/common-package.css">
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/library/beusable.js"></script>
+	<script type="text/javascript" src="https://tenping.kr/scripts/cpa/tenping.cpa.V2_Domain.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/env.js" ></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/common.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/comm.js"></script>
+	<script type="text/javascript" src="https://yafit.yanadoocdn.com/yanadoo/web/assets/js/edu/headscript.js"></script>
+	<script src="https://yafit.yanadoocdn.com/yanadoo/library/swiper-bundle.min.js"></script>
+</head>
+  <body>
+    <header></header>
+    <style>
+      .landing {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 100vw;
+      }
+      .landing > .inner {
+        margin: 0;
+        font-size: 0.032em;
+        color: #000;
+        letter-spacing: -1px;
+      }
+      .landing .inner-col button {
+        border-style: solid;
+        outline: none;
+      }
+      .landing strong {
+        font-weight: 700;
+      }
+      em {
+        font-style: normal;
+      }
+
+      .quiz-step-col {
+        width: 100%;
+        background-color: #111;
+      }
+      .quiz-step-col dl {
+        padding: 4em 0;
+      }
+      .quiz-step-col dt {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .quiz-step-col dt em {
+        display: inline-block;
+        position: absolute;
+        top: 0.3em;
+        right: 0;
+        font-weight: 400;
+        font-size: 120%;
+        color: #fff;
+      }
+      .quiz-step-col .quiz-number {
+        display: inline-block;
+        width: 5em;
+        height: 2.5em;
+        margin-bottom: 1em;
+        background: url(https://english.yanadoocdn.com/upload/yanadoo/mobile/sub/yafittalk/img_quiz_number.png)
+          no-repeat 0 0;
+        background-size: 100%;
+        text-indent: -9999em;
+      }
+      .quiz-step-col .progress-bar {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #555;
+      }
+      .quiz-step-col .progress-bar span {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #32fa32;
+        transition: 0.5s;
+      }
+      .quiz-step-col dd li {
+        display: none;
+      }
+      .quiz-step-col dd .active {
+        display: block;
+      }
+      .quiz-step-col dd {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .quiz-step-col dd p {
+        min-height: 5em;
+        padding: 2em 0 1em;
+        font-weight: 700;
+        font-size: 200%;
+        line-height: 1.3;
+        color: #fff;
+      }
+      .quiz-step-col dd label {
+        display: block;
+        position: relative;
+      }
+      .quiz-step-col dd label span {
+        display: inline-block;
+        width: 100%;
+        margin: 0.5em 0.2em;
+        padding: 1.5em 2em;
+        font-weight: 700;
+        font-size: 150%;
+        line-height: 1.3;
+        color: #fff;
+        background-color: transparent;
+        border-radius: 6em;
+        border: 1px solid #fff;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .quiz-step-col dd input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+      }
+      .quiz-step-col dd input:checked + span {
+        color: #000;
+        background-color: #32fa32;
+        border-color: transparent;
+      }
+      .quiz-step-col .button-group {
+        width: 100%;
+        position: relative;
+        padding-bottom: 2em;
+        overflow: hidden;
+      }
+      .quiz-step-col .button-group button {
+        width: 5em;
+        height: 5em;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 2em;
+        text-indent: -9999em;
+      }
+      .quiz-step-col .button-prev {
+        float: left;
+        background-image: url(https://english.yanadoocdn.com/upload/yanadoo/mobile/sub/yafittalk/btn_step_prev.png);
+      }
+      .quiz-step-col .button-next {
+        float: right;
+        background-image: url(https://english.yanadoocdn.com/upload/yanadoo/mobile/sub/yafittalk/btn_step_next.png);
+      }
+
+      .progress-col {
+        padding: 7em 0;
+        background-color: #111;
+        overflow: hidden;
+      }
+      .progress-col h3 {
+        padding-bottom: 2em;
+        font-weight: 400;
+        font-size: 160%;
+        line-height: 1.3;
+        color: #fff;
+        text-align: center;
+      }
+      .progress-col h3 strong {
+        display: block;
+        padding-top: 0.3em;
+        font-weight: 400;
+        font-size: 160%;
+      }
+      .progress-col h3 em {
+        font-weight: 400;
+        color: #32fa32;
+      }
+      .progress-col .loading-box {
+        position: relative;
+        width: 100%;
+        height: 5em;
+        margin-top: 3em;
+      }
+      .progress-col .loading-count {
+        position: absolute;
+        top: 1em;
+        right: 5%;
+        font-weight: 400;
+        font-size: 100%;
+        color: #32fa32;
+      }
+      .progress-col .loading-bar {
+        display: block;
+        position: absolute;
+        bottom: 2em;
+        right: 0;
+        left: 0;
+        width: 90%;
+        height: 2px;
+        margin: auto;
+        background-color: #606060;
+      }
+      .progress-col .loading-bar span {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #32fa32;
+        transition: 0.1s;
+      }
+      .progress-col .run-together-slide {
+        width: 88%;
+        height: 13em;
+        margin: 0 auto;
+      }
+      .progress-col .run-together-slide li {
+        overflow: hidden;
+      }
+      .progress-col .run-together-slide img {
+        display: block;
+        width: 96%;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 720px) {
+        .landing {
+          font-size: 720px;
+        }
+      }
+    </style>
+
+		<div class="landing" id="yafitTalk">
+			<div class="inner">
+				<div class="quiz-step-col">
+					<div class="inner-col">
+						<dl>
+							<dt class="quiz-step-title">
+								<strong class="quiz-number">Q</strong><em class="pager"></em>
+								<strong class="progress-bar"><span style="width: 0%"></span></strong>
+							</dt>
+							<dd>
+								<ul class="quiz-content">
+									<li class="active">
+										<p>성별을<br />선택해주세요</p>
+										<label><input type="radio" name="step_1" value="1" /><span>남성</span></label>
+										<label><input type="radio" name="step_1" value="2" /><span>여성</span></label>
+									</li>
+									<li>
+										<p>연령대를<br />선택해주세요</p>
+										<label><input type="radio" name="step_2" value="1" /><span>10대</span></label>
+										<label><input type="radio" name="step_2" value="2" /><span>20대</span></label>
+										<label><input type="radio" name="step_2" value="3" /><span>30대</span></label>
+										<label><input type="radio" name="step_2" value="4" /><span>40대</span></label>
+										<label><input type="radio" name="step_2" value="5" /><span>50대</span></label>
+										<label><input type="radio" name="step_2" value="6" /><span>60대</span></label>
+									</li>
+									<li>
+										<p>신장을<br />선택해주세요</p>
+										<label><input type="radio" name="step_3" value="1" /><span>~150cm</span></label>
+										<label><input type="radio" name="step_3" value="2" /><span>~160cm</span></label>
+										<label><input type="radio" name="step_3" value="3" /><span>~170cm</span></label>
+										<label><input type="radio" name="step_3" value="4" /><span>~180cm</span></label>
+										<label><input type="radio" name="step_3" value="5" /><span>~190cm</span></label>
+										<label
+										><input type="radio" name="step_3" value="6" /><span>191cm 이상</span></label
+										>
+									</li>
+									<li>
+										<p>1년 이내 어떠한<br />운동을 해보셨나요?</p>
+										<label
+										><input type="radio" name="step_4" value="1" /><span
+										>자전거 (사이클)</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_4" value="2" /><span
+										>기구 사용 홈 트레이닝<br />(줄넘기, 덤벨, 기타 홈 기구 등)</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_4" value="3" /><span
+										>기구 미사용 홈 트레이닝<br />(윗몸 일으키기, 푸쉬업, 플랭크 등)</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_4" value="4" /><span
+										>외부 활동 셀프 운동<br />(조깅, 축구, 걷기 등)</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_4" value="5" /><span
+										>외부 학원 운동<br />(헬스장, 필라테스, 테니스 등)</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_4" value="6" /><span
+										>운동 경험 거의 없음</span
+										></label
+										>
+									</li>
+									<li>
+										<p>직업은<br />무엇 인가요?</p>
+										<label
+										><input type="radio" name="step_5" value="1" /><span
+										>직장인(사업)</span
+										></label
+										>
+										<label><input type="radio" name="step_5" value="2" /><span>주부</span></label>
+										<label><input type="radio" name="step_5" value="3" /><span>학생</span></label>
+										<label
+										><input type="radio" name="step_5" value="4" /><span
+										>여가 시간 많음</span
+										></label
+										>
+									</li>
+									<li>
+										<p>규칙적인<br />생활을 하고 있나요?</p>
+										<label
+										><input type="radio" name="step_6" value="1" /><span>매우 일정함</span></label
+										>
+										<label
+										><input type="radio" name="step_6" value="2" /><span
+										>비교적 일정함</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_6" value="3" /><span>밤낮이 바뀜</span></label
+										>
+										<label
+										><input type="radio" name="step_6" value="4" /><span
+										>불규칙한 패턴</span
+										></label
+										>
+									</li>
+									<li>
+										<p>음주량은<br />얼마 인가요?</p>
+										<label
+										><input type="radio" name="step_7" value="1" /><span>하지 않음</span></label
+										>
+										<label
+										><input type="radio" name="step_7" value="2" /><span>주 1회 이하</span></label
+										>
+										<label
+										><input type="radio" name="step_7" value="3" /><span>주 2회 이상</span></label
+										>
+										<label
+										><input type="radio" name="step_7" value="4" /><span>거의 매일</span></label
+										>
+									</li>
+									<li>
+										<p>평소 식습관은<br />어떤 가요?</p>
+										<label
+										><input type="radio" name="step_8" value="1" /><span
+										>식사를 잘 챙겨 먹는다</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_8" value="2" /><span
+										>식사를 잘 챙겨 먹지 못 한다</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_8" value="3" /><span
+										>군것질을 더 즐긴다</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_8" value="4" /><span
+										>매우 불규칙적 이다</span
+										></label
+										>
+									</li>
+									<li>
+										<p>평소 운동량은<br />어떤 가요?</p>
+										<label
+										><input type="radio" name="step_9" value="1" /><span
+										>주 5회 이상 고강도</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_9" value="2" /><span
+										>주 1~3회 고강도</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_9" value="3" /><span
+										>틈나는 대로 가볍게</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_9" value="4" /><span>거의 없음</span></label
+										>
+									</li>
+									<li>
+										<p>6개월 이내 가장 이루고 싶은<br />목표를 설정해 주세요.</p>
+										<label
+										><input type="radio" name="step_10" value="1" /><span
+										>5kg 이상 체중 감량</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_10" value="2" /><span
+										>근육량 증가</span
+										></label
+										>
+										<label
+										><input type="radio" name="step_10" value="3" /><span>체력 증진</span></label
+										>
+										<label
+										><input type="radio" name="step_10" value="4" /><span
+										>전체 밸런스 유지</span
+										></label
+										>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="button-group">
+							<button type="button" class="button-prev" onclick="stepMove('prev')">이전</button>
+							<button type="button" class="button-next" onclick="stepMove('next')">다음</button>
+						</div>
+						<form name="yafitTalkForm" id="yafitTalkForm" method="post" action="">
+							<input type="hidden" name="yafitTalk_1" value="" />
+							<input type="hidden" name="yafitTalk_2" value="" />
+							<input type="hidden" name="yafitTalk_3" value="" />
+							<input type="hidden" name="yafitTalk_4" value="" />
+							<input type="hidden" name="yafitTalk_5" value="" />
+							<input type="hidden" name="yafitTalk_6" value="" />
+							<input type="hidden" name="yafitTalk_7" value="" />
+							<input type="hidden" name="yafitTalk_8" value="" />
+							<input type="hidden" name="yafitTalk_9" value="" />
+							<input type="hidden" name="yafitTalk_10" value="" />
+						</form>
+					</div>
+				</div>
+				<div class="progress-col" style="display: none">
+					<div class="inner-col">
+						<h3>
+							<strong>고객님의 결과를<br />추출하고 있습니다</strong>
+						</h3>
+						<div class="review-box">
+							<div class="run-together-slide">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_01.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_02.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_03.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_04.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_05.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_06.gif"
+												alt=""
+										/>
+									</li>
+									<li class="swiper-slide">
+										<img
+												src="https://english.yanadoocdn.com/upload/yanadoo/mobile/landing/yafitLite/2021/may/img_together_slide_07.gif"
+												alt=""
+										/>
+									</li>
+								</ul>
+							</div>
+							<div class="loading-box">
+								<span class="loading-count">0%</span>
+								<strong class="loading-bar"><span style="width: 0%"></span></strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // inner -->
+		</div>
+
+
+
+    <script>
+      function quizStep(step) {
+        let stepTotal = $('.quiz-content').find('li').length;
+
+        if (step < 1) {
+          alert('처음 단계 입니다.');
+        } else if (step > stepTotal) {
+          checkResult();
+        } else {
+          $('html, body').animate({ scrollTop: 0 }, 100);
+          $('.quiz-number').css('background-position-y', -2.5 * (step - 1) + 'em');
+          $('.quiz-step-title')
+            .find('.pager')
+            .text(step + '/' + stepTotal);
+          $('.progress-bar')
+            .find('span')
+            .css('width', (100 / stepTotal) * step + '%');
+          $('.quiz-content').find('li').removeClass('active');
+          $('.quiz-content')
+            .find('li')
+            .eq(step - 1)
+            .addClass('active');
+        }
+      }
+
+      function stepMove(move) {
+        let stepNow = $('.quiz-content').find('.active').index() + 1;
+
+        if (move == 'next') {
+          quizStep(stepNow + 1);
+        } else if (move == 'prev') {
+          quizStep(stepNow - 1);
+        }
+      }
+
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+          results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      function checkResult() {
+        let stepTotal = $('.quiz-content').find('li').length;
+        let stepNow = '';
+        let progress = 0;
+
+        for (i = 1; i <= stepTotal; i++) {
+          stepNow = $('input:radio[name="step_' + i + '"]:checked').val();
+
+          if (stepNow == undefined) {
+            alert('항목을 모두 선택해주세요');
+            quizStep(i);
+            return;
+          } else {
+            $('input[name="yafitTalk_' + i + '"]').val(stepNow);
+          }
+        }
+
+        $('html, body').animate({ scrollTop: 0 }, 100);
+        $('.quiz-step-col').hide();
+        $('.progress-col').show();
+
+        let runTogetherSlide = new Swiper('.run-together-slide', {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          autoplay: {
+            delay: 700,
+            disableOnInteraction: false,
+          },
+        });
+
+        let progressBar = setInterval(function () {
+          $('.loading-bar')
+            .find('span')
+            .css('width', progress + '%');
+          $('.loading-count').text(progress + '%');
+          if (progress >= 100) {
+            clearInterval(progressBar);
+            getResult();
+            return false;
+          } else {
+            ++progress;
+          }
+        }, 40);
+      }
+
+      function getResult() {
+        let queryString = '';
+        if (location.href.indexOf('?') > -1) {
+          queryString = '&' + location.search.substring(1);
+        }
+
+        let data = {};
+        for (let i = 1; i <= 10; i++) {
+          data['step' + i] = $('[name=step_' + i + ']:checked').val();
+        }
+
+        $.ajax({
+          url: API_HOST + '/v2/talk-yafit/complete',
+          type: 'POST',
+          data: JSON.stringify(data),
+          dataType: 'json',
+          contentType: 'application/json',
+          success: function (result) {
+            if (result.meta.code === META_SUCCESS_CODE) {
+              let talkSeq = result.data;
+              let nextUrl =
+                'https://yafitcdn.yanadoo.co.kr/yanadoo/test/yafitTalkResult.html?talkSeq=' + talkSeq + queryString;
+              if (!isLoggedIn()) {
+                window.location.href = 'https://www.yanadoo.co.kr/login?pathname=' + encodeURIComponent(nextUrl);
+                return;
+              }
+
+              location.href = nextUrl;
+            } else {
+              alert('오류가 발생했습니다.');
+            }
+          },
+          error: function (e) {
+            console.log(e);
+            alert('오류가 발생했습니다.');
+          },
+        });
+        // l
+      }
+
+      $(function () {
+        let delayControl = false;
+        quizStep(1);
+
+        $('.quiz-content')
+          .find('input[type="radio"]')
+          .on('click', function () {
+            if (!delayControl) {
+              delayControl = true;
+              window.setTimeout(() => {
+                stepMove('next');
+                delayControl = false;
+              }, 300);
+            }
+          });
+      });
+    </script>
+
+  </body>
+</html>

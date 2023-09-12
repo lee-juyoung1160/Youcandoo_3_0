@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/** FAQ **/
+@media screen and (max-width: 768px) {
+
+	.faq .page-wrap {
+		background-color: #f3f3f3;
+	}
+	.faq .input-wrap {
+		position: relative;
+		padding: 4.44vw 0 0;
+	}
+	.faq .input-wrap button {
+		display: block;
+		position: absolute;
+		right: 1.94vw;
+		top: 4.50vw;
+		width: 10.00vw;
+		height: 10.00vw;
+	}
+	.faq .input-wrap input[type="search"] {
+		width: 100%;
+		height: 10.00vw;
+		padding: 0 11.67vw 0 8.33vw;
+		font-size: 4.17vw;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_icon_search.png);
+		background-position: 1% 50%;
+		background-size: 7.22vw 7.22vw;
+		background-repeat: no-repeat;
+		background-color: #F4F4F4;
+		border: none;
+		border-radius: 1.39vw;
+	}
+	.faq .btn-wrap {
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		height: 20vw;
+		padding: 5.56vw 0 4.44vw;
+	}
+	.faq .btn-wrap button {
+		width: 22.78vw;
+		height: 10.00vw;
+		color: #626262;
+		text-align: center;
+		line-height: 10.00vw;
+		font-size: 3.61vw;
+		box-sizing: border-box;
+		border: 1px solid #ECECEC;
+	}
+	.faq .btn-wrap button:nth-child(1),
+	.faq .btn-wrap button:nth-child(2),
+	.faq .btn-wrap button:nth-child(3){
+		border-right: none;
+	}
+	.faq .btn-wrap button:nth-child(5),
+	.faq .btn-wrap button:nth-child(6),
+	.faq .btn-wrap button:nth-child(7){
+		border-right: none;
+		border-top: none;
+	}
+	.faq .btn-wrap button:nth-child(8) {
+		border-top: none;
+	}
+
+	.faq .btn-wrap button:nth-child(6) {
+		font-size: 3.33vw;
+		border-left: 1px solid #ECECEC !important;
+	}
+	.faq .btn-wrap button.active {
+		color: #6267EA;
+		font-weight: 600;
+		border: 1px solid #6267EA !important;
+	}
+	.faq .btn-wrap button.active + button {
+		border-left: none;
+	}
+
+	.faq .question-wrap .question {
+		display: flex;
+		align-items: center;
+		padding: 5.56vw 4.44vw 5.00vw;
+		border-bottom: 0.28vw solid #E7E7E7;
+	}
+	.faq .question-wrap .question p {
+		width: 80.00vw;
+		color: #000;
+		font-size: 4.17vw;
+		font-weight: 600;
+	}
+	.faq .question-wrap .question p span {
+		display: block;
+		margin-bottom: 1.67vw;
+		color: #5D5D5D;
+		font-size: 3.33vw;
+		font-weight: 400;
+	}
+	.faq .question-wrap .question i.arrow {
+		display: block;
+		width: 11.11vw;
+		height: 11.11vw;
+		transition: all .3s;
+	}
+
+	.faq .question-wrap .answer {
+		display: none;
+		padding: 4.44vw 16px;
+		font-size: 3.61vw;
+		line-height: 1.5em;
+		background-color: #F3F3F3;
+		white-space:pre-line;
+		word-break: break-all;
+	}
+
+	/* 리스트 오픈 */
+	.faq .question-wrap li.list-open .question i.arrow {
+		transform: rotate(180deg);
+	}
+	.faq .question-wrap li.list-open .answer {
+		display: block;
+	}
+
+
+}

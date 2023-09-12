@@ -1,0 +1,119 @@
+
+    <section class="board-list faq-list only-m">
+
+        <div class="container">
+            <div class="page-wrap no-title">
+                <article>
+                    <div class="input-box">
+                        <button id="btnSearch"  class="btn-search" type="button"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/feed_search.png?resource_version=<?=$resource_version?>" alt=""></button>
+                        <input id="searchWord" type="search" class="search-bar" placeholder="검색어를 입력해주세요.">
+                        <button id="btnClear" class="btn-close only-m" type="button"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon_close_s.png?resource_version=<?=$resource_version?>" alt=""></button>
+                    </div>
+
+                    <div class="select-btn clearfix">
+                        <div class="top">
+                            <button type="button" class="faq_type on" data-value="">전체</button>
+                            <button type="button" class="faq_type" data-value="service">이용안내</button>
+                            <button type="button" class="faq_type" data-value="user">회원정보</button>
+                            <button type="button" class="faq_type" data-value="action">두잇인증</button>
+                        </div>
+                        <div class="bottom">
+                            <button type="button" class="faq_type" data-value="create">두잇개설</button>
+                            <button type="button" class="faq_type" data-value="ucd">UCD</button>
+                            <button type="button" class="faq_type" data-value="promotion">프로모션</button>
+                            <button type="button" class="faq_type" data-value="error">오류/불편</button>
+                        </div>
+                    </div>
+                </article>
+                <ul class="faq-board">
+                    <!-- Data List Section -->
+                </ul>
+                <div class="no-result" style="display: none;">
+                    <img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/faq_loupe.png?resource_version=<?=$resource_version?>" alt="검색결과없음">
+                    <span>검색결과가 없습니다.</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function ajaxcall(keyword, type)
+        {
+            var param = {
+                "title" : keyword,
+                "type" : type
+            };
+
+            $.ajax({
+                url: api_server_url+"/v1.0/web/faq/list",
+                type: "POST",
+                data: JSON.stringify(param),
+                async:false,
+                dataType: "json",
+                error : function(e)
+                {
+
+                },
+                success:function(row)
+                {
+                    if(row != undefined)
+                    {
+                        $(".faq-board").html("");
+                        if(row.data.length > 0)
+                        {
+                            var html ="";
+                            for(var i=0; i<row.data.length; i++)
+                            {
+                                html += "<li>";
+                                html += "<div class='question'>";
+                                html += "<span class='board-tit'><b>["+row.data[i].faq_type+"]</b>"+row.data[i].title+"</span>";
+                                html += "<i class='arrow'><img src='https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/h_icon_down_s.png?resource_version=<?=$resource_version?>' alt='열기'></i>";
+                                html += "</div>";
+                                html += "<div class='answer'>"+row.data[i].contents+"</div>";
+                                html += "</li>";
+                            }
+                            $(".faq-board").html(html);
+                            $(".no-result").css("display","none");
+                        }
+                        else
+                        {
+                            $(".no-result").css("display","block");
+                        }
+
+                        BindEventListener();
+                    }
+                }
+            });
+        }
+
+        function BindEventListener()
+        {
+            var selectBtn = $('.select-btn').find('button');
+            selectBtn.on('click', function(){
+                selectBtn.removeClass('on');
+                $(this).addClass('on');
+            });
+
+            var  answerOpen = $('.question');
+            answerOpen.on('click', function(){
+                $(this).next().toggleClass('open').parents().siblings().children('.answer').removeClass('open');
+                $(this).find('.arrow').toggleClass('on').parents('li').siblings().find('.arrow').removeClass('on');
+                return false;
+            });
+        }
+        $(function(){
+            $(".faq_type").on("click", function(){
+                ajaxcall($("#searchWord").val(), $(this).data("value"));
+            });
+            $("#searchWord").keydown(function(key) {
+                if (key.keyCode == 13) {
+                    ajaxcall($("#searchWord").val(), $(".faq_type.on").data("value"));
+                }
+            });
+            $("#btnClear").on("click", function(){
+                 $("#searchWord").val("");
+            });
+            ajaxcall("","");
+        });
+    </script>

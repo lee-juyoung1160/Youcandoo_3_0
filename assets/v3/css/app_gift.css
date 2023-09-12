@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/** gift **/
+@media screen and (max-width: 768px) {
+
+	body {
+		background-color: #F3F3F3;
+	}
+
+	.gift .my-ucd {
+		position: fixed;
+		left: 0;
+		top: 13.89vw;
+		width: 100%;
+		height: 13.33vw;
+		background-color: #FAFAFA;
+	}
+	.gift .my-ucd .inner {
+		display: flex;
+		height: 11.11vw;
+	}
+	.gift .my-ucd p {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		color: #4C5264;
+		font-size: 4.44vw;
+		letter-spacing: 0;
+	}
+	.gift .my-ucd p img {
+		width: 4.72vw;
+		height: 4.72vw;
+		margin: 0 1.39vw 0 2.22vw;
+	}
+	.gift .my-ucd p strong {
+		color: #000;
+		font-weight: 800;
+	}
+	.gift .gift-list {
+		padding: 11.11vw 0 13.89vw;
+	}
+	.gift .gift-list li {
+		padding: 4.72vw 0;
+		border-bottom: 1px solid #f3f3f3;
+	}
+	.gift .gift-list li:last-child {
+		border-bottom: none;
+	}
+	.gift .gift-list li .inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	.gift .gift-list li .img {
+		overflow: hidden;
+		width: 25.00vw;
+		height: 25.00vw;
+		background-color: #eee;
+		border-radius: 1.39vw;
+	}
+	.gift .gift-list li .info {
+		width: 61.67vw;
+	}
+	.gift .gift-list li .info .title {
+		height: 9.72vw;
+		margin: 2.78vw 0 4.44vw;
+		color: #000;
+		font-size: 3.89vw;
+		font-weight: 600;
+	}
+
+	.gift .gift-list li .info .price-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.gift .gift-list li .info .price {
+		display: flex;
+		align-items: center;
+	}
+	.gift .gift-list li .info .price img {
+		width: 4.72vw;
+		height: 4.72vw;
+	}
+	.gift .gift-list li .info .price strong {
+		padding-left: 1.11vw;
+		font-size: 4.44vw;
+		font-weight: 800;
+	}
+	.gift .gift-list li .info button {
+		width: 22.22vw;
+		height: 8.33vw;
+		color: #fff;
+		font-size: 3.89vw;
+		background-color: #6267EA;
+		border-radius: 4.17vw;
+	}
+	.gift .gift-list li .info button.ucd-lack {
+		color: #fff;
+		background-color: #DDDDDD;
+	}
+
+	/* 신청 확인 모달 */
+	.gift .gift-confirm {
+		width: 80.28vw;
+		text-align: center;
+		border-radius: 5.56vw;
+	}
+	.gift .gift-confirm .inner {
+		padding: 8.33vw 8.33vw 7.22vw;
+	}
+	.gift .gift-confirm p {
+		margin-bottom: 13.89vw;
+		font-size: 4.44vw;
+		font-weight: 600;
+	}
+	.gift .gift-confirm p span {
+		display: block;
+		color: #989898;
+		font-size: 3.33vw;
+	}
+	.gift .gift-confirm .modal-footer {
+		display: flex;
+	}
+	.gift .gift-confirm .modal-footer button {
+		width: 50%;
+		color: #9D9D9D;
+		font-size: 4.72vw;
+	}
+	.gift .gift-confirm .modal-footer button:first-child {
+		border-right: 1px solid #ddd;
+	}
+	.gift .gift-confirm .modal-footer button.active {
+		color: #6267EA;
+		font-weight: 600;
+	}
+
+	/* 수량 선택 모달 */
+	.gift .bottom-modal-content {
+		display: none;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #fff;
+		border-radius: 5.56vw 5.56vw 0 0;
+		z-index: 300;
+	}
+	.gift .bottom-modal-content:after {
+		position: absolute;
+		left: 50%;
+		top: 2.78vw;
+		width: 7.22vw;
+		height: 0.83vw;
+		margin-left: -3.61vw;
+		background-color: rgba(0,0,0, .15);
+		border-radius: 13.89vw;
+		content: '';
+	}
+	.gift .bottom-modal-content .inner {
+		padding: 8.06vw 4.44vw 8.33vw;
+	}
+	.gift .bottom-modal-content .title {
+		margin-bottom: 5.56vw;
+		color: #000;
+		font-size: 4.44vw;
+		font-weight: 600;
+		text-align: center;
+	}
+	.gift .bottom-modal-content .modal-body ul {
+		margin-bottom: 1.39vw;
+	}
+	.gift .bottom-modal-content .modal-body ul li {
+		display: flex;
+		align-items: center;
+		padding: 6.94vw 4.44vw;
+		border-top: 1px solid #ECECEC;
+	}
+
+	.gift .bottom-modal-content .modal-body ul li strong {
+		margin-right: auto;
+		width: 30%;
+	}
+	.gift .bottom-modal-content .modal-body ul li span {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		text-align: right;
+		font-weight: 600;
+	}
+	.gift .bottom-modal-content .modal-body ul li button {
+		width: 8.33vw;
+		height: 8.33vw;
+	}
+	.gift .bottom-modal-content .modal-body ul li button:disabled {
+		opacity: .3;
+	}
+	.gift .bottom-modal-content .modal-body ul li span em {
+		margin: 0 0.56vw;
+		font-weight: 600;
+	}
+
+	.gift .bottom-modal-content .modal-footer {
+		display: flex;
+		justify-content: space-between;
+	}
+	.gift .bottom-modal-content .modal-footer button {
+		width: 44.44vw;
+		height: 11.11vw;
+		color: #fff;
+		font-size: 4.17vw;
+		font-weight: 600;
+		background-color: #C4C4C4;
+		border-radius: 1.39vw;
+	}
+	.gift .bottom-modal-content .modal-footer button.active {
+		background-color: #6267EA;
+	}
+
+	/* 신청 완료 페이지 */
+	.gift.complete .search_result {
+		padding: 25.83vw 0 15.28vw;
+	}
+	.gift.complete .search_result img {
+		width: 28.33vw;
+		height: 28.33vw;
+	}
+	.gift.complete .bottom-manual h5 {
+		color: #666;
+		font-weight: 600;
+	}
+	.gift.complete .bottom-manual p {
+		color: #666;
+		font-size: 3.61vw;
+	}
+
+	/* 하단 버튼 */
+	.bottom-btn-wrap {
+		display: flex;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	.bottom-btn-wrap button {
+		width: 50%;
+		height: 13.89vw;
+		color: #6267EA;
+		font-size: 4.72vw;
+		font-weight: 600;
+		background-color: #fff;
+	}
+	.bottom-btn-wrap button.active {
+		color: #fff;
+		background-color: #6267EA;
+	}
+
+
+
+
+}

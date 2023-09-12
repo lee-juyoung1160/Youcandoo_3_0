@@ -1,0 +1,5 @@
+/application/logs/
+/application/cache/
+.DS_Store
+.idea/*
+index.php

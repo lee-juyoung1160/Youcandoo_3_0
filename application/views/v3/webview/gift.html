@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="/assets/v3/css/app_gift.css?resource_version=<?=$resource_version?>">
+<section class="gift">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>UCD 상품 교환</p>
+	</header>
+	<div class="page-wrap">
+		<div class="my-ucd">
+			<div class="inner">
+				<p>나의 보유 UCD <img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_icon_ucd.png" alt="UCD">
+					<strong id="balance"></strong>
+				</p>
+			</div>
+		</div>
+		<article>
+			<ul class="gift-list" id="giftWrap">
+				<!--<li>
+					<div class="inner">
+						<div class="img">
+							<img src="" alt="">
+						</div>
+						<div class="info">
+							<p class="title">[스타벅스] 아이스 아메리카노 Tall아이스 아메리카노 Tall아이스</p>
+							<div class="price-wrap">
+								<p class="price">
+									<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_icon_ucd.png" alt="UCD">
+									<strong>5,900</strong>
+								</p>
+								<button type="button" class="open-modal">신청하기</button>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="inner">
+						<div class="img">
+							<img src="" alt="">
+						</div>
+						<div class="info">
+							<p class="title">[스타벅스] 아이스 아메리카노 Tall</p>
+							<div class="price-wrap">
+								<p class="price">
+									<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_icon_ucd.png" alt="UCD">
+									<strong>5,900</strong>
+								</p>
+								<button type="button" class="ucd-lack">UCD 부족</button>
+							</div>
+						</div>
+					</div>
+				</li>-->
+			</ul>
+		</article>
+		<div class="bottom-manual" style="display: none;" id="notice">
+			<div class="inner">
+				<h5><i><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/event_icon_tip.png" alt=""></i>안내</h5>
+				<p>
+					신청한 기프티콘, 야나두 평생 수강 패키지는
+					전주 월요일부터 일요일까지 신청 기준으로 다음주 수요일 발송돼요.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal-wrap">
+		<!-- 신청 확인 알럿 -->
+		<div class="modal-content gift-confirm" id="modalSubmit">
+			<div class="inner">
+				<div class="modal-body" id="modalSubmitBody">
+					<!--<p>
+						스타벅스 아이스 아메리카노 Tall<br>
+						상품 1개를 신청했어요.<br>
+						010-****-0000 번호로<br>
+						다음주 수요일 발송됩니다.<br><br>
+						<span>
+							*번호가 다르다면, 나 > 프로필 편집 > 휴대폰<br>번호 인증을 통해 변경해주세요.<br><br>
+						</span>
+					</p>-->
+				</div>
+				<div class="modal-footer">
+					<button id="btnCancelSubmit" type="button">취소</button>
+					<button id="btnSubmit" type="button" class="active">신청</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-modal-wrap">
+		<div class="bottom-modal-content" id="modalApply">
+			<div class="inner">
+				<div class="modal-body">
+					<p class="title" id="applyGiftName"></p>
+
+					<ul>
+						<li>
+							<strong>수량</strong>
+							<span>
+								<button type="button" id="btnDecrease">
+									<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_minus_icon.png" alt="마이너스">
+								</button>
+								<em id="quantity"></em>
+								<button type="button" id="btnIncrease">
+									<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_plus_icon.png" alt="플러스">
+								</button>
+							</span>
+						</li>
+						<li>
+							<strong>사용 UCD</strong>
+							<span id="totalPrice"></span>
+						</li>
+					</ul>
+
+
+				</div>
+				<div class="modal-footer">
+					<button id="btnCancelApply" type="button">취소</button>
+					<button id="btnSubmitApply" type="button" class="active">상품 교환 신청</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-bg"></div>
+	</div>
+
+</section>
+<script defer src="/assets/v3/js/gift.js?resource_version=<?=$resource_version?>"></script>

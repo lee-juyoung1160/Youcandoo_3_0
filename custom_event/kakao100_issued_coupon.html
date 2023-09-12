@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="공부습관,야나두,자기계발,자기개발,습관형성,자기관리앱,목표관리,생활습관,목표,목표달성,동기부여,습관">
+    <meta property="og:type" content="교육">
+    <meta property="og:title" content="목표달성 커뮤니티 앱 유캔두">
+    <meta property="og:url" content="https://www.youcandoo.co.kr">
+    <link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico?resource_version=<?=$resource_version?>">
+    <meta property="og:description" content="쉬운 방법으로 빠른 달성을 돕는 매일 1%의 성장습관. 오늘부터 하루 10분 관리 해보세요.">
+    <meta property="og:image" content="https://youcandoo.yanadoocdn.com/v3/web/assets/images/thumbnail.jpg?resource_version=<?=$resource_version?>">
+    <title>유캔두</title>
+</head>
+<style>
+    /*reset css*/
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button{margin:0;padding:0;font-style:normal;vertical-align:baseline;font-size:100%;border:0}*::-webkit-scrollbar-track,.modal_container::-webkit-scrollbar-track{background-color:rgba(0,0,0,.1);border-radius:10px;margin-top:5px;margin-bottom:0}*::-webkit-scrollbar,.modal_container::-webkit-scrollbar{width:5px;background-color:#fff;margin-top:20px;margin-bottom:20px}*::-webkit-scrollbar-thumb,.modal_container::-webkit-scrollbar-thumb{background-color:#717171;border-radius:10px;margin-top:20px;margin-bottom:20px}*:focus{outline:none}body{width:100%;height:auto;line-height:1;font-family:"NanumSquareOTFRegular","sans-serif";font-size:15px!important;color:#000;background-color:#fff}img{max-width:100%;vertical-align:top;height:auto!important}ol,ul,li{list-style:none}table{border-collapse:collapse;border-spacing:0}hr{display:block;margin:16px 0;padding:0;height:1px;border:0;border-top:1px solid #ccc}button{outline:none;cursor:pointer}i{cursor:pointer}input::-ms-clear,input::-ms-reveal{display:none;width:0;height:0}input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none}input,select,textarea{vertical-align:middle;-webkit-appearance:none;-webkit-border-radius:0}select{cursor:pointer}select:focus{outline:none}input:focus{outline:none}a{text-decoration:none;color:inherit;cursor:pointer;display:inline-block}*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}.clearfix::after{content:"";clear:both;display:block}.readable-hidden,.a11y,legend{position:absolute;width:1px;height:1px;overflow:hidden;margin:-1px;clip:rect(0,0,0,0)}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{transition:background-color 5000s ease-in-out 0s;-webkit-transition:background-color 9999s ease-out;-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#545454!important}h1,h2,h3,h4,h5,h6{font-weight:normal!important}@font-face{font-family:"NanumSquareOTFExtraBold";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFExtraBold.woff) format("woff")}@font-face{font-family:"NanumSquareOTFBold";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFBold.woff) format("woff")}@font-face{font-family:"NanumSquareOTFRegular";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFRegular.woff) format("woff")}@font-face{font-family:"NanumSquareOTFLight";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFLight.woff) format("woff")}
+    h1,footer{display: none;}
+    /* app header common css */
+    header {display: flex;position: fixed;left: 0;top: 0;width: 100%;height: 13.89vw;background-color: #fff;align-items: center;border-bottom: 1px solid #ECECEC;z-index: 200;}
+    header p {width: 72.22vw;color: #000;font-size: 5VW;text-align: left;}
+    header a {width: 13.89vw;height: 13.89vw;color: #fff;font-size: 3.33vw;text-align: center;text-indent: -2777.50vw;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/assets/images/webviewimg/v3/back_btn_black.png);background-repeat: no-repeat;background-position: 50% 50%;background-size: 4.72vw 6.94vw;}
+    main{padding-top: 13.89vw; position: relative;}
+    /* 해당 페이지 css */
+    /* font*/
+    @font-face {  font-family: "NanumSquareRoundEB";  font-weight: normal;  src: local(※), url("https://youcandoo.yanadoocdn.com/youcandoo/marketing/font/NanumSquareRoundEB.woff") format("woff");  }
+    @font-face {  font-family: "NanumSquareRoundB";  font-weight: normal;  src: local(※), url("https://youcandoo.yanadoocdn.com/youcandoo/marketing/font/NanumSquareRoundB.woff") format("woff");  }
+    @font-face {  font-family: "NanumSquareRoundR";  font-weight: normal;  src: local(※), url("https://youcandoo.yanadoocdn.com/youcandoo/marketing/font/NanumSquareRoundR_1.woff") format("woff");  }
+    /* 상세페이지 css */
+    .btn {display: block; position: absolute; cursor: pointer;}
+    .popup-btn {width: 89vw;height: 17vw;bottom: 115vw;left: 50%;border-radius: 8vw;transform: translateX(-50%);-webkit-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);-moz-transform: translateX(-50%);border: 0; background-color: transparent;}
+    /* modal css */
+    @keyframes scaleup { 0% {transform: scale(0.2);-webkit-transform: scale(0.2);-ms-transform: scale(0.2);-o-transform: scale(0.2);-moz-transform: scale(0.2);} 90% {transform: scale(1.2);-webkit-transform: scale(1.2);-ms-transform: scale(1.2);-o-transform: scale(1.2);-moz-transform: scale(1.2);} 100% {transform: scale(1);-webkit-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);-moz-transform: scale(1);} }
+    .modal {display: none;position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background-color: rgba(0, 0, 0, 0.81);animation: scaleup 0.2s ease-in;}
+    .modal.active {display: block;}
+    .modal-content {text-align: center;font-size: 1rem;line-height: 1.3;position: relative;width: 80vw;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);background-color: #ffffff;border-radius: 10px;padding: 11% 4.5%;font-family: "NanumSquareRoundB", "sans-serif";}
+    .modal-close-button {width: 4.5vw;position: absolute;top: 16px;right: 16px;cursor: pointer;}
+    .confirm-btn {width: 100%;height: 50px;font-size: 1rem;border: 0;text-align: center;font-family: "NanumSquareRoundEB", "sans-serif";color: #ffffff;background: #d53a3e;background: -moz-linear-gradient(top,  #d53a3e 0%, #980105 100%);background: -webkit-linear-gradient(top,  #d53a3e 0%,#980105 100%);background: linear-gradient(to bottom,  #d53a3e 0%,#980105 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d53a3e', endColorstr='#980105',GradientType=0 );}
+    .notice {width: 90%; margin: 0 auto; margin-top: 5.9%; text-align: left; font-size: 0.6rem; font-family: "NanumSquareRoundR", "sans-serif"; line-height: 1.3; color: #666666;}
+    .notice li {margin-bottom: 2%;}
+    .notice li:last-child{margin-bottom: 0;}
+    .point-color-red {margin-bottom: 4.7%; font-size: 1.5rem; color: #D92A00; font-family: "NanumSquareRoundEB", "sans-serif";}
+    .notice-color-pink {color: #F46F70;}
+    .light-font {margin-bottom: 5%;  font-family: "NanumSquareRoundB", "sans-serif";}
+    .bold-font {font-family: "NanumSquareRoundEB", "sans-serif";}
+    .line-bottom {display: inline-block; position: relative;}
+    .line-bottom .bold-font {position: relative; z-index: 2;}
+    .line-bottom::after{display: block; content: ""; width: 100%; height: 10px; position: absolute; bottom: 0; left: 0; border-radius: 2px; background-color:rgba(255,83,87,0.3);}
+    /* 팝업 종류에 따른 css */
+    #kakao-login-popup .modal-content {width: 84vw;}
+    #payment-guide-popup .confirm-btn {margin-top: 9%; border-radius: 50px;}
+    #kakao-login-popup .confirm-btn, #non-participation-popup .confirm-btn, #unable-pay-popup .confirm-btn, #payment-completed-popup .confirm-btn, #non-login-popup .confirm-btn {position: absolute; bottom: -41px; left: 0; border-radius: 0 0 10px 10px;}
+    /*  반응형  */
+    @media all and (max-width:320px) {html {font-size: 80% !important;}  .modal-content {width: 87vw;} #kakao-login-popup .modal-content {width: 88vw;}}
+</style>
+<body>
+<header>
+    <a id="btnBack">뒤로가기</a>
+    <p>이벤트</p>
+</header>
+<main class="event-detail">
+    <h1>이벤트 페이지</h1>
+    <img src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/event_page.png" alt="이벤트 이미지">
+    <button class="popup-btn btn" type="button" id="btnGiveCoupon"></button>
+    <!--  지급 가능한 유저 안 팝업  -->
+    <div class="modal" id="payment-guide-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="point-color-red">
+                축하해요!🎉
+            </p>
+            <p class="light-font">
+                나를 위한 작은 행동이<br> 우리 모두를 위한 기부로<br> 이어지는 기부쿠폰이<br> 곧 지급 될거에요.
+            </p>
+            <p class="bold-font"><span class="line-bottom"><span class="bold-font">카카오같이가치가</span></span> 보내는<br> 카카오톡 메시지를 확인해 주세요.😀</p>
+            <button class="confirm-btn" type="button">확인</button>
+            <ul class="notice">
+                <li>* 지급된 쿠폰은 12월 31일 까지 사용할 수 있어요.</li>
+                <li class="notice-color-pink">* 지급된 기부 쿠폰을 통한 기부는 카카오임팩트에서 후원하는 금액으로, 기부 영수증이 따로 발급되지 않아요.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 카카오 로그인 팝업   -->
+    <div class="modal" id="kakao-login-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="light-font">
+                기부쿠폰은<br> 카카오톡 메시지를 통해 지급 돼요.
+            </p>
+            <p class="bold-font">지금 사용중인 계정 로그아웃 후에<br> 카카오 계정으로 다시 로그인 해주세요.😀</p>
+            <ul class="notice">
+                <li>* 로그아웃 방법: [나 > 상단 우측 ‘톱니바퀴 아이콘’ > 하단의 ‘로그아웃’ 클릭]</li>
+                <li class="notice-color-pink">* 본인 인증을 하지 않은 계정은 재로그인 후에 기존 계정의 데이터가 사라지니 꼭 본인 인증을 진행하고 카카오 계정으로 재로그인 해주세요.</li>
+                <li class="notice-color-pink">* 본인 인증 방법: [나 > 상단 우측 ‘프로필 편집’ > ‘휴대폰 번호’ 클릭 > 인증하기]</li>
+            </ul>
+            <button class="confirm-btn" type="button">확인</button>
+        </div>
+    </div>
+
+    <!-- 미참여 유저 안내 팝업   -->
+    <div class="modal" id="non-participation-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="light-font">
+                기부쿠폰은<br> 일단백 챌린지 프로모션 두잇<br> 참여자 대상으로 지급 돼요.
+            </p>
+            <p class="bold-font"><span class="line-bottom"><span class="bold-font">일단백 챌린지 </span></span> 프로모션 두잇에 참여하고<br> 좋은 습관 만들기를 시작해보세요.😀</p>
+            <button class="confirm-btn" type="button">확인</button>
+        </div>
+    </div>
+
+    <!-- 지금 대상이 아닌 유저 안내 팝업   -->
+    <div class="modal" id="unable-pay-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="light-font">
+                기부쿠폰은<br> <span class="line-bottom"><span class="bold-font">3일 연속 인증</span></span>을 달성하신<br> 분들에게 지급돼요.
+            </p>
+            <p class="bold-font">조금만 더 힘내서<br> 다음 기회를 노려볼까요?😉</p>
+            <button class="confirm-btn" type="button">확인</button>
+        </div>
+    </div>
+
+    <!-- 지급 완료된 유저 안내 팝업   -->
+    <div class="modal" id="payment-completed-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="light-font">
+                벌써 기부쿠폰을<br> 받으셨네요!
+            </p>
+            <p class="bold-font">계속해서 <span class="line-bottom"><span class="bold-font">일단백 챌린지</span></span>와 함께<br> 좋은 습관을 만들어주세요.😀</p>
+            <button class="confirm-btn" type="button">확인</button>
+        </div>
+    </div>
+
+    <!-- 비로그인 유저 대상 팝업 -->
+    <div class="modal" id="non-login-popup">
+        <div class="modal-content">
+            <img class="modal-close-button" src="https://youcandoo.yanadoocdn.com/youcandoo/marketing/event/images/20211115/close_btn.png" alt="닫기">
+            <p class="light-font">
+                기부쿠폰 이벤트는<br> 유캔두 유저만 참여가 가능해요.
+            </p>
+            <p class="bold-font">이벤트 참여를 원하시면 카카오 계정으로<br> 로그인을 진행해주세요.😀</p>
+            <button class="confirm-btn" type="button">확인</button>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</body>
+<script>
+	let account_token;
+    // 단말기 확인
+    const userAgentOsType = navigator.userAgent.toLowerCase();
+    function isAos() {
+        return userAgentOsType.indexOf('android') > -1;
+    }
+    function isIos() {
+        return (userAgentOsType.indexOf("iphone") > -1 || userAgentOsType.indexOf("ipad") > -1 || userAgentOsType.indexOf("ipod") > -1);
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('btnBack').addEventListener('click', function () { webviewBack(); })
+        document.getElementById('btnGiveCoupon').addEventListener('click', function () { onClickBtnGiveCoupon(); });
+        document.querySelectorAll(".modal-close-button").forEach(element => element.addEventListener('click', fadeoutModal));
+        document.querySelectorAll('.confirm-btn').forEach(element => element.addEventListener('click', fadeoutModal));
+        getDeviceInfoFromNative();
+    })
+
+    /**  AOS는 native 펑션을 호출하면 token(Object)값을 return 해주고 IOS는 native 호출하면 웹의 getDeviceInfo(arg) callback 하면서 arg를 넘겨줌. **/
+    function getDeviceInfoFromNative()
+    {
+        if (isAos())
+        {
+            let responseObjFromAos;
+            try {
+                /**  native 펑션을 호출하면 token(Object)값을 return **/
+                responseObjFromAos = window.webview.getDeviceInfo();
+            } catch (e) {
+                console.log(e.message)
+            } finally {
+                getDeviceInfo(responseObjFromAos);
+            }
+        }
+        else if (isIos())
+        {
+            try {
+                /** native 호출하면 웹의 getDeviceInfo(arg) callback 하면서 arg를 넘겨줌. **/
+                const param = JSON.stringify({ "action" : {"pageType" : "inquiry"} });
+                const message = "jscall://"+encodeURIComponent(param);
+                let iframe = document.createElement('iframe');
+                iframe.setAttribute('src', message);
+                document.documentElement.appendChild(iframe);
+                iframe.parentNode.removeChild(iframe);
+                iframe = null;
+            } catch (e) {
+                console.log(e.message);
+                getDeviceInfo();
+            }
+        }
+    }
+
+    function getDeviceInfo(obj)
+    {
+        if (obj !== undefined)
+        {
+            const jsonObj = JSON.parse(obj)
+            account_token = jsonObj.account_token ? jsonObj.account_token : false;
+        }
+    }
+
+    function onClickBtnGiveCoupon()
+    {
+        if (account_token)
+        {
+            /** 상용배포시 EVENT_UUID 변경 **/
+            const event_uuid = 'EVT-EB3A45FE-F419-11EB-BDC3-023143024626'
+            const param = {
+                "event_uuid" : event_uuid,
+                "account_token" : account_token
+            }
+			/** 상용배포시 baseApiUrl 변경 https://api.youcandoo.co.kr/v3.0/webview/ **/
+			const baseApiUrl = 'https://api.youcandoo.co.kr/v3.0/webview/';
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", baseApiUrl+'event/custom/apply', true);
+            xhr.responseType = 'json';
+            xhr.send(JSON.stringify(param));
+
+            xhr.onload = function() {
+                if (xhr.status === 200)
+                    loadModalByStatusCode(xhr.response.status);
+                else
+                    alert('처리 중 오류가 발생했습니다.');
+            };
+        }
+        else
+            fadeinModal('non-login-popup');
+    }
+
+    function loadModalByStatusCode(status)
+    {
+        switch (status) {
+            case 0 :
+                fadeinModal('payment-guide-popup');
+                break;
+            case 20325 :
+                fadeinModal('kakao-login-popup');
+                break;
+            case 20324 :
+                fadeinModal('non-participation-popup');
+                break;
+            case 20323 :
+                fadeinModal('unable-pay-popup');
+                break;
+            case 20304 :
+                fadeinModal('payment-completed-popup');
+                break;
+            case 20302 :
+                alert('이벤트 참여기간 아닙니다.');
+                break;
+            case 20006 :
+                fadeinModal('non-login-popup');
+                break;
+            default :
+                return alert('처리 중 오류가 발생했습니다.');
+        }
+    }
+
+    function fadeinModal(elementId)
+    {
+        document.getElementById(elementId).classList.add('active');
+    }
+
+    function fadeoutModal()
+    {
+        document.querySelectorAll(".modal").forEach(element => element.classList.remove('active'));
+    }
+
+    function webviewBack()
+    {
+        if (isAos())
+        {
+            try {
+                window.webview.webviewback();
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        else if (isIos())
+        {
+            try {
+                const iosParams = JSON.stringify({ "action" : { "pageType" : "webview_back"} });
+                const message = "jscall://"+encodeURIComponent(iosParams);
+                let iframe = document.createElement('iframe');
+                iframe.setAttribute('src', message);
+                document.documentElement.appendChild(iframe);
+                iframe.parentNode.removeChild(iframe); iframe = null;
+            } catch (e) {
+                console.log(e)
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.referral .title {
+	margin-bottom: 6.39vw;
+	color: #000;
+	font-family: "NanumSquareOTFBold","sans-serif";
+	font-size: 5.56vw;
+	text-align: center;
+}
+
+/* 나의 초대코드 */
+.invitation-code_wrap {
+	margin-top: 9.72vw;
+}
+.input-copy_wrap {
+	position: relative;
+	width: 91.11vw;
+	margin: 0 auto;
+}
+.input-copy_wrap input {
+	display: block;
+	width: 83.22vw;
+	height: 10.28vw;
+	padding: 0 4.44vw 0 3.33vw;
+	font-size: 3.89vw;
+	border-radius: 1.39vw;
+	background-color: #f4f4f4;
+	border: none;
+}
+.invitation-btn_wrap p {
+	margin-top: 4.17vw;
+	color: #FF0000;
+	font-size: 3.33vw;
+	text-align: center;
+}
+.input-copy_wrap button {
+	position: absolute;
+	top: 0;
+	right: 1.39vw;
+	width: 20.56vw;
+	height: 10.28vw;
+}
+.invitation-btn {
+	margin-top: 3.33vw;
+	padding: 0 4.44vw;
+}
+.invitation-btn button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 11.11vw;
+	font-family: "NanumSquareOTFBold","sans-serif";
+	font-size: 3.61vw;
+	border-radius: 1.39vw;
+	letter-spacing: 0.08vw;
+}
+.invitation-btn .invitation-btn_link {
+	width: 100%;
+	color: #fff;
+	margin-top: 2.78vw;
+	background-color: #5D5D5D;
+}
+.invitation-btn .invitation-btn_link img {
+	width: 4.44vw;
+	height: 4.44vw;
+	padding: 0 1.67vw 0 4.17vw;
+}
+.invitation-btn .invitation-btn_kakao {
+	width: 100%;
+	color: #350B06;
+	margin-top: 6.67vw;
+	background-color: #FCE400;
+}
+.invitation-btn .invitation-btn_kakao img {
+	width: 4.17vw;
+	height: 3.61vw;
+	padding: 0 1.39vw 0 4.17vw;
+}
+
+/* 나의 친구 초대 현황 */
+.invitation-status_wrap {
+	margin-top: 13.89vw;
+}
+.invitation-status_wrap .shadow-box {
+	width: 100vw;
+	height: 34.17vw;
+	margin: 0 auto;
+	background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/invite_shadow_box.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.invitation-status_wrap .shadow-box {
+	display: flex;
+}
+.invitation-status_wrap .shadow-box dl {
+	position: relative;
+	width: 50%;
+	padding: 6.94vw 0;
+	text-align: center;
+}
+.invitation-status_wrap .shadow-box dl:first-child:after {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0.56vw;
+	height: 9.17vw;
+	margin-top: -3.33vw;
+	background-color: #EDEDED;
+	content: '';
+}
+.invitation-status_wrap .shadow-box dl dt {
+	color: #4C5264;
+	font-family: "NanumSquareOTFBold","sans-serif";
+	font-size: 3.61vw;
+}
+.invitation-status_wrap .shadow-box dl dd {
+	padding-top: 1.94vw;
+	font-family: 'NanumSquareOTFExtraBold', sans-serif;
+	font-size: 6.94vw;
+}
+.invitation-status_wrap .shadow-box dl dd span {
+	font-family: 'Roboto', sans-serif;
+}
+.invitation-status_wrap .shadow-box dl:first-child dd {
+	color: #4C5264;
+}
+.invitation-status_wrap .shadow-box dl:last-child dd {
+	color: #43BEFF;
+}
+.invitation-status_wrap .my-ucd {
+	display: flex;
+	align-items: center;
+	width: 83.33vw;
+	height: 9.72vw;
+	margin: 5.56vw auto 9.72vw;
+	padding: 0 3.89vw;
+	font-size: 3.89vw;
+	background-color: #F4F6FA;
+	border-radius: 13.89vw;
+}
+.invitation-status_wrap .my-ucd  img {
+	width: 5.00vw;
+	height: 5.28vw;
+	padding-right: 1.39vw;
+}
+.invitation-status_wrap .my-ucd strong {
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+	color: #4C5264;
+	font-family: "NanumSquareOTFBold","sans-serif";
+}
+.invitation-status_wrap .my-ucd span {
+	margin-left: auto;
+	color: #6A7BFC;
+	font-family: 'NanumSquareOTFExtraBold', sans-serif;
+}
+/* 꼭 읽어주세요! */
+.invitation-notice {
+	padding-bottom: 6.11vw;
+}
+.invitation-notice .notice-title {
+	margin-bottom: 3.61vw;
+	padding-top: 5.56vw;
+	color: #000;
+	font-family: "NanumSquareOTFBold","sans-serif";
+	font-size: 4.17vw;
+	border-top: 0.28vw solid #E7E7E7;
+}
+.invitation-notice ul li {
+	color: #000;
+	font-size: 3.33vw;
+	line-height: 1.5em;
+}
+
+/* 모달 */
+.modal-content {
+	width: 80.00vw;
+	height: 41.94vw;
+	border-radius: 3.61vw;
+}
+.modal-body {
+	padding: 11.94vw 0 7.78vw;
+	text-align: center;
+	font-family: "NanumSquareOTFBold","sans-serif";
+	font-size: 4.72vw;
+}
+.modal-footer button {
+	width: 100%;
+}

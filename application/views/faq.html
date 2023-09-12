@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/assets/css/faq.css?resource_version=<?=$resource_version?>">
+<section class="faq">
+    <div class="main-wrapper">
+        <div class="inner">
+            <h2 class="main-title">고객센터</h2>
+            <div class="search-wrap">
+                <form action="javascript:void(0);">
+                    <button class="search-btn" type="submit"><img src="https://service.yanadoocdn.com/youcandoo/assets/images/i-search.png?resource_version=<?=$resource_version?>" alt="검색"></button>
+                    <input type="search" id="searchWord" placeholder="검색 또는 도움말 카테고리를 선택하세요.">
+					<button class="reset-btn" type="reset"><img class="m-icon close-menu black-close" src="https://service.yanadoocdn.com/youcandoo/assets/images/icon_close_black.svg?resource_version=<?=$resource_version?>" alt="메뉴"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <article class="col-1">
+        <div class="inner">
+            <h4>faq 버튼 영역</h4>
+            <ul class="faq-btn w-faq-btn">
+                <li class="all active" data-tab="">전체 <span class="data" name="all">(0)</span></li>
+                <li class="cnt" data-tab="service">이용안내 <span class="data" name="service">(0)</span></li>
+                <li class="cnt" data-tab="user">회원정보 <span class="data" name="user">(0)</span></li>
+                <li class="cnt" data-tab="action">두잇인증 <span class="data" name="action">(0)</span></li>
+                <li class="cnt" data-tab="create">두잇개설 <span class="data" name="create">(0)</span></li>
+                <li class="cnt" data-tab="ucd">UCD <span class="data" name="ucd">(0)</span></li>
+                <li class="cnt" data-tab="promotion">프로모션 <span class="data" name="promotion">(0)</span></li>
+                <li class="cnt" data-tab="error">오류/불편 <span class="data" name="error">(0)</span></li>
+            </ul>
+
+            <div class="selectbox m-faq-btn">
+                <label for="faq-btn">전체 <span class="data"></span></label>
+                <select id="faq-btn">
+                    <option value="" selected>전체 <span class="data" name="all"></span></option>
+                    <option value="service">이용안내 <span class="data" name="service"></span></option>
+                    <option value="user">회원정보 <span class="data" name="user"></span></option>
+                    <option value="action">두잇인증 <span class="data" name="action"></span></option>
+                    <option value="create">두잇개설 <span class="data" name="create"></span></option>
+                    <option value="ucd">UCD <span class="data" name="ucd"></span></option>
+                    <option value="promotion">프로모션 <span class="data" name="promotion"></span></option>
+                    <option value="error">오류/불편 <span class="data" name="error"></span></option>
+                </select>
+            </div>
+        </div>
+    </article>
+    <article class="col-2">
+        <div class="inner">
+            <h4>faq 해당리스트 영역</h4>
+            <ul id="faq-board">
+<!--                <li class="list-open-btn" data-target=".open1">-->
+<!--                    <div class="title-wrap clearfix">-->
+<!--                        <div class="title-box">-->
+<!--                            <p class="division">[이용안내]</p>-->
+<!--                            <p class="title">유캔두가 뭔가요?</p>-->
+<!--                        </div>-->
+<!--                       <div class="btn">-->
+<!--                            <img src="https://service.yanadoocdn.com/youcandoo/assets/images/i-arrow-up.png?resource_version=<?=$resource_version?>" alt="펼치고 닫히기">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <p class="list-contents open1">-->
+<!--                        영어·외국어, 건강·다이어트, 취미, 자기계발 등 다양한 목표를 제시하는 ‘두잇’에 도전하고, 달성 시 리워드를 받아갈 수 있는 목표달성 리워드앱입니다.-->
+<!--                    </p>-->
+<!--                </li>-->
+            </ul>
+            <div class="pagination">
+<!--                <span>더보기 (<span class="data">10 / <sapn class="total">149</sapn></span>)</span>-->
+            </div>
+        </div>
+    </article>
+    <img class="top-btn" src="https://service.yanadoocdn.com/youcandoo/assets/images/i-top.png?resource_version=<?=$resource_version?>" alt="탑버튼">
+</section>
+<script src="/assets/js/faq.js?resource_version=<?=$resource_version?>"></script>

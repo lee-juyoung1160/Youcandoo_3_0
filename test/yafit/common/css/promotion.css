@@ -1,0 +1,145 @@
+/* update 2022-03-30 / v1.1 */
+em{font-style:normal;}
+.inner-col{background-color:transparent;}
+nav .logo, nav .btn-app-download{display:none;}
+header .nav-global .user-thumb-box{display:block; width:3.6rem; height:3.6rem; margin-top:.3rem; background-color:#cfcfda; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; border-radius:50%; border:1px solid #fff; box-sizing:border-box;}
+
+@media screen and (max-width:1024px){
+  nav .logo, nav .btn-app-download{display:block;}
+  header .nav-global a:last-child{margin-right:0;}
+  header .nav-global .user-thumb-box{width:5rem; height:5rem; margin-top:0; background-color:#fff;}
+  header.nav-mobile.active nav{display:block; position:fixed; top:0; left:0; width:80%; height:100%; padding:16rem 0 8rem; font-size:3rem; background-color:#fff; border-right:1px solid #e7e7f0; box-sizing:border-box; overflow-y:scroll; z-index:4;}
+  header.nav-mobile.active nav .logo{position:absolute; top:7rem; left:4rem; width:14rem; height:4rem;}
+  header.nav-mobile.active nav > ul > li{display:block; width:100%;}
+  header.nav-mobile.active nav > ul > li a{text-align:left;}
+  header.nav-mobile.active nav > ul > li.yafit > a::before{top:0.5rem; left:5rem; width:5rem; height:2.8rem; background-size:5rem auto;}
+  header.nav-mobile.active nav .btn-join-group{margin:5rem 0 0; padding:0 4.2rem;}
+  header.nav-mobile.active nav .btn-join-group button{display:block; width:100%; height:9.6rem; margin:0 0 1.7rem;}
+  header.nav-mobile.active nav .btn-app-download{margin:16.5rem 0 0; padding:0 4.2rem 0;}
+  header.nav-mobile.active nav .btn-app-download .title{display:block; margin:0 0 2.5rem;}
+  header.nav-mobile.active nav .btn-app-download button{width:10rem; height:10rem;}
+  header.nav-mobile.active .nav-close{display:block; position:fixed; top:0; bottom:0; width:100%; height:100%; background:#000; opacity:0.7; z-index:3;}
+  header.nav-mobile.active .nav-close span{display:block; position:absolute; top:50%; right:10%; width:7rem; height:7rem; background:#000 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_close_201x201.png) no-repeat right center/100%;}
+
+  header nav li.active > a{font-weight:400;}
+  header nav li.nav-main > a{font-weight:700;}
+  header nav li.nav-main ul{display:block; position:static; left:unset; transform:unset; width:100%; margin:0; padding:2rem 7rem; border:0; box-sizing:border-box; background:#f7f7fc;}
+  header nav li.active ul{padding:0;}
+  header nav li.active li{display:none;}
+  header nav li.nav-main ul{padding:2rem 7rem;}
+  header nav li.nav-main li, header nav li.active.nav-main li{display:block;}
+  header nav li.nav-main li.new a::after{width:3.2rem; height:3.2rem; margin:0 0 0 1rem; font-size:1.8rem; line-height:1;}
+  header nav li.active > a:after{content:''; display:block; position:absolute; top:50%; right:4rem; width:5rem; height:5rem; background:url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_arrow_50x50g.png) no-repeat 0 0/100%; transform:rotate(0deg) translateY(-50%);}
+  header nav li.nav-main > a:after{left:unset; border:unset; transform:rotate(180deg) translateY(50%);}
+}
+
+/* modal-open, modal-wrap common */
+.modal-open{overflow:hidden;}
+.modal-wrap{display:-webkit-flex; display:flex; position:fixed; top:0; right:0; bottom:0; left:0; -webkit-align-items:center; align-items:center; -webkit-justify-content:center; justify-content:center; background-color:rgba(0, 0, 0, 0.6); box-sizing:border-box; z-index:999;}
+.modal-wrap .dimmed{position:absolute; top:0; left:0; right:0; bottom:0;}
+.modal-content{position:relative; -webkit-flex:1 1 auto; flex:1 1 auto; max-height:74rem; overflow:auto; -ms-overflow-style:none; box-sizing:border-box;}
+.modal-wrap .modal-inner{display:-webkit-flex; display:flex; -webkit-flex-direction:column; flex-direction:column; position:relative; width:48rem; max-height:81rem; min-height:81rem; background-color:#fff; border-radius:1rem; box-sizing:border-box; overflow:hidden;}
+
+/* common-popup YU */
+.modal-wrap.course .modal-inner .btn-flex-form{display:block; margin-top:6.7rem;}
+.modal-wrap.course .modal-inner{background:#000 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/bg_night.png) 50% 0/100% auto no-repeat; text-align:center;}
+.modal-wrap.course .modal-inner .course-txt strong{display:block; font-weight:700; font-size:3rem; color:#fff;}
+.modal-wrap.course .modal-inner .course-txt strong span{color:#fded52;}
+.modal-wrap.course .modal-inner .course-txt p{margin-top:2.3rem; font-weight:400; font-size:2rem; line-height:1.5; color:#fff;}
+.modal-wrap.course .modal-inner .course-txt p + p{margin:5rem 0 1.5rem;}
+.modal-wrap .modal-content p{word-break:keep-all;}
+.modal-wrap.course .modal-inner .btn-modal-close{top:2.4rem; right:3.6rem; width:2rem; height:2rem;}
+.btn-modal-close.white{top:-6rem; right:0; width:3rem; height:3rem; padding:1rem; background:url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_close_90x90w.png) 50% 50%/100% auto no-repeat;}
+.modal-content.type-fixed-button .btn-flex-form{padding:0 3rem; background-color:inherit;}
+.btn-modal-close{position:absolute; top:0; right:1rem; width:7rem; height:7rem; z-index:10;}
+.modal-wrap.course .modal-inner .course-txt{padding:38rem 0 6.4rem;}
+.modal-wrap.course .modal-inner .btn-flex-form a,
+.modal-wrap.course .modal-inner .btn-flex-form button{display:block; width:100%;}
+.modal-wrap.course .modal-inner .btn-flex-form .btn-yta{margin:3.5rem 0 0; font-weight:700; font-size:1.9rem; color:#fff; text-decoration:underline;}
+.modal-wrap.course .modal-inner .month-price-txt{display:block; margin:3rem 0 0; font-size:1.5rem; color:#f7f7fc;}
+
+/* common-popup YU goods */
+.modal-wrap.modal-yu-goods .modal-inner{position:relative; width:55rem; height:60rem; max-height:auto; min-height:auto; margin:auto; font-size:1.5rem; border-radius:0; overflow:visible;}
+.modal-wrap.modal-yu-goods .btn-modal-close{top:-4rem; right:0; width:3rem; height:3rem; background:url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_close_90x90w.png) 50% 50%/100% auto no-repeat;}
+.modal-wrap.modal-yu-goods .modal-inner .btn{position:absolute; bottom:0; left:0; width:100%; padding:0.8em 0; font-weight:700; font-size:140%; background:#ffe400 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_more_38x11b.png) no-repeat 95% 50%;}
+.modal-wrap.modal-yu-goods .modal-inner dt{padding:3.5em 0 1.1em;}
+.modal-wrap.modal-yu-goods .modal-inner dt > span{display:inline-block; padding-top:0.2em; width:100%; font-weight:400; font-size:100%; color:#b7b7b7; text-align:center; white-space:pre-wrap;}
+.modal-wrap.modal-yu-goods .modal-inner dt > span em{display:inline-block; margin-bottom:0.4em; font-weight:700; font-size:120%; color:#000; border-bottom:1px solid #000;}
+.modal-wrap.modal-yu-goods .modal-inner dt strong{display:block; font-weight:400; font-size:240%; text-align:center;}
+.modal-wrap.modal-yu-goods .modal-inner dt strong span{display:inline-block; width:100%; height:1.3em; background:url(https://english.yanadoocdn.com/upload/yanadoo/new/common/bg_pop_yu_title.png) no-repeat 50% 0 / 100% auto; text-indent:-9999rem;}
+.modal-wrap.modal-yu-goods .modal-inner dt strong em{font-weight:700;}
+.modal-wrap.modal-yu-goods .modal-inner dt p{margin:1.2em 0 1.5em; font-size:120%; line-height:1.3; text-align:center; white-space:pre-wrap;}
+.modal-wrap.modal-yu-goods .modal-inner dt.type-02{padding-top:4em;}
+.modal-wrap.modal-yu-goods .modal-inner dt.type-02 > span{padding-top:2em;}
+.modal-wrap.modal-yu-goods .modal-inner dd{position:relative; margin:auto; text-align:center;}
+.modal-wrap.modal-yu-goods .modal-inner dd label{display:inline-block; position:relative; width:100%; height:100%; font-weight:700; font-size:136%; color:#fff; cursor:pointer;}
+.modal-wrap.modal-yu-goods .modal-inner dd label .goods-check-box{position:absolute; right:0; bottom:0; left:0; margin:auto; padding:0.5em 0; background-color:rgba(0, 0, 0, 0.3);}
+.modal-wrap.modal-yu-goods .modal-inner dd label + label{margin-left:0.2em;}
+.modal-wrap.modal-yu-goods .modal-inner dd label input[type='radio'] + .chk{width:2.5rem; height:2.5rem; background:#ececf7 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_check_38x30w.png) no-repeat 50% 50% / 1.5rem auto; border:0;}
+.modal-wrap.modal-yu-goods .modal-inner dd label input[type='radio'] + .chk::before{display:none;}
+.modal-wrap.modal-yu-goods .modal-inner dd label input[type='radio']:checked + .chk{background:#ffec13 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_check_38x30b.png) no-repeat 50% 50% / 1.5rem auto;}
+.modal-wrap.modal-yu-goods .modal-inner dd label input[type='radio'] + .chk + em{position:relative;}
+.modal-wrap.modal-yu-goods .modal-inner dd ul{display:flex; justify-content:center; align-items:center;}
+.modal-wrap.modal-yu-goods .modal-inner dd ul li{position:relative; flex:0 1 auto; width:14.8em; height:13.7em; border-radius:1em; overflow:hidden;}
+.modal-wrap.modal-yu-goods .modal-inner dd ul li + li{margin-left:0.7em;}
+.modal-wrap.modal-yu-goods .modal-inner dd ul li.goods1{background:url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/bestawards/2021/dec/new/pc/bg_pop_yu_goods_01.png) no-repeat 50% 50% / 100%;}
+.modal-wrap.modal-yu-goods .modal-inner dd ul li.goods2{background:url(https://english.yanadoocdn.com/upload/yanadoo/new/promotion/bestawards/2021/dec/new/pc/bg_pop_yu_goods_02.png) no-repeat 50% 50% / 100%;}
+.modal-wrap.modal-yu-goods .modal-inner dd > em{display:inline-block; padding-top:1.5em; color:#b7b7b7;}
+.modal-wrap.modal-yu-goods .modal-inner label img{display:block; margin:0 auto 0.5em;}
+
+/* modal-wrap-media */
+.modal-wrap.modal-wrap-media .dimed{position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%;}
+.modal-wrap.modal-wrap-media .modal-content{position:absolute; top:0; right:0; bottom:0; left:0; width:800px; height:478px; margin:auto; background-color:#000; overflow:visible; z-index:3;}
+.modal-wrap.modal-wrap-media .btn-close{position:absolute; top:-45px; right:0; width:40px; height:40px; margin:0; padding:0; text-indent:-9999px;}
+.modal-wrap.modal-wrap-media .btn-close:before{content:''; position:absolute; top:0; right:0; bottom:0; left:0; width:2px; height:40px; margin:auto; background-color:#fff; transform:rotate(45deg);}
+.modal-wrap.modal-wrap-media .btn-close:after{content:''; position:absolute; top:0; right:0; bottom:0; left:0; width:2px; height:40px; margin:auto; background-color:#fff; transform:rotate(-45deg);}
+
+/* ynd-modal */
+.ynd-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.6); z-index:10;}
+.locked-modal{width:100%; height:100%; overflow:hidden; z-index:11;}
+.locked-modal .ynd-bg{display:block;}
+.ynd-modal{visibility:hidden; position:fixed; width:100%; height:100%; top:0; left:0; bottom:0; z-index:550;}
+.ynd-modal .ynd-bg{position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.6);}
+.ynd-modal .ynd-modal-content{position:absolute; top:0; left:0; right:0; bottom:0; margin:auto; text-align:left; z-index:61;}
+.ynd-modal .ynd-modal-content a{display:block;}
+.ynd-modal .ynd-close{position:absolute; top:5px; right:5px; width:30px; height:30px; font-size:50px; font-weight:400; font-family:sans-serif; background-image:url(https://english.yanadoocdn.com/upload/yanadoo/pc/common/ico/ico_close_30x30g.png); background-repeat:no-repeat; background-position:0 0; background-size:100%; color:#fff; line-height:25px; text-indent:-9999em; z-index:5000;}
+.ynd-modal .ynd-today-close{font-size:140%; color:#fff;}
+
+@media screen and (max-width:1024px){
+  /* common-popup YU */
+  .modal-content{max-height:100%;}
+  .modal-wrap{-webkit-align-items:flex-end; align-items:flex-end; -webkit-justify-content:flex-end; justify-content:flex-end;}
+  .modal-wrap.course .modal-inner .btn-modal-close{top:3.7rem; right:5.4rem; width:3.3rem; height:3.3rem;}
+  .modal-wrap .modal-inner{width:100%; min-height:calc(100% - 8.7rem); max-height:calc(100% - 8.7rem); height:auto; border-radius:2rem 2rem 0 0;}
+  .modal-content.type-fixed-button .btn-flex-form{position:fixed; left:0; right:0; bottom:0; padding:0 4rem 6rem; z-index:10;}
+  .modal-wrap.course .modal-inner .course-txt{padding-bottom:8.1rem;}
+  .modal-wrap.course .modal-inner .course-txt strong{font-size:4.8rem; }
+  .modal-wrap.course .modal-inner .course-txt p{margin-top:3.9rem; font-size:3.2rem; }
+  .modal-wrap.course .modal-inner .btn-flex-form{margin-top:6.7rem; }
+  .modal-wrap.course .modal-inner .btn-flex-form .btn-yta{margin-top:4rem; font-size:3rem; }
+
+  /* common-popup YU goods */
+  .modal-content{max-height:100%; }
+  .modal-wrap{-webkit-align-items:flex-end; align-items:flex-end; -webkit-justify-content:flex-end; justify-content:flex-end; }
+  .modal-wrap.modal-yu-goods .modal-inner .btn-modal-close{top:0; right:-4rem; }
+  .modal-wrap .modal-inner{width:100%; min-height:calc(100% - 8.7rem); max-height:calc(100% - 8.7rem); height:auto; border-radius:2rem 2rem 0 0; }
+  .modal-content.type-fixed-button .btn-flex-form{position:fixed; left:0; right:0; bottom:0; z-index:10; padding:0 4rem 6rem; }
+  .modal-wrap.modal-yu-goods .modal-inner dt p{margin-bottom:1em; }
+  .modal-wrap.modal-yu-goods .modal-inner dd ul li{width:13.5em; height:12.4em; }
+  .modal-wrap.modal-yu-goods .modal-inner .btn{padding:0.8em 1em 0.8em 0; font-size:180%; background:#fded52 url(https://english.yanadoocdn.com/upload/yanadoo/new/common/ico_more_38x11b.png) no-repeat 95% 50% / 1.5em auto;}
+
+  /* modal-wrap-media */
+  .modal-wrap.modal-wrap-media .modal-content{width:300px; height:178px;}
+  .modal-wrap.modal-wrap-media .btn-close{top:-33px; right:0; width:30px; height:30px;}
+  .modal-wrap.modal-wrap-media .btn-close:before{width:1px; height:30px;}
+  .modal-wrap.modal-wrap-media .btn-close:after{width:1px; height:30px;}
+
+  /* ynd-modal */
+  .ynd-modal .ynd-modal-content{position:absolute; top:0; left:0; right:0; bottom:0; width:320px !important; margin:auto; text-align:left; z-index:61;}
+  .ynd-modal .ynd-modal-content img{width:100%;}
+  .ynd-modal .button-group{width:100%; overflow:hidden;}
+  .ynd-modal .button-group button{float:left; outline:none; width:50%; padding:1em 0; border-top:0; border-left:0; border-bottom:0; border-right:1px solid #ddd; background-color:#f0f0f0; color:#151515; letter-spacing:-1px;}
+  .ynd-modal .button-group button + button{border-right:0;}
+  .ynd-modal .ynd-close{width:5%; height:5%;}
+  
+}

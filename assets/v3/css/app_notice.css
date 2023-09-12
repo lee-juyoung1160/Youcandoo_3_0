@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/** notice **/
+@media screen and (max-width: 768px) {
+
+	.notice .notice-list li {
+		position: relative;
+		padding: 4.44vw 0;
+		border-bottom: 0.28vw solid #E7E7E7;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/notice_more_btn.png);
+		background-repeat: no-repeat;
+		background-position: 100% 50%;
+		background-size: 5.00vw 5.00vw;
+	}
+	.notice .notice-list li a {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.notice .title {
+		width: 81.67vw;
+	}
+	.notice .title strong {
+		color: #000;
+		font-size: 4.17vw;
+		font-weight: 600;
+	}
+	.notice .title span {
+		display: block;
+		margin-top: 1.39vw;
+		color: #9D9D9D;
+		font-size: 2.78vw;
+	}
+
+	.notice .search_result {
+		padding-top: 52.78vw;
+	}
+	/* detail */
+	.notice.detail .title-wrap {
+		padding:  8.33vw 0 4.17vw;
+		border-bottom: 1px solid #e7e7e7;
+	}
+
+	.notice.detail .title-wrap .title {
+		color: #000;
+		font-size: 5.56vw;
+		font-weight: 600;
+		word-break: keep-all;
+	}
+	.notice.detail .title-wrap .info {
+		display: flex;
+		margin-top: 8.33vw;
+	}
+	.notice.detail .title-wrap .info span {
+		width: 50%;
+		color: #9d9d9d;
+		font-size: 3.33vw;
+	}
+	.notice.detail .title-wrap .info .writer {
+		margin-right: auto;
+	}
+	.notice.detail .title-wrap .info .date {
+		margin-left: auto;
+		text-align: right;
+	}
+
+
+}

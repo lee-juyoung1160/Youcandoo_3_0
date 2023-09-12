@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="공부습관,야나두,자기계발,자기개발,습관형성,자기관리앱,목표관리,생활습관,목표,목표달성,동기부여,습관">
+	<meta property="og:type" content="교육">
+	<meta property="og:title" content="목표달성 커뮤니티 앱 유캔두">
+	<meta property="og:url" content="https://www.youcandoo.co.kr">
+	<link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico?resource_version=<?=$resource_version?>">
+	<meta property="og:description" content="쉬운 방법으로 빠른 달성을 돕는 매일 1%의 성장습관. 오늘부터 하루 10분 관리 해보세요.">
+	<meta property="og:image" content="https://youcandoo.yanadoocdn.com/v3/web/assets/images/thumbnail.jpg?resource_version=<?=$resource_version?>">
+	<meta name="naver-site-verification" content="5cd73ba0e794ce2e3a0fde79f8fa3a886dcc8f20"/>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161922496-1"></script>
+	<title>유캔두</title>
+	<link rel="stylesheet" href="/assets/v3/css/web_reset.min.css?resource_version=<?=$resource_version?>">
+	<link rel="stylesheet" href="/assets/v3/css/web_common.min.css?resource_version=<?=$resource_version?>">
+	<script>
+		// 애널리틱스 관련 스크립트
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-161922496-1');
+
+		// Facebook Pixel Code
+		!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '2554132361509566');
+		fbq('track', 'PageView');
+
+		// 앱스플라이어
+		!function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","banners",{banners: {key: "b9f8c3d2-5dc9-4f04-b757-6115e75a583e"}})
+		AF('banners', 'showBanner');
+
+		// 뷰저블 트래킹 스크립트
+		(function(w, d, a){
+			w.__beusablerumclient__ = {
+				load : function(src){
+					var b = d.createElement("script");
+					b.src = src; b.async=true; b.type = "text/javascript";
+					d.getElementsByTagName("head")[0].appendChild(b);
+				}
+			};w.__beusablerumclient__.load(a);
+		})(window, document, "//rum.beusable.net/script/b211221e140653u472/85ceacddc9");
+	</script>
+</head>
+<body>
+<header>
+	<div class="web-header <?=$type?>">
+		<div class="inner">
+			<h1 class="logo">
+				<a href="/web/v3.0/main"><img class="white-logo" src="https://youcandoo.yanadoocdn.com/v3/web/assets/images/web_logo.svg?resource_version=<?=$resource_version?>" alt="로고"><img class="blue-logo" src="https://youcandoo.yanadoocdn.com/v3/web/assets/images/web_logo_blue.svg?resource_version=<?=$resource_version?>" alt="로고"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="app-header <?=$type?>">
+		<a id="btnBack">뒤로가기</a>
+		<p><?=$title?></p>
+	</div>
+</header>

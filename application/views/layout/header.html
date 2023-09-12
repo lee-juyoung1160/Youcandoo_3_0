@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:type" content="유캔두">
+    <meta property="og:title" content="야나두가 만든 목표달성앱 유캔두">
+    <meta property="og:url" content="https://www.youcandoo.co.kr/">
+    <meta property="og:description" content="마음 먹은대로 이뤄지는 목표 달성의 새로운 패러다임. 유캔두와 함께라면 나두 할 수 있어요.">
+    <meta property="og:image" content="https://service.yanadoocdn.com/youcandoo/assets/images/thumbnail.jpg">
+    <meta name="naver-site-verification" content="5cd73ba0e794ce2e3a0fde79f8fa3a886dcc8f20" />
+    <title>유캔두</title>
+	<script>
+		const api_server_url = "<?php echo $this->config->item('api_server_url');?>";
+	</script>
+    <link rel="shortcut icon" href="https://service.yanadoocdn.com/youcandoo/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/reset.css?resource_version=<?=$resource_version?>">
+    <link rel="stylesheet" href="/assets/css/common.css?resource_version=<?=$resource_version?>">
+    <script src="https://service.yanadoocdn.com/youcandoo/assets/js/jquery-3.5.1.min.js"></script>
+    <script>
+		// Facebook Pixel Code
+        !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2554132361509566');
+        fbq('track', 'PageView');
+
+		// 앱스플라이어
+		!function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","banners",{banners: {key: "b9f8c3d2-5dc9-4f04-b757-6115e75a583e"}})
+		AF('banners', 'showBanner')
+    </script>
+</head>
+<body>
+<header>
+    <div class="w-header">
+        <div class="inner clearfix">
+            <h1 class="logo"><a href="/"><img class="white-logo" src="https://service.yanadoocdn.com/youcandoo/assets/images/logo_youcando_white.svg?resource_version=<?=$resource_version?>" alt="유캔두로고"><img class="color-logo" src="https://service.yanadoocdn.com/youcandoo/assets/images/logo_youcando_color.svg?resource_version=<?=$resource_version?>" alt="유캔두로고"></a></h1>
+            <nav>
+                <ul class="clearfix">
+<!--                    <li class="event-promption-menu"><a href="/event/promotion">100억 프로모션</a></li>-->
+                    <li><a href="/event">이벤트</a></li>
+                    <li><a href="/faq">고객센터</a></li>
+<!--                    <li class="ucd-btn"><a href="javascript:void(0)">UCD충전</a></li>-->
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="m-header clearfix">
+        <h1 class="logo"><a href="/"><img class="white-logo" src="https://service.yanadoocdn.com/youcandoo/assets/images/logo_youcando_white.svg?resource_version=<?=$resource_version?>" alt="유캔두로고"><img class="color-logo" src="https://service.yanadoocdn.com/youcandoo/assets/images/logo_youcando_color.svg?resource_version=<?=$resource_version?>" alt="유캔두로고"></a></h1>
+        <img class="m-icon menu white-menu" src="https://service.yanadoocdn.com/youcandoo/assets/images/icon_menu_white.svg?resource_version=<?=$resource_version?>" alt="메뉴">
+        <img class="m-icon menu black-menu" src="https://service.yanadoocdn.com/youcandoo/assets/images/icon_menu_black.svg?resource_version=<?=$resource_version?>" alt="메뉴">
+        <img class="m-icon close-menu black-close" src="https://service.yanadoocdn.com/youcandoo/assets/images/icon_close_black.svg?resource_version=<?=$resource_version?>" alt="메뉴">
+        <nav>
+            <ul class="clearfix">
+<!--                <li class="event-promption-menu"><a href="/event/promotion">100억 프로모션</a></li>-->
+                <li><a href="/event">이벤트</a></li>
+                <li><a href="/faq">고객센터</a></li>
+<!--                <li class="ucd-btn"><a href="javascript:void(0)">UCD충전</a></li>-->
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+/* webview-common */
+
+@media screen and (max-width: 768px) {
+
+	/*layout*/
+	section {
+		overflow: hidden;
+		width: 100%;
+	}
+	header  {
+		display: flex;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 13.89vw;
+		background-color: #fff;
+		align-items: center;
+		border-bottom: 1px solid #ECECEC;
+		z-index: 200;
+	}
+
+	header p {
+		width: 72.22vw;
+		color: #000;
+		font-size: 5VW;
+		text-align: left;
+	}
+	.ios header p {
+		text-align: center;
+	}
+	.aos header p {
+		text-align: left;
+	}
+	header a {
+		width: 13.89vw;
+		height: 13.89vw;
+		color: #fff;
+		font-size: 3.33vw;
+		text-align: center;
+		text-indent: -2777.50vw;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/back_btn_black.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: 4.72vw 6.94vw;
+	}
+
+	/* fide header */
+	header.fade{
+		position: absolute;
+		background-color: rgba(255,255,255,0);
+		border-bottom: none;
+
+		/*-webkit-transition: all 0.8s ease;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
+		transition: all 0.8s ease;*/
+	}
+	header.fade a{
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/back_btn_white.png);
+	}
+	header.fade p {
+		display: none;
+		font-size: 4.44vw;
+	}
+	header.fade.fixed {
+		position: fixed;
+		background-color: #fff;
+
+		-webkit-transition: all 0.8s ease;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
+		transition: all 0.8s ease;
+	}
+	header.fade.fixed a {
+		color: #000;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/back_btn_black.png);
+	}
+	header.fade.fixed p {
+		display: block;
+	}
+
+	.page-wrap {
+		margin-top: 13.89vw;
+	}
+	.fix-page-wrap article:last-child {
+		padding-bottom: 27.78vw;
+	}
+	article {
+		margin-bottom: 2.22vw;
+		background-color: #fff;
+	}
+	article:last-child {
+		margin-bottom: 0;
+	}
+	.inner {
+		padding: 0 4.44vw;
+	}
+
+	/* 하단고정버튼 */
+	.bottom-fix {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	.bottom-fix button {
+		width: 100%;
+		height: 13.89vw;
+		color: #fff;
+		font-size: 4.72vw;
+		text-align: center;
+		background-color: #6267EA;
+	}
+	.bottom-fix button.btn-default{
+		color: #fff;
+		background-color: #C4C4C4;
+	}
+	.bottom-fix button.btn-default.active {
+		background-color: #6267EA;
+	}
+
+	input[type="search"]::placeholder,
+	input[type="text"]::placeholder,
+	input[type="password"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder  {
+		color: #9D9D9D;
+	}
+	input[type="file"] {
+		position: absolute;
+		width: 0;
+		height: 0;
+		padding: 0;
+		overflow: hidden;
+		border: 0;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"] + label {
+		display: flex;
+		align-content: center;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	input[type="checkbox"] + label span {
+		display: inline-flex;
+		width: 16px;
+		height: 16px;
+		margin-right: 10px;
+		background-image: url("https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/check_box_off.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	input[type="checkbox"]:checked + label span {
+		background-image: url("https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/check_box_on.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	/* 하단 메뉴얼 */
+	.bottom-manual {
+		background-color: #F3F3F3;
+	}
+	.bottom-manual,
+	.bottom-manual h5 {
+		color: #5D5D5D;
+		font-size: 3.89vw;
+		font-weight: 300;
+	}
+	.bottom-manual .inner {
+		padding: 8.33vw 4.44vw 11.11vw;
+	}
+	.bottom-manual h5 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2.78vw;
+	}
+	.bottom-manual h5 i {
+		width: 5.56vw;
+		height: 5.56vw;
+		margin-right: 0.83vw;
+	}
+
+	.bottom-manual p {
+		line-height: 1.5em;
+		letter-spacing: 0;
+	}
+
+	/* 검색 결과 없음 */
+	.search_result {
+		padding-top: 33.33vw;
+		text-align: center;
+	}
+	.search_result img {
+		width: 28.33vw;
+		height: 28.33vw;
+	}
+	.search_result p {
+		margin:  4.44vw 0;
+		text-align: center;
+		font-size: 5.00vw;
+		font-weight: 600;
+	}
+
+	/* modal */
+	.modal-content {
+		display: none;
+		position: fixed;
+		left: 50%;
+		top:50%;
+		background-color: #fff;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		z-index: 300;
+	}
+	.modal-bg {
+		display: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #000;
+		opacity: .3;
+		z-index: 299;
+	}
+
+	/*confirm-alert*/
+	.modal-content.confirm-alert {
+		width: 74.44vw;
+		text-align: center;
+	}
+
+	.modal-content.confirm-alert .modal-body {
+		padding: 6.11vw 0;
+		color: #000;
+		font-size: 4.17vw;
+		line-height: 1.5em;
+	}
+
+	.modal-content.confirm-alert .modal-footer button {
+		padding: 4.17vw 0;
+		color: #6267EA;
+		font-size: 4.17vw;
+	}
+
+	/*detail*/
+	.detail .content-wrap .img {
+		width: 100%;
+		margin-bottom: 5.56vw;
+	}
+	.detail .content-wrap .text-wrap {
+		color: #5d5d5d;
+		padding: 5.56vw 0 11.11vw;
+		font-size: 4.17vw;
+		white-space:pre-line;
+		word-break: break-all;
+	}
+
+	/*error*/
+	.error header {
+		border-bottom: none;
+	}
+	.error .network_non {
+		text-align: center;
+	}
+	.error .network_non img {
+		width: 28.33vw;
+		height: 28.33vw;
+		padding-top: 46.94vw;
+	}
+	.error .network_non p {
+		color: #000;
+		font-size: 4.44vw;
+	}
+	.error .network_non p span {
+		display: block;
+		margin-top: 2.50vw;
+		color: #9D9D9D;
+		font-size: 3.89vw;
+	}
+
+
+}
+
+@media screen and (min-width: 768.1px) {
+	section {
+		display: none !important;
+	}
+}

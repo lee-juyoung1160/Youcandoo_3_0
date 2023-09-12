@@ -1,0 +1,297 @@
+<link rel="stylesheet" href="/assets/v3/css/app_inquiry.css?resource_version=<?=$resource_version?>">
+<section class="inquiry">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>1:1 문의</p>
+	</header>
+	<div class="page-wrap fix-page-wrap">
+		<article>
+			<ul class="btn-wrap" id="tabWrap">
+				<li class="active" data-target="createForm"><button type="button">1:1 문의하기</button></li>
+				<li data-target="listContent"><button type="button">문의 내역</button></li>
+			</ul>
+
+			<!-- 1:1 문의하기 -->
+			<div class="inquiry-create" id="createForm">
+				<div class="form-wrap">
+					<div class="inner">
+
+						<div class="item guest-item">
+							<p class="title">이름</p>
+							<div class="input-wrap">
+								<input type="text" placeholder="이름을 입력해주세요" id="username">
+							</div>
+							<span class="error-message">이름을 입력해주세요.</span>
+						</div>
+
+						<div class="item guest-item">
+							<p class="title">비밀번호</p>
+							<div class="input-wrap password">
+								<input type="password" class="ip-password" placeholder="비밀번호를 입력해주세요" id="password">
+								<i class="eye eye-off" id="btnShowPassword"></i>
+								<!--<i class="eye eye-on"></i>-->
+							</div>
+							<span class="error-message password-error-message">8자리 이상 영문, 숫자, 특수문자로 입력해주세요.</span>
+						</div>
+
+						<div class="item guest-item">
+							<p class="title">이메일</p>
+							<div class="input-wrap">
+								<input type="email" placeholder="이메일을 입력해주세요" id="email">
+							</div>
+							<span class="error-message">이메일 형식으로 입력해주세요.</span>
+						</div>
+
+						<div class="item member-item">
+							<p class="title">닉네임</p>
+							<div class="input-wrap">
+								<input type="text" id="nickname" readonly>
+							</div>
+							<span class="error-message">닉네임을 확인해주세요.</span>
+						</div>
+
+						<div class="item">
+							<p class="title">문의유형</p>
+							<div class="select-box">
+								<select id="selInquiryType">
+									<option value="" disabled selected hidden>문의유형을 선택해주세요</option>
+									<option value="회원정보">회원정보</option>
+									<option value="이용안내">이용안내</option>
+									<option value="두잇 참여/개설">두잇 참여/개설</option>
+									<option value="UCD">UCD</option>
+									<option value="오류/불편">오류/불편</option>
+									<option value="이벤트">이벤트</option>
+									<option value="제휴">제휴</option>
+									<option value="기타">기타</option>
+								</select>
+							</div>
+							<span class="error-message">문의유형을 선택해주세요.</span>
+						</div>
+
+						<div class="item">
+							<p class="title">제목</p>
+							<div class="input-wrap">
+								<span class="input-length">0/50</span>
+								<input type="text" placeholder="제목을 입력해주세요" maxlength="50" id="title">
+							</div>
+							<span class="error-message">제목을 입력해주세요.</span>
+						</div>
+
+						<div class="item">
+							<p class="title">내용</p>
+							<div class="input-wrap">
+								<span class="input-length">0/500</span>
+								<textarea placeholder="자세히 설명해 주실수록 더 정확하고 빠른 답변을 받아보실 수 있어요" maxlength="500" id="content"></textarea>
+							</div>
+							<span class="error-message">내용을 입력해주세요.</span>
+						</div>
+
+						<div class="item">
+							<p class="title">사진 첨부</p>
+							<div class="file-wrap">
+								<div class="upload-wrap" id="fileWrap">
+									<!--파일 업로드-->
+
+									<!--
+									첨부파일 이미지 업로드가 될때
+									.file3  >  .file2  >  .file1 순으로 display:none;
+									.file1 display:none; 시 상단 .upload-wrap 에 .full 추가
+
+									반대로
+									첨부파일 미리보기 이미지 삭제버튼 클릭 시
+									.file1  >  .file2  >  .file3 순으로 display:block;
+									.file1 display:block; 시 상단 .upload-wrap 에 .full 삭제
+									-->
+
+									<div class="file file3">
+										<label for="input-file3" class="btn-input-file">
+											<p class="file-langht">
+												<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_photo_plus.png" alt="사진첨부">
+												<span class="file-count"></span>
+											</p>
+										</label>
+										<input type="file" id="input-file3" name="attachment" accept="image/png, image/jpeg">
+									</div>
+
+									<div class="file file2">
+										<label for="input-file2" class="btn-input-file">
+											<p class="file-langht">
+												<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_photo_plus.png" alt="사진첨부">
+												<span class="file-count"></span>
+											</p>
+										</label>
+										<input type="file" id="input-file2" name="attachment" accept="image/png, image/jpeg">
+									</div>
+
+									<div class="file file1">
+										<label for="input-file1" class="btn-input-file">
+											<p class="file-langht">
+												<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_photo_plus.png" alt="사진첨부">
+												<span class="file-count"></span>
+											</p>
+										</label>
+										<input type="file" id="input-file1" name="attachment" accept="image/png, image/jpeg">
+									</div>
+								</div>
+								<!--미리보기 이미지-->
+								<ul class="view-img-wrap" id="thumbnailWrap">
+									<!--<li>
+										<div class="img">
+											<img src="https://s3.ap-northeast-2.amazonaws.com/service.youcandoo/doit/4ea2b3a36f72243925b5038f3c28ffba/3fda16aa83e1729942fee93a0e2eb89a.jpg" alt="">
+										</div>
+										<i class="btn-delete-img"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_btn_write_delete.png" alt=""></i>
+									</li>
+									<li>
+										<div class="img">
+											<img src="https://s3.ap-northeast-2.amazonaws.com/service.youcandoo/doit/4ea2b3a36f72243925b5038f3c28ffba/3fda16aa83e1729942fee93a0e2eb89a.jpg" alt="">
+										</div>
+										<i class="btn-delete-img"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_btn_write_delete.png" alt=""></i>
+									</li>-->
+								</ul>
+							</div>
+							<span class="desc">* 이미지는 10MB 이내, 3개까지 첨부 가능합니다. (jpg, png)</span>
+						</div>
+
+						<div class="item member-item">
+							<div class="checkbox-wrap">
+								<input id="chkReplyEmail" type="checkbox" name="chk-reply-email">
+								<label for="chkReplyEmail"><span></span>이메일로 답변받기</label>
+							</div>
+							<div class="input-wrap">
+								<input type="email" placeholder="답변받을 이메일 주소를 입력해주세요" id="replyEmail" disabled>
+							</div>
+							<span class="error-message">이메일 형식으로 입력해주세요.</span>
+						</div>
+
+						<div class="item guest-item">
+							<div class="checkbox-wrap">
+								<input id="chkPrivacy" type="checkbox" name="chk-privacy">
+								<label for="chkPrivacy"><span></span><button type="button" id="btnPrivacy">개인정보 수집 및 이용동의</button></label>
+							</div>
+							<span class="error-message">개인 정보 수집 및 이용에 동의해주세요.</span>
+						</div>
+
+					</div>
+				</div>
+				<div class="bottom-fix">
+					<button id="btnSubmit" type="button">문의하기</button>
+				</div>
+			</div>
+
+			<!-- 1:1 내역 -->
+			<div class="inquiry-list" style="display: none;" id="listContent">
+				<!-- 리스트 -->
+				<div class="list-wrap" id="listWrap">
+					<!--<ul class="inner">
+						<li class="title-wrap">
+							<a href="/v3.0/webview/inquiry/detail/1">more</a>
+							<p class="title">
+								<span>2020. 02. 02</span>
+								<strong>
+									두잇 인증이 안되요!
+									<i class="icon-file"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_attached_file.png" alt="첨부파일"></i>
+								</strong>
+							</p>
+							<span class="icon-arrow">답변대기</span>
+						</li>
+						<li class="title-wrap">
+							<a href="/v3.0/webview/inquiry/detail/2">more</a>
+							<p class="title">
+								<span>2020. 02. 02</span>
+								<strong>
+									두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!두잇 인증이 안되요!
+									<i class="icon-file"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_attached_file.png" alt="첨부파일"></i>
+								</strong>
+							</p>
+							<span class="icon-arrow complete">답변완료</span>
+						</li>
+					</ul>-->
+				</div>
+
+				<!--문의내역 없을때-->
+				<!--<div class="search_result">
+					<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_none_img.png" alt="검색 결과 없음">
+					<p>문의내역이 없어요</p>
+				</div>-->
+
+				<!-- 비회원 일 경우 이메일 로그인 -->
+				<div class="guest" style="display: none;" id="guestLoginForm">
+
+					<div class="login-top">
+						<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_img_data.png" alt="회원 데이터 없음">
+						<p>비회원으로 문의하셨나요?<br>입력하신 이메일과 비밀번호로 조회할 수 있어요.<br><br>회원이라면 로그인 후 이용해주세요.</p>
+					</div>
+					<div class="form-wrap">
+						<div class="inner">
+
+							<div class="item guest-item">
+								<div class="input-wrap">
+									<input type="email" placeholder="이메일을 입력해주세요" id="loginEmail">
+								</div>
+								<span class="error-message">이메일 형식을 입력해주세요.</span>
+							</div>
+
+							<div class="item guest-item">
+								<div class="input-wrap password">
+									<input type="password" class="ip-password" placeholder="비밀번호를 입력해주세요" id="loginPassword">
+								</div>
+								<span class="error-message">비밀번호를 입력해주세요.</span>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="bottom-fix">
+						<button id="btnLogin" type="button" class="btn-default active">조회하기</button>
+					</div>
+
+				</div>
+			</div>
+		</article>
+	</div>
+
+	<div class="modal-wrap">
+		<!-- 문의 등록 알럿 -->
+		<div class="modal-content confirm-alert" id="modalSuccess">
+			<div class="modal-body">1:1 문의가 접수되었어요!<br>조금만 기다려 주세요.</div>
+			<!--<div class="modal-body">개인정보 수집 및 이용동의를<br>체크해주세요.</div>-->
+			<!--<div class="modal-body">이메일, 비밀번호를<br>확인해 주세요.</div>-->
+			<div class="modal-footer"><button type="button" id="btnSuccessOk">확인</button></div>
+		</div>
+
+		<!-- 개인정보 수집 동의 안내 -->
+		<div class="modal-content privacy" id="modalPrivacy">
+			<div class="modal-body">
+				<div class="inner">
+					<div class="top">
+						<h5>개인정보 수집 및 이용동의 안내</h5>
+						<p>
+							원활한 문의 상담을 위해 꼭 필요한 정보만을 수집하고 있어요. 아래 내용을 확인하시고 동의해주세요.
+						</p>
+					</div>
+					<div class="bottom">
+						<dl>
+							<dt>수집 이용·목적</dt>
+							<dd>문의하기</dd>
+						</dl>
+						<dl>
+							<dt>수집 항목</dt>
+							<dd>이름, 이메일, 비밀번호</dd>
+						</dl>
+						<dl>
+							<dt>보유 기간</dt>
+							<dd>전자상거래 등에서의 소비자 보호에 관한 법률에 따라 3년</dd>
+						</dl>
+					</div>
+					<div class="modal-footer"><button type="button" id="btnPrivacyOk">확인</button></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal-bg" id="modalBackDrop"></div>
+	</div>
+</section>
+<script src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/js/core-min.js"></script>
+<script src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/js/x64-core-min.js"></script>
+<script src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/js/sha512-min.js"></script>
+<script defer src="/assets/v3/js/inquiryv2.js?resource_version=<?=$resource_version?>"></script>

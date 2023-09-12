@@ -1,0 +1,131 @@
+
+<section class="gift-exchange only-m">
+	<div class="container">
+		<div class="page-title-wrap" style="display: none;">
+			<h2>상품 교환</h2>
+			<progress id="progressbar" value="0" max="100"></progress>
+		</div>
+		<div id="contents" class="page-wrap no-title">
+
+			<!--<div class="my-ucd clearfix">
+				<strong>나의 보유 UCD<span id="myUcd"></span></strong>
+			</div>-->
+
+			<!--<ul class="gift-list">
+				<li class="clearfix">
+					<div class="img-wrap">
+						<img src="/assets/images/gift-starbucks.png" alt="스타벅스">
+					</div>
+					<div class="text-wrap">
+						<p>스타벅스 아이스 아메리카노 Tall</p>
+						<strong>
+							<img src="/assets/images/icon_ucd.png" class="icon-ucd" alt="UCD">
+							<span>5,300</span>
+						</strong>
+					</div>
+					<button type="button" class="btn-gift-apply">신청하기</button>
+				</li>
+				<li class="clearfix">
+					<div class="img-wrap">
+						<img src="/assets/images/gift-baskin.png" alt="베스킨라빈스">
+					</div>
+					<div class="text-wrap">
+						<p>베스킨라빈스 파인트</p>
+						<strong>
+							<img src="/assets/images/icon_ucd.png" class="icon-ucd" alt="UCD">
+							<span>10,600</span>
+						</strong>
+					</div>
+					<button type="button" class="btn-gift-apply">신청하기</button>
+				</li>
+				<li class="clearfix">
+					<div class="img-wrap">
+						<img src="/assets/images/gift-ssg_1.png" alt="신세계상품권1만원권">
+					</div>
+					<div class="text-wrap">
+						<p>신세계 상품권 1만원권</p>
+						<strong>
+							<img src="/assets/images/icon_ucd.png" class="icon-ucd" alt="UCD">
+							<span>12,000</span>
+						</strong>
+					</div>
+					<button type="button" class="btn-gift-apply">신청하기</button>
+				</li>
+				<li class="clearfix">
+					<div class="img-wrap">
+						<img src="/assets/images/gift-ssg_3.png" alt="신세계상품권3만원권">
+					</div>
+					<div class="text-wrap">
+						<p>신세계 상품권 3만원권</p>
+						<strong>
+							<img src="/assets/images/icon_ucd.png" class="icon-ucd" alt="UCD">
+							<span>33,000</span>
+						</strong>
+					</div>
+					<button type="button" class="btn-gift-apply">신청하기</button>
+				</li>
+				<li class="clearfix">
+					<div class="img-wrap">
+						<img src="/assets/images/gift-yanadoo_package.png" alt="야나두평생수강패키지">
+					</div>
+					<div class="text-wrap">
+						<p>야나두 평생수강 패키지</p>
+						<em class="red-message">(10명 한정)</em>
+						<strong>
+							<img src="/assets/images/icon_ucd.png" class="icon-ucd" alt="UCD">
+							<span>200,000</span>
+						</strong>
+					</div>
+					<button type="button" class="btn-gift-apply">신청하기</button>
+				</li>
+			</ul>-->
+
+			<!--<div class="bottom">
+				<div class="text-wrap">
+					<h4>&lt;안내&gt;</h4>
+					<div>
+						기프티콘은 매주 1회 발송돼요!<br>
+						■전주 화요일부터 월요일까지 신청 기준으로 매주 수요일 발송<br><br>
+						모바일상품권, 야나두 평생수강 패키지는 매월 2회 발송돼요!<br>
+						■1일~15일까지 신청한 경우 당월 30일 발송<br>
+						■16~말일까지 신청한 경우 익월 15일 발송<br>
+
+					</div>
+				</div>
+			</div>-->
+
+		</div>
+
+	</div>
+
+
+	<div id="modalApply" class="slide-up-modal" style="display: none;">
+		<div class="modal-container">
+			<p class="title" id="modalApplyTitle"></p>
+			<ul>
+				<li class="clearfix">
+					<span class="sub-title">수량</span>
+					<div class="right-wrap">
+						<button id="btnMinus" class="btn-quantity btn-minus">
+							<img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon-ucd-minus.png?resource_version=<?=$resource_version?>" alt="minus">
+						</button>
+						<span id="quantity" class="quantity-num"></span>
+						<button id="btnPlus" class="btn-quantity btn-plus">
+							<img src="https://service.yanadoocdn.com/youcandoo/assets/images/webviewimg/icon-ucd-plus.png?resource_version=<?=$resource_version?>" alt="plus">
+						</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="sub-title">차감 UCD</span>
+					<span class="right-wrap price"><span id="totalPrice"></span> UCD</span>
+				</li>
+			</ul>
+		</div>
+		<div class="bottom-btn-wrap clearfix">
+			<button id="btnCancelModalApply">취소</button>
+			<button id="btnOkModalApply">상품 교환신청</button>
+		</div>
+	</div>
+	<div id="modalBackDrop"></div>
+</section>
+<script defer src="/assets/js/webview/gift-exchange-v2.js?resource_version=<?=$resource_version?>"></script>

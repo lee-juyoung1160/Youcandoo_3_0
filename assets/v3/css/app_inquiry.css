@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+/** inquiry **/
+@media screen and (max-width: 768px) {
+
+	/*문의하기*/
+	.inquiry .btn-wrap {
+		display: flex;
+		width: 100%;
+		padding-top: 1.67vw;
+		border-bottom: 1px solid #E2E8ED;
+	}
+
+	.inquiry .btn-wrap li {
+		display: flex;
+		justify-content: center;
+		width: 50%;
+	}
+
+	.inquiry .btn-wrap li button {
+		position: relative;
+		width: 45.56vw;
+		height: 10.28vw;
+		color: #989898;
+		font-size: 4.5vw;
+		font-weight: 600;
+	}
+
+	.inquiry .btn-wrap li.active button {
+		color: #6267EA;
+		font-weight: 800;
+	}
+
+	.inquiry .btn-wrap li.active button:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.83vw;
+		background-color: #6267EA;
+		content: '';
+	}
+
+	/*문의하기 - form*/
+	.inquiry .form-wrap {
+		padding-top: 2.78vw;
+	}
+
+	.inquiry .form-wrap .item {
+		padding: 2.78vw 0;
+	}
+	.inquiry .guest .form-wrap .item {
+		padding: 2.78vw 0 0;
+	}
+
+	.inquiry .form-wrap .item p.title {
+		font-size: 4.17vw;
+		font-weight: 600;
+	}
+
+	.inquiry .form-wrap .item .input-wrap {
+		width: 100%;
+	}
+
+	.inquiry .form-wrap .item .input-wrap input[type="text"],
+	.inquiry .form-wrap .item .input-wrap input[type="password"],
+	.inquiry .form-wrap .item .input-wrap input[type="email"] {
+		width: 100%;
+		padding: 2.78vw 0;
+		font-size: 3.89vw;
+		text-align: left;
+		background-color: #fff;
+		border: none;
+		border-bottom: 1px solid #000;
+	}
+	.inquiry .form-wrap .item .input-wrap input[type="email"]:disabled {
+		background-color: #fff;
+	}
+
+	.inquiry .form-wrap .item .input-wrap.password {
+		position: relative;
+	}
+
+	.inquiry .form-wrap .item .input-wrap.password input[type="password"] {
+		width: calc(100% - 10.00vw);
+		padding-right: 10.00vw;
+	}
+
+	.inquiry .form-wrap .item .input-wrap.password i.eye {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 10.00vw;
+		height: 10.00vw;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+
+	.inquiry .form-wrap .item .input-wrap.password i.eye-off {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_eye_off.png);
+	}
+
+	.inquiry .form-wrap .item .input-wrap.password i.eye-on {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_eye_on.png);
+	}
+
+	.inquiry .form-wrap .item .select-box {
+		border-bottom: 1px solid #000;
+	}
+	.inquiry .form-wrap .item .select-box select {
+		-webkit-appearance: none;  /* 네이티브 외형 감추기 */
+		-moz-appearance: none;
+		appearance: none;
+		width: 100%;
+		color: #000;
+		padding: 2.78vw 0;
+		font-size: 3.89vw;
+		background-color: #fff;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_btn_list_down.png);
+		background-position: 100% 50%;
+		background-repeat: no-repeat;
+		background-size: 11.11vw 11.11vw;
+		border: none;
+	}
+
+	.inquiry .form-wrap .item .input-wrap .input-length {
+		display: block;
+		color: #9D9D9D;
+		font-size: 3.33vw;
+		text-align: right;
+	}
+
+	.inquiry .form-wrap .item textarea {
+		width: calc(100% - 5.56vw);
+		height: 40.56vw;
+		margin-top: 1.39vw;
+		padding: 2.78vw;
+		font-size: 3.89vw;
+		border: 1px solid #000000;
+		border-radius: 1.39vw;
+	}
+
+	.inquiry .form-wrap .item .input-wrap .select-box button {
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_btn_list_down.png);
+		background-position: 100% 50%;
+		background-repeat: no-repeat;
+		background-size: 11.11vw 11.11vw;
+	}
+
+	.inquiry .file-wrap {
+		display: flex;
+		margin-top: 3.33vw;
+	}
+
+	.inquiry .upload-wrap {
+		position: relative;
+		width: 26.67vw;
+		height: 26.67vw;
+		margin-right: 5.56vw;
+	}
+
+	.inquiry .upload-wrap.full {
+		width: 0;
+		height: 0;
+		margin-right: 0;
+	}
+
+	.inquiry .upload-wrap .file {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.inquiry .upload-wrap .file .btn-input-file {
+		display: flex;
+		justify-content: center;
+		width: 26.67vw;
+		height: 26.67vw;
+		text-align: center;
+		background-color: #fff;
+		border: 1px solid #D4D4D4;
+		border-radius: 1.94vw;
+	}
+
+	.inquiry .upload-wrap .file .file-langht {
+		line-height: .8em;
+	}
+
+	.inquiry .upload-wrap .file .btn-input-file img {
+		width: 10.00vw;
+		height: 10.00vw;
+		padding-top: 5.56vw;
+	}
+
+	.inquiry .upload-wrap .file .btn-input-file span {
+		display: block;
+		color: #4C5264;
+		font-size: 3.33vw;
+		letter-spacing: 0;
+	}
+
+	.inquiry .view-img-wrap {
+		display: flex;
+	}
+
+	.inquiry .view-img-wrap li {
+		position: relative;
+		width: 26.67vw;
+		height: 26.67vw;
+		margin-right: 5.56vw;
+	}
+
+	.inquiry .view-img-wrap li:last-child {
+		margin-right: 0;
+	}
+
+	.inquiry .view-img-wrap li .img {
+		overflow: hidden;
+		width: 26.67vw;
+		height: 26.67vw;
+		background-color: #fff;
+		border-radius: 1.94vw;
+	}
+
+	.inquiry .view-img-wrap li .img img {
+		height: 100%;
+	}
+
+	.inquiry .view-img-wrap li .btn-delete-img {
+		position: absolute;
+		top: -3.56vw;
+		right: -3.56vw;
+		width: 11.11vw;
+		height: 11.11vw;
+	}
+
+	.inquiry .desc {
+		display: block;
+		padding-top: 2.78vw;
+		color: #4C5264;
+		font-size: 3.33vw;
+	}
+
+	.inquiry .checkbox-wrap button {
+		color: #000;
+		font-size: 3.61vw;
+		font-weight: 600;
+		border-bottom: 1px solid #000;
+	}
+
+	.inquiry .error-message {
+		padding-top: 1.39vw;
+		font-size: 3.06vw;
+		opacity: 0;
+	}
+
+	.inquiry .error-message.password-error-message {
+		color: #000;
+		opacity: 1;
+	}
+
+	.inquiry .form-wrap .item.error .error-message {
+		color: #FF0000;
+		opacity: 1;
+	}
+
+	.inquiry .form-wrap .item.error input[type="text"],
+	.inquiry .form-wrap .item.error input[type="password"],
+	.inquiry .form-wrap .item.error input[type="email"],
+	.inquiry .form-wrap .item.error select,
+	.inquiry .form-wrap .item.error textarea,
+	.inquiry .form-wrap .item.error .select-box,
+	.inquiry .item.error .checkbox-wrap button {
+		border-color: #FF0000;
+	}
+
+	/*모달*/
+	.inquiry .modal-content.select-option {
+		width: 91.11vw;
+	}
+
+	.inquiry .modal-content.select-option button {
+		width: 100%;
+		height: 13.89vw;
+		color: #000;
+		font-size: 4.44vw;
+	}
+
+	.inquiry .modal-content.privacy {
+		width: 80.56vw;
+		border-radius: 5.56vw;
+	}
+
+	.inquiry .modal-content.privacy .inner {
+		padding: 5.56vw;
+	}
+
+	.inquiry .modal-content.privacy .top {
+		border-bottom: 1px solid #ECECEC;
+	}
+
+	.inquiry .modal-content.privacy .top h5 {
+		color: #000;
+		font-size: 4.44vw;
+		font-weight: 800;
+		text-align: center;
+	}
+
+	.inquiry .modal-content.privacy .top p {
+		padding: 4.17vw 0;
+		font-size: 3.61vw;
+		color: #5D5D5D;
+	}
+
+	.inquiry .modal-content.privacy .bottom dl {
+		display: flex;
+		margin: 4.17vw 0;
+		font-size: 3.61vw;
+	}
+
+	.inquiry .modal-content.privacy .bottom dt {
+		width: 35%;
+		margin-right: auto;
+		font-weight: 600;
+	}
+
+	.inquiry .modal-content.privacy .bottom dd {
+		width: 65%;
+		margin-left: auto;
+		text-align: right;
+	}
+
+	.inquiry .modal-content.privacy .modal-footer button {
+		width: 100%;
+		height: 13.33vw;
+		color: #fff;
+		font-size: 4.44vw;
+		font-weight: 600;
+		background-color: #6267EA;
+		border-radius: 1.39vw;
+	}
+
+	/*문의내역*/
+	/*회원 일 경우*/
+	.inquiry .list-wrap li{
+		position: relative;
+	}
+	.inquiry .list-wrap a {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-indent: -9999px;
+		z-index: 50;
+	}
+	.inquiry .title-wrap {
+		display: flex;
+		align-items: center;
+		padding: 4.72vw 0;
+		border-bottom: 1px solid #E7E7E7;
+	}
+
+	.inquiry .title {
+		width: 65.28vw;
+	}
+
+	.inquiry .title span {
+		display: block;
+		margin-bottom: 1.67vw;
+		color: #9D9D9D;
+		font-size: 2.78vw;
+	}
+
+	.inquiry .title strong {
+		position: relative;
+		color: #000;
+		font-size: 4.17vw;
+		font-weight: 600;
+	}
+
+	.inquiry .icon-file {
+		width: 4.17vw;
+		height: 4.17vw;
+	}
+
+	.inquiry .title .icon-file {
+		position: absolute;
+		bottom: 0;
+		padding-left: 1.11vw;
+	}
+
+	.inquiry .icon-arrow {
+		width: 17.78vw;
+		height: 6.94vw;
+		color: #6267EA;
+		margin-top: 2.78vw;
+		margin-left: auto;
+		font-size: 3.33vw;
+		font-weight: 600;
+		text-align: center;
+		line-height: 6.94vw;
+		border: 1px solid #6267EA;
+		border-radius: 5.56vw;
+	}
+
+	.inquiry .icon-arrow.complete {
+		color: #fff;
+		background-color: #5D5D5D;
+		border: 1px solid #5D5D5D;
+	}
+
+	/*비회원일경우*/
+	.inquiry .login-top {
+		padding: 19.44vw 0 13.89vw;
+		text-align: center;
+	}
+
+	.inquiry .login-top img {
+		width: 28.33vw;
+		height: 28.33vw;
+	}
+
+	.inquiry .login-top p {
+		margin-top: 4.44vw;
+		font-size: 4.44vw;
+		font-weight: 600;
+		text-align: center;
+	}
+
+
+	/** 1:1 상세 **/
+	.inquiry.detail article {
+		padding-bottom: 9.72vw;
+	}
+
+	.inquiry.detail .title-wrap .title strong {
+		font-size: 4.72vw;
+	}
+
+	.inquiry.detail .text-wrap {
+		font-size: 3.89vw;
+		padding: 4.44vw 0 5.56vw;
+		line-height: 1.6em;
+		white-space:pre-line;
+		word-break: break-all;
+	}
+
+	.inquiry.detail .file-view-wrap button {
+		display: block;
+		padding-left: 5.56vw;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/inquiry_icon_attached_file.png);
+		background-position: 0 50%;
+		background-repeat: no-repeat;
+		background-size: 4.17vw 4.17vw;
+	}
+
+	.inquiry.detail .file-view-wrap button.active {
+		color: #0A84FF;
+		font-weight: 600;
+	}
+
+	.inquiry.detail .file-view-wrap button:nth-child(2) {
+		margin: 3.89vw 0;
+	}
+
+	.inquiry.detail .file-view-wrap .img-wrap {
+		overflow: hidden;
+		width: 79.44vw;
+		margin: 5.56vw 0 0 5.56vw;
+		border-radius: 2.78vw;
+	}
+	.inquiry.detail .answer-wrap {
+		background-color: #f3f3f3;
+	}
+	.inquiry.detail .answer-wrap .title-wrap .title strong {
+		font-size: 4.17vw;
+	}
+
+}

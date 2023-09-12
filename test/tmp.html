@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="공부습관,야나두,자기계발,자기개발,습관형성,자기관리앱,목표관리,생활습관,목표,목표달성,동기부여,습관">
+	<meta property="og:type" content="교육">
+	<meta property="og:title" content="목표달성 커뮤니티 앱 유캔두">
+	<meta property="og:url" content="https://www.youcandoo.co.kr">
+	<link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico?resource_version=<?=$resource_version?>">
+	<meta property="og:description" content="쉬운 방법으로 빠른 달성을 돕는 매일 1%의 성장습관. 오늘부터 하루 10분 관리 해보세요.">
+	<meta property="og:image" content="https://youcandoo.yanadoocdn.com/v3/web/assets/images/thumbnail.jpg?resource_version=<?=$resource_version?>">
+	<title>유캔두</title>
+	<script src="../test/html2canvas.js"></script>
+</head>
+<style>
+	/*reset css*/
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button{margin:0;padding:0;font-style:normal;vertical-align:baseline;font-size:100%;border:0}*::-webkit-scrollbar-track,.modal_container::-webkit-scrollbar-track{background-color:rgba(0,0,0,.1);border-radius:10px;margin-top:5px;margin-bottom:0}*::-webkit-scrollbar,.modal_container::-webkit-scrollbar{width:5px;background-color:#fff;margin-top:20px;margin-bottom:20px}*::-webkit-scrollbar-thumb,.modal_container::-webkit-scrollbar-thumb{background-color:#717171;border-radius:10px;margin-top:20px;margin-bottom:20px}*:focus{outline:none}body{width:100%;height:auto;line-height:1;font-family:"NanumSquareOTFRegular","sans-serif";font-size:15px!important;color:#000;background-color:#fff}img{max-width:100%;vertical-align:top;height:auto!important}ol,ul,li{list-style:none}table{border-collapse:collapse;border-spacing:0}hr{display:block;margin:16px 0;padding:0;height:1px;border:0;border-top:1px solid #ccc}button{outline:none;cursor:pointer}i{cursor:pointer}input::-ms-clear,input::-ms-reveal{display:none;width:0;height:0}input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none}input,select,textarea{vertical-align:middle;-webkit-appearance:none;-webkit-border-radius:0}select{cursor:pointer}select:focus{outline:none}input:focus{outline:none}a{text-decoration:none;color:inherit;cursor:pointer;display:inline-block}*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}.clearfix::after{content:"";clear:both;display:block}.readable-hidden,.a11y,legend{position:absolute;width:1px;height:1px;overflow:hidden;margin:-1px;clip:rect(0,0,0,0)}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{transition:background-color 5000s ease-in-out 0s;-webkit-transition:background-color 9999s ease-out;-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#545454!important}h1,h2,h3,h4,h5,h6{font-weight:normal!important}@font-face{font-family:"NanumSquareOTFExtraBold";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFExtraBold.woff) format("woff")}@font-face{font-family:"NanumSquareOTFBold";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFBold.woff) format("woff")}@font-face{font-family:"NanumSquareOTFRegular";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFRegular.woff) format("woff")}@font-face{font-family:"NanumSquareOTFLight";font-weight:400;src:local(※),url(https://youcandoo.yanadoocdn.com/youcandoo/assets/font/NanumSquareOTFLight.woff) format("woff")}
+	/* app header common css */
+	header {display: flex;position: fixed;left: 0;top: 0;width: 100%;height: 13.89vw;background-color: #fff;align-items: center;border-bottom: 1px solid #ECECEC;z-index: 200;}
+	header p {width: 72.22vw;color: #000;font-size: 5vw;text-align: left;}
+	header a {width: 13.89vw;height: 13.89vw;color: #fff;font-size: 3.33vw;text-align: center;text-indent: -2777.50vw;background-image: url(https://youcandoo.yanadoocdn.com/youcandoo/assets/images/webviewimg/v3/back_btn_black.png);background-repeat: no-repeat;background-position: 50% 50%;background-size: 4.72vw 6.94vw;}
+	main{padding-top: 13.89vw; position: relative;}
+	/* 해당 페이지 css */
+	h1{display: none;}
+	#downloadCaptureContent {padding: 50px; text-align: center;width: 400px; height: 400px;  background-image: url("../test/test.png"); background-repeat: no-repeat; background-size: 100%; background-position: center;}
+	h6 {margin-bottom: 5%;}
+	p{width: 100%; text-align: center; margin-bottom: 60%; line-height: 1.8;}
+	#downloadCaptureBtn {display: block; width: 400px; height: 30px; line-height: 30px; text-align: center; background-color: orangered;}
+</style>
+<body>
+<header>
+
+</header>
+<main class="event-detail">
+	<h1>이벤트 페이지</h1>
+	<div id="downloadCaptureContent">
+		<h6>다이어트 선언서</h6>
+		<p>나 <input type="text">은(는)<br>
+			질법다 챌린지로<br>
+			<input type="text">	빼고 기부한다!
+		</p>
+		<span>유캔두 질법다</span>
+	</div>
+<!--	<a id="downloadCaptureBtn" href="javascript:void(0);">내 선언서 저장하기</a>-->
+	<a id="downloadCaptureBtn" href="https://youcandoo.s3.ap-northeast-2.amazonaws.com/qna/2021/06/28/c52d6f57afa14b5073de9de10448f3cd.jpg" onclick="return XenoUrlOpenLinkDo(this.href);">
+		s3 다운
+	</a>
+</main>
+</body>
+<script>
+
+	// 이미지 캡져
+	// document.getElementById("downloadCaptureBtn").addEventListener("click", function() {
+	// 	html2canvas(document.getElementById("downloadCaptureContent"),{
+	// 		logging: true,
+	// 		letterRendering: 1,
+	// 		allowTaint: false,
+	// 		useCORS: true,
+	// 	}).then(canvas => {
+	// 		saveAs(canvas.toDataURL('image/png'),"capture-test.png");
+	// 	});
+	//
+	// });
+	//
+	// function saveAs(uri, filename) {
+	// 	let link = document.createElement('a');
+	// 	if (typeof link.download === 'string') {
+	// 		link.href = uri;
+	// 		link.download = filename;
+	// 		document.body.appendChild(link);
+	// 		link.click();
+	// 		document.body.removeChild(link);
+	// 	} else {
+	// 		window.open(uri);
+	// 	}
+	// }
+
+</script>
+</html>
+
+
+
+
+

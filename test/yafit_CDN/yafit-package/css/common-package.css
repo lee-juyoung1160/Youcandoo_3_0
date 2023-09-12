@@ -1,0 +1,421 @@
+@charset "UTF-8";
+
+body {min-width: 280px; font-family: 'Inter', 'NotoSansCJKkr', sans-serif;}
+.inner {max-width: 1200px; margin: 0 auto; padding: 0 30px;}
+.flex-col {display: flex;}
+.right-area {margin-left: auto;}
+.point-color {color: #08AA59;}
+.display-pc {display: block;}
+.display-m {display: none;}
+img {width: 100%;}
+button {cursor: pointer;}
+select {width: 100%; height: 35px; padding: 0 20px; color: #000; font-size: 16px; border: 1px solid #707070; background-color: #fff; background-image: url(https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/detail/common/select_arrow.svg); background-position: 95% 50%; background-repeat: no-repeat;}
+.btn-submit {color: #000 !important; background-color: #00CC66 !important;}
+
+.move-action {opacity: 0; transition: opacity .4s, transform .4s ease-in-out;}
+.active .move-action {opacity: 1; transform: translate3d(0, 0, 0);}
+.fade-top {transform: translate3d(0, 30px, 0);}
+
+.package-detail-page {width: 100%; letter-spacing: -.5px;}
+.package-detail-col {padding: 70px 0 0 0;}
+
+/* 패키지 썸네일 */
+.package-detail-col .inner {display: flex;}
+.package-thumbnail {overflow: hidden; width: 48%; margin-right: auto;}
+.package-thumbnail-slide {position: relative; width: 100%;}
+.package-thumbnail-slide .swiper-pagination {position: absolute; left: 0; bottom: 5%; width: 100%;}
+.package-thumbnail-slide .swiper-pagination-bullet {width: 9px; height: 9px; background-color: #c9c9c9; opacity: .5;}
+.package-thumbnail-slide .swiper-pagination-bullet-active {opacity: 1;}
+/* 탭 */
+.detail-tabs-col {background-color: #000000; opacity: .3; }
+.detail-tabs-col.active {position: fixed;left: 0;top: 8.8rem;width: 100%;z-index: 100000;}
+.detail-tabs {display: flex;}
+.detail-tabs li {position: relative; width: 50%;}
+.detail-tabs li button {display: block;width: 100%; padding: 22px 0; color: #fff; font-size: 22px; font-weight: 300; text-align: center; cursor: pointer;}
+.detail-tabs li:first-child:after {content: ''; position: absolute; right: 0; top: 50%; width: 1px; height: 20px; margin-top: -10px; background-color: #fff; opacity: .4;}
+/* 패키지 정보 선택 */
+.package-detail-info { width: 50%; min-width: 525px; padding: 0 3%; margin-left: auto;text-align: left;}
+.package-detail-info .top {position: relative;}
+.package-detail-info .top h3 {margin-right: auto; font-size: 31px; font-weight: 600;}
+.package-detail-info .top .badge {display: inline-block; margin-bottom: 10px; padding: 5px 20px; color: #08AA59; font-size: 16px; font-weight: 400; border: 1px solid #08AA59; border-radius: 100px 100px 100px 100px;}
+.package-detail-info .btn-copy-link {display: flex; position: absolute; right: 0; bottom:0; width: 44px; height: 44px;}
+.package-detail-info .package-detail {margin-top: 40px;}
+.package-detail-info .package-detail .title {font-size: 16px; font-weight: 400;}
+.package-detail-info .package-detail .right-area {width: 270px; text-align: right;}
+.package-detail .desc_1 {margin-top: 35px; font-size: 16px; font-weight: 400; text-align: center; line-height: 1.4em}
+.package-detail .package-configuration {padding-bottom: 40px; border-bottom: 1px solid #BABABA;}
+.package-detail .package-configuration .right-area span {display: block; padding-bottom: 5px; color: #666; font-size: 15px;}
+.package-detail .package-app-pass {padding-top: 35px;}
+.package-detail .discount-price-area {display: flex; align-items: center;padding: 15px 10px;}
+.package-detail .discount-price-area .badge {margin-right: auto; padding: 3px 15px; font-size: 15px; border-radius: 90px;}
+.package-detail .discount-price-area .badge.badge-discount__20 {background-color: #00CC66;}
+.package-detail .discount-price-area .badge.badge-discount__25 {background-color: #FEE510;}
+.package-detail .package-app-pass .discount-price-area .discount-price {display: block; margin-left: auto; color: #888888; font-weight: 400;}
+.package-detail .package-app-pass .price-area {padding:10px 0; border-top: 1px solid #BABABA;}
+.package-detail .package-app-pass .price-area .flex-col {padding: 5px 10px; align-items: end;}
+.package-detail .package-app-pass .price-area .title {margin-right: auto; color: #666666; font-size: 14px; font-weight: 400;}
+.package-detail .package-app-pass .price-area strong {margin-left: auto; font-size: 25px; font-weight: 600;}
+.package-detail .package-app-pass .price-area .desc {margin-top: 10px; padding-right: 10px; color: #888; font-size: 10px;}
+.package-benefits {margin-top: 35px; padding: 20px; background-color: #F8F8F9; border-radius: 6px;}
+.package-benefits .title {color: #777; font-size: 14px;}
+.package-benefits strong {color: #1C1C1C; font-size: 16px; font-weight: 400;}
+.package-benefits p {color: #1C1C1C; font-size: 14px; font-weight: 300; line-height: 1.3em;}
+.package-benefits__mileage {margin-bottom: 13px;}
+.package-btn-area {padding: 40px 0 70px}
+.package-btn-area button {width: 49%; height: 60px; color: #000; text-align: center; font-size: 16px; font-weight: 600; border: 2px solid #00CC66;}
+.package-btn-area .btn-consul {position: relative; background-color: transparent; margin-right: 1%;}
+/*.package-btn-area .btn-consul:after {position: absolute; top: -20px; left: 0; width: 120px; height: 38px; background-image: url(https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/detail/common/badge_btn_cs.svg); background-size: cover; content: '';}*/
+.package-btn-area .btn-buy {background-color: #00CC66;}
+/* contents */
+.package-detail-contents {max-width: 720px; margin: 0 auto;}
+.contents-wrap {position: relative;}
+.contents_btn {position: absolute; transform: translateX(-50%); -wekit-transform: translateX(-50%); -o-transform: translateX(-50%);}
+/* FAQ */
+.faq {width: 720px; margin: 0 auto; padding-bottom: 170px; background-color: #F2F2F4;}
+.faq .inner {padding: 0 60px;}
+.faq h4 {padding: 150px 0 50px; font-family: 'Inter', 'NotoSansCJKkr', sans-serif; font-size: 60px; font-weight: 600;}
+.faq-list {margin-bottom: 70px; border-top: 1px solid #1B212A;}
+.faq-list  > li .faq-title {display: flex;align-items: center; padding: 42px 12px; font-size: 24px; border-bottom: 1px solid #DADADA; cursor: pointer;}
+.faq-list  > li .faq-title strong {width: 20%; margin-right: 24px; font-weight: 400;}
+.faq-list  > li .faq-title .faq-arrow {width: 20px; height: 10px; margin-left: auto; transition: all .3s;}
+.faq-list  > li .faq-title.active .faq-arrow {transform: rotate(-180deg);}
+.faq-list  > li .faq-title strong.buy {color: #00CC66;}
+.faq-list  > li .faq-title strong.use {color: #239EC3;}
+.faq-list  > li .faq-title strong.etc {color: #808080;}
+.faq-list  > li .faq-contents {display: none; padding: 30px 40px; font-size: 22px; font-weight: 300; line-height: 1.5em; border-bottom: 1px solid #1B212A;}
+.faq-list  > li .faq-contents ul li {position: relative; margin-bottom: 10px; padding-left: 15px;}
+.faq-list  > li .faq-contents ul li:before {position: absolute; top: 0px; left: 0; content: '-';}
+.faq-list  > li .faq-contents table th {font-weight: 300;}
+.faq-list  > li .faq-contents table caption {padding: 30px 0 10px; font-weight: 600;}
+.faq-list  > li .faq-contents table th, .faq-list  > li .faq-contents table td {font-size: 18px;text-align: center; border: 1px solid #555;}
+.faq-list  > li .faq-contents dl dt {font-weight: 600;}
+.faq-list  > li .faq-contents dl dd {font-weight: 300;}
+
+.contact-btn-wrap a {display: block;width: 500px;height: 90px;margin: 0 auto 20px;}
+
+/* floating banner */
+.floating-banner {opacity: 0; transition: opacity .4s, transform .4s ease-in-out; transition-delay: .2s; position: fixed; left: 0; bottom: 0; width: 100%; z-index: 10;}
+.floating-banner.active {opacity: 1; transform: translate3d(0, 0, 0);}
+.bottom-bar-banner {background-color: #000;}
+.bottom-bar-banner .flex-col {align-items: center;}
+.bottom-bar-banner p {color: #fff; margin-right: auto; font-size: 25px;}
+.bottom-bar-banner p strong {color: #00CC66;}
+.bottom-bar-banner .package-btn-area {display: flex; width: 436px; margin-left: auto; padding: 15px 0; justify-content: end;}
+.bottom-bar-banner .package-btn-area button {font-size: 20px;}
+.bottom-bar-banner .package-btn-area .btn-consul {color: #00CC66;}
+.bottom-bar-banner .package-btn-area .btn-consul:after {display: none;}
+.bottom-bar-banner .package-btn-area .btn-buy {background-image: url(https://yafit.yanadoocdn.com/yanadoo/images/web/brandStory/text-line.png); background-repeat: no-repeat; background-size: 0% 100%; animation: bgGradient 3s linear infinite; -webkit-animation: bgGradient 3s linear infinite; border: none;}
+
+@keyframes bgGradient{0% {background-size: 0% 100%;} 50% {background-size: 100% 100%;} 100% {background-size: 0% 100%;}}
+@-webkit-keyframes bgGradient{0% {background-size: 0% 100%;} 50% {background-size: 100% 100%;} 100% {background-size: 0% 100%;}}
+
+/* 하단 배너 */
+.bottom-banner-bg {display:none; position:fixed; top: 0; bottom: 0; right: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.1); z-index: 100;}
+.bottom-banner {width: 100%; position: fixed; bottom: 0; left: 0; background-color: #F9F9FB; z-index: 10;}
+.bottom-banner .btn-bnr-down {position: absolute;
+	top: -30px; left: 50%; width: 180px; height: 35px; background-color: #F9F9FB; background-image: url(https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/detail/common/select_arrow.svg); background-repeat: no-repeat; background-position: 50% 50%; border-radius: 27px 27px 0 0; cursor: pointer; transform: translateX(-50%); -wekit-transform: translateX(-50%); -o-transform: translateX(-50%); text-indent: -9999px;}
+/* cs 하단 배너 */
+.counsel-banner {display: none; z-index: 100000000;}
+.counsel-banner .inner {padding: 0;}
+.counsel-banner .flex-col {justify-content: center;}
+.counsel-banner-img {width: 300px; height: 263px; padding: 90px 0 63px;}
+.counsel-form-wrap {width: 800px; margin-left: 40px; padding: 90px 0 50px;}
+.counsel-form-wrap h4 {font-size: 30px; font-weight: 600;}
+.counsel-form-wrap h4+p {font-size: 20px; font-weight: 300;}
+.counsel-form-wrap form {padding-top: 30px;}
+.counsel-form-wrap .left-area, .counsel-form-wrap .right-area {width: 52%;}
+.input-form {display: flex; align-items: center;margin-bottom: 20px;}
+.input-form .input-title {width: 83px; font-size: 18px; font-weight: 300;}
+.input-title.wide-width {width: 137px;}
+.input-form .input-title i {margin-left: 3px; color: #00CC66;}
+.input-form input[type="text"],
+.input-form input[type="tel"] {width: 275px; height: 50px; padding: 0 12px; font-size: 17px; background-color: #fff; border: 1px solid #D0D0D0;}
+.input-form select {width: 300px; height: 50px; color: #000; background-color: #fff; font-size: 17px; border: 1px solid #D0D0D0;}
+.input-form selectelect option {color: #000;}
+.input-form .select-phone {width: 96px; margin-right: 3px;}
+.input-form input[type="tel"].input-phone {width: 176px;}
+.radio-wrap input[type='radio'] + label {display: inline-flex;align-items: center;margin-right: 27px; font-size: 18px;font-weight: 300;}
+.radio-wrap input[type='radio'] + label span {display: inline-flex; position: relative;height: 35px; align-items: center; padding-left: 50px;}
+.radio-wrap input[type='radio'] + label span:before {content: '';position: absolute;top: -0.1em;left: 0;width: 35px;height: 35px;background-color: #E8E8E8; border-radius: 50%;}
+.radio-wrap input[type='radio']:checked + label {color: #08AA59; font-weight: 400;}
+.radio-wrap input[type='radio']:checked + label span:before {background-color: #08AA59; background-image: url(https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/detail/common/radio_on.svg); background-size: 50%; background-position: 50% 50%; background-repeat: no-repeat;}
+.check-wrap {display: flex;align-items: center;margin-left: 130px;}
+.check-wrap input[type='checkbox'] + label {display: inline-flex;align-items: center;margin-right: 34px;color:#525252;font-size: 14px;font-weight: 300;}
+.check-wrap input[type='checkbox'] + label span {display: inline-flex; position: relative;height: 24px; align-items: center; padding-left: 44px;}
+.check-wrap input[type='checkbox'] + label span:before {content: '';position: absolute;top: -0.1em;left: 0;width: 24px;height: 24px;background-color: #fff; border: 1px solid #D0D0D0;}
+.check-wrap input[type='checkbox']:checked + label span:before {background-image: url(https://yafitcdn.yanadoo.co.kr/yanadoo/images/web/package/detail/common/check_on.svg); background-size: 65%; background-position: 50% 50%; background-repeat: no-repeat;}
+.check-wrap a {color: #A2A2A2; font-size: 15px;}
+.check-wrap a i {margin-left: 10px;}
+
+.buy-banner {display: none; z-index: 100000000;}
+.buy-banner > .inner {padding: 40px 0 60px;}
+.buy-banner .left-area {width: 45%;}
+.buy-banner .left-area .title {font-size: 20px; font-weight: 400;}
+.buy-banner .left-area .package-configuration {border: none;padding-bottom: 0;}
+.buy-banner .left-area .package-configuration span {display: block; color: #666666;font-size: 20px;font-weight: 300;margin-bottom: 5px; text-align: right;}
+.buy-banner .left-area .package-app-pass select {width: 360px;}
+.buy-banner .left-area .package-app-pass .discount-price-area {display: flex; padding: 30px 0 20px;}
+.buy-banner .discount-price-area .badge {font-size: 19px;}
+.buy-banner .discount-price-area .discount-price {font-size: 20px;}
+.buy-banner .package-app-pass .price-area .flex-col {font-size: 20px;}
+.buy-banner .package-app-pass .price-area strong {font-size: 32px;}
+.buy-banner .package-app-pass .price-area .desc {font-size: 16px;text-align: right;font-weight: 300;}
+.buy-banner .package-benefits {width: 500px; background-color: transparent; margin-left: auto; margin-top: 0; padding: 0;}
+.buy-banner .package-benefits > div {padding: 20px 30px; background-color: #fff; border-radius: 6px;}
+.buy-banner .package-benefits .title {font-size: 20px;}
+.buy-banner .package-benefits strong {font-size: 20px;}
+.buy-banner .package-benefits p {font-size: 18px; text-align: right;}
+
+/* modal */
+.modal-wrap {display: none; z-index: 999999999;}
+.modal-open {display: flex;}
+.modal-wrap .modal-inner {min-height: inherit; border-radius: 0;}
+.modal-wrap .modal-header {display: flex; align-items: center; padding: 20px 5px 20px 20px; background-color: #F2F2F4;}
+.modal-wrap .modal-header .btn-modal__close {width: 44px; height: 44px; margin-left: auto;}
+.modal-wrap .modal-header strong {font-size: 22px; font-weight: 300;}
+.modal-content {padding: 30px 35px;}
+.modal-wrap.modal-wrap-media .modal-content {padding: 0;}
+/* modal-yafit-spec*/
+.modal-content.yafit-spec .top {margin-top: 10px;}
+.modal-content.yafit-spec .top ul {display: flex; flex-wrap: wrap;}
+.modal-content.yafit-spec .top ul li.wide-width {width: 65%;}
+.modal-content.yafit-spec .top ul li {width: 35%; margin-bottom: 40px; font-size: 18px;}
+.modal-content.yafit-spec .top ul li strong {display: block; margin-bottom: 7px;}
+.modal-content.yafit-spec .top ul li span {color: #434343; font-weight: 300;}
+.modal-content.yafit-spec .bottom-box {margin-top: 10px; padding: 23px; background-color: #F2F2F4; border-radius: 11px;}
+.modal-content.yafit-spec .bottom-box .title {font-size: 16px; margin-bottom: 5px;}
+.modal-content.yafit-spec .bottom-box .sub-title {display: flex; align-items: center; font-size: 16px;}
+.modal-content.yafit-spec .bottom-box .sub-title img {width: 9px; height: 15px;margin-right: 5px;}
+.modal-content.yafit-spec .bottom-box ul {margin-top: 15px;}
+.modal-content.yafit-spec .bottom-box ul li {display: flex; align-items: center; margin-bottom: 5px; color: #434343; font-size: 12px;}
+.modal-content.yafit-spec .bottom-box ul li a {margin-left: auto; color: #A8A8A8;}
+/* modal-yafit-pad */
+.modal-content.yafit-pad {background-color: #F5F5F7;}
+.modal-content.yafit-pad .title {display: block;font-size: 30px; text-align: center;}
+.modal-content.yafit-pad .title span {display: block; color: #00CC66;}
+.modal-content.yafit-pad .desc {margin-top: 10px; color: #434343; font-size: 12px; font-weight: 300; text-align: center;}
+.modal-content.yafit-pad .pad-nav ul{display:flex; justify-content:center; align-items:center; margin-top: 30px;}
+.modal-content.yafit-pad .pad-nav li{width:50%; padding:1.4rem 0; background-color:#eaeaea; border-radius:1.5rem 1.5rem 0 0; }
+.modal-content.yafit-pad .pad-nav li button{display:block; margin:auto; font-size: 16px; color:#9b9b9b; letter-spacing:-1px; text-align:center;}
+.modal-content.yafit-pad .pad-nav .active {background-color:#fff;}
+.modal-content.yafit-pad .pad-nav .active button{color:#000;}
+.modal-content.yafit-pad .pad-cont li {display:none;}
+.modal-content.yafit-pad .pad-cont li.active{display:block;}
+.modal-content.yafit-pad .pad-cont li > div{margin-bottom:2.5rem; background-color:#fff;  border-radius:2rem;}
+.modal-content.yafit-pad .pad-cont li .info{color: #434343; font-size: 18px;font-weight: 300; line-height: 1.5em;}
+/* modal-yafit-pad */
+.modal-content.yafit-gallaxy h4 {font-size: 22px; font-weight: 600;}
+.modal-content.yafit-gallaxy h4 + p {margin: 3px 0 42px; color: #434343; font-size: 14px;}
+.modal-content.yafit-gallaxy .grey-box {padding: 18px 0; text-align: center; background-color: #F7F7F7; border: 1px solid #E5E5E5;}
+.modal-content.yafit-gallaxy .spec-container {margin-top: 35px;}
+.modal-content.yafit-gallaxy .spec-container li {margin-bottom: 35px;}
+.modal-content.yafit-gallaxy .spec-container li:last-child {margin-bottom: 0;}
+.modal-content.yafit-gallaxy .spec-container strong {display: block; font-size: 16px;}
+.modal-content.yafit-gallaxy .spec-container div {margin-top: 6px; font-size: 13px;}
+.modal-content.yafit-gallaxy .spec-container .flex-col {width: 100%;}
+.modal-content.yafit-gallaxy .spec-container .flex-col span:first-child {width: 42%;}
+.modal-content.yafit-gallaxy .spec-container .flex-col span:last-child {width: 58%;}
+.modal-content.yafit-gallaxy .spec-container li:last-child .flex-col span:first-child {width: 25%;}
+.modal-content.yafit-gallaxy .spec-container li:last-child .flex-col span:last-child {width: 75%;}
+/* modal-yafit-garminSensor */
+.modal-content.yafit-garminSensor strong {font-size: 20px; font-weight: 600}
+.modal-content.yafit-garminSensor li {margin-bottom: 30px; font-size: 18px; font-weight: 300}
+
+@media screen and (max-width: 1024px) {
+	.package-detail-col {padding: 0;}
+	.inner {max-width: 100%; padding: 0;}
+	.package-detail-col .inner {display: block;}
+	.package-thumbnail {width: 100%; margin-right: inherit;}
+	.package-thumbnail-slide .swiper-pagination-bullet {width: 9px; height: 9px;}
+	.package-detail-info .top {padding: 0 5%;}
+	.package-detail-info .btn-copy-link {right: 5%;}
+	.package-detail-info {width: 100%; min-width: inherit; margin-top: 70px; padding: 0;}
+	.package-detail .package-configuration {padding: 0 5% 70px; border-bottom: none;}
+	.package-detail .package-configuration {border-bottom: none;}
+	.m-grey-box {padding: 0 5%; background-color: #F8F8F9;}
+	.floating-banner .inner {padding: 0 5%}
+	.floating-banner p {font-size: 19px;}
+	.counsel-banner-img {display: none;}
+	.bottom-bar-banner > .inner {padding: 0 5%;}
+	.buy-banner > .inner {padding: 60px 5%;}
+	.buy-banner .left-area .package-app-pass select {width: 250px;}
+	.buy-banner .package-benefits {width: 400px;}
+	.modal-wrap {justify-content: center;align-items: center;}
+
+}
+
+@media screen and (max-width: 910px) {
+	.input-form-wrap {display: block;}
+	.counsel-form-wrap {width: inherit;}
+	.input-form-wrap .left-area, .input-form-wrap .right-area {width: 100%;}
+	.input-form-wrap .right-area {padding-left: 0;}
+	.input-form input[type="tel"].input-phone {width: 200px;}
+}
+
+@media screen and (max-width: 720px) {
+	.display-pc {display: none;}
+	.display-m {display: block;}
+	select {height: 8.33vw; font-size:3.5vw; padding: 0 2.78vw;}
+
+	.package-nav {overflow: hidden; position: absolute; top:26rem; left: 0; width: 100%; padding: 6.94vw 13.5vw 0 6.25vw; z-index: 11;box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing: border-box;}
+	.package-nav ul {display: flex; justify-content: space-between; width: 150%;}
+	.package-nav ul li {width: fit-content !important;}
+	.package-nav ul li a {opacity: .75; padding: 1.94vw 4.44vw; color: #6F6F6F; font-size: 3.61vw;font-weight: 400;background-color:#fff; border: 1px solid #D9D9D9; border-radius: 5.56vw;}
+	.package-nav ul li.active a {opacity: 1; color:#fff; font-weight: 600; background-color: #00CC66; border: 1px solid #00CC66;}
+	.package-nav.fixed {position: fixed;}
+
+	.package-thumbnail-slide .swiper-pagination-bullet {width: 1.81vw; height: 1.81vw;}
+	.package-detail-info {margin-top: 9.72vw;}
+	.package-detail-info .top .badge {display: none;}
+	.package-detail-info .top h3 {font-size: 8.33vw;}
+	.package-detail-info .btn-copy-link {width: 10.42vw;height: 10.42vw;}
+	.package-detail-info .package-detail {margin-top: 9.72vw;}
+	.package-detail-info .package-detail .title {font-size: 3.89vw;}
+	.package-detail .package-configuration {padding: 0 5% 9.72vw;}
+	.package-detail .package-configuration .right-area span {font-size: 3.89vw;}
+	.package-app-pass .flex-col {padding-top: 9.72vw;}
+
+	.m-grey-box {padding: 0 5%; background-color: #F8F8F9;}
+	.package-detail-info .package-detail .right-area {width: 58.33vw;}
+	.package-detail .desc_1 {margin-top: 5.56vw; font-size: 4.17vw;}
+
+	.package-detail .discount-price-area {padding: 3.47vw 1.39vw;}
+	.package-detail .discount-price-area .badge {padding: 0.56vw 2.78vw; font-size: 3.61vw;}
+	.package-detail .package-app-pass .discount-price-area .discount-price {font-size: 3.89vw;}
+	.package-detail .package-app-pass .price-area {padding: 2.78vw 0;}
+	.package-detail .package-app-pass .price-area .flex-col {padding: 0.83vw 1.39vw;}
+	.package-detail .package-app-pass .price-area .title {font-size: 3.33vw;}
+	.package-detail .package-app-pass .price-area strong {font-size: 5.00vw;}
+	.package-detail .package-app-pass .price-area .desc {margin-top: 0.83vw; padding-right: 1.39vw; font-size: 2.50vw;}
+	.package-benefits {margin-top: 9.72vw; padding: 4.17vw; background-color: #fff;}
+	.package-detail-info .package-benefits .title {font-size: 3.47vw;}
+	.package-detail-info .package-benefits .right-area {width: 54.17vw; font-size: 3.61vw;}
+	.package-benefits__mileage {margin-bottom: 2.78vw;}
+	.package-btn-area {padding: 9.72vw 0;}
+	.package-btn-area button {width: 48%; height: 13.89vw; font-size: 3.61vw;}
+	.package-btn-area .btn-consul:after {top:-4.86vw; left: -2.08vw; width: 27.78vw; height: 9.31vw;}
+
+	/* 탭 */
+	.detail-tabs li button {padding: 4.58vw 0; color: #fff; font-size: 3.33vw;}
+	.detail-tabs li:first-child:after {width: 0.14vw; height: 2.78vw; margin-top: -1.39vw;}
+	.package-detail-contents {width: 100%;}
+	.floating-banner {padding: 0; background-color: #fff;}
+	.floating-banner .inner {padding: 0;}
+	.floating-banner p {display: none;}
+	.floating-banner .package-btn-area {display: flex; width: 100%;padding: 0;}
+	.floating-banner .package-btn-area button {display: inline; width: 50.00vw; height: 13.89vw;margin: 0; color: #000; font-size: 3.61vw;}
+	.floating-banner .package-btn-area .btn-consul {margin-right: 0; color: #000; border: 0.14vw solid #F2F2F4;}
+	/* faq */
+	.faq {width: 100.00vw; margin: 0 auto; padding-bottom: 23.61vw;}
+	.faq .inner {padding: 0 8.33vw;}
+	.faq h4 {padding: 20.83vw 0 6.94vw;font-size: 8.33vw;}
+	.faq-list {margin-bottom: 9.72vw;}
+	.faq-list  > li .faq-title {padding: 5.83vw 1.67vw; font-size: 3.33vw; cursor: pointer;}
+	.faq-list  > li .faq-title strong {margin-right: 3.33vw; font-weight: 400;}
+	.faq-list  > li .faq-contents {padding: 4.17vw 5.56vw; font-size: 3.06vw;}
+	.faq-list  > li .faq-contents ul li {margin-bottom: 1.39vw; padding-left: 2.08vw;}
+	.faq-list  > li .faq-contents table caption {padding: 4.17vw 0 1.39vw;}
+	.faq-list  > li .faq-contents table th, .faq-list  > li .faq-contents table td {font-size: 2.50vw;}
+	.faq-list  > li .faq-title .faq-arrow {width: 2.78vw; height: 1.39vw;}
+	.contact-btn-wrap a {width: 69.44vw;height: 12.50vw;margin: 0 auto 2.78vw;}
+
+	.bottom-banner {background-color: #F9F9FB;}
+	.bottom-banner .btn-bnr-down {top:-4.17vw; width: 25.00vw; height: 4.86vw; background-color: #F9F9FB; background-position: 50% 100%; background-size: 2.78vw 1.53vw; border-radius: 3.75vw 3.75vw 0 0;}
+	.counsel-banner > .inner {padding: 0 5%;}
+	.counsel-form-wrap {margin-left: 0; padding: 12.50vw 0 11.11vw;}
+	.counsel-form-wrap form {padding-top: 0;}
+	.counsel-form-wrap h4, .counsel-form-wrap h4+p {display: none;}
+	.input-form {letter-spacing: -1.5px;}
+	.input-form input[type="text"], .input-form input[type="tel"] {width: 60.14vw; height: 9.72vw;font-size: 4vw;}
+	.input-form input[type="tel"].input-phone {width: 40.00vw;}
+	.input-form .input-title {width: 20.42vw; font-size: 3.47vw; margin-right: 2.78vw;}
+	.input-form select {width: 60.14vw; height: 9.72vw; padding: 2vw; font-size: 4vw;}
+	.input-form .select-phone {width: 18.75vw; margin-right: 1.39vw;}
+
+	.radio-wrap input[type='radio'] + label {margin-right: 13.89vw; font-size: 3.47vw;}
+	.radio-wrap input[type='radio'] + label span {height: 4.86vw;padding-left: 7.64vw;}
+	.radio-wrap input[type='radio'] + label span:before {width: 4.86vw;height: 4.86vw;}
+
+	.check-wrap {margin: 0 auto; padding: 2.78vw 0; justify-content: center;background-color: #F6F6F8; border-radius: 0.42vw;}
+	.check-wrap input[type='checkbox'] + label {margin-right: 5.00vw; font-size: 3.06vw;}
+	.check-wrap input[type='checkbox'] + label span {display: inline-flex; position: relative;height: 3.61vw; align-items: center; padding-left: 6.11vw;}
+	.check-wrap input[type='checkbox'] + label span:before {width: 3.61vw;height: 3.61vw;}
+	.check-wrap input[type='checkbox']:checked + label span:before {background-size: 65%;}
+	.check-wrap a {font-size: 3.06vw;}
+	.check-wrap a i {margin-left: 6.11vw;}
+	.counsel-banner .check-wrap + p {margin: 5.56vw 0; font-size: 3.33vw; font-weight: 300; text-align: center;}
+
+	.buy-banner {background-color: #F2F2F4;}
+	.buy-banner.bottom-banner .btn-bnr-down {background-color: #fff;}
+	.buy-banner > .inner {padding: 0;}
+	.buy-banner > .inner.flex-col {display: block;}
+	.buy-banner .left-area {width: 100%;}
+	.buy-banner .left-area .title {font-size: 3.89vw; font-weight: 400;}
+	.buy-banner .left-area .package-configuration {padding: 5.56vw 5% 4.17vw; background-color: #fff;}
+	.buy-banner .left-area .package-configuration span {font-size: 3.47vw;margin-bottom: 0.69vw;}
+	.buy-banner .left-area .package-app-pass {padding: 5.56vw 5%;}
+	.buy-banner .left-area .package-app-pass select {width: 58.33vw; font-size: 3.89vw;}
+	.buy-banner .left-area .package-app-pass .discount-price-area {display: flex; padding: 4.17vw 2.08vw 2.78vw;}
+	.buy-banner .discount-price-area .badge {font-size: 3.61vw;}
+	.buy-banner .discount-price-area .discount-price {font-size: 3.89vw;}
+	.buy-banner .package-app-pass .price-area .flex-col {font-size: 3.33vw;}
+	.buy-banner .package-app-pass .price-area strong {font-size: 5.00vw;}
+	.buy-banner .package-app-pass .price-area .desc {font-size: 2.50vw;margin-top: 0.83vw;}
+	.buy-banner .package-benefits {width: 100%; background-color: transparent; margin-left: auto; margin-top: 0; padding: 0 5% 5.56vw;}
+	.buy-banner .package-benefits > div {padding: 4.17vw;}
+	.buy-banner .package-benefits .title {font-size: 3.47vw;}
+	.buy-banner .package-benefits strong {font-size: 3.61vw;}
+	.buy-banner .package-benefits p {font-size: 3.47vw;}
+	.buy-banner .btn-buy-submit {background-color: #32FA32 !important;border: none;}
+
+	.bottom-banner .bottom-bar-banner > .inner {padding: 0;}
+	.bottom-banner .bottom-bar-banner {background-color: transparent;}
+	.bottom-banner .bottom-bar-banner p {display: none;}
+	.bottom-banner .bottom-bar-banner .package-btn-area {display: block;width: 100%;padding: 0;}
+	.bottom-banner .bottom-bar-banner .package-btn-area .btn-submit {width: 100%; font-size: 3.61vw;}
+
+}
+
+@media screen and (max-width: 480px) {
+	/* modal */
+	.modal-open {display: flex;}
+	.modal-wrap .modal-inner {min-height: inherit; border-radius: 0;}
+	.modal-wrap .modal-header {display: flex; align-items: center; padding: 4.17vw 1.04vw 4.17vw 4.17vw; background-color: #F2F2F4;}
+	.modal-wrap .modal-header .btn-modal__close {width: 9.17vw; height: 9.17vw; margin-left: auto;}
+	.modal-wrap .modal-header strong {font-size: 4.58vw; font-weight: 300;}
+	.modal-content {padding: 6.25vw 7.29vw;}
+	/* modal-yafit-spec*/
+	.modal-content.yafit-spec .top {margin-top: 2.08vw;}
+	.modal-content.yafit-spec .top ul li {margin-bottom: 8.33vw; font-size: 3.75vw;}
+	.modal-content.yafit-spec .top ul li strong {margin-bottom: 1.46vw;}
+	.modal-content.yafit-spec .bottom-box {margin-top: 2.08vw; padding: 4.79vw;}
+	.modal-content.yafit-spec .bottom-box .title {font-size: 3.33vw; margin-bottom: 1.04vw;}
+	.modal-content.yafit-spec .bottom-box .sub-title { font-size: 3.33vw;}
+	.modal-content.yafit-spec .bottom-box .sub-title img {width: 1.88vw; height: 3.13vw;margin-right: 1.04vw;}
+	.modal-content.yafit-spec .bottom-box ul {margin-top: 3.13vw;}
+	.modal-content.yafit-spec .bottom-box ul li {margin-bottom: 1.04vw;font-size: 2.50vw;}
+	/* modal-yafit-pad*/
+	.modal-content.yafit-pad .title {font-size: 6.25vw;}
+	.modal-content.yafit-pad .desc {margin-top: 2.08vw;font-size: 2.50vw;}
+	.modal-content.yafit-pad .pad-nav ul{margin-top: 6.25vw;}
+	.modal-content.yafit-pad .pad-nav li button{ font-size: 3.33vw;}
+	.modal-content.yafit-pad .pad-cont li .info{font-size: 3.75vw;}
+	/* modal-yafit-pad */
+	.modal-content.yafit-gallaxy h4 {font-size: 4.58vw; }
+	.modal-content.yafit-gallaxy h4 + p {margin: 0.63vw 0 8.75vw;  font-size: 2.92vw;}
+	.modal-content.yafit-gallaxy .grey-box {padding: 3.75vw 0;   border: 0.21vw solid #E5E5E5;}
+	.modal-content.yafit-gallaxy .spec-container {margin-top: 7.29vw;}
+	.modal-content.yafit-gallaxy .spec-container li {margin-bottom: 7.29vw;}
+	.modal-content.yafit-gallaxy .spec-container li:last-child {margin-bottom: 0;}
+	.modal-content.yafit-gallaxy .spec-container strong { font-size: 3.33vw;}
+	.modal-content.yafit-gallaxy .spec-container div {margin-top: 1.25vw; font-size: 2.71vw;}
+	.modal-content.yafit-gallaxy .spec-container .flex-col {width: 100%;}
+	.modal-content.yafit-gallaxy .spec-container .flex-col span:first-child {width: 42%;}
+	.modal-content.yafit-gallaxy .spec-container .flex-col span:last-child {width: 58%;}
+	.modal-content.yafit-gallaxy .spec-container li:last-child .flex-col span:first-child {width: 25%;}
+	.modal-content.yafit-gallaxy .spec-container li:last-child .flex-col span:last-child {width: 75%;}
+	/* modal-yafit-garminSensor */
+	.modal-content.yafit-garminSensor strong {font-size: 4.17vw; font-weight: 600}
+	.modal-content.yafit-garminSensor li {margin-bottom: 6.25vw; font-size: 3.75vw; font-weight: 300}
+}
+

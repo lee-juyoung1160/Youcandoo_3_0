@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="/assets/v3/css/app_faq.css?resource_version=<?=$resource_version?>">
+<section class="faq">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>자주 묻는 질문</p>
+	</header>
+	<div class="page-wrap">
+		<article>
+			<div class="inner">
+				<div class="input-wrap">
+					<input id="keyword" type="search" placeholder="검색어를 입력해주세요.">
+					<button type="button" id="searchClear" class="search-clear"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/searchbar_cancel_btn.svg" alt="초기화"></button>
+				</div>
+				<div class="btn-wrap" id="btnWrap">
+					<!--<button type="button" class="active">서비스안내</button>
+					<button type="button">회원정보</button>
+					<button type="button">두잇 참여</button>
+					<button type="button">두잇 운영</button>
+					<button type="button">랭킹/레벨/뱃지</button>
+					<button type="button">UCD</button>
+					<button type="button">오류/불편</button>
+					<button type="button">기타</button>-->
+				</div>
+			</div>
+		</article>
+		<article id="contentWrap">
+			<ul class="question-wrap">
+				<!--<li>
+					<div class="question">
+						<p><span>두잇인증</span>두잇 인증은 어떻게 하나요?</p>
+						<i class="arrow"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_btn_list_down.png" alt="열기"></i>
+					</div>
+					<div class="answer">
+						안녕하세요, 유캔두입니다.<br>두잇인증은 이로케 이렇게 저렇케 죠로케 합니다.<br>감쟈합니다.
+					</div>
+				</li>
+				<li>
+					<div class="question">
+						<p><span>두잇인증</span>두잇 인증은 어떻게 하나요?</p>
+						<i class="arrow"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_btn_list_down.png" alt="열기"></i>
+					</div>
+					<div class="answer">
+						안녕하세요, 유캔두입니다.<br>두잇인증은 이로케 이렇게 저렇케 죠로케 합니다.<br>감쟈합니다.
+					</div>
+				</li>
+				<li>
+					<div class="question">
+						<p><span>두잇인증</span>두잇 인증은 어떻게 하나요?<br>두잇 인증은 어떻게 하나요?</p>
+						<i class="arrow"><img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_btn_list_down.png" alt="열기"></i>
+					</div>
+					<div class="answer">
+						안녕하세요, 유캔두입니다.<br>두잇인증은 이로케 이렇게 저렇케 죠로케 합니다.<br>감쟈합니다.
+					</div>
+				</li>-->
+			</ul>
+		</article>
+		<!--<article class="search_result">
+			<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/faq_search_result.png" alt="검색 결과 없음">
+			<p>앗..검색 결과가 없어요</p>
+		</article>-->
+	</div>
+</section>
+
+<script>
+	const keyword = document.getElementById('keyword');
+
+	getFaqType();
+	keyword.addEventListener('keyup', onSubmitSearchFaq);
+	keyword.addEventListener('search', getFaqList);
+	document.getElementById('btnBack').addEventListener('click', webviewClose);
+	document.getElementById('searchClear').addEventListener('click', onClickBtnSearchClear);
+
+	function onClickBtnSearchClear()
+	{
+		keyword.value = '';
+		getFaqList();
+	}
+
+	function onSubmitSearchFaq(event)
+	{
+		if (event.keyCode === 13 || isEmpty(keyword.value))
+			getFaqList();
+	}
+
+	function getFaqType()
+	{
+		const url = api.faqType;
+		const errMsg = `faq 타입을 ${message.loadError}`
+
+		XMLHttpRequestWithJson(url, null, getFaqTypeCallback, errMsg);
+	}
+
+	function getFaqTypeCallback(data)
+	{
+		isSuccessResp(data) ? buildFaqType(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildFaqType(data)
+	{
+		if (!isEmpty(data.data) && data.data.list.length  > 0)
+		{
+			let buttonEl = '';
+			data.data.list.map((type, index) => {
+				const active = index === 0 ? 'active' : '';
+				buttonEl += `<button type="button" class="${active}" data-type="${type}">${type}</button>`;
+			});
+			document.getElementById('btnWrap').innerHTML = buttonEl;
+		}
+
+		onClickBtnType(document.querySelector('#btnWrap button'));
+
+		document.querySelectorAll('#btnWrap button').forEach(element =>
+			element.addEventListener('click', function () { onClickBtnType(this); })
+		)
+	}
+
+	let g_faq_type = '';
+	function onClickBtnType(obj)
+	{
+		g_faq_type = obj.dataset.type;
+		document.querySelectorAll('#btnWrap button').forEach(element => element.classList.remove('active'));
+		obj.classList.add('active');
+		getFaqList();
+	}
+
+	function getFaqList()
+	{
+		const url = api.faqList;
+		const errMsg = `faq 목록을 ${message.loadError}`;
+		const param = {
+			"keyword" : keyword.value.trim(),
+			"faq_type" : g_faq_type
+		}
+
+		XMLHttpRequestWithJson(url, JSON.stringify(param), getFaqListCallback, errMsg);
+	}
+
+	function getFaqListCallback(data)
+	{
+		isSuccessResp(data) ? buildList(data) : alert(getErrorMessage(data.status));
+	}
+
+	function buildList(data)
+	{
+		let contentEl = '';
+		if (!isEmpty(data.data) && data.data.list.length > 0)
+		{
+			document.getElementById('contentWrap').classList.remove('search_result');
+
+			contentEl += '<ul class="question-wrap">';
+			data.data.list.map(obj => {
+				const {contents, faq_type, title} = obj;
+				contentEl +=
+					`<li>
+						<div class="question">
+							<p><span>${faq_type}</span>${title}</p>
+							<i class="arrow"><img src="${faqArrow}" alt="열기"></i>
+						</div>
+						<div class="answer">
+							${contents}
+						</div>
+					</li>`
+			})
+			contentEl += '</ul>';
+		}
+		else
+		{
+			document.getElementById('contentWrap').classList.add('search_result');
+			contentEl =`<img src="${faqNoContent}" alt="검색 결과 없음"><p>앗..검색 결과가 없어요</p>`;
+		}
+
+		document.getElementById('contentWrap').innerHTML = contentEl;
+
+		document.querySelectorAll('.question-wrap li').forEach(element => element.addEventListener('click', function () { onClickList(this); }));
+	}
+
+	function onClickList(obj)
+	{
+		document.querySelectorAll('.question-wrap li').forEach(element => {
+			if (element === obj) return;
+			element.classList.remove('list-open')
+		});
+		obj.classList.contains('list-open') ? obj.classList.remove('list-open') : obj.classList.add('list-open');
+	}
+</script>

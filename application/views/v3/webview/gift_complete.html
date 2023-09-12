@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/assets/v3/css/app_gift.css?resource_version=<?=$resource_version?>">
+<section class="gift complete">
+	<header>
+		<a id="btnBack">뒤로가기</a>
+		<p>UCD 상품 교환</p>
+	</header>
+	<div class="page-wrap">
+		<article class="search_result">
+			<img src="https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/gift_complete_img.png" alt="완료">
+			<p>상품 신청이 완료되었어요!<br>다음 주 수요일 휴대폰번호로 발송돼요.</p>
+		</article>
+		<div class="bottom-manual">
+			<div class="inner">
+				<h5>※ 안내</h5>
+				<p id="notice">
+					신청한 기프티콘, 야나두 평생 수강 패키지는 전주 월요일부터 일요일까지 신청 기준으로 다음주 수요일 발송돼요.
+				</p>
+			</div>
+		</div>
+		<div class="bottom-btn-wrap">
+			<button id="btnApply" type="button">상품 추가 신청</button>
+			<button id="btnOk" type="button" class="active">확인</button>
+		</div>
+	</div>
+</section>
+<script>
+	document.getElementById('btnBack').addEventListener('click', onClickBtnBack);
+	document.getElementById('btnOk').addEventListener('click', webviewClose);
+	document.getElementById('btnApply').addEventListener('click', function () { location.href = '/webview/v3.0/gift' });
+</script>

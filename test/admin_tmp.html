@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="keywords" content="#">
+	<meta property="og:type" content="#">
+	<meta property="og:title" content="#">
+	<meta property="og:url" content="#">
+	<meta property="og:description" content="#">
+	<meta property="og:image" content="#">
+	<link rel="shortcut icon" href="https://youcandoo.yanadoocdn.com/v3/web/assets/images/favicon.ico">
+	<title>어드민 레이아웃</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+	/* reset css */
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button{margin:0;padding:0;font-style:normal; font-weight:normal !important;vertical-align:baseline;font-size:100%;border:0}*::-webkit-scrollbar-track,.modal_container::-webkit-scrollbar-track{background-color:rgba(0,0,0,.1);border-radius:10px;margin-top:5px;margin-bottom:0}*::-webkit-scrollbar,.modal_container::-webkit-scrollbar{width:5px;background-color:#fff;margin-top:20px;margin-bottom:20px}*::-webkit-scrollbar-thumb,.modal_container::-webkit-scrollbar-thumb{background-color:#717171;border-radius:10px;margin-top:20px;margin-bottom:20px}*:focus{outline:none}body{width:100%;min-width:280px;height:auto;line-height:1;font-family:"NanumSquareOTFRegular","sans-serif";font-size:14px!important;color:#000; background-color:#fff;}img{max-width:100%;vertical-align:top;height:auto!important}ol,ul,li{list-style:none}table{border-collapse:collapse;border-spacing:0}hr{display:block;margin:16px 0;padding:0;height:1px;border:0;border-top:1px solid #ccc}button{outline:none;cursor:pointer;background-color: transparent;}i{cursor:pointer}input::-ms-clear,input::-ms-reveal{display:none;width:0;height:0}input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none}input,select,textarea{vertical-align:middle;-webkit-appearance:none;-webkit-border-radius:0}select{cursor:pointer}select:focus{outline:none}input:focus{outline:none}a{text-decoration:none;color:inherit;cursor:pointer;display:block;}*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-tap-highlight-color:rgba(255,255,255,0)}.clearfix::after{content:"";clear:both;display:block}.readable-hidden,.a11y,legend{position:absolute;width:1px;height:1px;overflow:hidden;margin:-1px;clip:rect(0,0,0,0)}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{transition:background-color 5000s ease-in-out 0s;-webkit-transition:background-color 9999s ease-out;-webkit-box-shadow:0 0 0 1000px #fff inset!important;-webkit-text-fill-color:#545454!important}
+	/* font */
+	@font-face {font-family: "SpoqaHanSansNeoRegular";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoRegular.woff2") format("woff2"); font-weight: normal !important;}
+	@font-face {font-family: "SpoqaHanSansNeoMedium";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoMedium.woff2") format("woff2"); font-weight: normal !important;}
+	@font-face {font-family: "SpoqaHanSansNeoBold";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/youcandoo/marketing/font/SpoqaHanSansNeoBold.woff2?") format("woff2"); font-weight: normal !important;}
+	@font-face {  font-family: "NanumSquareOTFExtraBold";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/web/assets/font/NanumSquareOTFExtraBold.woff?resource_version=<?=$resource_version?>") format("woff");font-weight: normal;}
+	@font-face {  font-family: "NanumSquareOTFRegular";src: local(※), url("https://youcandoo.yanadoocdn.com/v3/web/assets/font/NanumSquareOTFRegular.woff") format("woff");font-weight: normal !important;}
+	/* commmon */
+	main{width: 100%; height: 100vh; padding-left: 200px; background-color:#fafafa; transition: all 0.3s ease;}
+	article{width: 95%; margin: 0 auto; margin-top:20px; margin-bottom:20px; padding: 15px 30px; border-radius: 10px; background-color: #fff; box-shadow: 0.15rem 0 1.75rem 0 rgb(216 216 216 / 15%);}
+	/* material-icons commons */
+	.material-icons {vertical-align: middle; cursor: pointer;}
+	/* header common css */
+	.fixed--header__left {position: fixed; top:0; left: 0; z-index: 998; width: 200px; height: 100vh; border-right: 1px solid #f3f3f3; background-color: #fff;}
+	.fixed--header__wrap { padding: 20px; display: flex; align-items: center; justify-content: center;}
+	.fixed--header__wrap .btn--menu {opacity: 1!important; visibility: visible;position: fixed; top: 13px; left: 18px; z-index: 999;font-size: 25px;color: #b3b3b3;}
+	.fixed--header__wrap .logo img {width: 45px;}
+
+	/* button common css */
+	.btn--add {display: flex; justify-content: center; align-items: center; margin: 0 auto; margin-top: 20px; width: 90%; height: 40px; line-height: 40px;border-radius: 30px; color: #fff; background-color: #1954f8;}
+	.btn--add span:first-child{margin-right: 3px;}
+	.btn--save {width: 30%; height: 40px; line-height: 40px;border-radius: 30px; color: #fff; background-color: #1954f8;}
+	.btn--reset {color: #b3b3b3;}
+
+	/* input-search common css */
+	.input-search span {color: #b3b3b3; }
+	.input-search input {border: 0; color: #b3b3b3; background-color: transparent; font-size: 15px;}
+	.input-search input::placeholder {color: #b3b3b3; font-size: 15px;}
+
+	/* nav common css */
+	.nav--list {width: 100%; height: auto; margin-top: 20px; color: #b3b3b3;}
+	.nav--list li {width: 100%; padding: 10px 25px; margin-bottom: 10px;}
+	.nav--list li:last-child{margin-bottom: 0;}
+	.nav--list li:hover{color: #1954f8; border-radius: 0 20px 20px 0;background-color: #c9d7ff;}
+	.nav--list li span:first-child {margin-right: 10px;}
+
+	/* aside--add css */
+	.aside--add {position: fixed;top: 0;left: 200px; width: 250px; height: 100vh; background-color: #fff;box-shadow: 0.15rem 0 1.75rem 0 rgb(216 216 216 / 15%);}
+	.aside-contents {width:100%;height: 92vh;overflow-y: auto; }
+	.aside--add .title {padding: 20px; text-align: left;}
+	.aside-fixed {position: absolute; left: 0; bottom: 0; display: flex; justify-content: space-around;  align-items: center; width: 100%; height: 8vh; border-top: 1px solid #f3f3f3;}
+
+	/* main header top css */
+	.main--header__top {display: flex; justify-content: space-between; width: 100%; padding: 15px 30px; color: #b3b3b3; border-bottom: 2px solid #f3f3f3; }
+	.user-utill {display: flex;}
+	.noti-icon { padding-right: 15px;}
+	.settings-icon { margin-right: 15px; padding-right: 15px; border-right: 1px solid #dcdcdc;}
+	.logout-icon { margin-left: 10px;}
+
+
+	/* modal */
+
+	.modal.active{visibility: visible;opacity: 1;transition-delay: 0s;}
+	.modal {opacity: 0;visibility: hidden;transition: all 0.3s ease;position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%; background-color:#00000080;}
+	.modal--wrapper {display: flex;flex-direction: column;border-radius: 10px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 60vh; background-color: #fff;}
+	.modal--wrapper .close-btn-top {margin: 20px 20px 0 0; text-align: right; background-color: transparent;}
+	.modal--contents {padding: 20px;height: 47vh; overflow-y: auto;}
+	.modal--title {margin-bottom: 10px;}
+	/* active */
+	.fixed--header__left.active {left: -200px; visibility: hidden; transition: all 0.3s ease;}
+	.fixed--header__left { opacity: 1; visibility: visible; transition: all 0.3s ease;}
+	.aside--add.active {left: -400px; visibility: hidden; transition: all 0.3s ease;}
+	.aside--add{ opacity: 1; visibility: visible; transition: all 0.3s ease;}
+	.btn--add.active {color: #fff; background-color: red;}
+	.btn--add.active .add-icons {transform: rotate(45deg);}
+
+
+	/* checkbox + radio common */
+	.checkbox-wrap,
+	.radio-wrap {
+		margin-bottom: 5px;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="checkbox"] + label,
+	input[type="radio"] + label{
+		font-size: inherit;
+		margin-right: 10px;
+	}
+	input[type="checkbox"] + label span {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		margin: -2px 10px 0 0;
+		vertical-align: middle;
+		cursor: pointer;
+		border: 1px solid #aaa;
+		background-color: #fff;
+	}
+	input[type="checkbox"]:checked + label span {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("/assets/v2/img/check-on.png");
+		border: 1px solid #007aff;
+	}
+	input[type="radio"] + label span {
+		display:inline-block;
+		width:18px;
+		height:18px;
+		border-radius: 50%;
+		margin:-2px 10px 0 0;
+		vertical-align:middle;
+		cursor:pointer;
+		border: 1px solid #aaa;
+		background-color: #fff;
+	}
+	input[type="radio"]:checked + label span {
+		background-size: 12px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-image: url("/assets/v2/img/radio-on.png");
+		border: 1px solid #007aff;
+	}
+	input[type="checkbox"]:disabled + label span,
+	input[type="radio"]:disabled + label span {
+		background-color: #ddd;
+	}
+	textarea {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #c5ccd6;
+		border-radius: 3px;
+	}
+	.border-right-list {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	.border-right-list li:first-child {
+		padding-left: 0;
+	}
+	.border-right-list li {
+		padding: 0 10px;
+		border-right: 1px solid #aaa;
+	}
+	.border-right-list li:last-child {
+		border-right: none;
+	}
+</style>
+<body>
+<header class="fixed--header__left">
+	<div class="fixed--header__wrap">
+		<button id="btnCloseToMenu" class="btn--menu" type="button"><span class="material-icons">menu</span></button>
+		<h1 class="logo"><a href="/"><img src="https://youcandoo.yanadoocdn.com/v3/web/assets/images/web_logo_blue.svg" alt="로고"></a></h1>
+	</div>
+	<button id="btnAddToItem" class="btn--add" type="button"><span class="material-icons add-icons">add</span><span class="add-title">항목 추가 등록하기</span></button>
+	<nav class="nav--list">
+		<ul>
+			<li><a href="#"><span class="material-icons">turned_in</span><span>항목1</span></a></li>
+			<li><a href="#"><span class="material-icons">code</span><span>항목2</span></a></li>
+			<li><a href="#"><span class="material-icons">turned_in</span><span>항목3</span></a></li>
+			<li><a href="#"><span class="material-icons">turned_in</span><span>항목4</span></a></li>
+			<li><a href="#"><span class="material-icons">turned_in</span><span>항목5</span></a></li>
+		</ul>
+	</nav>
+</header>
+<aside class="aside--add active">
+	<div class="aside-contents">
+		<h2 class="title">Add New Product</h2>
+	</div>
+	<div class="aside-fixed">
+		<button class="btn--reset" type="reset">Reset</button>
+		<button class="btn--save" type="submit">Save</button>
+	</div>
+</aside>
+<main>
+	<header class="main--header__top">
+		<div class="input-search">
+			<span class="material-icons">search</span>
+			<input type="search" placeholder="Search">
+		</div>
+		<div class="user-utill">
+			<span class="material-icons noti-icon">notifications</span>
+			<span id="settings-icon"class="material-icons settings-icon">settings</span>
+			<div class="user-wrap">
+				<span class="material-icons user-icon">account_circle</span>
+				<span class="user-name">awefwqef</span>
+				<span class="material-icons logout-icon">logout</span>
+			</div>
+		</div>
+	</header>
+	<article class="list">
+		<h2>Product list</h2>
+
+		<table>
+			<thead>
+			<tr>
+				<th></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+
+	</article>
+</main>
+<footer>
+
+</footer>
+<div class="modal" id="settingsModal">
+	<div class="modal--wrapper">
+		<button class="close-btn close-btn-top" type="button"><span class="material-icons">close</span></button>
+		<div class="modal--contents">
+			<h2 class="modal--title">사용할 화면 모드</h2>
+			<div class="radio-wrap">
+				<input id="userScreenLightMode" type="radio" name="radio-exposure" value="lightMode" checked="">
+				<label for="userScreenLightMode"><span></span>라이트 모드</label>
+				<input id="userScreenDarkMode" type="radio" name="radio-exposure" value="darkMode">
+				<label for="userScreenDarkMode"><span></span>다크모드</label>
+			</div>
+		</div>
+		<div class="aside-fixed">
+			<button class="btn--reset" type="reset">Reset</button>
+			<button class="btn--save" type="submit">Save</button>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	document.getElementById('btnCloseToMenu').addEventListener('click', onClickBtnMenuEvent);
+	document.getElementById('btnAddToItem').addEventListener('click', onClickBtnAddLIstEvent);
+
+	function onClickBtnMenuEvent() {
+		if(!document.querySelector('.aside--add').classList.contains('active')){
+			alert('항목 창을 닫아주세요.')
+			event.preventDefault();
+		}else {
+			if (!document.querySelector('.fixed--header__left').classList.contains('active')) {
+				document.querySelector('.fixed--header__left').classList.add('active');
+				document.querySelector('main').style.paddingLeft="54px";
+			}else {
+				document.querySelector('.fixed--header__left').classList.remove('active');
+				document.querySelector('main').style.paddingLeft="200px";
+			}
+		}
+	}
+
+	function onClickBtnAddLIstEvent() {
+		if (!document.querySelector('.aside--add').classList.contains('active')) {
+			document.querySelector('.aside--add').classList.add('active')
+			document.querySelector('main').style.paddingLeft="200px";
+			document.querySelector('.btn--add').classList.toggle('active');
+			document.querySelector('.add-title').textContent="항목 추가 등록하기";
+		}else {
+			document.querySelector('.aside--add').classList.remove('active');
+			document.querySelector('main').style.paddingLeft="450px";
+			document.querySelector('.btn--add').classList.toggle('active');
+			document.querySelector('.add-title').textContent="항목창 닫기";
+		}
+	}
+
+	document.querySelectorAll(".close-btn").forEach(element => element.addEventListener('click', onClickBtnModalClose));
+	document.getElementById('settings-icon').addEventListener('click', onClickBtnMoveTosettingsModal);
+
+	function onClickBtnMoveTosettingsModal() {
+		document.getElementById('settingsModal').classList.add('active');
+	}
+	function onClickBtnModalClose() {
+		document.querySelectorAll('.modal').forEach(element => element.classList.remove('active'))
+	}
+
+	// 화면 모드
+	document.getElementById('userScreenLightMode').addEventListener('click', function () { userScreenMode('lightMode') });
+	document.getElementById('userScreenDarkMode').addEventListener('click', function () { userScreenMode('darkMode') });
+
+	function userScreenMode(type) {
+		if(type === 'lightMode') {
+			document.querySelector('body').style.backgroundColor = "#fff";
+			document.querySelector('.modal--wrapper').style.backgroundColor = "#fff";
+			document.querySelector('.fixed--header__left').style.backgroundColor = "#fff";
+			document.querySelector('main').style.backgroundColor = "#fafafa";
+			document.querySelector('.aside--add').style.backgroundColor = "#fff";
+			document.querySelector('.modal--wrapper').style.backgroundColor = "#fff";
+			document.querySelector('.modal--wrapper').style.color = "#000";
+		}else {
+			document.querySelector('body').style.backgroundColor = "#252525";
+			document.querySelector('.fixed--header__left').style.backgroundColor = "#252525";
+			document.querySelector('main').style.backgroundColor = "#252525";
+			document.querySelector('.aside--add').style.backgroundColor = "#252525";
+			document.querySelector('.modal--wrapper').style.backgroundColor = "#252525";
+			document.querySelector('.modal--wrapper').style.color = "#fff";
+
+		}
+
+	}
+</script>
+</html>

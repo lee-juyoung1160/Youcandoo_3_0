@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/** mission **/
+@media screen and (max-width: 768px) {
+
+	body,
+	.mission .page-wrap {
+		background-color: #F6F7FB;
+	}
+	.mission .page-wrap {
+		padding-bottom: 17.50vw;
+	}
+	.mission article {
+		margin-bottom: 0;
+	}
+	.mission .inner {
+		padding: 0 5.56vw;
+	}
+	.mission .top {
+		padding: 8.89vw 0 6.94vw;
+	}
+	.mission .top .title {
+		display: flex;
+		margin-bottom: 7.22vw;
+		align-items: center;
+	}
+	.mission .top .title img {
+		width: 13.33vw;
+		height: 13.89vw;
+		margin-right: 3.89vw;
+	}
+	.mission .top .title h3 {
+		font-size: 5.56vw;
+		font-weight: 800;
+	}
+
+	.mission .paragraph {
+		color: #4C5264;
+		font-size: 4.17vw;
+		line-height: 1.5em;
+	}
+	.mission .paragraph em {
+		color: #6267EA;
+		font-weight: 600;
+	}
+
+	.mission .content .paragraph:nth-of-type(1) {
+		padding-top: 21.39vw;
+	}
+	.mission .content .paragraph:nth-of-type(2) {
+		padding-top: 29.72vw;
+	}
+	.mission .content .paragraph:nth-of-type(3) {
+		padding-top: 18.61vw;
+	}
+	.mission .content .paragraph:nth-of-type(4) {
+		padding-top: 11.11vw;
+	}
+	.mission .content .paragraph h4 {
+		position: relative;
+		margin-bottom: 6.67vw;
+		color: #000;
+		font-size: 5.56vw;
+		font-weight: 800;
+		line-height: 1.6em;
+	}
+	.mission .content .paragraph h4:before {
+		position: absolute;
+		top: -6.94vw;
+		left: 0;
+		width: 8.33vw;
+		height: 1.11vw;
+		background-color: #000;
+		content: '';
+	}
+	.mission .content .paragraph p {
+		margin-bottom: 3.89vw;
+	}
+	.mission .content .paragraph p strong {
+		color: #000;
+		font-weight: 600;
+	}
+	.mission .content .paragraph  .emphasis {
+		color: #000;
+	}
+	.mission .content .paragraph .img {
+		display: flex;
+		justify-content: center;
+	}
+	.mission .content .paragraph img {
+		width: 75.00vw;
+		margin: 6.67vw 0 11.11vw;
+	}
+	.mission .content .paragraph span.title {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 2.78vw;
+		color: #000;
+		font-size: 4.44vw;
+		font-weight: 600;
+		background-image: url(https://youcandoo.yanadoocdn.com/v3/youcandoo/assets/images/webviewimg/v3/mission-title-back-color.png);
+		background-size: 100% 2.22vw;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+	}
+
+
+	.mission .content .tip .inner {
+		padding: 2.78vw 3.89vw 4.44vw;
+	}
+	.mission .content .tip h5 {
+		display: flex;
+		align-items: center;
+		color: #6267EA;
+		font-size: 3.89vw;
+		font-weight: 600;
+	}
+	.mission .content .tip h5 img {
+		width: 6.67vw;
+		height: 6.67vw;
+		margin-right: 0.56vw;
+	}
+	.mission .content .tip p {
+		margin-top: 2.22vw;
+		padding: 0 7.22vw;
+		color: #4C5264;
+		font-size: 4.17vw;
+	}
+
+}
